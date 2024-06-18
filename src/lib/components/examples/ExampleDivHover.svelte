@@ -11,7 +11,7 @@
   let animationElement = (node: HTMLElement) => {
     let changeSize = () => {
       width.set(230);
-      height.set(135);
+      height.set(145);
       rounded.set(20);
       isChanged = true;
     };

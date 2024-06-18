@@ -1,13 +1,17 @@
 <script>
+  import Box from "../dev/ExamplesRoute/Box.svelte";
+  import HeadingOne from "../dev/ExamplesRoute/tags/HeadingOne.svelte";
+  import Para from "../dev/ExamplesRoute/tags/Para.svelte";
   import ExampleDivHover from "../examples/ExampleDivHover.svelte";
 </script>
 
 <div>
-  <h1 class="font-bold text-xl md:text-3xl">Div Hover</h1>
-  <p class="text-muted-foreground">Simple hover Effect using Spring</p>
+  <HeadingOne>Div Hover</HeadingOne>
+  <Para>
+    This is a simple example of div hover. When you hover over the div, it will change its size and shape.
+  </Para>
 </div>
-<div
-  class="flex justify-center items-center min-h-52 border border-primary/40 rounded-xl my-2"
->
+
+<Box>
   <ExampleDivHover />
-</div>
+</Box>

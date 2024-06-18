@@ -2,7 +2,7 @@
   import { onMount } from "svelte";
   import { fly } from "svelte/transition";
 
-  let examplesList = [
+  export let examplesList = [
     {
       name: "Div Hover",
       link: "/examples/1",
