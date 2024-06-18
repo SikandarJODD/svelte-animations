@@ -1,5 +1,5 @@
 <script>
-  import Hero from "$lib/components/dev/Hero/Hero.svelte";
+  import HeroPage from "$lib/components/dev/Hero/HeroPage.svelte";
 </script>
 
-<Hero />
+<HeroPage />

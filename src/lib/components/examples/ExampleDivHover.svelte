@@ -33,7 +33,7 @@
   };
   let avatars = [
     {
-      src: "https://avatars.githubusercontent.com/u/93428946?v=4",
+      src: "https://i.pinimg.com/564x/ea/8b/06/ea8b06307f2f6f0a6f6041d3f492d013.jpg",
       alt: "bhide",
       fallback: "SM",
       name: "Saloni",
@@ -47,7 +47,7 @@
   ];
 </script>
 
-<div class="flex justify-center items-center h-screen">
+<div class="flex justify-center items-center ">
   <div
     id="animationElement"
     use:animationElement

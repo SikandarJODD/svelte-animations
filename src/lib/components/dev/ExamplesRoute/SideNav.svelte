@@ -1,6 +1,6 @@
 <script>
   import { onMount } from "svelte";
-  import { fly, slide } from "svelte/transition";
+  import { fly } from "svelte/transition";
 
   let examplesList = [
     {

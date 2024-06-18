@@ -126,11 +126,4 @@
 </nav>
 
 <style>
-  @import url("https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300..700&display=swap");
-  .overpass-mono {
-    font-family: "Overpass Mono", monospace;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-  }
 </style>

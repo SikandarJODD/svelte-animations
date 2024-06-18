@@ -2,13 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.overpass-mono {
-  font-family: "Overpass Mono", monospace;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-}
-
 @layer base {
   :root {
     --background: 0 0% 100%;
