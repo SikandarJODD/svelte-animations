@@ -1,4 +1,4 @@
-import DivEffect from "./DivEffect.svelte";
+import DeferredTransitionEffect from "./DeferredTransitionEffect.svelte";
 import DivHover from "./DivHover.svelte";
 import LinkEffect from "./LinkEffect.svelte";
 import ModulDivEffect from "./ModulDivEffect.svelte";
@@ -25,5 +25,12 @@ export let allExamples = [
         desc: 'Modul Card Effect using crossfade and spring.',
         component: ModulDivEffect,
         link: '/examples/3'
+    },
+    {
+        id: 4,
+        name: 'Deferred transitions ',
+        desc: 'Deferred transitions using crossfade ',
+        component: DeferredTransitionEffect,
+        link: '/examples/4'
     }
 ]

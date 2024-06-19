@@ -1,13 +1,12 @@
 <script lang="ts">
   import { cubicOut, quintInOut } from "svelte/easing";
   import { crossfade, scale, fade, slide, fly, blur } from "svelte/transition";
-  import Button from "../ui/button/button.svelte";
   let layout = "layouta";
 
   let [send, receive] = crossfade({
-    duration: 500,
-    easing: quintInOut,
+    duration: 400,
     fallback: blur,
+    easing:quintInOut
   });
 </script>
 
@@ -54,7 +53,7 @@
       on:click={() => {
         layout = "layouta";
       }}
-      class="bg-lime-100 p-2.5 md:p-4 rounded-3xl layoutb flex gap-1  md:gap-4"
+      class="bg-lime-100 p-2.5 md:p-4 rounded-3xl layoutb flex gap-1 md:gap-4"
       in:receive={{ key: "layoutb" }}
       out:send={{ key: "layoutb" }}
     >
@@ -65,7 +64,7 @@
         in:receive|global={{ key: "img" }}
         out:send|global={{ key: "img" }}
       />
-      <div class="mt-2 px-1 md:px-2 flex flex-col ">
+      <div class="mt-2 px-1 md:px-2 flex flex-col">
         <h1
           class="font-bold text-sm md:text-2xl heading text-gray-900"
           in:receive={{ key: "heading" }}
@@ -74,7 +73,7 @@
           Mumbai City
         </h1>
         <p
-          class="text-xs md:text-md w-full  para text-gray-700 "
+          class=" sm:text-md w-full para text-gray-700"
           in:receive={{ key: "para" }}
           out:send={{ key: "para" }}
         >

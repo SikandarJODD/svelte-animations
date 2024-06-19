@@ -15,7 +15,7 @@
     stiffness: 0.1,
     damping: 0.3,
   });
-  let y = spring(0, {
+  let y = spring(-190, {
     stiffness: 0.1,
     damping: 0.3,
   });
@@ -36,7 +36,7 @@
 {#if isHover}
   <img
     in:scale={{ duration: 200, delay: 200 }}
-    style="position: absolute; bottom:40px; left:{$x}px; z-indez: 100;"
+    style="position: absolute; transform: translateY({$y}px); left:{$x}px; z-indez: 100;"
     src={hrefDetails.imgSrc}
     alt={hrefDetails.imgAlt}
     class="h-44 w-56 rounded-lg shadow-lg object-cover object-center"
