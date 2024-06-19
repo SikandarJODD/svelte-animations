@@ -32,7 +32,7 @@
       />
       <div class="mt-2 px-2 flex flex-col">
         <h1
-          class="font-bold text-lg heading text-gray-900"
+          class="font-bold text-md md:text-lg heading text-gray-900"
           in:receive={{ key: "heading" }}
           out:send={{ key: "heading" }}
         >
@@ -54,36 +54,35 @@
       on:click={() => {
         layout = "layouta";
       }}
-      class="bg-lime-100 p-4 rounded-3xl layoutb flex gap-4"
+      class="bg-lime-100 p-2.5 md:p-4 rounded-3xl layoutb flex gap-1  md:gap-4"
       in:receive={{ key: "layoutb" }}
       out:send={{ key: "layoutb" }}
     >
       <img
         src="https://i.pinimg.com/564x/b3/7c/fa/b37cfa52ac8e142ffe42772712f6e33d.jpg"
         alt="Saturn Art"
-        class="w-64 h-64 rounded-2xl img"
+        class="w-36 h-32 md:w-64 md:h-64 rounded-2xl img"
         in:receive|global={{ key: "img" }}
         out:send|global={{ key: "img" }}
       />
-      <div class="mt-2 px-2 flex flex-col">
+      <div class="mt-2 px-1 md:px-2 flex flex-col ">
         <h1
-          class="font-bold text-2xl heading text-gray-900"
+          class="font-bold text-sm md:text-2xl heading text-gray-900"
           in:receive={{ key: "heading" }}
           out:send={{ key: "heading" }}
         >
           Mumbai City
         </h1>
         <p
-          class=" text-md w-60 para text-gray-700"
+          class="text-xs md:text-md w-full  para text-gray-700 "
           in:receive={{ key: "para" }}
           out:send={{ key: "para" }}
         >
-          Yoo devs, Howw are you doing?
+          Yoo devs, Howw you doing?
         </p>
       </div>
     </div>
   {/if}
-
 </div>
 
 <style>
