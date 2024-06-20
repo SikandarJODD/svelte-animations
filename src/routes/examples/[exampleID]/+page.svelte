@@ -5,7 +5,7 @@
   $: singlePage = allExamples.filter(
     (example) => example.id === Number(exampleID)
   );
-  $: console.log(exampleID, singlePage, "singlePage");
+  // $: console.log(exampleID, singlePage, "singlePage");
 </script>
 
 <svelte:head>

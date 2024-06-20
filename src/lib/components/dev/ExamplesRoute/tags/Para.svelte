@@ -1,3 +1,3 @@
-<p class="text-muted-foreground text-md mt-px">
+<p class="text-gray-700 text-md mt-1">
   <slot></slot>
 </p>

@@ -1,6 +1,7 @@
 <script>
+  import { page } from "$app/stores";
   import { onMount } from "svelte";
-  import { fly } from "svelte/transition";
+  import { fly, blur } from "svelte/transition";
 
   export let examplesList = [
     {
@@ -15,6 +16,7 @@
 
   let mobileMenu = true;
   let isLoading = false;
+  $: routeID = $page.url.pathname;
   onMount(() => {
     isLoading = true;
   });
@@ -113,6 +115,9 @@
                   {#each examplesList as item}
                     <li>
                       <a
+                        on:click={() => {
+                          mobileMenu = !mobileMenu;
+                        }}
                         href={item.link}
                         class="group flex gap-x-3 rounded-md p-2 text-sm font-medium leading-6 text-primary"
                       >
@@ -129,28 +134,48 @@
     </div>
   </div>
 
+  <!-- in:fly={{ x: -200, duration: 600 }} -->
   <!-- Static sidebar for desktop -->
   {#if isLoading}
     <div
-      in:fly={{ x: -200, duration: 600 }}
       class="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-64 lg:flex-col mt-16"
     >
       <!-- Sidebar component, swap this element with another sidebar if you like -->
       <div
-        class="flex grow flex-col gap-y-5 overflow-y-auto border-r border-t rounded-e-2xl border-gray-200 bg-white px-6"
+        class="flex grow flex-col gap-y-0 overflow-y-auto border-r border-t rounded-e-2xl border-gray-200 bg-white px-6"
       >
-        <nav class="flex flex-1 flex-col mt-4">
-          <ul role="list" class="flex flex-1 flex-col gap-y-7">
+        <nav class="flex flex-1 flex-col mt-2">
+          <ul role="list" class="flex flex-1 flex-col">
             <li>
-              <ul role="list" class="-mx-2 space-y-1">
+              <ul role="list" class="-mx-3">
                 {#each examplesList as item}
-                  <li>
+                  <li
+                    class="flex justify-between items-center hover:bg-sky-50 transition-all duration-150 hover:text-primary px-2 rounded-md"
+                  >
                     <a
                       href={item.link}
-                      class="group flex gap-x-3 rounded-md p-2 text-sm font-medium overpass-mono leading-6 text-primary hover:bg-sky-50 hover:text-primary"
+                      class="group flex {item.link == routeID
+                        ? 'text-primary  font-semibold'
+                        : 'text-gray-600 font-normal'}  transition-all duration-150 rounded-md p-1.5 text-sm leading-6"
                     >
                       {item.name}
                     </a>
+                    {#if item.link == routeID}
+                      <svg
+                        in:blur
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="12"
+                        height="12"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-circle"
+                        ><circle cx="12" cy="12" r="10" /></svg
+                      >
+                    {/if}
                   </li>
                 {/each}
               </ul>
