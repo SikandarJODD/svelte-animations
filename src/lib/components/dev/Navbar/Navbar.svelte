@@ -11,6 +11,10 @@
       name: "Examples",
       link: "/examples",
     },
+    {
+      name: "Framer Motion",
+      link: "/learnings",
+    },
   ];
   let loading = false;
   onMount(() => {

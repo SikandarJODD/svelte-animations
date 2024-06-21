@@ -14,4 +14,6 @@
 {:else if routeID[1] === ""}
   <Navbar />
 {/if}
-<slot />
+<div>
+  <slot />
+</div>

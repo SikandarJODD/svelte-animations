@@ -138,7 +138,7 @@
   <!-- Static sidebar for desktop -->
   {#if isLoading}
     <div
-      class="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-64 lg:flex-col mt-16"
+      class="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-60 lg:flex-col mt-16"
     >
       <!-- Sidebar component, swap this element with another sidebar if you like -->
       <div
@@ -215,7 +215,7 @@
     </div>
   </div>
 
-  <main class="py-10 lg:pl-64">
+  <main class="py-6 lg:pl-60">
     <div class="px-4 sm:px-6 lg:px-8">
       <slot></slot>
     </div>
