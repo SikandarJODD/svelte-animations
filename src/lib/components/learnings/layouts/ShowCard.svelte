@@ -11,7 +11,7 @@
 </script>
 
 <a href={item.link}>
-  <Card.Root class="w-[350px] md:rounded-3xl">
+  <Card.Root class="w-[350px] md:rounded-3xl transition-all duration-200 hover:border-gray-400/70">
     <Card.Content class="pt-6 pb-0">
       <div>
         <img src={item.image} alt={item.name} class="rounded-xl" />

@@ -17,11 +17,12 @@
       whileDrag={{
         boxShadow: "0px 8px 12px #222",
         cursor: "grabbing",
+        border: "2px solid #0091FF",
       }}
       transition={{
         duration: 0.2,
       }}
-      let:motion><div class="box" use:motion></div></Motion
+      let:motion><div class="box" use:motion>Drag</div></Motion
     >
   </Box>
   

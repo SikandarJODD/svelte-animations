@@ -1,11 +1,10 @@
 <script>
     import Box from "$lib/components/dev/ExamplesRoute/Box.svelte";
-    import Button from "$lib/components/ui/button/button.svelte";
     import { Motion } from "svelte-motion";
     let i = 0;
   </script>
   
-  <Box cls="bg-slate-900 " minHeight={400}>
+  <Box cls="bg-slate-800 flex" minHeight={400}>
     {#key i}
       <Motion
         animate={{

@@ -3,12 +3,31 @@
     import { Motion } from "svelte-motion";
   </script>
   
-  <Box cls="bg-slate-900 flex ">
+  <Box cls="bg-slate-800 flex gap-3 md:gap-10 flex-col md:flex-row">
+      <Motion
+        whileHover={{
+          scale: 0.86,
+        }}
+        let:motion><div class="box" use:motion>
+          Scale
+        </div></Motion
+      >
       <Motion
         whileHover={{
           scale: 0.8,
+          rotate: 45,
         }}
-        let:motion><div class="box" use:motion></div></Motion
+        let:motion><div class="box" use:motion>
+          Hover Rotate
+        </div></Motion
+      >
+      <Motion
+        whileHover={{
+          backgroundColor: "#0091FF",
+        }}
+        let:motion><div class="box" use:motion>
+          BgColor
+        </div></Motion
       >
   </Box>
   

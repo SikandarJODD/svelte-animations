@@ -101,7 +101,7 @@ export let allLearning = [
     {
         id: 9,
         name: 'Cycling through States',
-        desc: 'While Drag Effect using Framer Motion.',
+        desc: 'Cycling through States Effect using Framer Motion.',
         component: CyclingStates,
         link: "/learnings/9",
         image: CyclingThroughStatesImg
@@ -109,7 +109,7 @@ export let allLearning = [
     {
         id: 10,
         name: 'Animation Sequence',
-        desc: 'While Drag Effect using Framer Motion.',
+        desc: 'Animation Sequence Effect using Framer Motion.',
         component: AnimateSequence,
         link: "/learnings/10",
         image: AnimateSequenceImg

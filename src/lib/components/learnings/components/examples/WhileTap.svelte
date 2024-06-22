@@ -3,14 +3,20 @@
     import { Motion } from "svelte-motion";
   </script>
   
-  <Box cls="bg-slate-900 flex">
+  <Box cls="bg-slate-800 flex gap-3 md:gap-10">
     <Motion
       whileTap={{
         rotate: 45,
         scale: 0.75,
         
       }}
-      let:motion><div class="box" use:motion></div></Motion
+      let:motion><div class="box" use:motion>Rotate</div></Motion
+    >
+    <Motion
+      whileTap={{
+        scale: 0.84,
+      }}
+      let:motion><div class="box" use:motion>Simple</div></Motion
     >
   </Box>
   

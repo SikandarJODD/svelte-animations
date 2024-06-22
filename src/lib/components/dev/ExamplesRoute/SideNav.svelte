@@ -149,17 +149,16 @@
             <li>
               <ul role="list" class="-mx-3">
                 {#each examplesList as item}
-                  <li
-                    class="flex justify-between items-center hover:bg-sky-50 transition-all duration-150 hover:text-primary px-2 rounded-md"
+                  <a href={item.link}
+                    class="flex justify-between items-center hover:bg-sky-50 transition-all duration-150 hover:text-primary px-2 rounded-md group"
                   >
-                    <a
-                      href={item.link}
+                    <div
                       class="group flex {item.link == routeID
                         ? 'text-primary  font-semibold'
-                        : 'text-gray-600 font-normal'}  transition-all duration-150 rounded-md p-1.5 text-sm leading-6"
+                        : 'text-gray-600 font-normal'}  transition-all duration-150 rounded-md p-1.5 text-sm leading-6 group-hover:text-primary"
                     >
                       {item.name}
-                    </a>
+                    </div>
                     {#if item.link == routeID}
                       <svg
                         in:blur
@@ -176,7 +175,7 @@
                         ><circle cx="12" cy="12" r="10" /></svg
                       >
                     {/if}
-                  </li>
+                  </a>
                 {/each}
               </ul>
             </li>

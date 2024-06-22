@@ -21,6 +21,53 @@
     dragElastic={0.5}
     whileTap={{
       cursor: "grabbing",
-    }}><div class="box" use:motion></div></Motion
+    }}
+    ><div class="box relative" use:motion>
+      <div class="absolute top-1">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="26"
+          height="26"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-chevron-up"><path d="m18 15-6-6-6 6" /></svg
+        >
+      </div>
+      <div class="absolute bottom-1">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="26"
+          height="26"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6" /></svg
+        >
+      </div>
+      <div class='absolute right-1'>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="26"
+          height="26"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6" /></svg
+        >
+      </div>
+      <div class='absolute left-1'>
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left"><path d="m15 18-6-6 6-6"/></svg>
+      </div>
+    </div></Motion
   >
 </Box>
