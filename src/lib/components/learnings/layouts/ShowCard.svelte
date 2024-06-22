@@ -11,20 +11,20 @@
 </script>
 
 <a href={item.link}>
-  <Card.Root class="w-[350px]">
+  <Card.Root class="w-[350px] md:rounded-3xl">
     <Card.Content class="pt-6 pb-0">
       <div>
         <img src={item.image} alt={item.name} class="rounded-xl" />
       </div>
     </Card.Content>
-    <Card.Header class="pt-4 px-7 flex justify-between flex-row items-center">
-      <div>
+    <Card.Header class="pt-4 px-7 ">
         <Card.Title>{item.name}</Card.Title>
-        <Card.Description class='mt-px'>{item.desc}</Card.Description>
-      </div>
-      <div>
-        <Button size="sm" href={item.link} variant="outline">Visit</Button>
-      </div>
+        <Card.Description class=""
+          >{item.desc.length > 40
+            ? `${item.desc.slice(0, 40)}...`
+            : item.desc}</Card.Description
+        >
+      
     </Card.Header>
   </Card.Root>
 </a>

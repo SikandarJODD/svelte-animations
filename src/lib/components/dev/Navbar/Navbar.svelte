@@ -26,7 +26,9 @@
   let mobileMenu = false;
 </script>
 
-<nav class="border-b border-primary/20">
+<nav
+  class="border-b border-primary/20 sticky top-0 bg-white/40 backdrop-blur-md"
+>
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="flex h-14 items-center justify-between">
       <div class="flex items-center w-full">

@@ -119,7 +119,7 @@
                           mobileMenu = !mobileMenu;
                         }}
                         href={item.link}
-                        class="group flex gap-x-3 rounded-md p-2 text-sm font-medium leading-6 text-primary"
+                        class="group {item.link === routeID ? 'text-primary bg-sky-200 font-medium':'text-gray-700' } flex gap-x-3 rounded-md p-2 text-sm  leading-6"
                       >
                         {item.name}
                       </a>

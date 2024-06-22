@@ -6,3 +6,11 @@
   font-weight: 500;
   font-style: normal;
 }
+
+.box {
+  width: 150px;
+  height: 150px;
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
