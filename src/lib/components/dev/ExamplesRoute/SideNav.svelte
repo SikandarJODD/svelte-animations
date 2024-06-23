@@ -1,7 +1,8 @@
 <script>
   import { page } from "$app/stores";
+  import { navs } from "$lib";
   import { onMount } from "svelte";
-  import { fly, blur } from "svelte/transition";
+  import { blur, fade, scale, slide } from "svelte/transition";
 
   export let examplesList = [
     {
@@ -31,16 +32,6 @@
     role="dialog"
     aria-modal="true"
   >
-    <!--
-        Off-canvas menu backdrop, show/hide based on off-canvas menu state.
-  
-        Entering: "transition-opacity ease-linear duration-300"
-          From: "opacity-0"
-          To: "opacity-100"
-        Leaving: "transition-opacity ease-linear duration-300"
-          From: "opacity-100"
-          To: "opacity-0"
-      -->
     <div
       class="{mobileMenu
         ? '-translate-x-full'
@@ -63,7 +54,6 @@
           <button
             on:click={() => {
               mobileMenu = !mobileMenu;
-              console.log(mobileMenu, "close");
             }}
             type="button"
             class="-m-2.5 p-2.5"
@@ -109,6 +99,23 @@
             <span class="ml-2 overpass-mono mt-px">Svelte Animations</span>
           </div>
           <nav class="flex flex-1 flex-col">
+            {#key mobileMenu}
+              <div
+                class="transition-all duration-150"
+                transition:slide
+              >
+                {#each navs as item}
+                  <a
+                    href={item.link}
+                    class="group {item.link === routeID
+                      ? 'text-primary bg-sky-100 font-medium rounded-md'
+                      : 'text-gray-700'} flex gap-x-3 p-2 text-sm leading-6"
+                  >
+                    {item.name}
+                  </a>
+                {/each}
+              </div>
+            {/key}
             <ul role="list" class="flex flex-1 flex-col gap-y-7">
               <li>
                 <ul role="list" class="-mx-2">
@@ -119,7 +126,9 @@
                           mobileMenu = !mobileMenu;
                         }}
                         href={item.link}
-                        class="group {item.link === routeID ? 'text-primary bg-sky-200 font-medium':'text-gray-700' } flex gap-x-3 rounded-md p-2 text-sm  leading-6"
+                        class="group {item.link === routeID
+                          ? 'text-primary bg-sky-200 font-medium'
+                          : 'text-gray-700'} flex gap-x-3 rounded-md p-2 text-sm leading-6"
                       >
                         {item.name}
                       </a>
@@ -149,7 +158,8 @@
             <li>
               <ul role="list" class="-mx-3">
                 {#each examplesList as item}
-                  <a href={item.link}
+                  <a
+                    href={item.link}
                     class="flex justify-between items-center hover:bg-sky-50 transition-all duration-150 hover:text-primary px-2 rounded-md group"
                   >
                     <div
@@ -186,7 +196,7 @@
   {/if}
 
   <div
-    class="sticky top-0 z-40 flex items-center gap-x-6 bg-white px-4 py-4 shadow-sm sm:px-6 lg:hidden"
+    class="sticky top-0 z-40 flex items-center gap-x-6 bg-white/40 backdrop-blur-md px-4 py-4 shadow-sm sm:px-6 lg:hidden"
   >
     <button
       on:click={() => (mobileMenu = !mobileMenu)}
@@ -210,7 +220,7 @@
       </svg>
     </button>
     <div class="flex-1 text-sm font-semibold leading-6 text-gray-900">
-      Svelte Aniamtions
+      Svelte Framer Motion
     </div>
   </div>
 

@@ -1,21 +1,8 @@
 <script>
+  import { navs } from "$lib";
   import { onMount } from "svelte";
   import { draw, slide } from "svelte/transition";
 
-  let navs = [
-    {
-      name: "Home",
-      link: "/",
-    },
-    {
-      name: "Examples",
-      link: "/examples",
-    },
-    {
-      name: "Framer Motion",
-      link: "/learnings",
-    },
-  ];
   let loading = false;
   onMount(() => {
     loading = true;

@@ -1,49 +1,24 @@
 <script>
   import Box from "$lib/components/dev/ExamplesRoute/Box.svelte";
-  import { Motion, useTransform, useMotionValue } from "svelte-motion";
-  let x = useMotionValue(0);
-  let y = useMotionValue(0);
-  let rotateX = useTransform(y, [-100, 100], [60, -60]);
-  let rotateY = useTransform(x, [-100, 100], [-60, 60]);
+  import { Motion, useAnimation } from "svelte-motion";
+  let controls = useAnimation();
+  let startCode = async () => {
+    let all = [{ rotate: -90 }, { scale: 1.5 }, { rotate: 0 },{
+      scale: 1,
+      borderRadius: "50%",
+    }, { scale: 0.9,borderRadius: "20%", }];
+    await controls.start(all[0]);
+    await controls.start(all[1]);
+    await controls.start(all[2]);
+    await controls.start(all[3]);
+    await controls.start(all[4]);
+  };
 </script>
 
-<Box cls="bg-slate-800 mt-0" minHeight={450}>
-  <div class="small_circle">
-    <Motion
-      let:motion
-      style={{
-        left: -25,
-        top: -25,
-        position: "relative",
-        cursor: "grab",
-        x,
-        y,
-        rotateX,
-        rotateY,
-      }}
-      drag={true}
-      dragConstraints={{
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-      }}
-      dragElastic={0.6}
-      whileTap={{ cursor: "grabbing" }}
-      ><div class="box" use:motion></div></Motion
-    >
-  </div>
+<Box cls="bg-slate-800">
+  <Motion animate={controls} onTap={startCode} let:motion
+    ><div class="box" use:motion>
+      Tap 
+    </div></Motion
+  >
 </Box>
-
-<style>
-  .small_circle {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background: radial-gradient(
-      rgba(255, 255, 255, 0),
-      rgba(255, 255, 255, 0.3)
-    );
-    perspective: 800;
-  }
-</style>

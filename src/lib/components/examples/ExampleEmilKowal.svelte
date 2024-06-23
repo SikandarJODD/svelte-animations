@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { fade, scale, blur } from "svelte/transition";
+    import {  blur } from "svelte/transition";
     import { draw } from "svelte/transition";
     import Button from "$lib/components/ui/button/button.svelte";
     import { spring, tweened } from "svelte/motion";
@@ -7,7 +7,7 @@
     // Play with Damping and Stiffness
     let x = spring(100, {
       stiffness: 0.05,
-      damping: 0.2,
+      damping: 0.25,
     });
     let y = spring(28);
     let rounded = tweened(20);
@@ -64,7 +64,7 @@
   <div class="flex justify-center items-center min-h-[300px] flex-col">
     <div class="min-h-60 flex justify-center items-center">
       <div
-        class="box bg-black"
+        class="bg-black"
         style="width: {$x}px; height:{$y}px; border-radius: {$rounded}px;"
       >
         {#if isHovered}
@@ -128,12 +128,12 @@
           </div>
         {:else}
           <div
-            class="px-2 flex justify-between text-white items-center h-full"
+            class="px-2 flex justify-between text-white items-center h-full "
             in:blur={{ amount: 2 }}
           >
             <div></div>
             {#key text}
-              <div class="" in:blur>
+              <div  in:blur>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
