@@ -4,7 +4,7 @@ This Project contains simple animations examples using **Spring** and **Tweened*
 
 Visit for Docs : [svelte/motion](https://svelte.dev/docs/svelte-motion)
 
-Hosted on Vercel : [simple-animations-examples](https://svelte-animation-svelte.vercel.app/)
+Hosted on Vercel : [simple-animations-examples](https://animation-svelte.vercel.app/)
 
 ### Svelte Spring, Crossfade, Svelte-Motion Examples
 

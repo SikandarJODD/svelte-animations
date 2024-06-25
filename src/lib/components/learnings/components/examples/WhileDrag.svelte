@@ -3,7 +3,7 @@
     import { Motion } from "svelte-motion";
   </script>
   
-  <Box cls="bg-slate-800 flex">
+  <Box cls="bg-slate-800 flex text-black">
     <Motion
       drag={true}
       whileHover={{

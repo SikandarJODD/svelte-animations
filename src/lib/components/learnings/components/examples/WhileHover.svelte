@@ -3,7 +3,7 @@
     import { Motion } from "svelte-motion";
   </script>
   
-  <Box cls="bg-slate-800 flex gap-3 md:gap-10 flex-col md:flex-row">
+  <Box cls="bg-slate-800 flex gap-3 md:gap-10 flex-col md:flex-row text-black">
       <Motion
         whileHover={{
           scale: 0.86,

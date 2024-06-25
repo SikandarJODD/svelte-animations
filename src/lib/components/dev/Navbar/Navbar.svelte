@@ -2,6 +2,8 @@
   import { navs } from "$lib";
   import { onMount } from "svelte";
   import { draw, slide } from "svelte/transition";
+  import Theme from "./Theme.svelte";
+  import { page } from "$app/stores";
 
   let loading = false;
   onMount(() => {
@@ -11,10 +13,11 @@
   let paths = ["M21 4H2", "M18 8H6", "M19 12H9", "M16 16h-6", "M11 20H9"];
 
   let mobileMenu = false;
+  $: routeID = $page.url.pathname;
 </script>
 
 <nav
-  class="border-b border-primary/20 sticky top-0 bg-white/40 backdrop-blur-md"
+  class="border-b border-primary/20 sticky top-0 bg-white/40 dark:bg-slate-900 backdrop-blur-md"
 >
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="flex h-14 items-center justify-between">
@@ -42,16 +45,21 @@
             >
           {/if}
         </div>
-        <div class="hidden sm:ml-6 sm:block w-full mt-1.5">
+        <div class="hidden sm:ml-6 sm:block w-full">
           <div class="flex justify-center items-center">
             {#each navs as item}
               <a
                 href={item.link}
-                class="rounded-md px-3 py-2 text-sm overpass-mono"
-                >{item.name}</a
+                class="rounded-md px-3 py-2 text-sm hover:text-primary duration-100 transition-all {routeID ===
+                item.link
+                  ? 'text-primary font-medium'
+                  : 'text-primary/70'}">{item.name}</a
               >
             {/each}
           </div>
+        </div>
+        <div class='hidden sm:block'>
+          <Theme />
         </div>
       </div>
 
@@ -103,13 +111,16 @@
 
   <!-- Mobile menu, show/hide based on menu state. -->
   {#key mobileMenu}
-    <div class="{mobileMenu ? 'flex' : 'hidden'} sm:hidden" id="mobile-menu">
-      <div class="space-y-1 px-2 pb-3 pt-2" transition:slide>
+    <div class="{mobileMenu ? 'flex' : 'hidden'} sm:hidden " id="mobile-menu">
+      <div class="space-y-1 px-2 pb-3 pt-0" transition:slide>
         {#each navs as item}
           <a
             on:click={() => (mobileMenu = false)}
             href={item.link}
-            class="block rounded-md px-3 py-2 text-sm overpass-mono"
+            class="block rounded-md px-3 py-2 text-sm {routeID ===
+                item.link
+                  ? 'text-primary font-medium'
+                  : 'text-primary/70'}"
             >{item.name}</a
           >
         {/each}

@@ -1,24 +1,17 @@
 <script>
-  import Box from "$lib/components/dev/ExamplesRoute/Box.svelte";
-  import {
-    Motion,
-  } from "svelte-motion";
+  import { Motion } from "svelte-motion";
 
-  
   let heading = "Coding";
   let text = heading.split("");
-  
 </script>
 
-<div class="bg-neutral-950 p-4 md:p-8">
+<div class="bg-neutral-950 dark:bg-white/95 p-4 md:p-8">
   <div class="flex items-center justify-center h-56">
-    <Motion initial="initial" 
-    whileHover='whileHover'
-     let:motion>
+    <Motion initial="initial" whileHover="whileHover" let:motion>
       <a
         href="/"
         use:motion
-        class="group relative flex items-center justify-center transition-colors duration-500 "
+        class="group relative flex items-center justify-center transition-colors duration-500"
       >
         <div>
           <Motion
@@ -34,7 +27,7 @@
             let:motion
           >
             <span
-              class="relative z-10 block text-4xl font-bold text-neutral-500 transition-colors duration-500 group-hover:text-neutral-50 md:text-5xl "
+              class="relative z-10 block text-4xl font-bold text-neutral-500 transition-colors duration-500 group-hover:text-neutral-50 dark:group-hover:text-black md:text-5xl"
               use:motion
             >
               {#each text as l (l)}

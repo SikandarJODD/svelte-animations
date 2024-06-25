@@ -51,7 +51,7 @@
   <div
     id="animationElement"
     use:animationElement
-    class="border border-primary flex rounded-lg flex-col items-center"
+    class="border border-primary flex rounded-lg flex-col justify-center items-center"
     style="width: {$width}px; height:{$height}px; border-radius: {$rounded}px;"
   >
     {#if isChanged}
@@ -59,7 +59,7 @@
         <div in:fade={{ duration: 600 }}>
           {#each avatars as { src, alt, fallback, name }}
             <div
-              class="m-1 p-1 hover:bg-gray-200/80 rounded-full border border-primary flex gap-3 items-center justify-between"
+              class="m-1 p-1 hover:bg-primary/10 rounded-full border border-primary flex gap-3 items-center justify-between"
             >
               <Avatar.Root>
                 <Avatar.Image {src} {alt} />

@@ -4,7 +4,7 @@
   let controls = useAnimation();
 </script>
 
-<Box cls="bg-slate-800" minHeight={450}>
+<Box cls="bg-slate-800 text-black" minHeight={450}>
   <div
     class="bg-gray-500/10 h-80  w-80 flex justify-center items-center rounded-xl shadow-md"
   >

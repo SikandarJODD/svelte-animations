@@ -7,7 +7,7 @@
   let rotateY = useTransform(x, [-100, 100], [-60, 60]);
 </script>
 
-<Box cls="bg-slate-800 flex" minHeight={450}>
+<Box cls="bg-slate-800 flex text-black"  minHeight={450}>
   <div class="small_circle">
     <Motion
       let:motion

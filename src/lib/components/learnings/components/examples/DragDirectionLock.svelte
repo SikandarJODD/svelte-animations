@@ -3,7 +3,7 @@
   import { Motion } from "svelte-motion";
 </script>
 
-<Box cls="bg-slate-800 flex" minHeight={450}>
+<Box cls="bg-slate-800 flex text-black" minHeight={450}>
   <Motion
     let:motion
     drag={true}
@@ -67,7 +67,7 @@
       </div>
       <div class='absolute left-1'>
         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left"><path d="m15 18-6-6 6-6"/></svg>
-      </div>
+      </div> Drag
     </div></Motion
   >
 </Box>

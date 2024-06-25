@@ -30,7 +30,7 @@
 
 <div class="flex justify-center items-center h-[70vh] md:h-fit">
   <div
-    class="grid grid-cols-3 place-content-center place-items-center gap-3 *:border *:border-sky-800/50 *:rounded-lg *:p-2 p-4 t w-full h-full md:w-48 md:h-[390px] rounded-lg md:bg-sky-50 border border-sky-500 relative"
+    class="grid grid-cols-3 place-content-center place-items-center gap-3 *:border *:border-sky-800/50 *:rounded-lg *:p-2 p-4 t w-full h-full md:w-48 md:h-[390px] rounded-lg bg-sky-50 border border-sky-500 relative"
   >
     {#each apps as app}
       {#if openApp !== app}
@@ -44,7 +44,7 @@
         </button>
       {:else}
         <div
-          class="app absolute bg-white w-full h-full items-center justify-center flex flex-col gap-2"
+          class="app absolute bg-white text-black w-full h-full items-center justify-center flex flex-col gap-2"
           in:receive={{ key: app }}
           out:send={{ key: app }}
         >

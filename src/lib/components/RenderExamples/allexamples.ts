@@ -6,6 +6,7 @@ import LinkEffect from "./LinkEffect.svelte";
 import ModulDivEffect from "./ModulDivEffect.svelte";
 import RevealLinkRender from "./RevealLinkRender.svelte";
 import ShiftDropEffect from "./ShiftDropEffect.svelte";
+import TextEffect from "./TextEffect.svelte";
 import ShiftingDropDownExample from "./shiftingDropDown/ShiftingDropDownExample.svelte";
 
 export let allExamples = [
@@ -57,5 +58,12 @@ export let allExamples = [
         desc: 'Shifting Dropdown using Svelte Motion',
         component: ShiftDropEffect,
         link: '/examples/7'
-    }
+    },
+    {
+        id: 8,
+        name: 'Text Hover Bounce Effect',
+        desc: 'Text Hover Bounce Effect using Svelte Motion',
+        component: TextEffect,
+        link: '/examples/8'
+    },
 ]

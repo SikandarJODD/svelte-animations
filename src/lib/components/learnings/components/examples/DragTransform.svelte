@@ -7,7 +7,7 @@
   // let borderRadius = useTransform(x, [-150, 0, 150], [50, 50, 100]);
 </script>
 
-<Box cls="bg-slate-800 " minHeight={450}>
+<Box cls="bg-slate-800 text-black" minHeight={450}>
   <Motion
     style={{
       x,

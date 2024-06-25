@@ -20,8 +20,8 @@
   let x = useCycle(0, 100);
 </script>
 
-<Box cls="bg-slate-800">
-  <Motion
+<Box cls="bg-slate-800 text-black" >
+<Motion
     animate={{
       rotate: $rotate,
       scale: $scale,
