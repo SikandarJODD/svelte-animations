@@ -6,6 +6,7 @@ import LinkEffect from "./LinkEffect.svelte";
 import ModulDivEffect from "./ModulDivEffect.svelte";
 import RevealLinkRender from "./RevealLinkRender.svelte";
 import ShiftDropEffect from "./ShiftDropEffect.svelte";
+import SlideTabEffect from "./SlideTabEffect.svelte";
 import TextEffect from "./TextEffect.svelte";
 import ShiftingDropDownExample from "./shiftingDropDown/ShiftingDropDownExample.svelte";
 
@@ -65,5 +66,12 @@ export let allExamples = [
         desc: 'Text Hover Bounce Effect using Svelte Motion',
         component: TextEffect,
         link: '/examples/8'
+    },
+    {
+        id: 9,
+        name: 'Slide Tab',
+        desc: 'Slide Tab Effect using Svelte Motion',
+        component: SlideTabEffect,
+        link: '/examples/9'
     },
 ]

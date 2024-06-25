@@ -12,7 +12,7 @@
     the tabs, the content will shift to the selected tab.
   </Para>
   <Badge variant="outline" class="border-primary mt-1.5">Svelte-Motion</Badge>
-  <div class="mt-2 rounded-xl overflow-hidden">
+  <div class="mt-4">
     <ShiftingDropDownExample />
   </div>
 </div>

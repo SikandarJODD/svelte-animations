@@ -14,7 +14,6 @@
     Ring button is one <span class="text-blue-500/70">only once</span> click
   </Para>
 </div>
-
-<Box>
+<div class='bg-white/95 border mt-4 border-primary'>
   <ExampleEmilKowal />
-</Box>
+</div>

@@ -10,6 +10,6 @@
   <Para>Hover the Link to see the effect</Para>
   <Badge variant="outline" class="border-primary mt-1.5">Svelte-Motion</Badge>
 </div>
-<div class="mt-2 rounded-2xl overflow-hidden">
+<div class="mt-4 ">
   <RevealLinkExample></RevealLinkExample>
 </div>

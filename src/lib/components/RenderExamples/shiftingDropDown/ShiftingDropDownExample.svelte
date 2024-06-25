@@ -55,7 +55,7 @@
   </script>
   
   <div
-    class="flex h-96 w-full justify-start bg-neutral-950 p-8 text-neutral-200 md:justify-center"
+    class="flex h-96 w-full justify-start bg-neutral-950 dark:bg-black/80 p-8 text-neutral-200 md:justify-center"
   >
     <!-- svelte-ignore a11y-no-static-element-interactions -->
     <div

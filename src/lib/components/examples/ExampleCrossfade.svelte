@@ -33,14 +33,14 @@
       </div>
       <div class="mt-2 px-2 flex flex-col">
         <h1
-          class="font-bold text-md md:text-lg heading text-gray-900"
+          class="font-bold text-lg md:text-lg heading text-gray-900"
           in:receive={{ key: "heading" }}
           out:send={{ key: "heading" }}
         >
           Mumbai City
         </h1>
         <p
-          class="text-xs para text-gray-700"
+          class="text-xs sm:text-sm w-52  para text-gray-700"
           in:receive={{ key: "para" }}
           out:send={{ key: "para" }}
         >
@@ -55,7 +55,7 @@
       on:click={() => {
         layout = "layouta";
       }}
-      class="bg-lime-100 p-2.5 md:p-4 rounded-3xl layouta flex gap-1 md:gap-4 w-fit h-fit overflow-hidden"
+      class="bg-lime-100 p-2.5 md:p-4 rounded-3xl layouta flex gap-1 md:gap-3 w-fit h-fit overflow-hidden"
       in:receive={{ key: "layouta" }}
       out:send={{ key: "layouta" }}
     >
@@ -72,14 +72,14 @@
       </div>
       <div class="mt-2 px-1 md:px-2 flex flex-col">
         <h1
-          class="font-bold text-sm md:text-2xl heading text-gray-900"
+          class="font-bold text-lg md:text-2xl heading text-gray-900"
           in:receive={{ key: "heading" }}
           out:send={{ key: "heading" }}
         >
           Mumbai City
         </h1>
         <p
-          class=" sm:text-md w-full para text-gray-700"
+          class="text-xs md:text-sm w-full para text-gray-700"
           in:receive={{ key: "para" }}
           out:send={{ key: "para" }}
         >
@@ -92,9 +92,6 @@
 
 <style>
   .layouta {
-    position: absolute;
-  }
-  .layoutb {
     position: absolute;
   }
 </style>

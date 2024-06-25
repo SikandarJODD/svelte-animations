@@ -8,6 +8,6 @@
   <HeadingOne>Text Hover Bounce Effect</HeadingOne>
   <Para>Hover text to see the effect. Inspired from Hover.dev</Para>
 </div>
-<div class='mt-4 rounded-xl overflow-hidden'> 
+<div class='mt-4 '> 
   <ExampleTextHoverBounceEffect></ExampleTextHoverBounceEffect>
 </div>
