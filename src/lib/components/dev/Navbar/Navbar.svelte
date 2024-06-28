@@ -18,7 +18,7 @@
 </script>
 
 <nav
-  class="border-b border-primary/20 sticky top-0 bg-white/40 dark:bg-slate-900 backdrop-blur-md"
+  class="border-b border-primary/20 sticky top-0 bg-white/40 dark:bg-black/[0.96]  backdrop-blur-md"
 >
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="flex h-14 items-center justify-between">

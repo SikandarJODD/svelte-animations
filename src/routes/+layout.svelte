@@ -15,7 +15,7 @@
 {#if pageWidth > 1023 && routeID[1] === "examples"}
   <Navbar />
 {:else if routeID[1] === ""}
-  <Navbar />
+  <!-- <Navbar /> -->
 {/if}
 <div>
   <slot />
