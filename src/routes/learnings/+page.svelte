@@ -1,8 +1,8 @@
 <script>
-  import { allLearning } from "$lib/components/learnings/components/page/allLearning";
-  import Para from "$lib/components/dev/ExamplesRoute/tags/Para.svelte";
-  import HeadingOne from "$lib/components/dev/ExamplesRoute/tags/HeadingOne.svelte";
-  import ShowCard from "$lib/components/learnings/layouts/ShowCard.svelte";
+  import HeadingOne from "$lib/components/dev/tags/HeadingOne.svelte";
+  import Para from "$lib/components/dev/tags/Para.svelte";
+  import { motionLearnings } from "$lib/framer-motion/MotionsLearnings";
+  import ShowCard from "$lib/framer-motion/layouts/ShowCard.svelte";
 </script>
 
 <svelte:head>
@@ -45,7 +45,7 @@
     > which is a port of Framer Motion for Svelte.
   </Para>
   <div class='flex justify-center items-center flex-wrap gap-6 mt-10'>
-    {#each allLearning as item}
+    {#each motionLearnings as item}
       <ShowCard {item} />
     {/each}
   </div>

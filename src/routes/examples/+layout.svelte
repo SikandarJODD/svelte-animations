@@ -1,8 +1,8 @@
 <script>
-  import { allExamples } from "$lib/components/RenderExamples/allexamples";
-  import SideNav from "$lib/components/dev/ExamplesRoute/SideNav.svelte";
+  import SideNav from "$lib/components/dev/tags/SideNav.svelte";
+  import { animationExamples } from "$lib/examples/AnimationsExamples";
 </script>
 
-<SideNav examplesList={allExamples}>
+<SideNav examplesList={animationExamples}>
   <slot></slot>
 </SideNav>

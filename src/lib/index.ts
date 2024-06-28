@@ -13,4 +13,8 @@ export let navs = [
         name: "Framer Motion",
         link: "/learnings",
     },
+    {
+        name: "Luxe",
+        link: '/luxe'
+    }
 ];

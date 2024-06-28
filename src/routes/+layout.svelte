@@ -1,4 +1,5 @@
 <script>
+	import { onMount } from 'svelte';
   import { page } from "$app/stores";
   import Navbar from "$lib/components/dev/Navbar/Navbar.svelte";
   import "../app.css";
@@ -6,6 +7,7 @@
   import { ModeWatcher } from "mode-watcher";
   $: routeID = $page.url.pathname.split("/");
   let pageWidth = 0;
+ 
 </script>
 
 <svelte:window bind:innerWidth={pageWidth} />

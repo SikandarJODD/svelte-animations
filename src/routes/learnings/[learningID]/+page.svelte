@@ -1,12 +1,11 @@
 <script>
   import { page } from "$app/stores";
-  import { allExamples } from "$lib/components/RenderExamples/allexamples";
-  import HeadingOne from "$lib/components/dev/ExamplesRoute/tags/HeadingOne.svelte";
-  import Para from "$lib/components/dev/ExamplesRoute/tags/Para.svelte";
-  import { allLearning } from "$lib/components/learnings/components/page/allLearning";
+  import HeadingOne from "$lib/components/dev/tags/HeadingOne.svelte";
+  import Para from "$lib/components/dev/tags/Para.svelte";
+  import { motionLearnings } from "$lib/framer-motion/MotionsLearnings";
 
   $: exampleID = $page.params.learningID;
-  $: singlePage = allLearning.filter(
+  $: singlePage = motionLearnings.filter(
     (example) => example.id === Number(exampleID)
   )[0];
 </script>

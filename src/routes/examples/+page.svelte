@@ -1,6 +1,6 @@
 <script>
-  import HeadingOne from "$lib/components/dev/ExamplesRoute/tags/HeadingOne.svelte";
-  import Para from "$lib/components/dev/ExamplesRoute/tags/Para.svelte";
+  import HeadingOne from "$lib/components/dev/tags/HeadingOne.svelte";
+  import Para from "$lib/components/dev/tags/Para.svelte";
 </script>
 
 <svelte:head>

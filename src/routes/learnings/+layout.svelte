@@ -1,8 +1,8 @@
 <script>
-  import SideNav from "$lib/components/dev/ExamplesRoute/SideNav.svelte";
-  import { allLearning } from "$lib/components/learnings/components/page/allLearning";
+	import { motionLearnings } from '$lib/framer-motion/MotionsLearnings';
   import { page } from "$app/stores";
   import Navbar from "$lib/components/dev/Navbar/Navbar.svelte";
+  import SideNav from "$lib/components/dev/tags/SideNav.svelte";
   $: routeID = $page.url.pathname.split("/");
   $: console.log(routeID);
   let pageWidth = 0;
@@ -14,6 +14,6 @@
   <Navbar />
 {/if}
 
-<SideNav examplesList={allLearning}>
+<SideNav examplesList={motionLearnings}>
   <slot></slot>
 </SideNav>
