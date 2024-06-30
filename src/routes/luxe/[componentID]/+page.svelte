@@ -16,7 +16,7 @@
       .join("") + ".svelte";
 </script>
 
-<div class="my-14 mx-5">
+<div class="my-0 md:my-14 mx-2 md:mx-5">
   <a href='/luxe' class="flex items-center gap-1 text-muted-foreground">
     <svg
       xmlns="http://www.w3.org/2000/svg"

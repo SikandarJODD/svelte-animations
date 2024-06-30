@@ -53,7 +53,7 @@
     <div
       class="{mobileMenu
         ? '-translate-x-full'
-        : 'translate-x-0'} transition-opacity ease-linear duration-300 fixed inset-0 bg-gray-900/80"
+        : 'translate-x-0'} transition-opacity ease-linear duration-300 fixed inset-0 dark:bg-background"
     ></div>
 
     <div
@@ -95,9 +95,7 @@
         </div>
 
         <!-- Sidebar component, swap this element with another sidebar if you like -->
-        <div
-          class="flex grow flex-col overflow-y-auto dark:bg-slate-900 bg-white px-6 m-0 p-0"
-        >
+        <div class="flex grow flex-col overflow-y-auto px-6 m-0 p-0">
           <div
             class="flex h-16 shrink-0 items-center border-b border-primary/50"
           >
@@ -133,23 +131,30 @@
                 {/each}
               </div>
             {/key}
-            <ul role="list" class="flex flex-1 flex-col gap-y-7">
+            <ul role="list" class="flex flex-1 flex-col gap-y-7 mt-4">
               <li>
                 <ul role="list" class="-mx-2">
-                  {#each examplesList as item}
-                    <li>
-                      <a
-                        on:click={() => {
-                          mobileMenu = !mobileMenu;
-                        }}
-                        href={item.link}
-                        class="group {item.link === routeID
-                          ? 'text-primary'
-                          : 'text-primary/60'} flex gap-x-3 rounded-md p-2 text-sm leading-6"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
+                  {#each componentsNav as cnavs}
+                    <div class='mb-4'>
+                      <div class='font-medium'>
+                        {cnavs.heading}
+                      </div>
+                      {#each cnavs.sub as item}
+                        <li>
+                          <a
+                            on:click={() => {
+                              mobileMenu = !mobileMenu;
+                            }}
+                            href={item.link}
+                            class="group {item.link === routeID
+                              ? 'text-primary'
+                              : 'text-primary/60'} flex gap-x-3 rounded-md p-2 text-sm leading-6"
+                          >
+                            {item.name}
+                          </a>
+                        </li>
+                      {/each}
+                    </div>
                   {/each}
                 </ul>
               </li>
@@ -171,7 +176,7 @@
         class="flex grow flex-col gap-y-0 overflow-y-auto dark:border-primary/40 dark:bg-background bg-white px-6"
       >
         <nav class="flex flex-1 flex-col mt-2 mb-32">
-          <a href='/' class="font-bold text-xl mx-1 my-3">Svelte Animations</a>
+          <a href="/" class="font-bold text-xl mx-1 my-3">Svelte Animations</a>
           <ul role="list" class="flex flex-1 flex-col">
             {#each componentsNav as item}
               <li>
@@ -189,7 +194,7 @@
                         href={subItem.link}
                         class="group {subItem.link == routeID
                           ? 'text-primary bg-neutral-900 border-border font-medium'
-                          : 'text-primary/60 '} capitalize  flex gap-x-3 p-2 text-sm leading-6 select-none px-3 py-1.5 mb-0.5 border border-transparent rounded-sm hover:bg-neutral-900 transition-all duration-300"
+                          : 'text-primary/60 '} capitalize flex gap-x-3 p-2 text-sm leading-6 select-none px-3 py-1.5 mb-0.5 border border-transparent rounded-sm hover:bg-neutral-900 transition-all duration-300"
                       >
                         {subItem.name}
                       </a>
@@ -205,7 +210,7 @@
   {/if}
 
   <div
-    class="sticky top-0 z-40 flex items-center gap-x-6 dark:bg-slate-900 bg-white backdrop-blur-md px-4 py-4 shadow-sm sm:px-6 lg:hidden"
+    class="sticky top-0 z-40 flex items-center gap-x-6 dark:bg-background border-b bg-white backdrop-blur-md px-4 py-4 shadow-sm sm:px-6 lg:hidden"
   >
     <button
       on:click={() => (mobileMenu = !mobileMenu)}
