@@ -171,7 +171,7 @@
         class="flex grow flex-col gap-y-0 overflow-y-auto dark:border-primary/40 dark:bg-background bg-white px-6"
       >
         <nav class="flex flex-1 flex-col mt-2 mb-32">
-          <div class="font-bold text-xl mx-1 my-3">Svelte Animations</div>
+          <a href='/' class="font-bold text-xl mx-1 my-3">Svelte Animations</a>
           <ul role="list" class="flex flex-1 flex-col">
             {#each componentsNav as item}
               <li>

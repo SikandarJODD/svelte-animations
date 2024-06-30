@@ -5,6 +5,7 @@
   let background = useMotionTemplate`radial-gradient(200px circle at ${mouseX}px ${mouseY}px, rgba(51, 51, 51, 0.4), transparent 80%)`;
 </script>
 
+<!-- svelte-ignore a11y-no-static-element-interactions -->
 <div
   on:mousemove={(e) => {
     const { left, top } = e.currentTarget.getBoundingClientRect();
@@ -32,6 +33,7 @@
     class="relative flex flex-col gap-3 rounded-xl border border-white/10 px-4 py-5"
   >
     <div class="space-y-2">
+      <!-- svelte-ignore a11y-img-redundant-alt -->
       <img
         src="https://i.pinimg.com/564x/c3/5c/30/c35c30d5bb21d2392c3daa0abd8a5440.jpg"
         alt="Product image"

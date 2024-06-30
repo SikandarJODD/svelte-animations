@@ -76,3 +76,9 @@
     @apply bg-background text-foreground;
   }
 }
+.shiki {
+  background-color: transparent !important;
+}
+.shiki::-webkit-scrollbar {
+  @apply w-1;
+}
