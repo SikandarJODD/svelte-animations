@@ -150,7 +150,7 @@
     >
       <!-- Sidebar component, swap this element with another sidebar if you like -->
       <div
-        class="flex grow flex-col gap-y-0 overflow-y-auto border-r border-gray-300 dark:border-primary/40 dark:bg-slate-950/90 bg-white px-6"
+        class="flex grow flex-col gap-y-0 overflow-y-auto border-r border-gray-300 dark:border-primary/40 {routeID==='/learnings'? 'dark:bg-slate-950/90':'dark:bg-background'} bg-white px-6"
       >
         <a href="/" class="mt-16 mb-0 font-semibold text-xl"
           >Svelte Animations</a
@@ -226,7 +226,7 @@
     </div>
   </div>
 
-  <main class="py-6 lg:pl-60 dark:bg-[#020817] min-h-screen">
+  <main class="py-6 lg:pl-60 {routeID==='/learnings'? 'dark:bg-slate-950':'dark:bg-background'}  min-h-screen">
     <div class="px-4 sm:px-6 lg:px-8">
       <slot></slot>
     </div>

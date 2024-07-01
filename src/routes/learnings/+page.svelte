@@ -34,7 +34,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" content="@Sikandar_Bhide" />
 </svelte:head>
-<div>
+<div >
   <div class="px-10 mt-8">
     <HeadingOne>Framer Motion using Svelte</HeadingOne>
     <Para>

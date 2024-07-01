@@ -227,7 +227,7 @@
     </div>
   </div>
 
-  <main class="py-6 lg:pl-60">
+  <main class="py-6 lg:pl-60 dark:bg-background min-h-screen">
     <div class="px-4 sm:px-6 lg:px-8">
       <slot></slot>
     </div>
