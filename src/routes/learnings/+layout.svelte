@@ -7,12 +7,12 @@
   $: console.log(routeID);
   let pageWidth = 0;
 </script>
-<svelte:window bind:innerWidth={pageWidth} />
-{#if pageWidth > 1023 && routeID[1] === "learnings"}
+<!-- <svelte:window bind:innerWidth={pageWidth} /> -->
+<!-- {#if pageWidth > 1023 && routeID[1] === "learnings"}
   <Navbar />
 {:else if routeID[1] === ""}
   <Navbar />
-{/if}
+{/if} -->
 
 <SideNav examplesList={motionLearnings}>
   <slot></slot>

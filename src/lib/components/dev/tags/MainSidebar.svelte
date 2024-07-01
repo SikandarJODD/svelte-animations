@@ -1,17 +1,24 @@
 <script>
   import { page } from "$app/stores";
   import { navs } from "$lib";
+  import { animationExamples } from "$lib/examples/AnimationsExamples";
   import { onMount } from "svelte";
-  import { blur, fade, scale, slide } from "svelte/transition";
-
-  export let examplesList = [
+  import { blur, slide } from "svelte/transition";
+  export let componentsNav = [
     {
-      name: "Div Hover",
-      link: "/examples/1",
+      id: 1,
+      heading: "Getting Started",
+      sub: [
+        {
+          name: "Browse Components",
+          link: "/examples",
+        },
+      ],
     },
     {
-      name: "Example 2",
-      link: "/examples/2",
+      id: 2,
+      heading: "Components",
+      sub: animationExamples,
     },
   ];
 
@@ -35,15 +42,15 @@
     <div
       class="{mobileMenu
         ? '-translate-x-full'
-        : 'translate-x-0'} transition-opacity ease-linear duration-300 fixed inset-0 bg-gray-900/80"
+        : 'translate-x-0'} transition-opacity ease-linear duration-300 fixed inset-0 dark:bg-background"
     ></div>
 
     <div
       class="{mobileMenu
         ? '-translate-x-full'
         : 'translate-x-0'} fixed inset-0 flex
-      transition ease-in-out duration-300 transform
-      "
+        transition ease-in-out duration-300 transform
+        "
     >
       <div
         class="{mobileMenu
@@ -77,9 +84,7 @@
         </div>
 
         <!-- Sidebar component, swap this element with another sidebar if you like -->
-        <div
-          class="flex grow flex-col overflow-y-auto dark:bg-slate-900 bg-white px-6 m-0 p-0"
-        >
+        <div class="flex grow flex-col overflow-y-auto px-6 m-0 p-0">
           <div
             class="flex h-16 shrink-0 items-center border-b border-primary/50"
           >
@@ -115,23 +120,30 @@
                 {/each}
               </div>
             {/key}
-            <ul role="list" class="flex flex-1 flex-col gap-y-7">
+            <ul role="list" class="flex flex-1 flex-col gap-y-7 mt-4">
               <li>
                 <ul role="list" class="-mx-2">
-                  {#each examplesList as item}
-                    <li>
-                      <a
-                        on:click={() => {
-                          mobileMenu = !mobileMenu;
-                        }}
-                        href={item.link}
-                        class="group {item.link === routeID
-                          ? 'text-primary'
-                          : 'text-primary/60'} flex gap-x-3 rounded-md p-2 text-sm leading-6"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
+                  {#each componentsNav as cnavs}
+                    <div class="mb-4">
+                      <div class="font-medium">
+                        {cnavs.heading}
+                      </div>
+                      {#each cnavs.sub as item}
+                        <li>
+                          <a
+                            on:click={() => {
+                              mobileMenu = !mobileMenu;
+                            }}
+                            href={item.link}
+                            class="group {item.link === routeID
+                              ? 'text-primary'
+                              : 'text-primary/60'} flex gap-x-3 rounded-md p-2 text-sm leading-6"
+                          >
+                            {item.name}
+                          </a>
+                        </li>
+                      {/each}
+                    </div>
                   {/each}
                 </ul>
               </li>
@@ -146,51 +158,40 @@
   <!-- Static sidebar for desktop -->
   {#if isLoading}
     <div
-      class="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-60 lg:flex-col mt-0"
+      class="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-64 lg:flex-col mt-10"
     >
       <!-- Sidebar component, swap this element with another sidebar if you like -->
       <div
-        class="flex grow flex-col gap-y-0 overflow-y-auto border-r border-gray-300 dark:border-primary/40 dark:bg-slate-950/90 bg-white px-6"
+        class="flex grow flex-col gap-y-0 overflow-y-auto dark:border-primary/40 dark:bg-background bg-white px-6"
       >
-        <a href="/" class="mt-16 mb-0 font-semibold text-xl"
-          >Svelte Animations</a
-        >
-        <nav class="flex flex-1 flex-col mt-2">
+        <nav class="flex flex-1 flex-col mt-2 mb-32">
+          <a href="/" class="font-bold text-xl mx-1 my-3">Svelte Animations</a>
           <ul role="list" class="flex flex-1 flex-col">
-            <li>
-              <ul role="list" class="-mx-3">
-                {#each examplesList as item}
-                  <a
-                    href={item.link}
-                    class="flex justify-between items-center transition-all duration-150 hover:text-primary px-2 rounded-md group hover:bg-gray-800/50"
-                  >
+            {#each componentsNav as item}
+              <li>
+                <ul role="list" class="">
+                  <li class="mt-4">
                     <div
-                      class="group flex {item.link == routeID
-                        ? 'text-primary  font-medium'
-                        : 'text-primary/60 font-thin '}  transition-all duration-150 rounded-md p-2 text-md group-hover:text-primary"
+                      class="text-primary/95 font-semibold text-md leading-6 p-2"
                     >
-                      {item.name}
+                      {item.heading}
                     </div>
-                    {#if item.link == routeID}
-                      <svg
-                        in:blur
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="12"
-                        height="12"
-                        viewBox="0 0 24 24"
-                        fill="#A5FAC7"
-                        stroke="#525252"
-                        stroke-width="1.4"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="lucide lucide-circle"
-                        ><circle cx="12" cy="12" r="10" /></svg
+                  </li>
+                  {#each item.sub as subItem}
+                    <li>
+                      <a
+                        href={subItem.link}
+                        class="group {subItem.link == routeID
+                          ? 'text-primary bg-neutral-900 border-border font-medium'
+                          : 'text-primary/60 '} capitalize flex gap-x-3 p-2 text-sm leading-6 select-none px-3 py-1.5 mb-0.5 border border-transparent rounded-sm hover:bg-neutral-900 transition-all duration-300"
                       >
-                    {/if}
-                  </a>
-                {/each}
-              </ul>
-            </li>
+                        {subItem.name}
+                      </a>
+                    </li>
+                  {/each}
+                </ul>
+              </li>
+            {/each}
           </ul>
         </nav>
       </div>
@@ -198,7 +199,7 @@
   {/if}
 
   <div
-    class="sticky top-0 z-40 flex items-center gap-x-6 dark:bg-slate-900 bg-white backdrop-blur-md px-4 py-4 shadow-sm sm:px-6 lg:hidden"
+    class="sticky top-0 z-40 flex items-center gap-x-6 dark:bg-background border-b bg-white backdrop-blur-md px-4 py-4 shadow-sm sm:px-6 lg:hidden"
   >
     <button
       on:click={() => (mobileMenu = !mobileMenu)}
@@ -226,7 +227,7 @@
     </div>
   </div>
 
-  <main class="py-6 lg:pl-60 dark:bg-[#020817] min-h-screen">
+  <main class="py-6 lg:pl-60">
     <div class="px-4 sm:px-6 lg:px-8">
       <slot></slot>
     </div>

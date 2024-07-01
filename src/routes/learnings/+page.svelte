@@ -35,16 +35,18 @@
   <meta name="twitter:creator" content="@Sikandar_Bhide" />
 </svelte:head>
 <div>
-  <HeadingOne>Framer Motion using Svelte</HeadingOne>
-  <Para>
-    Framer Motion is a production-ready motion library for React. we are going
-    to use <a
-      href="https://svelte-motion.gradientdescent.de"
-      target="_blank"
-      class="text-primary underline underline-offset-2">Svelte-Motion</a
-    > which is a port of Framer Motion for Svelte.
-  </Para>
-  <div class='flex justify-center items-center flex-wrap gap-6 mt-10'>
+  <div class="px-10 mt-8">
+    <HeadingOne>Framer Motion using Svelte</HeadingOne>
+    <Para>
+      Framer Motion is a production-ready motion library for React. we are going
+      to use <a
+        href="https://svelte-motion.gradientdescent.de"
+        target="_blank"
+        class="text-primary underline underline-offset-2">Svelte-Motion</a
+      > which is a port of Framer Motion for Svelte.
+    </Para>
+  </div>
+  <div class="flex justify-center items-center flex-wrap gap-6 mt-5">
     {#each motionLearnings as item}
       <ShowCard {item} />
     {/each}

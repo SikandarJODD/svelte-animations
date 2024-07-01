@@ -61,7 +61,9 @@
   };
 </script>
 
-<div class="flex justify-center items-center min-h-[300px] flex-col">
+<div
+  class="flex justify-center items-center min-h-[300px] flex-col bg-gray-100 w-full"
+>
   <div class="min-h-60 flex justify-center items-center">
     <div
       class="bg-black"
@@ -155,19 +157,19 @@
   </div>
   <div class="flex justify-center items-center gap-4">
     <Button
-      class="rounded-full border-fuchsia-400 dark:bg-transparent dark:text-black "
-      variant="outline"
+      class="rounded-full outline-none  border border-black"
+      
       on:click={originalSize}>Idle</Button
     >
     <Button
-      class="rounded-full border-fuchsia-400 dark:bg-transparent dark:text-black "
-      variant="outline"
+      class="rounded-full  outline-none border border-black"
+      
       on:click|once={clickEffect}>Ring</Button
     >
     <Button
       on:click={timerSize}
-      class="rounded-full border-fuchsia-400  dark:bg-transparent dark:text-black"
-      variant="outline">Timer</Button
+      class="rounded-full  outline-none border border-black"
+      >Timer</Button
     >
   </div>
 </div>

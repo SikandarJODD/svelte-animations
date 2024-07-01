@@ -3,6 +3,7 @@
   import DotBackground from "$lib/components/ui/GridDotBg/DotBackground.svelte";
   import GridAndDotBg from "$lib/components/ui/GridDotBg/GridAndDotBg.svelte";
   import Spotlight from "$lib/components/ui/spotlight/Spotlight.svelte";
+  import ButtonAnimatedBorder from "$lib/luxe/buttons/ButtonAnimatedBorder.svelte";
 </script>
 
 <DotBackground>
@@ -14,23 +15,25 @@
       <h2
         class="bg-opacity-50 bg-gradient-to-r from-neutral-100 via-neutral-200 to-neutral-500 bg-clip-text text-center text-4xl font-bold text-transparent md:text-7xl"
       >
-        Svelte Animations
+        Svelte Tailwind Components
       </h2>
       <p
-        class="mx-auto mt-4 max-w-lg text-center text-base font-normal text-neutral-300"
+        class="mx-auto mt-4 max-w-lg text-center text-base md:text-lg font-normal text-neutral-300"
       >
-        Simple Svelte animations for your projects build using Spring, Tweened,
-        and <a
+        Components are build using Tailwind CSS,Tweened, Spring and <a
           href="https://svelte-motion.gradientdescent.de"
-          class="underline underline-offset-2">Svelte Motion</a
+          class=" text-teal-300">Svelte Motion</a
         >
       </p>
       <div class="flex justify-center items-center mt-6 gap-3 flex-wrap">
-        <Button href="/examples" size="sm">Components</Button>
-        <Button href="/learnings" size="sm">Framer Motion</Button>
+        <Button href="/examples">Components</Button>
+        <Button href="/learnings">Framer Motion</Button>
       </div>
-      <div class="flex justify-center items-center mt-2 flex-wrap">
-        <Button href='/luxe' size="sm" variant='secondary'>Luxe Components</Button>
+      <div class="flex justify-center items-center mt-4 flex-wrap">
+        <ButtonAnimatedBorder href="/luxe">Luxe Component</ButtonAnimatedBorder>
+        <!-- <Button href="/luxe"  variant="secondary"
+          >Luxe Components</Button
+        > -->
       </div>
     </div>
   </div>

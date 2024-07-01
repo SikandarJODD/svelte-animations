@@ -3,6 +3,7 @@
 
 </script>
 
+
 <LuxeSidebar>
     <slot></slot>
 </LuxeSidebar>

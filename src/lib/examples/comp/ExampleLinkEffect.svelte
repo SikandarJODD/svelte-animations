@@ -20,21 +20,21 @@
   };
 </script>
 
-<div class="relative w-full flex justify-center items-center">
+<div class="relative w-full flex justify-center items-center z-50">
   {#if isHover}
     <img
       in:blur={{duration:300}}
       style="position:absolute;  bottom:40px;"
       src={hrefDetails.imgSrc}
       alt={hrefDetails.imgAlt}
-      class="h-44 w-44 rounded-lg shadow-lg"
+      class="h-44 w-44 rounded-lg shadow-lg z-50"
     />
   {/if}
   <a
     use:linkEffect
     href={hrefDetails.href}
     target="_blank"
-    class="text-md underline cursor-pointer"
+    class="text-md underline cursor-pointer z-50"
   >
     {hrefDetails.text}
   </a>

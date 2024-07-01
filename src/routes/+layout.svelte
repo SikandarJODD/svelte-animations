@@ -12,11 +12,11 @@
 
 <svelte:window bind:innerWidth={pageWidth} />
 <ModeWatcher />
-{#if pageWidth > 1023 && routeID[1] === "examples"}
+<!-- {#if pageWidth > 1023 && routeID[1] === "examples"}
   <Navbar />
 {:else if routeID[1] === ""}
-  <!-- <Navbar /> -->
-{/if}
+  <Navbar />
+{/if} -->
 <div>
   <slot />
 </div>
