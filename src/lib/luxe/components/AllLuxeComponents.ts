@@ -21,7 +21,7 @@ import TextGlitch from "../text/TextGlitch.svelte";
 import TextGradient from "../text/TextGradient.svelte";
 import TextShake from "../text/TextShake.svelte";
 import TextShine from "../text/TextShine.svelte";
-
+import DockMenu from "../dock/DockMenu.svelte";
 
 type LuxeComponent = {
   id: string;
@@ -31,7 +31,20 @@ type LuxeComponent = {
   link: any | string;
   code: string;
 }
+
 export let allLuxeComponents: LuxeComponent[] = [
+  {
+    id: 'dock-menu',
+    name: 'Dock Menu',
+    description: 'An animated border badge',
+    component: DockMenu,
+    link: "/luxe/dock-menu",
+    code: `${(await import('../dock/DockMenu.svelte?raw')).default}
+
+<!-- Dock Item Component -->    
+${(await import('../dock/DockItem.svelte?raw')).default}
+    `
+  },
   {
     id: 'badge-animated-border',
     name: 'Badge Animated Border',

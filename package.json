@@ -36,6 +36,7 @@
 		"@tailwindcss/aspect-ratio": "^0.4.2",
 		"bits-ui": "^0.21.10",
 		"clsx": "^2.1.1",
+		"lucide-svelte": "^0.399.0",
 		"mini-svg-data-uri": "^1.4.4",
 		"mode-watcher": "^0.3.1",
 		"shiki": "^1.10.0",
