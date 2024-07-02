@@ -24,6 +24,10 @@
           name: "Browse Components",
           link: "/luxe",
         },
+        {
+          name: "Usage & Installation",
+          link: "/luxe/usage",
+        },
       ],
     },
     {

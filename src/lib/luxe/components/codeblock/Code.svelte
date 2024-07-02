@@ -4,10 +4,11 @@
   import { fade, slide } from "svelte/transition";
 
   export let code = "";
+  export let lang = "svelte";
   let htmlCode: any = "Loading...";
   onMount(async () => {
     htmlCode = await codeToHtml(code, {
-      lang: "svelte",
+      lang: `${lang}`,
       theme: "vesper",
     });
   });
