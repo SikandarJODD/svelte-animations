@@ -29,8 +29,20 @@ type LuxeComponent = {
   description: string;
   component: any;
   link: any | string;
-  code: string;
+  code: string | Code[];
 }
+type Code = {
+  filename: string;
+  code: string
+}
+/*
+${(await import('../dock/DockMenu.svelte?raw')).default}
+
+<!-- Dock Item Component -->    
+${(await import('../dock/DockItem.svelte?raw')).default}
+    
+ */
+
 
 export let allLuxeComponents: LuxeComponent[] = [
   {
@@ -39,11 +51,142 @@ export let allLuxeComponents: LuxeComponent[] = [
     description: 'An animated border badge',
     component: DockMenu,
     link: "/luxe/dock-menu",
-    code: `${(await import('../dock/DockMenu.svelte?raw')).default}
+    code: [{
+      filename: 'DockMenu.svelte',
+      code: `<script lang="ts">
+  import { Motion, useMotionValue } from "svelte-motion";
+  import { cn } from "$lib/utils";
+  import DockItem from "./DockItem.svelte";
+  import { AlbumIcon, HomeIcon, MonitorIcon } from "lucide-svelte";
 
-<!-- Dock Item Component -->    
-${(await import('../dock/DockItem.svelte?raw')).default}
-    `
+  type DockItem = {
+    id: string;
+    icon?: {
+      component: any;
+      props?: Record<string, any>;
+    };
+  };
+
+  const icons: Record<string, DockItem["icon"]> = {
+    homeIcon: {
+      component: HomeIcon,
+      props: {
+        size: 32,
+      },
+    },
+    albumIcon: {
+      component: AlbumIcon,
+      props: {
+        size: 32,
+      },
+    },
+    monitorIcon: {
+      component: MonitorIcon,
+      props: {
+        size: 32,
+      },
+    },
+  };
+
+  export let side: "top" | "bottom" = "bottom";
+  export let className: string;
+  export { className as class };
+  export const items: DockItem[] = [
+    { id: "1", icon: icons["homeIcon"] },
+    { id: "2", icon: icons["albumIcon"] },
+    { id: "3", icon: icons["monitorIcon"] },
+  ];
+
+  const mouseX = useMotionValue(Infinity);
+  const containerX = useMotionValue(0);
+  $: console.log(containerX, mouseX, "Moving");
+
+  let containerRef: HTMLDivElement;
+</script>
+
+<div
+  class={cn(side === "top" ? "top-4" : "bottom-4", className)}
+  {...$$restProps}
+>
+  <Motion let:motion>
+    <!-- svelte-ignore a11y-no-static-element-interactions -->
+    <div
+      use:motion
+      bind:this={containerRef}
+      class="h-16 items-end gap-4 rounded-full bg-neutral-950 border border-neutral-800 px-3 pb-2 flex shadow-inner shadow-neutral-300/5"
+      on:mouseleave={() => mouseX.set(Infinity)}
+      on:mousemove={(e) => {
+        const rect = containerRef.getBoundingClientRect();
+        console.log("rect value", rect, e);
+        if (rect) {
+          mouseX.set(e.clientX - rect.left);
+          containerX.set(rect.x);
+        }
+      }}
+    >
+      {#each items as dockItem}
+        <!-- Scroll to View DockItem Code  -->
+        <DockItem {containerX} {mouseX}>
+          {#if dockItem?.icon}
+            <svelte:component
+              this={dockItem.icon.component}
+              {...dockItem.icon.props}
+            />
+          {/if}
+        </DockItem>
+      {/each}
+    </div>
+  </Motion>
+</div>
+`
+    },{
+      filename:'DockItem.svelte',
+      code:`<script lang="ts">
+  import { useSpring, useTransform, Motion } from "svelte-motion";
+  import type { MotionValue } from "svelte-motion";
+
+  export let containerX: MotionValue<number>;
+  export let mouseX: MotionValue<number>;
+
+  let dockItem: HTMLDivElement;
+
+  let distance = useTransform(mouseX, (val) => {
+    const bounds = dockItem?.getBoundingClientRect() ?? {
+      x: 0,
+      width: 0,
+      left: 0,
+    };
+
+    const XDiffToContainerX = bounds?.x - containerX.get();
+
+    return val - bounds?.width / 2 - XDiffToContainerX;
+  });
+  let widthSync = useTransform(distance, [-125, 0, 125], [44, 85, 44]);
+    //   Adjust stiffness and damping as per needs 
+  let width = useSpring(widthSync, { stiffness: 400, damping: 25 });
+</script>
+
+<Motion
+  let:motion
+  style={{ width: width }}
+  transition={{
+    bounceDamping: 300,
+    bounceStiffness: 800,
+    bounce: 0.3,
+    duration: 0.8,
+  }}
+>
+  <div
+    role="button"
+    bind:this={dockItem}
+    use:motion
+    class="group p-2 flex aspect-square items-center justify-center overflow-hidden rounded-full transition active:-translate-y-10 bg-neutral-950 border-neutral-800 border shadow-inner shadow-neutral-300/20 active:duration-1000 active:ease-out text-neutral-400 hover:text-white duration-500"
+  >
+    <slot />
+  </div>
+</Motion>
+`
+    }]
   },
   {
     id: 'badge-animated-border',
@@ -67,7 +210,7 @@ ${(await import('../dock/DockItem.svelte?raw')).default}
   },
   {
     id: 'badge-background-shine',
-    name: 'Badge background shine',
+    name: 'Badge Background Shine',
     description: 'A badge with a background shine effect',
     component: BadgeBackgroundShine,
     link: "/luxe/badge-background-shine",
@@ -80,7 +223,7 @@ ${(await import('../dock/DockItem.svelte?raw')).default}
   },
   {
     id: 'badge-rotate-shine',
-    name: 'Badge rotate shine',
+    name: 'Badge Rotate Shine',
     description: 'A badge with a rotate shine effect',
     component: BadgeRotateBorder,
     link: "/luxe/badge-rotate-shine",
@@ -119,7 +262,7 @@ ${(await import('../dock/DockItem.svelte?raw')).default}
   },
   {
     id: 'button-background-shine',
-    name: 'Button background shine',
+    name: 'Button Background Shine',
     description: 'A button with a background shine effect',
     component: ButtonBackgroundShine,
     link: "/luxe/button-background-shine",
@@ -132,7 +275,7 @@ ${(await import('../dock/DockItem.svelte?raw')).default}
   },
   {
     id: 'button-destructive',
-    name: 'Button destructive',
+    name: 'Button Destructive',
     description: 'A button with a destructive style',
     component: ButtonDestructive,
     link: "/luxe/button-destructive",
@@ -145,7 +288,7 @@ ${(await import('../dock/DockItem.svelte?raw')).default}
   },
   {
     id: 'button-loading',
-    name: 'Button loading',
+    name: 'Button Loading',
     description: 'A button with a loading state',
     component: ButtonLoading,
     link: "/luxe/button-loading",
@@ -171,7 +314,7 @@ ${(await import('../dock/DockItem.svelte?raw')).default}
   },
   {
     id: 'button-rotate-border',
-    name: 'Button rotate border',
+    name: 'Button Rotate Border',
     description: 'A button with a rotating border',
     component: ButtonRotateBorder,
     link: "/luxe/button-rotate-border",
@@ -189,7 +332,7 @@ ${(await import('../dock/DockItem.svelte?raw')).default}
   },
   {
     id: 'button-success',
-    name: 'Button success',
+    name: 'Button Success',
     description: 'A button with a success style',
     component: ButtonSuccess,
     link: "/luxe/button-success",
@@ -231,7 +374,7 @@ ${(await import('../dock/DockItem.svelte?raw')).default}
   },
   {
     id: 'card-background-shine',
-    name: 'Card background shine',
+    name: 'Card Background Shine',
     description: 'A card with a background shine effect',
     component: CardBackgroundShine,
     link: "/luxe/card-background-shine",
@@ -290,7 +433,7 @@ ${(await import('../dock/DockItem.svelte?raw')).default}
   },
   {
     id: 'card-hover-effect',
-    name: 'Card hover effect',
+    name: 'Card Hover Effect',
     description: 'A card with hover effect',
     component: CardHoverEffect,
     link: '/luxe/card-hover-effect',
@@ -302,24 +445,24 @@ ${(await import('../dock/DockItem.svelte?raw')).default}
   const items = [
     {
       id: 1,
-      title: "Luxe",
+      title: "Framer Motion ",
       description:
         "Explore the new website that simplifies the creation of sophisticated dark mode components.",
-      href: "https://luxe.guhrodrigues.com",
+      href: "https://animation-svelte.vercel.app/learnings",
     },
     {
       id: 2,
-      title: "Luxe",
+      title: "Svelte Animations",
       description:
         "Explore the new website that simplifies the creation of sophisticated dark mode components.",
-      href: "https://luxe.guhrodrigues.com",
+      href: "https://animation-svelte.vercel.app",
     },
     {
       id: 3,
-      title: "Luxe",
+      title: "Github",
       description:
         "Explore the new website that simplifies the creation of sophisticated dark mode components.",
-      href: "https://luxe.guhrodrigues.com",
+      href: "https://github.com/SikandarJODD/svelte-animations",
     },
   ];
   export let containerClassName = "";
@@ -332,7 +475,7 @@ ${(await import('../dock/DockItem.svelte?raw')).default}
   }}
   class={cn("grid md:grid-cols-3 ", containerClassName)}
 >
-  <AnimateSharedLayout >
+  <AnimateSharedLayout>
     {#each items as one, i}
       <a
         href={one.href}
@@ -364,7 +507,9 @@ ${(await import('../dock/DockItem.svelte?raw')).default}
           </AnimatePresence>
         {/if}
         <div class="z-[1] space-y-3">
-          <h1 class="font-medium text-white">{one.title}</h1>
+          <h1 class="font-medium text-white {hoverdIdx === i + 1 ? 'text-orange-400 transition-all duration-300':'' }">
+            {one.title}
+          </h1>
           <p class="text-neutral-400">{one.description}</p>
         </div>
       </a>
@@ -375,7 +520,7 @@ ${(await import('../dock/DockItem.svelte?raw')).default}
   },
   {
     id: 'card-product',
-    name: 'Card product',
+    name: 'Card Product',
     description: 'A card product',
     component: CardProduct,
     link: '/luxe/card-product',
@@ -442,7 +587,7 @@ ${(await import('../dock/DockItem.svelte?raw')).default}
   },
   {
     id: 'card-revealed-pointer',
-    name: 'Card revealed pointer',
+    name: 'Card Revealed Pointer',
     description: 'A card with a revealed pointer',
     component: CardRevealedPointer,
     link: '/luxe/card-revealed-pointer',
@@ -494,7 +639,7 @@ ${(await import('../dock/DockItem.svelte?raw')).default}
   },
   {
     id: 'text-animated-decoration',
-    name: 'Text animated decoration',
+    name: 'Text Animated Decoration',
     description: 'Text with animated decoration',
     component: TextAnimatedDecoration,
     link: '/luxe/text-animated-decoration',
@@ -507,7 +652,7 @@ ${(await import('../dock/DockItem.svelte?raw')).default}
   },
   {
     id: 'text-animated-gradient',
-    name: 'Text animated gradient',
+    name: 'Text Animated Gradient',
     description: 'Text with animated decoration',
     component: TextAnimatedGradient,
     link: '/luxe/text-animated-gradient',
@@ -520,7 +665,7 @@ ${(await import('../dock/DockItem.svelte?raw')).default}
   },
   {
     id: 'text-glitch',
-    name: 'Text glitch',
+    name: 'Text Glitch',
     description: 'Text with glitch effect',
     link: '/luxe/text-glitch',
     component: TextGlitch,
@@ -541,7 +686,7 @@ ${(await import('../dock/DockItem.svelte?raw')).default}
   },
   {
     id: 'text-gradient',
-    name: 'Text gradient',
+    name: 'Text Gradient',
     description: 'Text with gradient',
     link: '/luxe/text-gradient',
     component: TextGradient,
@@ -562,7 +707,7 @@ ${(await import('../dock/DockItem.svelte?raw')).default}
   },
   {
     id: 'text-shine',
-    name: 'Text shine',
+    name: 'Text Shine',
     description: 'Text with shine effect',
     link: '/luxe/text-shine',
     component: TextShine,

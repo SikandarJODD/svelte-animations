@@ -3,11 +3,13 @@
   import { allLuxeComponents } from "$lib/luxe/components/AllLuxeComponents";
   import { page } from "$app/stores";
   import CodeBlock from "$lib/luxe/components/codeblock/CodeBlock.svelte";
+  import Code from "$lib/luxe/components/codeblock/Code.svelte";
 
   $: routeID = $page.params.componentID;
   $: comp = allLuxeComponents.filter((comp) => comp.id == routeID)[0];
   $: fileName =
-    comp.name.split(" ")
+    comp.name
+      .split(" ")
       .map((k) => {
         let kit = k.charAt(0).toUpperCase();
         let m = kit + k.replace(k[0], "");
@@ -16,8 +18,24 @@
       .join("") + ".svelte";
 </script>
 
+<svelte:head>
+  <title>{comp.name} · Svelte</title>
+  <meta name="description" content={comp.description} />
+  <meta property="og:title" content={comp.name +'· Svelte'} />
+  <meta
+    property="og:description"
+    content={comp.description}
+  />
+  <meta property="og:site_name" content="Svelte Tailwind Components">
+  <meta property="og:url" content="https://animation-svelte.vercel.app">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content={comp.name +'· Svelte'}>
+  <meta name="twitter:description" content={comp.description}>
+  <meta name="twitter:site" content="@Sikandar_Bhide">
+</svelte:head>
+
 <div class="my-0 md:my-14 mx-2 md:mx-5">
-  <a href='/luxe' class="flex items-center gap-1 text-muted-foreground">
+  <a href="/luxe" class="flex items-center gap-1 text-muted-foreground">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="17"
@@ -42,10 +60,17 @@
         <svelte:component this={comp.component} />
       </ComponentView>
     </div>
-    <div>
+    {#if typeof comp.code === "string"}
+      <!-- content here -->
       {#key comp}
         <CodeBlock code={comp.code} {fileName} />
       {/key}
-    </div>
+    {:else if comp.code instanceof Array}
+      {#each comp.code as { filename, code }}
+        <div>
+          <CodeBlock {code} fileName={filename} />
+        </div>
+      {/each}
+    {/if}
   </div>
 </div>

@@ -46,7 +46,7 @@
           viewBox="0 0 256 308"
           width="14"
           height="20"
-          class="mt-0.5"
+          class="mt-px"
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="xMidYMid"
           ><path

@@ -1,5 +1,5 @@
 <div
-  class="relative flex flex-col gap-8 bg-neutral-950 border border-white/10 w-full max-w-lg rounded-xl p-10"
+  class="relative flex flex-col gap-8 bg-neutral-950 border border-white/10 w-full max-w-lg rounded-xl p-10 overflow-hidden"
 >
   <div
     class="absolute right-5 top-0 h-px w-80 bg-gradient-to-l from-transparent via-white/30 via-10% to-transparent"

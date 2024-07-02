@@ -6,24 +6,24 @@
   const items = [
     {
       id: 1,
-      title: "Luxe",
+      title: "Framer Motion ",
       description:
         "Explore the new website that simplifies the creation of sophisticated dark mode components.",
-      href: "https://luxe.guhrodrigues.com",
+      href: "https://animation-svelte.vercel.app/learnings",
     },
     {
       id: 2,
-      title: "Luxe",
+      title: "Svelte Animations",
       description:
         "Explore the new website that simplifies the creation of sophisticated dark mode components.",
-      href: "https://luxe.guhrodrigues.com",
+      href: "https://animation-svelte.vercel.app",
     },
     {
       id: 3,
-      title: "Luxe",
+      title: "Github",
       description:
         "Explore the new website that simplifies the creation of sophisticated dark mode components.",
-      href: "https://luxe.guhrodrigues.com",
+      href: "https://github.com/SikandarJODD/svelte-animations",
     },
   ];
   export let containerClassName = "";
@@ -36,7 +36,7 @@
   }}
   class={cn("grid md:grid-cols-3 ", containerClassName)}
 >
-  <AnimateSharedLayout >
+  <AnimateSharedLayout>
     {#each items as one, i}
       <a
         href={one.href}
@@ -68,7 +68,9 @@
           </AnimatePresence>
         {/if}
         <div class="z-[1] space-y-3">
-          <h1 class="font-medium text-white">{one.title}</h1>
+          <h1 class="font-medium text-white {hoverdIdx === i + 1 ? 'text-orange-400 transition-all duration-300':'' }">
+            {one.title}
+          </h1>
           <p class="text-neutral-400">{one.description}</p>
         </div>
       </a>
