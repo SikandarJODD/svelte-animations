@@ -16,21 +16,61 @@ import Drag3dTransformImg from "$lib/framer-motion/assets/Drag_3D_Transform.svg"
 
 // Components
 
+// Tweened Animation
 import TweenedExample from "./comp/TweenedExample.svelte";
+import TweenedExampleCode from "./comp/TweenedExample.svelte?raw";
+
+// Spring Example
 import SpringExample from "./comp/SpringExample.svelte";
+import SpringExampleCode from "./comp/SpringExample.svelte?raw";
+
+// Duration Based Spring Example
 import DurationBasedSpringExample from "./comp/DurationBasedSpringExample.svelte";
+import DurationBasedSpringExampleCode from "./comp/DurationBasedSpringExample.svelte?raw";
+
+// Repeat Example
 import RepeatExample from "./comp/RepeatExample.svelte";
+import RepeatExampleCode from "./comp/RepeatExample.svelte?raw";
+
+// Reverse Example
 import ReverseExample from "./comp/ReverseExample.svelte";
+import ReverseExampleCode from "./comp/ReverseExample.svelte?raw";
+
+// While Hover
 import WhileHover from "./comp/WhileHover.svelte";
+import WhileHoverCode from "./comp/WhileHover.svelte?raw";
+
+// While Tap
 import WhileTap from "./comp/WhileTap.svelte";
+import WhileTapCode from "./comp/WhileTap.svelte?raw";
+
+// While Drag
 import WhileDrag from "./comp/WhileDrag.svelte";
+import WhileDragCode from "./comp/WhileDrag.svelte?raw";
+
+// Cycling States
 import CyclingStates from "./comp/CyclingStates.svelte";
+import CyclingStatesCode from "./comp/CyclingStates.svelte?raw";
+
+// Animated Sequence
 import AnimateSequence from "./comp/AnimateSequence.svelte";
+import AnimateSequenceCode from "./comp/AnimateSequence.svelte?raw";
+
+// Drag Constraints
 import DragConstraints from "./comp/DragConstraints.svelte";
+import DragConstraintsCode from "./comp/DragConstraints.svelte?raw";
+
+// Drag Direction Lock
 import DragDirectionLock from "./comp/DragDirectionLock.svelte";
+import DragDirectionLockCode from "./comp/DragDirectionLock.svelte?raw";
+
+// Drag Transform
 import DragTransform from "./comp/DragTransform.svelte";
+import DragTransformCode from "./comp/DragTransform.svelte?raw";
+
+// Drag 3D Transform
 import Drag3dTransform from "./comp/Drag3dTransform.svelte";
-import { fmcode } from "./framerCode";
+import Drag3dTransformCode from "./comp/Drag3dTransform.svelte?raw";
 
 type MotionLearnings = {
     id: number;
@@ -50,7 +90,7 @@ export let motionLearnings: MotionLearnings[] = [
         component: TweenedExample,
         link: "/learnings/1",
         image: TweenedImg,
-        code: fmcode[0].code
+        code: TweenedExampleCode
     },
     {
         id: 2,
@@ -59,7 +99,7 @@ export let motionLearnings: MotionLearnings[] = [
         component: SpringExample,
         link: "/learnings/2",
         image: SpringImg,
-        code: fmcode[1].code
+        code: SpringExampleCode
     },
     {
         id: 3,
@@ -68,7 +108,7 @@ export let motionLearnings: MotionLearnings[] = [
         component: DurationBasedSpringExample,
         link: "/learnings/3",
         image: DurationBasedSpringImg,
-        code: fmcode[2].code
+        code: DurationBasedSpringExampleCode
     },
     {
         id: 4,
@@ -77,7 +117,7 @@ export let motionLearnings: MotionLearnings[] = [
         component: RepeatExample,
         link: "/learnings/4",
         image: RepeatImg,
-        code: fmcode[3].code
+        code: RepeatExampleCode
     },
     {
         id: 5,
@@ -86,7 +126,7 @@ export let motionLearnings: MotionLearnings[] = [
         component: ReverseExample,
         link: "/learnings/5",
         image: ReverseImg,
-        code: fmcode[4].code
+        code: ReverseExampleCode
     },
     {
         id: 6,
@@ -95,7 +135,7 @@ export let motionLearnings: MotionLearnings[] = [
         component: WhileHover,
         link: "/learnings/6",
         image: WhileHoverImg,
-        code: fmcode[5].code
+        code: WhileHoverCode
     },
     {
         id: 7,
@@ -104,7 +144,7 @@ export let motionLearnings: MotionLearnings[] = [
         component: WhileTap,
         link: "/learnings/7",
         image: WhileTapImg,
-        code: fmcode[6].code
+        code: WhileTapCode
     },
     {
         id: 8,
@@ -113,7 +153,7 @@ export let motionLearnings: MotionLearnings[] = [
         component: WhileDrag,
         link: "/learnings/8",
         image: WhileDragImg,
-        code: fmcode[7].code
+        code: WhileDragCode
     },
     {
         id: 9,
@@ -122,7 +162,7 @@ export let motionLearnings: MotionLearnings[] = [
         component: CyclingStates,
         link: "/learnings/9",
         image: CyclingThroughStatesImg,
-        code: fmcode[8].code
+        code: CyclingStatesCode
     },
     {
         id: 10,
@@ -131,7 +171,7 @@ export let motionLearnings: MotionLearnings[] = [
         component: AnimateSequence,
         link: "/learnings/10",
         image: AnimateSequenceImg,
-        code: fmcode[9].code
+        code: AnimateSequenceCode
     },
     {
         id: 11,
@@ -140,7 +180,7 @@ export let motionLearnings: MotionLearnings[] = [
         component: DragConstraints,
         link: "/learnings/11",
         image: DragConstraintsImg,
-        code: fmcode[10].code
+        code: DragConstraintsCode
     },
     {
         id: 12,
@@ -149,7 +189,7 @@ export let motionLearnings: MotionLearnings[] = [
         component: DragDirectionLock,
         link: "/learnings/12",
         image: DragDirectionLockingImg,
-        code: fmcode[11].code
+        code: DragDirectionLockCode
     },
     {
         id: 13,
@@ -158,7 +198,7 @@ export let motionLearnings: MotionLearnings[] = [
         component: DragTransform,
         link: "/learnings/13",
         image: DragTransformImg,
-        code: fmcode[12].code
+        code: DragTransformCode
     },
     {
         id: 14,
@@ -167,6 +207,6 @@ export let motionLearnings: MotionLearnings[] = [
         component: Drag3dTransform,
         link: "/learnings/14",
         image: Drag3dTransformImg,
-        code: fmcode[13].code
+        code: Drag3dTransformCode
     }
 ]
