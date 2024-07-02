@@ -64,7 +64,7 @@ import CardRevealedPointerCode from "../cards/CardRevealedPointer.svelte?raw";
 
 // Text Animated Decoration
 import TextAnimatedDecoration from "../text/TextAnimatedDecoration.svelte";
-import TextAnimatedDecorationCode from "../text/TextAnimatedDecoration.svelte?Code";
+import TextAnimatedDecorationCode from "../text/TextAnimatedDecoration.svelte?raw";
 
 // Animated Text Gradient
 import TextAnimatedGradient from "../text/TextAnimatedGradient.svelte";
