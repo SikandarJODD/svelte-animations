@@ -5,6 +5,7 @@
   import { motionLearnings } from "$lib/framer-motion/MotionsLearnings";
   import CodeBlock from "$lib/luxe/components/codeblock/CodeBlock.svelte";
   import ComponentView from "$lib/luxe/components/codeblock/ComponentView.svelte";
+  import GradientLine from "$lib/luxe/components/codeblock/GradientLine.svelte";
 
   $: exampleID = $page.params.learningID;
   $: singlePage = motionLearnings.filter(
@@ -43,19 +44,7 @@
   <meta name="twitter:image" content={singlePage.image} />
   <meta name="twitter:site" content="@Sikandar_Bhide" />
 </svelte:head>
-<!-- <div>
-  <HeadingOne>
-    {singlePage.name}
-  </HeadingOne>
-  <Para>
-    {singlePage.desc}
-  </Para>
-  <div>
-    {#if singlePage}
-      <svelte:component this={singlePage.component} />
-    {/if}
-  </div>
-</div> -->
+
 <div class="my-0 md:my-14 mx-2 md:mx-5">
   <a href="/learnings" class="flex items-center gap-1 text-muted-foreground">
     <svg
@@ -77,11 +66,15 @@
     <h1 class="text-2xl font-bold mt-4 md:text-3xl capitalize my-6">
       {singlePage.name}
     </h1>
-    <div>
-      <ComponentView>
-        <svelte:component this={singlePage.component} />
-      </ComponentView>
-    </div>
+    <ComponentView class='relative'>
+      <GradientLine />
+      <svelte:component this={singlePage.component} />
+    </ComponentView>
+    <CodeBlock
+      code={`npx @svelte-add/tailwindcss@latest \nnpm i svelte-motion\n`}
+      lang="shellscript"
+      fileName="Tailwind CSS & Svelte Motion"
+    />
     <div>
       {#key singlePage}
         <CodeBlock code={singlePage.code} {fileName} />

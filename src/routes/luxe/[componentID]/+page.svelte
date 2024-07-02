@@ -21,17 +21,14 @@
 <svelte:head>
   <title>{comp.name} · Svelte</title>
   <meta name="description" content={comp.description} />
-  <meta property="og:title" content={comp.name +'· Svelte'} />
-  <meta
-    property="og:description"
-    content={comp.description}
-  />
-  <meta property="og:site_name" content="Svelte Tailwind Components">
-  <meta property="og:url" content="https://animation-svelte.vercel.app">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content={comp.name +'· Svelte'}>
-  <meta name="twitter:description" content={comp.description}>
-  <meta name="twitter:site" content="@Sikandar_Bhide">
+  <meta property="og:title" content={comp.name + "· Svelte"} />
+  <meta property="og:description" content={comp.description} />
+  <meta property="og:site_name" content="Svelte Tailwind Components" />
+  <meta property="og:url" content="https://animation-svelte.vercel.app" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={comp.name + "· Svelte"} />
+  <meta name="twitter:description" content={comp.description} />
+  <meta name="twitter:site" content="@Sikandar_Bhide" />
 </svelte:head>
 
 <div class="my-0 md:my-14 mx-2 md:mx-5">
@@ -56,7 +53,14 @@
       {comp.name}
     </h1>
     <div>
-      <ComponentView>
+      <ComponentView
+        class={comp?.showGrid === true ? " relative overflow-hidden " : ""}
+      >
+        {#if comp?.showGrid}
+          <div
+            class="absolute h-full w-full bg-[linear-gradient(to_right,#b1b1b12e_1px,transparent_1px),linear-gradient(to_bottom,#b1b1b12e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_10%,transparent_100%)]"
+          ></div>
+        {/if}
         <svelte:component this={comp.component} />
       </ComponentView>
     </div>

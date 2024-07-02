@@ -91,6 +91,19 @@ import DockMenu from "../dock/DockMenu.svelte";
 import DockMenuCode from "../dock/DockMenu.svelte?raw"
 import DockMenuItemCode from "../dock/DockItem.svelte?raw"
 
+// Input Spotlight Border
+import InputSpotlightBorder from "../inputs/InputSpotlightBorder.svelte";
+import InputSpotlightBorderCode from "../inputs/InputSpotlightBorder.svelte?raw";
+
+// Input Gradient Bordeer 
+import InputGradientBorder from "../inputs/InputGradientBorder.svelte";
+import InputGradientBorderCode from "../inputs/InputGradientBorder.svelte?raw";
+
+// Input Pulse Border
+import InputPulseBorder from "../inputs/InputPulseBorder.svelte";
+import InputPulseBorderCode from "../inputs/InputPulseBorder.svelte?raw";
+
+
 type LuxeComponent = {
   id: string;
   name: string;
@@ -98,6 +111,7 @@ type LuxeComponent = {
   component: any;
   link: any | string;
   code: string | Code[];
+  showGrid?: boolean
 }
 type Code = {
   filename: string;
@@ -118,8 +132,8 @@ export let allLuxeComponents: LuxeComponent[] = [
         code: DockMenuCode
       },
       {
-        filename:'DockItem.svelte',
-        code:DockMenuItemCode
+        filename: 'DockItem.svelte',
+        code: DockMenuItemCode
       }
     ]
   },
@@ -298,5 +312,32 @@ export let allLuxeComponents: LuxeComponent[] = [
     description: 'Animated Tabs from Luxe Components',
     link: '/luxe/animated-tabs',
     code: AnimatedTabsCode
-  }
+  },
+  {
+    id: 'input-spotlight-border',
+    name: 'Input Spotlight Border',
+    component: InputSpotlightBorder,
+    link: '/luxe/input-spotlight-border',
+    description: 'Input Spotlight using Svelte Motion',
+    code: InputSpotlightBorderCode,
+    showGrid: true
+  },
+  {
+    id: 'input-gradient-border',
+    name: 'Input Gradient Border',
+    component: InputGradientBorder,
+    link: '/luxe/input-gradient-border',
+    description: 'Input Gradient Border using Tailwind CSS',
+    code: InputGradientBorderCode,
+    showGrid: true
+  },
+  {
+    id: 'input-pulse-border',
+    name: 'Input Pulse Border',
+    component: InputPulseBorder,
+    link: '/luxe/input-pulse-border',
+    description: 'Input Pulse Border using Tailwind CSS',
+    code: InputPulseBorderCode,
+    showGrid: true
+  },
 ]

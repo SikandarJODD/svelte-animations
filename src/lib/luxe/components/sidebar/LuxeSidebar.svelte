@@ -143,7 +143,15 @@
                       <div class="font-medium">
                         {cnavs.heading}
                       </div>
-                      {#each cnavs.sub as item}
+                      {#each cnavs.sub.sort((a, b) => {
+                        if (a.name > b.name) {
+                          return 1;
+                        }
+                        if (b.name > a.name) {
+                          return -1;
+                        }
+                        return 0;
+                      }) as item}
                         <li>
                           <a
                             on:click={() => {
@@ -246,7 +254,7 @@
       </svg>
     </button>
     <div class="flex-1 text-sm font-semibold leading-6 text-primary">
-      Svelte Framer Motion
+      Svelte Components
     </div>
   </div>
 

@@ -1,22 +1,22 @@
 // place files you want to import through the `$lib` alias in this folder.
 // Navbar
 export let navs = [
-    {
-        name: "Home",
-        link: "/",
-    },
-    {
-        name: "Examples",
-        link: "/examples",
-    },
-    {
-        name: "Framer Motion",
-        link: "/learnings",
-    },
-    {
-        name: "Luxe",
-        link: '/luxe'
-    }
+	{
+		name: "Home",
+		link: "/",
+	},
+	{
+		name: "Examples",
+		link: "/examples",
+	},
+	{
+		name: "Framer Motion",
+		link: "/learnings",
+	},
+	{
+		name: "Luxe",
+		link: '/luxe'
+	}
 ];
 
 export let tailwindCode = `// Insert this inside theme > extend > 
@@ -33,6 +33,10 @@ export let tailwindCode = `// Insert this inside theme > extend >
 	            "text-glitch-from": "text-glitch-from 0.6s ease-in-out infinite",
 	            "text-scale": "text-scale 1s linear infinite forwards",
 	            'spin': 'spin 2s linear infinite',
+				// From UI-Snippets : https://ui.ibelick.com
+				// 'text-gradient': 'text-gradient 1.5s linear infinite',
+				'background-shine': 'background-shine 2s linear infinite',
+				'pulse-slow': 'pulse 6s infinite cubic-bezier(0.4, 0, 0.6, 1)',
             },
             "keyframes": {
 				spin: {
@@ -126,6 +130,11 @@ export let tailwindCode = `// Insert this inside theme > extend >
 						opacity: "1",
 						transform: "translate(-50%,-40%) scale(1)",
 					},
+				},
+				// For Gradient Input, UI-Snippets : https://ui.ibelick.com
+				'background-shine': {
+					from: { backgroundPosition: '0 0' },
+					to: { backgroundPosition: '-200% 0' },
 				},
 			},
 `
