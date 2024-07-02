@@ -44,7 +44,6 @@
 
   const mouseX = useMotionValue(Infinity);
   const containerX = useMotionValue(0);
-  $: console.log(containerX, mouseX, "Moving");
 
   let containerRef: HTMLDivElement;
 </script>
@@ -62,7 +61,6 @@
       on:mouseleave={() => mouseX.set(Infinity)}
       on:mousemove={(e) => {
         const rect = containerRef.getBoundingClientRect();
-        console.log("rect value", rect, e);
         if (rect) {
           mouseX.set(e.clientX - rect.left);
           containerX.set(rect.x);
