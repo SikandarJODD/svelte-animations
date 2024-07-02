@@ -135,8 +135,8 @@
               <li>
                 <ul role="list" class="-mx-2">
                   {#each componentsNav as cnavs}
-                    <div class='mb-4'>
-                      <div class='font-medium'>
+                    <div class="mb-4">
+                      <div class="font-medium">
                         {cnavs.heading}
                       </div>
                       {#each cnavs.sub as item}
@@ -188,7 +188,15 @@
                       {item.heading}
                     </div>
                   </li>
-                  {#each item.sub as subItem}
+                  {#each item.sub.sort((a, b) => {
+                    if (a.name > b.name) {
+                      return 1;
+                    }
+                    if (b.name > a.name) {
+                      return -1;
+                    }
+                    return 0;
+                  }) as subItem}
                     <li>
                       <a
                         href={subItem.link}

@@ -1,4 +1,5 @@
 import CardContent from "$lib/components/ui/card/card-content.svelte";
+import AnimatedTabs from "../animatedTabs/AnimatedTabs.svelte";
 import BadgeAnimatedBorder from "../badge/BadgeAnimatedBorder.svelte";
 import BadgeBackgroundShine from "../badge/BadgeBackgroundShine.svelte";
 import BadgeRotateBorder from "../badge/BadgeRotateBorder.svelte";
@@ -23,21 +24,21 @@ import TextShine from "../text/TextShine.svelte";
 
 
 type LuxeComponent = {
-    id: string;
-    name: string;
-    description: string;
-    component: any;
-    link: any | string;
-    code: string;
+  id: string;
+  name: string;
+  description: string;
+  component: any;
+  link: any | string;
+  code: string;
 }
 export let allLuxeComponents: LuxeComponent[] = [
-    {
-        id: 'badge-animated-border',
-        name: 'Badge Animated Border',
-        description: 'An animated border badge',
-        component: BadgeAnimatedBorder,
-        link: "/luxe/badge-animated-border",
-        code: `<div
+  {
+    id: 'badge-animated-border',
+    name: 'Badge Animated Border',
+    description: 'An animated border badge',
+    component: BadgeAnimatedBorder,
+    link: "/luxe/badge-animated-border",
+    code: `<div
   class="group relative grid overflow-hidden rounded-full px-3 py-1 shadow-[0_1000px_0_0_hsl(0_0%_20%)_inset] transition-colors duration-200"
 >
   <span>
@@ -50,27 +51,27 @@ export let allLuxeComponents: LuxeComponent[] = [
   />
   <span class="z-10 text-neutral-400 text-xs font-medium">Badge</span>
 </div>`,
-    },
-    {
-        id: 'badge-background-shine',
-        name: 'Badge background shine',
-        description: 'A badge with a background shine effect',
-        component: BadgeBackgroundShine,
-        link: "/luxe/badge-background-shine",
-        code: `<div
+  },
+  {
+    id: 'badge-background-shine',
+    name: 'Badge background shine',
+    description: 'A badge with a background shine effect',
+    component: BadgeBackgroundShine,
+    link: "/luxe/badge-background-shine",
+    code: `<div
   class="inline-flex animate-shine items-center justify-center rounded-full text-xs border border-neutral-800 \n bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-3 py-1 \n font-medium text-neutral-400 transition-colors"
 >
   Badge
 </div>
 `,
-    },
-    {
-        id: 'badge-rotate-shine',
-        name: 'Badge rotate shine',
-        description: 'A badge with a rotate shine effect',
-        component: BadgeRotateBorder,
-        link: "/luxe/badge-rotate-shine",
-        code: `<div class="relative inline-flex overflow-hidden rounded-full p-px">
+  },
+  {
+    id: 'badge-rotate-shine',
+    name: 'Badge rotate shine',
+    description: 'A badge with a rotate shine effect',
+    component: BadgeRotateBorder,
+    link: "/luxe/badge-rotate-shine",
+    code: `<div class="relative inline-flex overflow-hidden rounded-full p-px">
   <span
     class="absolute inset-[-1000%]  animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#c2c2c2_0%,#505050_50%,#bebebe_100%)]"
   />
@@ -81,14 +82,14 @@ export let allLuxeComponents: LuxeComponent[] = [
   </span>
 </div>
 `
-    },
-    {
-        id: 'button-animated-border',
-        name: 'Button Animated Border',
-        description: 'An animated border button',
-        component: ButtonAnimatedBorder,
-        link: "/luxe/button-animated-border",
-        code: `<button
+  },
+  {
+    id: 'button-animated-border',
+    name: 'Button Animated Border',
+    description: 'An animated border button',
+    component: ButtonAnimatedBorder,
+    link: "/luxe/button-animated-border",
+    code: `<button
   class="group relative grid overflow-hidden rounded-xl px-4 py-2 shadow-[0_1000px_0_0_hsl(0_0%_20%)_inset] transition-colors duration-200"
 >
   <span>
@@ -102,40 +103,40 @@ export let allLuxeComponents: LuxeComponent[] = [
   <span class="z-10 text-neutral-400 text-sm font-medium">Button</span>
 </button>
 `
-    },
-    {
-        id: 'button-background-shine',
-        name: 'Button background shine',
-        description: 'A button with a background shine effect',
-        component: ButtonBackgroundShine,
-        link: "/luxe/button-background-shine",
-        code: `<button
+  },
+  {
+    id: 'button-background-shine',
+    name: 'Button background shine',
+    description: 'A button with a background shine effect',
+    component: ButtonBackgroundShine,
+    link: "/luxe/button-background-shine",
+    code: `<button
   class="inline-flex animate-shine items-center justify-center rounded-xl text-sm border border-neutral-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-4 py-2 font-medium text-neutral-400 transition-colors"
 >
   Button
 </button>
 `
-    },
-    {
-        id: 'button-destructive',
-        name: 'Button destructive',
-        description: 'A button with a destructive style',
-        component: ButtonDestructive,
-        link: "/luxe/button-destructive",
-        code: `<button
+  },
+  {
+    id: 'button-destructive',
+    name: 'Button destructive',
+    description: 'A button with a destructive style',
+    component: ButtonDestructive,
+    link: "/luxe/button-destructive",
+    code: `<button
   class="py-2 px-4 rounded-xl text-sm font-medium bg-red-950 text-red-500 border border-red-900"
 >
   Button
 </button>
 `
-    },
-    {
-        id: 'button-loading',
-        name: 'Button loading',
-        description: 'A button with a loading state',
-        component: ButtonLoading,
-        link: "/luxe/button-loading",
-        code: `<button
+  },
+  {
+    id: 'button-loading',
+    name: 'Button loading',
+    description: 'A button with a loading state',
+    component: ButtonLoading,
+    link: "/luxe/button-loading",
+    code: `<button
   disabled
   class="flex items-center gap-1.5 text-sm py-2  px-4 font-semibold bg-white text-black rounded-xl  duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
 >
@@ -154,14 +155,14 @@ export let allLuxeComponents: LuxeComponent[] = [
   Loading...
 </button>
 `
-    },
-    {
-        id: 'button-rotate-border',
-        name: 'Button rotate border',
-        description: 'A button with a rotating border',
-        component: ButtonRotateBorder,
-        link: "/luxe/button-rotate-border",
-        code: `<button class="relative inline-flex overflow-hidden rounded-xl p-px">
+  },
+  {
+    id: 'button-rotate-border',
+    name: 'Button rotate border',
+    description: 'A button with a rotating border',
+    component: ButtonRotateBorder,
+    link: "/luxe/button-rotate-border",
+    code: `<button class="relative inline-flex overflow-hidden rounded-xl p-px">
   <span
     class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#c2c2c2_0%,#505050_50%,#bebebe_100%)]"
   />
@@ -172,27 +173,27 @@ export let allLuxeComponents: LuxeComponent[] = [
   </span>
 </button>
 `
-    },
-    {
-        id: 'button-success',
-        name: 'Button success',
-        description: 'A button with a success style',
-        component: ButtonSuccess,
-        link: "/luxe/button-success",
-        code: `<button
+  },
+  {
+    id: 'button-success',
+    name: 'Button success',
+    description: 'A button with a success style',
+    component: ButtonSuccess,
+    link: "/luxe/button-success",
+    code: `<button
   class="py-2 px-4 rounded-xl text-sm font-medium bg-emerald-950 text-emerald-500 border border-emerald-900"
 >
   Button
 </button>
 `
-    },
-    {
-        id: 'card-animated-border',
-        name: 'Card Animated Border',
-        description: 'An animated border card',
-        component: CardAnimatedBorder,
-        link: "/luxe/card-animated-border",
-        code: `<div class="w-full max-w-[350px]">
+  },
+  {
+    id: 'card-animated-border',
+    name: 'Card Animated Border',
+    description: 'An animated border card',
+    component: CardAnimatedBorder,
+    link: "/luxe/card-animated-border",
+    code: `<div class="w-full max-w-[350px]">
   <div
     class="group relative grid overflow-hidden rounded-xl px-4 py-5 shadow-[0_1000px_0_0_hsl(0_0%_20%)_inset] transition-colors duration-200"
   >
@@ -214,14 +215,14 @@ export let allLuxeComponents: LuxeComponent[] = [
   </div>
 </div>
 `
-    },
-    {
-        id: 'card-background-shine',
-        name: 'Card background shine',
-        description: 'A card with a background shine effect',
-        component: CardBackgroundShine,
-        link: "/luxe/card-background-shine",
-        code: `<div
+  },
+  {
+    id: 'card-background-shine',
+    name: 'Card background shine',
+    description: 'A card with a background shine effect',
+    component: CardBackgroundShine,
+    link: "/luxe/card-background-shine",
+    code: `<div
   class="inline-flex animate-shine max-w-[350px] w-full items-center justify-center rounded-xl text-sm border border-white/10 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-4 py-5 transition-colors"
 >
   <div class="flex flex-col gap-2">
@@ -233,14 +234,14 @@ export let allLuxeComponents: LuxeComponent[] = [
   </div>
 </div>
 `
-    },
-    {
-        id: 'card-comment',
-        name: 'Card Comment',
-        description: 'A card for comments',
-        component: CardComment,
-        link: '/luxe/card-comment',
-        code: `<div
+  },
+  {
+    id: 'card-comment',
+    name: 'Card Comment',
+    description: 'A card for comments',
+    component: CardComment,
+    link: '/luxe/card-comment',
+    code: `<div
   class="relative flex flex-col gap-8 bg-neutral-950 border border-white/10 w-full max-w-lg rounded-xl p-10"
 >
   <div
@@ -273,15 +274,15 @@ export let allLuxeComponents: LuxeComponent[] = [
   </div>
 </div>
 `
-    },
-    {
-        id: 'card-hover-effect',
-        name: 'Card hover effect',
-        description: 'A card with hover effect',
-        component: CardHoverEffect,
-        link: '/luxe/card-hover-effect',
-        code: `<script lang="ts">
-  import { Motion, AnimatePresence, AnimateSharedLayout } from "svelte-motion";
+  },
+  {
+    id: 'card-hover-effect',
+    name: 'Card hover effect',
+    description: 'A card with hover effect',
+    component: CardHoverEffect,
+    link: '/luxe/card-hover-effect',
+    code: `<script lang="ts">
+  import { Motion, AnimateSharedLayout, AnimatePresence } from "svelte-motion";
   import { cn } from "$lib/utils";
 
   let hoverdIdx = 0;
@@ -309,58 +310,63 @@ export let allLuxeComponents: LuxeComponent[] = [
     },
   ];
   export let containerClassName = "";
-  export let hoveredItemClassName = "";
-  export let itemClassName = "";
 </script>
 
-<div class={cn("grid md:grid-cols-3 px-32 py-32", containerClassName)}>
-  {#each items as one}
-    <a
-      href={one.href}
-      target="_blank"
-      on:mouseenter={() => (hoverdIdx = one.id)}
-      on:mouseleave={() => (hoverdIdx = 0)}
-      class="relative flex flex-col gap-3 p-4"
-    >
-      <AnimatePresence let:item list={[{ key: 1 }, { key: 2 }, { key: 3 }]}>
+<!-- svelte-ignore a11y-no-static-element-interactions -->
+<div
+  on:mouseleave={() => {
+    hoverdIdx = 0;
+  }}
+  class={cn("grid md:grid-cols-3 ", containerClassName)}
+>
+  <AnimateSharedLayout >
+    {#each items as one, i}
+      <a
+        href={one.href}
+        target="_blank"
+        on:mouseenter={() => (hoverdIdx = one.id)}
+        class="relative flex flex-col gap-3 p-4"
+      >
         {#if hoverdIdx === one.id}
-          <Motion
-            layoutId="cardHoverEffect"
-            initial={{ opacity: 0 }}
-            animate={{
-              opacity: 1,
-              transition: { duration: 0.15 },
-            }}
-            exit={{
-              opacity: 0,
-              transition: { duration: 0.15, delay: 0.2 },
-            }}
-            let:motion
-          >
-            <span
-              use:motion
-              class="absolute inset-0 z-0 block h-full w-full rounded-xl bg-neutral-900 cardHoverEffect"
+          <AnimatePresence let:item list={[{ key: hoverdIdx }]}>
+            <Motion
+              layoutId="cardeffect"
+              initial={{ opacity: 0 }}
+              animate={{
+                opacity: 1,
+                transition: { duration: 0.15 },
+              }}
+              exit={{
+                opacity: 0.8,
+                transition: { duration: 2, delay: 0.2 },
+              }}
+              let:motion
             >
-            </span>
-          </Motion>
+              <span
+                use:motion
+                class="absolute inset-0 z-0 block h-full w-full rounded-xl bg-neutral-900 cardHoverEffect"
+              >
+              </span>
+            </Motion>
+          </AnimatePresence>
         {/if}
-      </AnimatePresence>
-      <div class="z-[1] space-y-3">
-        <h1 class="font-medium text-white">{one.title}</h1>
-        <p class="text-neutral-400">{one.description}</p>
-      </div>
-    </a>
-  {/each}
+        <div class="z-[1] space-y-3">
+          <h1 class="font-medium text-white">{one.title}</h1>
+          <p class="text-neutral-400">{one.description}</p>
+        </div>
+      </a>
+    {/each}
+  </AnimateSharedLayout>
 </div>
 `
-    },
-    {
-        id: 'card-product',
-        name: 'Card product',
-        description: 'A card product',
-        component: CardProduct,
-        link: '/luxe/card-product',
-        code: `<script>
+  },
+  {
+    id: 'card-product',
+    name: 'Card product',
+    description: 'A card product',
+    component: CardProduct,
+    link: '/luxe/card-product',
+    code: `<script>
   import { Motion, useMotionTemplate, useMotionValue } from "svelte-motion";
   let mouseX = useMotionValue(0);
   let mouseY = useMotionValue(0);
@@ -420,14 +426,14 @@ export let allLuxeComponents: LuxeComponent[] = [
   </div>
 </div>
 `
-    },
-    {
-        id: 'card-revealed-pointer',
-        name: 'Card revealed pointer',
-        description: 'A card with a revealed pointer',
-        component: CardRevealedPointer,
-        link: '/luxe/card-revealed-pointer',
-        code: `<script>
+  },
+  {
+    id: 'card-revealed-pointer',
+    name: 'Card revealed pointer',
+    description: 'A card with a revealed pointer',
+    component: CardRevealedPointer,
+    link: '/luxe/card-revealed-pointer',
+    code: `<script>
   import { Motion, useMotionValue, useMotionTemplate } from "svelte-motion";
   let mouseX = useMotionValue(0);
   let mouseY = useMotionValue(0);
@@ -472,40 +478,40 @@ export let allLuxeComponents: LuxeComponent[] = [
   </div>
 </div>
 `
-    },
-    {
-        id: 'text-animated-decoration',
-        name: 'Text animated decoration',
-        description: 'Text with animated decoration',
-        component: TextAnimatedDecoration,
-        link: '/luxe/text-animated-decoration',
-        code: `<div
+  },
+  {
+    id: 'text-animated-decoration',
+    name: 'Text animated decoration',
+    description: 'Text with animated decoration',
+    component: TextAnimatedDecoration,
+    link: '/luxe/text-animated-decoration',
+    code: `<div
   class="relative after:absolute after:bg-neutral-400 after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300"
 >
   <span class="text-neutral-400">Text Animated Decoration</span>
 </div>
 `
-    },
-    {
-        id: 'text-animated-gradient',
-        name: 'Text animated gradient',
-        description: 'Text with animated decoration',
-        component: TextAnimatedGradient,
-        link: '/luxe/text-animated-gradient',
-        code: `<span
+  },
+  {
+    id: 'text-animated-gradient',
+    name: 'Text animated gradient',
+    description: 'Text with animated decoration',
+    component: TextAnimatedGradient,
+    link: '/luxe/text-animated-gradient',
+    code: `<span
   class="inline-flex animate-text-gradient bg-gradient-to-r from-[#ACACAC] via-[#363636] to-[#ACACAC] bg-[200%_auto] text-3xl text-center text-transparent font-medium bg-clip-text"
 >
   Text Animated Gradient
 </span>
 `
-    },
-    {
-        id: 'text-glitch',
-        name: 'Text glitch',
-        description: 'Text with glitch effect',
-        link: '/luxe/text-glitch',
-        component: TextGlitch,
-        code: `<div class="relative overflow-hidden group">
+  },
+  {
+    id: 'text-glitch',
+    name: 'Text glitch',
+    description: 'Text with glitch effect',
+    link: '/luxe/text-glitch',
+    component: TextGlitch,
+    code: `<div class="relative overflow-hidden group">
   <span class="invisible">Text Glitch</span>
   <span
     class="text-neutral-400 absolute top-0 left-0 group-hover:-translate-y-full transition-transform ease-in-out duration-500 hover:duration-300"
@@ -519,39 +525,98 @@ export let allLuxeComponents: LuxeComponent[] = [
   </span>
 </div>
 `
-    },
-    {
-        id: 'text-gradient',
-        name: 'Text gradient',
-        description: 'Text with gradient',
-        link: '/luxe/text-gradient',
-        component: TextGradient,
-        code: `<h1
+  },
+  {
+    id: 'text-gradient',
+    name: 'Text gradient',
+    description: 'Text with gradient',
+    link: '/luxe/text-gradient',
+    component: TextGradient,
+    code: `<h1
   class="text-3xl font-semibold bg-gradient-to-b from-white to-neutral-700 text-transparent bg-clip-text"
 >
   Text Gradient Hello
 </h1>
 `
-    },
-    {
-        id: 'text-shake',
-        name: 'Text Shake',
-        description: 'Text Shake',
-        link: '/luxe/text-shake',
-        component: TextShake,
-        code: '<span class="text-neutral-400 hover:animate-text-shake"> Text Shake </span>'
-    },
-    {
-        id: 'text-shine',
-        name: 'Text shine',
-        description: 'Text with shine effect',
-        link: '/luxe/text-shine',
-        component: TextShine,
-        code: `<h1
+  },
+  {
+    id: 'text-shake',
+    name: 'Text Shake',
+    description: 'Text Shake',
+    link: '/luxe/text-shake',
+    component: TextShake,
+    code: '<span class="text-neutral-400 hover:animate-text-shake"> Text Shake </span>'
+  },
+  {
+    id: 'text-shine',
+    name: 'Text shine',
+    description: 'Text with shine effect',
+    link: '/luxe/text-shine',
+    component: TextShine,
+    code: `<h1
   class="text-3xl font-medium inline-flex animate-shine bg-[linear-gradient(110deg,#939393,45%,#1e2631,55%,#939393)] bg-[length:200%_100%] text-transparent bg-clip-text"
 >
   Text Shine
 </h1>
 `
+  },
+  {
+    id: 'animated-tabs',
+    name: 'Animated Tabs',
+    component: AnimatedTabs,
+    description: 'Animated Tabs from Luxe Components',
+    link: '/luxe/animated-tabs',
+    code: `<script>
+  import { Motion, AnimateSharedLayout } from "svelte-motion";
+  const tabs = [
+    {
+      title: "Product",
     },
+    {
+      title: "Services",
+    },
+    {
+      title: "About",
+    },
+  ];
+  let activeIdx = 0;
+</script>
+
+<div class="relative flex flex-wrap items-center justify-center">
+  <AnimateSharedLayout>
+    {#each tabs as item, i}
+      <button
+        class="group relative z-[1] rounded-full px-4 py-2 {activeIdx === i
+          ? 'z-0'
+          : ''} "
+        on:click={() => {
+          activeIdx = i;
+        }}
+      >
+        {#if activeIdx === i}
+          <Motion
+            layoutId="clicked-btn"
+            transition={{ duration: 0.2 }}
+            let:motion
+          >
+            <div
+              use:motion
+              class="absolute inset-0 rounded-full bg-white"
+            ></div>
+          </Motion>
+        {/if}
+        <span
+          class="relative text-sm block font-medium duration-200 {activeIdx ===
+          i
+            ? 'text-black delay-100'
+            : 'text-white'}"
+        >
+          {item.title}
+        </span>
+      </button>
+    {/each}
+  </AnimateSharedLayout>
+</div>
+`,
+  }
 ]
