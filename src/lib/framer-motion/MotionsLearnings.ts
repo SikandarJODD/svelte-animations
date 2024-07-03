@@ -72,6 +72,27 @@ import DragTransformCode from "./comp/DragTransform.svelte?raw";
 import Drag3dTransform from "./comp/Drag3dTransform.svelte";
 import Drag3dTransformCode from "./comp/Drag3dTransform.svelte?raw";
 
+// ColorInterpolation
+import ColorInterpolation from "./comp/ColorInterpolation.svelte";
+import ColorInterpolationCode from "./comp/ColorInterpolation.svelte?raw";
+
+// Morph SVG
+import MorphSvg from "./comp/MorphSVG.svelte";
+import MorphSvgCode from "./comp/MorphSVG.svelte?raw";
+
+// Scroll Progress
+import ScrollProgress from "./comp/ScrollProgress.svelte";
+import ScrollProgressCode from "./comp/ScrollProgress.svelte?raw";
+
+// Keyframe Position Color
+import KeyframesPositionColor from "./comp/KeyframesPositionColor.svelte";
+import KeyframesPositionColorCode from "./comp/KeyframesPositionColor.svelte?raw";
+
+// Animated Presence Stack
+import AnimatedPresenceStackCode from "./comp/AnimatedPresenceStack.svelte?raw";
+import AnimatedPresenceStack from "./comp/AnimatedPresenceStack.svelte";
+import CardCode from "./comp/Card.svelte?raw";
+
 type MotionLearnings = {
     id: number;
     name: string;
@@ -79,7 +100,12 @@ type MotionLearnings = {
     component: any;
     link: string;
     image: any;
-    code?: string
+    code: string | Code[];
+    class?: string
+}
+type Code = {
+    filename: string;
+    code: string
 }
 
 export let motionLearnings: MotionLearnings[] = [
@@ -208,5 +234,60 @@ export let motionLearnings: MotionLearnings[] = [
         link: "/learnings/14",
         image: Drag3dTransformImg,
         code: Drag3dTransformCode
+    },
+    {
+        id: 15,
+        name: 'Color Interpolation',
+        desc: 'Color Interpolation Effect using Framer Motion.',
+        component: ColorInterpolation,
+        link: "/learnings/15",
+        image: Drag3dTransformImg,
+        code: ColorInterpolationCode
+    },
+    {
+        id: 16,
+        name: 'Morph SVG',
+        desc: 'Morph SVG Effect using Framer Motion.',
+        component: MorphSvg,
+        link: "/learnings/16",
+        image: Drag3dTransformImg,
+        code: MorphSvgCode,
+    },
+    {
+        id: 17,
+        name: 'Scroll Progess',
+        desc: 'Scroll Progess Effect using Framer Motion.',
+        component: ScrollProgress,
+        link: "/learnings/17",
+        image: Drag3dTransformImg,
+        code: ScrollProgressCode,
+    },
+    {
+        id: 18,
+        name: 'Keyframes Position',
+        desc: 'Keyframes Position Color Effect using Framer Motion.',
+        component: KeyframesPositionColor,
+        link: "/learnings/18",
+        image: Drag3dTransformImg,
+        code: KeyframesPositionColorCode,
+        class:'h-[380px] flex justify-center items-start'
+    },
+    {
+        id: 19,
+        name: 'Animated Presence Stack',
+        desc: 'Animated Presence Stack Effect using Framer Motion.',
+        component: AnimatedPresenceStack,
+        link: "/learnings/19",
+        image: Drag3dTransformImg,
+        code: [{
+            filename: 'AnimatedPresenceStack.svelte',
+            code: AnimatedPresenceStackCode,
+        }, {
+            filename: 'Card.svelte',
+            code: CardCode
+        }]
     }
+
+
+
 ]

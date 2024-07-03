@@ -66,7 +66,7 @@
     <h1 class="text-2xl font-bold mt-4 md:text-3xl capitalize my-6">
       {singlePage.name}
     </h1>
-    <ComponentView class='relative'>
+    <ComponentView class="relative {singlePage.class}">
       <GradientLine />
       <svelte:component this={singlePage.component} />
     </ComponentView>
@@ -77,7 +77,13 @@
     />
     <div>
       {#key singlePage}
-        <CodeBlock code={singlePage.code} {fileName} />
+        {#if typeof singlePage.code === "string"}
+          <CodeBlock code={singlePage.code} {fileName} />
+        {:else if singlePage.code instanceof Array}
+          {#each singlePage.code as { filename, code }}
+            <CodeBlock {code} fileName={filename} />
+          {/each}
+        {/if}
       {/key}
     </div>
   </div>

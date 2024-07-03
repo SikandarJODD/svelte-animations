@@ -155,7 +155,7 @@
         <a href="/" class="mt-16 mb-0 font-semibold text-xl"
           >Svelte Animations</a
         >
-        <nav class="flex flex-1 flex-col mt-2">
+        <nav class="flex flex-1 flex-col mt-2 mb-16">
           <ul role="list" class="flex flex-1 flex-col">
             <li>
               <ul role="list" class="-mx-3">

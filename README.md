@@ -1,10 +1,22 @@
-# Simple Animations Examples
+# Simple Components
 
-This Project contains simple animations examples using **Spring** and **Tweened**
+Build using _Svelte Motion_ and Tailwind CSS
 
-Visit for Docs : [svelte/motion](https://svelte.dev/docs/svelte-motion)
+Svelte Motion Docs : [svelte/motion](https://svelte.dev/docs/svelte-motion)
 
-Hosted on Vercel : [simple-animations-examples](https://animation-svelte.vercel.app/)
+Hosted on Vercel : [Svelte Components](https://animation-svelte.vercel.app/)
+
+## New Components
+
+| Name                    | Desc                                                                     | Section       |
+| ----------------------- | ------------------------------------------------------------------------ | ------------- |
+| Dock Menu               | [Visit](https://animation-svelte.vercel.app/luxe/dock-menu)              | Luxe          |
+| Input Spotlight Border  | [Visit](https://animation-svelte.vercel.app/luxe/input-spotlight-border) | Luxe          |
+| Input Pulse Border      | [Visit](https://animation-svelte.vercel.app/luxe/input-pulse-border)     | Luxe          |
+| Color Interpolation     | [Visit](https://animation-svelte.vercel.app/learnings/15)                | Framer-Motion |
+| Morph SVG               | [Visit](https://animation-svelte.vercel.app/learnings/16)                | Framer-Motion |
+| Scroll Progress         | [Visit](https://animation-svelte.vercel.app/learnings/17)                | Framer-Motion |
+| Animates Presence Stack | [Visit](https://animation-svelte.vercel.app/learnings/19)                | Framer-Motion |
 
 ### Svelte Spring, Crossfade, Svelte-Motion Examples
 
