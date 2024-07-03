@@ -5,6 +5,7 @@
   import Spotlight from "$lib/components/ui/spotlight/Spotlight.svelte";
   import ButtonAnimatedBorder from "$lib/luxe/buttons/ButtonAnimatedBorder.svelte";
   import { draw } from "svelte/transition";
+  import HomeLuxeButton from "../tags/HomeLuxeButton.svelte";
   let getStarsCount = async () => {
     let res = await fetch(
       "https://api.github.com/repos/SikandarJODD/svelte-animations"
@@ -40,7 +41,7 @@
       </div>
       <div class="flex justify-center items-center mt-4 flex-col gap-4">
         {#await getStarsCount()}
-          <p class='text-neutral-400' >Loading...</p>
+          <p class="text-neutral-400">Loading...</p>
         {:then value}
           <Button
             size="sm"
@@ -63,7 +64,7 @@
             {value}</Button
           >
         {/await}
-        <ButtonAnimatedBorder href="/luxe">Luxe Component</ButtonAnimatedBorder>
+        <HomeLuxeButton href="/luxe">Luxe Component</HomeLuxeButton>
       </div>
     </div>
   </div>

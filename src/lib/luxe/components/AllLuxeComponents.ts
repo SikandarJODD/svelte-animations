@@ -329,7 +329,7 @@ export let allLuxeComponents: LuxeComponent[] = [
     link: '/luxe/input-gradient-border',
     description: 'Input Gradient Border using Tailwind CSS',
     code: InputGradientBorderCode,
-    showGrid: true
+    showGrid: false
   },
   {
     id: 'input-pulse-border',
