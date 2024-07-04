@@ -1,5 +1,5 @@
 <script>
-  import Ripple from "./Ripple.svelte";
+  import Ripple from "../Ripple.svelte";
 </script>
 
 <div
@@ -10,5 +10,11 @@
   >
     Ripple
   </p>
-  <Ripple />
+  <Ripple
+    MAIN_CIRCLE_SIZE={210}
+    NUM_CIRCLES={8}
+    MAIN_CIRCLE_OPACITY={0.26}
+    HEIGHT={70}
+    WIDTH={70}
+  />
 </div>

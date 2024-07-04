@@ -8,9 +8,11 @@
   export let lang = "svelte";
 </script>
 
-<div class="p-4 relative rounded-xl bg-background border border-border">
-  <div class="absolute top-4 right-4 z-10">
-    <CopyCode {code} />
+<div class="p-4 relative rounded-xl bg-background border border-border group">
+  <div class="sticky top-4 z-10 pb-10">
+    <div class="absolute right-0">
+      <CopyCode {code} />
+    </div>
   </div>
   <GradientLine />
   {#if fileName.length > 0}
@@ -58,10 +60,13 @@
           /></svg
         >
       {/if}
-      <span class="text-sm dark:text-neutral-400">{fileName}</span>
+      <span
+        class="text-sm dark:text-neutral-400 group-hover:text-neutral-100 transition-all duration-200"
+        >{fileName}</span
+      >
     </div>
   {/if}
-  <div class="relative overflow-x-auto pt-10">
+  <div class="relative overflow-x-auto -mt-2">
     <Code {code} {lang} />
   </div>
 </div>

@@ -78,6 +78,8 @@ const config: Config = {
 				// 'text-gradient': 'text-gradient 1.5s linear infinite',
 				'background-shine': 'background-shine 2s linear infinite',
 				'pulse-slow': 'pulse 6s infinite cubic-bezier(0.4, 0, 0.6, 1)',
+				// Magic UI 
+				'ripple': 'ripple 3400ms ease infinite',
 			},
 			"keyframes": {
 				spin: {
@@ -176,6 +178,15 @@ const config: Config = {
 				'background-shine': {
 					from: { backgroundPosition: '0 0' },
 					to: { backgroundPosition: '-200% 0' },
+				},
+				// Magic UI 
+				ripple: {
+					"0%, 100%": {
+						transform: "translate(-50%, -50%) scale(1)",
+					},
+					"50%": {
+						transform: "translate(-50%, -50%) scale(0.9)",
+					},
 				},
 			},
 		},

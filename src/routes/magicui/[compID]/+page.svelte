@@ -58,41 +58,84 @@
         {comp.desc}
       </p>
     </div>
-    <Tabs.Root value="preview">
-      <Tabs.List class="bg-transparent">
-        <Tabs.Trigger value="preview">Preview</Tabs.Trigger>
-        <Tabs.Trigger value="code">Code</Tabs.Trigger>
-      </Tabs.List>
-      <Separator class="mb-4 -mt-0.5 ml-1  pt-0" />
-      <Tabs.Content value="preview">
-        <div>
-          <ComponentView
-            class="{comp?.showGrid === true
-              ? ' relative overflow-hidden '
-              : ''} {comp.class}"
-          >
-            {#if comp?.showGrid}
-              <div
-                class="absolute h-full w-full bg-[linear-gradient(to_right,#b1b1b12e_1px,transparent_1px),linear-gradient(to_bottom,#b1b1b12e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_10%,transparent_100%)]"
-              ></div>
-            {/if}
-            <svelte:component this={comp.previewComp} />
-          </ComponentView>
-        </div>
-      </Tabs.Content>
-      <Tabs.Content value="code">
-        {#if typeof comp.previewCode === "string"}
-          {#key comp}
-            <CodeBlock code={comp.previewCode} {fileName} />
-          {/key}
-        {:else if comp.previewCode instanceof Array}
-          {#each comp.previewCode as { filename, code }}
-            <div>
-              <CodeBlock {code} fileName={filename} />
-            </div>
-          {/each}
+    <div>
+      <ComponentView
+        class="{comp?.showGrid === true
+          ? ' relative overflow-hidden '
+          : ''} {comp.class}"
+      >
+        {#if comp?.showGrid}
+          <div
+            class="absolute h-full w-full bg-[linear-gradient(to_right,#b1b1b12e_1px,transparent_1px),linear-gradient(to_bottom,#b1b1b12e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_10%,transparent_100%)]"
+          ></div>
         {/if}
-      </Tabs.Content>
-    </Tabs.Root>
+        <svelte:component this={comp.component} />
+      </ComponentView>
+    </div>
+    <div>
+      {#if typeof comp.code === "string"}
+        {#key comp}
+          <CodeBlock code={comp.code} {fileName} />
+        {/key}
+      {:else if comp.code instanceof Array}
+        {#each comp.code as { filename, code }}
+          <div>
+            <CodeBlock {code} fileName={filename} />
+          </div>
+        {/each}
+      {/if}
+    </div>
+    {#if comp?.tailwind}
+      <CodeBlock code={comp.tailwind} fileName="tailwind.config.ts" lang='json' />
+    {/if}
   </div>
+  {#if comp?.examples}
+    <h1 class="text-2xl font-bold mt-4 md:text-3xl capitalize mb-3">
+      Examples
+    </h1>
+    <Tabs.Root value={comp.examples[0].name}>
+      {#each comp.examples as example}
+        <Tabs.List class="bg-transparent">
+          <Tabs.Trigger value={example.name}>{example.name}</Tabs.Trigger>
+        </Tabs.List>
+      {/each}
+      <Separator class="mb-4 -mt-0.5 ml-1  pt-0" />
+      {#each comp.examples as example}
+        <Tabs.Content value={example.name}>
+          <div class="space-y-4">
+            <div>
+              <ComponentView
+                class="{example?.showGrid === true
+                  ? ' relative overflow-hidden '
+                  : ''} {example.class}"
+              >
+                {#if example?.showGrid}
+                  <div
+                    class="absolute h-full w-full bg-[linear-gradient(to_right,#b1b1b12e_1px,transparent_1px),linear-gradient(to_bottom,#b1b1b12e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_10%,transparent_100%)]"
+                  ></div>
+                {/if}
+                <svelte:component this={example.component} />
+              </ComponentView>
+            </div>
+            <div>
+              {#if typeof example.code === "string"}
+                {#key example}
+                  <CodeBlock code={example.code} fileName={example.fileName} />
+                {/key}
+              {:else if example.code instanceof Array}
+                {#each example.code as singleCode}
+                  <div>
+                    <CodeBlock
+                      code={singleCode.code}
+                      fileName={singleCode.filename}
+                    />
+                  </div>
+                {/each}
+              {/if}
+            </div>
+          </div>
+        </Tabs.Content>
+      {/each}
+    </Tabs.Root>
+  {/if}
 </div>

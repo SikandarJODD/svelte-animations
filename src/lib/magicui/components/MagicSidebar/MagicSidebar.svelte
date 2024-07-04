@@ -28,6 +28,10 @@
           name: "Dot Pattern",
           link: "/magicui/dot-pattern",
         },
+        {
+          name: "Ripple",
+          link: "/magicui/ripple",
+        },
       ],
     },
     // {
@@ -160,7 +164,7 @@
                             href={item.link}
                             class="group {item.link === routeID
                               ? 'text-primary'
-                              : 'text-primary/60'} flex gap-x-3 rounded-md p-2 text-sm leading-6"
+                              : 'text-primary/60'} flex gap-x-3 rounded-md p-2  text-sm leading-6"
                           >
                             {item.name}
                           </a>
@@ -221,7 +225,7 @@
                         href={subItem.link}
                         class="group {subItem.link == routeID
                           ? 'text-primary bg-neutral-900 border-border font-medium'
-                          : 'text-primary/60 '} capitalize flex gap-x-3 p-2 text-sm leading-6 select-none px-3 py-1.5 border border-transparent rounded-sm hover:bg-neutral-900 transition-all duration-300"
+                          : 'text-primary/60 '} capitalize flex gap-x-3 p-2 mt-px text-sm leading-6 select-none px-3 py-1.5 border border-transparent rounded-sm hover:bg-neutral-900 transition-all duration-300"
                       >
                         {subItem.name}
                       </a>
