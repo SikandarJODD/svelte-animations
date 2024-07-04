@@ -12,12 +12,12 @@
       sub: [
         {
           name: "Browse Components",
-          link: "/magicui",
+          link: "/magic",
         },
-        {
-          name: "Usage & Installation",
-          link: "/magicui/usage",
-        },
+        // {
+        //   name: "Usage & Installation",
+        //   link: "/magicui/usage",
+        // },
       ],
     },
     {
@@ -26,19 +26,28 @@
       sub: [
         {
           name: "Dot Pattern",
-          link: "/magicui/dot-pattern",
+          link: "/magic/dot-pattern",
         },
         {
           name: "Ripple",
-          link: "/magicui/ripple",
+          link: "/magic/ripple",
+        },
+        {
+          name: "Grid Pattern",
+          link: "/magic/grid-pattern",
         },
       ],
     },
-    // {
-    //   id: 2,
-    //   heading: "Components",
-    //   sub: allLuxeComponents,
-    // },
+    {
+      id: 3,
+      heading: "Buttons",
+      sub: [
+        {
+          name: "Shimmer Button",
+          link: "/magic/shimmer-button",
+        },
+      ],
+    },
   ];
 
   let mobileMenu = true;
@@ -164,7 +173,7 @@
                             href={item.link}
                             class="group {item.link === routeID
                               ? 'text-primary'
-                              : 'text-primary/60'} flex gap-x-3 rounded-md p-2  text-sm leading-6"
+                              : 'text-primary/60'} flex gap-x-3 rounded-md p-2 text-sm leading-6"
                           >
                             {item.name}
                           </a>

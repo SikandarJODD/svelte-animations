@@ -1,17 +1,8 @@
-// Dot Pattern
-import { DotPattern } from "$lib/magicui/backgrounds/DotPattern";
-import DotPatternCode from "$lib/magicui/backgrounds/DotPattern/DotPattern.svelte?raw";
-import DotsCenterExample from "$lib/magicui/backgrounds/DotPattern/examples/DotsCenterExample.svelte";
-import DotsCenterExampleCode from "$lib/magicui/backgrounds/DotPattern/examples/DotsCenterExample.svelte?raw";
-import LinerGradientDotPattern from "$lib/magicui/backgrounds/DotPattern/examples/LinerGradientDotPattern.svelte";
-import LinerGradientDotPatternCode from "$lib/magicui/backgrounds/DotPattern/examples/LinerGradientDotPattern.svelte?raw";
 
-// Ripple Effect
-import { Ripple } from "$lib/magicui/backgrounds/Ripple";
-import RippleCode from "$lib/magicui/backgrounds/Ripple/Ripple.svelte?raw";
-import RippleExample from "$lib/magicui/backgrounds/Ripple/examples/RippleExample.svelte";
-import RippleExampleCode from "$lib/magicui/backgrounds/Ripple/examples/RippleExample.svelte?raw";
-import { allMagicTailwinds } from "./AllMagicTailwinds";
+import { backgroundMagic } from "$lib/magicui/backgrounds/backgroundMagic";
+import { buttonMagic } from "$lib/magicui/buttons/buttonMagic";
+
+
 
 type MagicComponent = {
     id: string;
@@ -41,47 +32,34 @@ type ExampleComponent = {
     showGrid?: boolean
 }
 // Create a list of all Magic Components 
-export let allMagicComponents: MagicComponent[] = [{
-    id: 'dot-pattern',
-    name: 'Dot Pattern',
-    desc: 'A background dot pattern made with SVGs, fully customizable using Tailwind CSS.',
-    component: DotPattern,
-    previewComp: DotsCenterExample,
-    link: "/magic-components/dot-pattern",
-    code: DotPatternCode,
-    previewCode: DotsCenterExampleCode,
-    class: 'relative overflow-hidden',
-    examples: [{
+type AllMagic = {
+    id: number | string;
+    heading: string;
+    sub: MagicComponent[] | any;
+
+}
+
+export let allMagicComponents: AllMagic[] = [
+    {
         id: 1,
-        name: 'Center Dots',
-        fileName: 'DotsCenterExample.svelte',
-        code: DotsCenterExampleCode,
-        component: DotsCenterExample,
-        showGrid: true
+        heading: "Getting Started",
+        sub: [
+            {
+                id: "getting-started",
+                name: "Browse Components",
+                link: "/magic",
+            },
+        ],
     },
     {
-        id: 2,
-        name: 'Linear Gradient Dots',
-        fileName: 'LinerGradientDotPattern.svelte',
-        code: LinerGradientDotPatternCode,
-        component: LinerGradientDotPattern,
-        showGrid: true
-    }]
-}, {
-    id: 'ripple',
-    name: 'Ripple',
-    desc: 'A ripple effect component made with SVGs and Tailwind CSS.',
-    component: Ripple,
-    link: "/magic-components/ripple",
-    code: RippleCode,
-    class: 'relative overflow-hidden h-[440px]',
-    tailwind: allMagicTailwinds['ripple'],
-    examples: [{
-        id: 1,
-        name: 'Ripple Effect',
-        fileName: 'Ripple.svelte',
-        component: RippleExample,
-        code: RippleExampleCode,
-    }]
-}
-]
+        id: 'backgrounds',
+        heading: "Backgrounds",
+        sub: backgroundMagic
+    },
+    {
+        id: 'buttons',
+        heading: "Buttons",
+        sub: buttonMagic
+    }
+];
+

@@ -66,9 +66,10 @@
         {/await}
         <div class="flex justify-center items-center gap-3">
           <HomeLuxeButton href="/luxe">Luxe Component</HomeLuxeButton>
-          <HomeLuxeButton href="/magicui">Magic UI</HomeLuxeButton>
+          <HomeLuxeButton href="/magic/dot-pattern">Magic UI</HomeLuxeButton>
         </div>
       </div>
     </div>
   </div>
 </DotBackground>
+

@@ -7,19 +7,18 @@
   export let cx = 1;
   export let cy = 1;
   export let cr = 1;
+  export let fillColor = "rgb(163 163 163 / 0.8)";
 
-  let className: any = '';
+  let className: any = "";
   export { className as class };
   let id = crypto.randomUUID().toString().slice(0, 10); // generating a unique ID for Components
 </script>
 
 <svg
   aria-hidden="true"
-  class={cn(
-    "pointer-events-none absolute inset-0 h-full w-full fill-neutral-400/80",
-    className
-  )}
+  class={cn("pointer-events-none absolute inset-0 h-full w-full ", className)}
   {...$$restProps}
+  fill={fillColor}
 >
   <defs>
     <pattern
