@@ -64,7 +64,10 @@
             {value}</Button
           >
         {/await}
-        <HomeLuxeButton href="/luxe">Luxe Component</HomeLuxeButton>
+        <div class="flex justify-center items-center gap-3">
+          <HomeLuxeButton href="/luxe">Luxe Component</HomeLuxeButton>
+          <HomeLuxeButton href="/magicui">Magic UI</HomeLuxeButton>
+        </div>
       </div>
     </div>
   </div>

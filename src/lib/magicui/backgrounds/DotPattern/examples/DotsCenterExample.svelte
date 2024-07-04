@@ -3,7 +3,7 @@
 </script>
 
 <div
-  class="relative flex h-fit w-full max-w-[32rem] items-center justify-center overflow-hidden rounded-lg border bg-background p-20 md:shadow-xl"
+  class="relative flex h-full w-full max-w-[32rem] items-center justify-center overflow-hidden rounded-lg border bg-background p-20 md:shadow-xl"
 >
   <!-- Just Delete this P tag for Viewing the Dot Center Pattern -->
   <p

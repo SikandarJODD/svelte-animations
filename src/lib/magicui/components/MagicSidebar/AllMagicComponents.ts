@@ -1,6 +1,7 @@
 import { DotPattern } from "$lib/magicui/backgrounds/DotPattern";
 import DotPatternCode from "$lib/magicui/backgrounds/DotPattern/DotPattern.svelte?raw";
 import DotsCenterExample from "$lib/magicui/backgrounds/DotPattern/examples/DotsCenterExample.svelte";
+import DotsCenterExampleCode from "$lib/magicui/backgrounds/DotPattern/examples/DotsCenterExample.svelte?raw";
 
 type MagicComponent = {
     id: string;
@@ -11,6 +12,8 @@ type MagicComponent = {
     code: string | Code[];
     class?: string;
     showGrid?: boolean;
+    previewComp?: any;
+    previewCode?: string | Code[];
 }
 type Code = {
     filename: string;
@@ -20,10 +23,12 @@ type Code = {
 export let allMagicComponents: MagicComponent[] = [{
     id: 'dot-pattern',
     name: 'Dot Pattern',
-    desc: 'Dot Pattern using Framer Motion.',
+    desc: 'A background dot pattern made with SVGs, fully customizable using Tailwind CSS.',
     component: DotPattern,
+    previewComp: DotsCenterExample,
     link: "/magic-components/dot-pattern",
     code: DotPatternCode,
+    previewCode: DotsCenterExampleCode,
     class: 'relative overflow-hidden',
 }
 ]
