@@ -16,7 +16,7 @@
       class="sticky top-0 mx-auto flex h-[30%] max-w-4xl items-center bg-transparent px-[1rem] py-[5rem]"
     >
       <p
-        class="flex flex-wrap p-5 text-2xl font-bold text-black/20 dark:text-white/20 md:p-8 md:text-3xl lg:p-10 lg:text-4xl xl:text-5xl"
+        class="flex flex-wrap p-5  text-2xl font-bold text-black/20 dark:text-white/20 md:p-8 md:text-3xl lg:p-10 lg:text-4xl xl:text-5xl"
       >
         {#each words as item, i}
           <Word progress={icode} range={[i, i + 1]} wordsLen={words.length}>

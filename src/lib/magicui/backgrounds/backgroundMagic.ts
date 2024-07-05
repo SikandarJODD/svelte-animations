@@ -23,7 +23,7 @@ import DashedStrokeGrid from "$lib/magicui/backgrounds/GridPattern/examples/Dash
 import DashedStrokeGridCode from "$lib/magicui/backgrounds/GridPattern/examples/DashedStrokeGrid.svelte?raw";
 import SkewGridExample from "$lib/magicui/backgrounds/GridPattern/examples/SkewGridExample.svelte";
 import SkewGridExampleCode from "$lib/magicui/backgrounds/GridPattern/examples/SkewGridExample.svelte?raw";
-import { allMagicTailwinds } from "../components/MagicSidebar/AllMagicTailwinds";
+import { allMagicTailwinds } from "../AllMagicTailwinds";
 
 
 

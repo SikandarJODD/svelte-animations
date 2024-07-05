@@ -3,7 +3,7 @@
   import ComponentView from "$lib/luxe/components/codeblock/ComponentView.svelte";
   import { page } from "$app/stores";
   import CodeBlock from "$lib/luxe/components/codeblock/CodeBlock.svelte";
-  import { allMagicComponents } from "$lib/magicui/components/MagicSidebar/AllMagicComponents";
+  import { allMagicComponents } from "$lib/magicui/AllMagicComponents";
   import * as Tabs from "$lib/components/ui/tabs";
   import DotsCenterExample from "$lib/magicui/backgrounds/DotPattern/examples/DotsCenterExample.svelte";
   import DotPattern from "$lib/magicui/backgrounds/DotPattern/DotPattern.svelte";
@@ -35,7 +35,7 @@
   <meta name="twitter:site" content="@Sikandar_Bhide" />
 </svelte:head>
 
-<div class="my-0 md:my-14 mx-2 md:mx-5">
+<div class="my-0 md:my-10 mx-2 md:mx-5">
   <a href="/magic" class="flex items-center gap-1 text-muted-foreground">
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -61,21 +61,94 @@
         {comp.desc}
       </p>
     </div>
+    {#if comp?.examples}
+      <!-- <h1 class="text-2xl font-bold mt-4 md:text-3xl capitalize mb-3">
+        Examples
+      </h1> -->
+      <Tabs.Root value={comp.examples[0].name}>
+        {#each comp.examples as example}
+          <Tabs.List class="bg-transparent">
+            <Tabs.Trigger value={example.name}>{example.name}</Tabs.Trigger>
+          </Tabs.List>
+        {/each}
+        <Separator class="mb-4 -mt-0.5 ml-1  pt-0" />
+        {#each comp.examples as example}
+          <Tabs.Content value={example.name}>
+            <div class="space-y-4">
+              <div>
+                <ComponentView
+                  class="{example?.showGrid === true
+                    ? ' relative overflow-hidden '
+                    : ''} {example.class} {example?.showDots === true
+                    ? ' relative overflow-hidden '
+                    : ''}"
+                >
+                  {#if example?.showGrid}
+                    <div
+                      class="absolute h-full w-full bg-[linear-gradient(to_right,#b1b1b12e_1px,transparent_1px),linear-gradient(to_bottom,#b1b1b12e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_10%,transparent_100%)]"
+                    ></div>
+                  {:else if example?.showDots}
+                    <div
+                      class="[mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_30%,transparent_100%)] absolute h-full w-full"
+                    >
+                      <DotPattern
+                        class="[mask-image:radial-gradient(600px_circle_at_center,white,transparent)] "
+                        fillColor="rgba(120, 120, 120,0.4)"
+                      />
+                    </div>
+                  {/if}
+                  <svelte:component this={example.component} />
+                </ComponentView>
+              </div>
+              <div>
+                {#if typeof example.code === "string"}
+                  {#key example}
+                    <CodeBlock
+                      code={example.code}
+                      fileName={example.fileName}
+                    />
+                  {/key}
+                {:else if example.code instanceof Array}
+                  {#each example.code as singleCode}
+                    <div>
+                      <CodeBlock
+                        code={singleCode.code}
+                        fileName={singleCode.filename}
+                      />
+                    </div>
+                  {/each}
+                {/if}
+              </div>
+            </div>
+          </Tabs.Content>
+        {/each}
+      </Tabs.Root>
+    {/if}
+    {#if comp?.component}
+      <div>
+        <h1 class="text-2xl font-bold mt-4 md:text-3xl capitalize mb-4">
+          Original Component
+        </h1>
+
+        <ComponentView
+          class="{comp?.showGrid === true
+            ? ' relative overflow-hidden '
+            : ''} {comp.class}"
+        >
+          {#if comp?.showGrid}
+            <div
+              class="absolute h-full w-full bg-[linear-gradient(to_right,#b1b1b12e_1px,transparent_1px),linear-gradient(to_bottom,#b1b1b12e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_10%,transparent_100%)]"
+            ></div>
+          {/if}
+          <svelte:component this={comp.component} />
+        </ComponentView>
+      </div>
+    {/if}
+
     <div>
-      <ComponentView
-        class="{comp?.showGrid === true
-          ? ' relative overflow-hidden '
-          : ''} {comp.class}"
-      >
-        {#if comp?.showGrid}
-          <div
-            class="absolute h-full w-full bg-[linear-gradient(to_right,#b1b1b12e_1px,transparent_1px),linear-gradient(to_bottom,#b1b1b12e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_10%,transparent_100%)]"
-          ></div>
-        {/if}
-        <svelte:component this={comp.component} />
-      </ComponentView>
-    </div>
-    <div>
+      <h1 class="text-2xl font-bold mt-0 md:text-3xl capitalize mb-3">
+        Component Code
+      </h1>
       {#if typeof comp.code === "string"}
         {#key comp}
           <CodeBlock code={comp.code} {fileName} />
@@ -96,64 +169,4 @@
       />
     {/if}
   </div>
-  {#if comp?.examples}
-    <h1 class="text-2xl font-bold mt-4 md:text-3xl capitalize mb-3">
-      Examples
-    </h1>
-    <Tabs.Root value={comp.examples[0].name}>
-      {#each comp.examples as example}
-        <Tabs.List class="bg-transparent">
-          <Tabs.Trigger value={example.name}>{example.name}</Tabs.Trigger>
-        </Tabs.List>
-      {/each}
-      <Separator class="mb-4 -mt-0.5 ml-1  pt-0" />
-      {#each comp.examples as example}
-        <Tabs.Content value={example.name}>
-          <div class="space-y-4">
-            <div>
-              <ComponentView
-                class="{example?.showGrid === true
-                  ? ' relative overflow-hidden '
-                  : ''} {example.class} {example?.showDots === true
-                  ? ' relative overflow-hidden '
-                  : ''}"
-              >
-                {#if example?.showGrid}
-                  <div
-                    class="absolute h-full w-full bg-[linear-gradient(to_right,#b1b1b12e_1px,transparent_1px),linear-gradient(to_bottom,#b1b1b12e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_10%,transparent_100%)]"
-                  ></div>
-                {:else if example?.showDots}
-                  <div
-                    class="[mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_30%,transparent_100%)] absolute h-full w-full"
-                  >
-                    <DotPattern
-                      class="[mask-image:radial-gradient(600px_circle_at_center,white,transparent)] "
-                      fillColor="rgba(120, 120, 120,0.4)"
-                    />
-                  </div>
-                {/if}
-                <svelte:component this={example.component} />
-              </ComponentView>
-            </div>
-            <div>
-              {#if typeof example.code === "string"}
-                {#key example}
-                  <CodeBlock code={example.code} fileName={example.fileName} />
-                {/key}
-              {:else if example.code instanceof Array}
-                {#each example.code as singleCode}
-                  <div>
-                    <CodeBlock
-                      code={singleCode.code}
-                      fileName={singleCode.filename}
-                    />
-                  </div>
-                {/each}
-              {/if}
-            </div>
-          </div>
-        </Tabs.Content>
-      {/each}
-    </Tabs.Root>
-  {/if}
 </div>

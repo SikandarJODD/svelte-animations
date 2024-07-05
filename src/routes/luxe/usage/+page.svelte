@@ -6,7 +6,7 @@
 <div class="my-0 md:my-14 mx-2 md:mx-5">
   <div class="space-y-7">
     <h1 class="text-2xl font-bold mt-4 md:text-3xl capitalize my-6">
-      Basic Usage of Components
+      Basic Usage of Luxe Components
     </h1>
     <!-- <CodeBlock
       code="npm i svelte-motion"

@@ -1,4 +1,4 @@
-import type { MagicComponent } from "../components/MagicSidebar/AllTypes";
+import type { MagicComponent } from "../AllTypes";
 import NumberTicker from "./NumberTicker/NumberTicker.svelte";
 import NumberTickerCode from "./NumberTicker/NumberTicker.svelte?raw";
 import NumTickerExample from "./NumberTicker/examples/NumTickerExample.svelte";
@@ -22,7 +22,7 @@ import TextRevealCode from "./TextReveal/TextReveal.svelte?raw";
 import WordCode from "./TextReveal/Word.svelte?raw";
 
 
-import { allMagicTailwinds } from "../components/MagicSidebar/AllMagicTailwinds";
+import { allMagicTailwinds } from "../AllMagicTailwinds";
 import TextRevealExample from "./TextReveal/TextRevealExample.svelte";
 import TextRevealExampleCode from "./TextReveal/TextRevealExample.svelte?raw";
 
@@ -76,7 +76,8 @@ export let allMagicText: MagicComponent[] = [
                 fileName: 'AnimatedGradientText.svelte',
                 name: 'Animated Gradient Text',
                 component: AnimatedExample,
-                code: AnimatedExampleCode
+                code: AnimatedExampleCode,
+                showDots: true
             }
         ]
     },

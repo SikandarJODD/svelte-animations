@@ -1,11 +1,15 @@
-<script>
-  import { allLuxeComponents } from "$lib/luxe/components/AllLuxeComponents";
+<script lang="ts">
   import { page } from "$app/stores";
   import { navs } from "$lib";
   import { onMount } from "svelte";
-  import { blur, slide } from "svelte/transition";
+  import { slide } from "svelte/transition";
 
-  export let componentsNav = [
+  type compNavs = {
+    id: number;
+    heading: string;
+    sub: { name: string; link: string; isNew?: boolean }[];
+  };
+  export let componentsNav: compNavs[] = [
     {
       id: 1,
       heading: "Getting Started",
@@ -13,6 +17,22 @@
         {
           name: "Browse Components",
           link: "/magic",
+        },
+      ],
+    },
+    {
+      id: 5,
+      heading: "Components",
+      sub: [
+        {
+          name: "Orbiting Circles",
+          link: "/magic/orbiting-circles",
+          isNew: true,
+        },
+        {
+          name: "Marquee",
+          link: "/magic/marquee",
+          isNew: true,
         },
       ],
     },
@@ -49,24 +69,21 @@
       heading: "Text Animations",
       sub: [
         {
-          id: 1,
+          name: "Text Reveal",
+          link: "/magic/text-reveal",
+          isNew: true,
+        },
+        {
           name: "Number Ticker",
           link: "/magic/number-ticker",
         },
         {
-          id: 2,
           name: "Animated Gradient Text",
           link: "/magic/animated-gradient-text",
         },
         {
-          id: 3,
           name: "Animated Shiny Text",
           link: "/magic/animated-shiny-text",
-        },
-        {
-          id: 4,
-          name: "Text Reveal",
-          link: "/magic/text-reveal",
         },
       ],
     },
@@ -220,7 +237,7 @@
     >
       <!-- Sidebar component, swap this element with another sidebar if you like -->
       <div
-        class="flex grow flex-col gap-y-0 overflow-y-auto dark:border-primary/40 dark:bg-background bg-white px-6"
+        class="flex grow flex-col gap-y-0 overflow-y-auto dark:border-primary/40 dark:bg-background bg-white pl-6 pr-4"
       >
         <nav class="flex flex-1 flex-col mt-2 mb-32">
           <a href="/" class="font-bold text-xl mx-1 mt-3 mb-1"
@@ -256,9 +273,15 @@
                         href={subItem.link}
                         class="group {subItem.link == routeID
                           ? 'text-primary bg-neutral-900 border-border font-medium'
-                          : 'text-primary/60 '} capitalize flex gap-x-3 p-2 mt-px text-sm leading-6 select-none px-3 py-1.5 border border-transparent rounded-sm hover:bg-neutral-900 transition-all duration-300"
+                          : 'text-primary/60 '} capitalize flex justify-between items-center gap-x-3 p-2 mt-px text-sm leading-6 select-none pl-3 py-1.5 border border-transparent rounded-sm hover:bg-neutral-900 transition-all duration-300"
                       >
                         {subItem.name}
+                        {#if subItem?.isNew}
+                          <span
+                            class="inline-flex items-center rounded-full bg-green-500/10 px-3 py-1 text-xs font-medium text-green-400 ring-1 ring-inset ring-green-500/20"
+                            >New</span
+                          >
+                        {/if}
                       </a>
                     </li>
                   {/each}

@@ -3,7 +3,7 @@ export type MagicComponent = {
     id: string;
     name: string;
     desc: string;
-    component: any;
+    component?: any;
     link: string;
     code: string | Code[];
     class?: string;

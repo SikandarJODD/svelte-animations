@@ -1,4 +1,5 @@
-import type { MagicComponent } from "../components/MagicSidebar/AllTypes";
+import { allMagicTailwinds } from "../AllMagicTailwinds";
+import type { MagicComponent } from "../AllTypes";
 
 // Shimmer Button
 import ShimmerButton from "./shimmer/ShimmerButton.svelte";
@@ -15,6 +16,7 @@ export let buttonMagic: MagicComponent[] = [
         code: ShimmerButtonCode,
         link: "/magic/shimmer-button",
         showGrid: true,
+        tailwind: allMagicTailwinds['shimmer'],
         examples: [
             {
                 id: 1,
