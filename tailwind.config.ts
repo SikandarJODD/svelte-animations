@@ -81,7 +81,9 @@ const config: Config = {
 				// Magic UI 
 				'ripple': 'ripple 3400ms ease infinite',
 				"spin-around": "spin-around calc(var(--speed) * 2) infinite linear",
-				 magicslide: "magicslide var(--speed) ease-in-out infinite alternate",
+				magicslide: "magicslide var(--speed) ease-in-out infinite alternate",
+				shimmer: "shimmer 8s infinite",
+				gradient: "gradient 8s linear infinite",
 			},
 			"keyframes": {
 				spin: {
@@ -207,6 +209,19 @@ const config: Config = {
 				magicslide: {
 					to: {
 						transform: "translate(calc(100cqw - 100%), 0)",
+					},
+				},
+				shimmer: {
+					"0%, 90%, 100%": {
+						"background-position": "calc(-100% - var(--shimmer-width)) 0",
+					},
+					"30%, 60%": {
+						"background-position": "calc(100% + var(--shimmer-width)) 0",
+					},
+				},
+				gradient: {
+					to: {
+						backgroundPosition: "var(--bg-size) 0",
 					},
 				},
 			},

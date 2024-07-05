@@ -9,14 +9,8 @@
   import DotPattern from "$lib/magicui/backgrounds/DotPattern/DotPattern.svelte";
 
   $: routeID = $page.params.compID;
-  $: comp = allMagicComponents
-    .map((c) => {
-      return c.sub.filter((s) => {
-        return s.id === routeID;
-      });
-    })
-    .filter((c) => c.length > 0)[0][0];
-  $: console.log(comp, "Components", routeID);
+  $: comp = allMagicComponents.filter((c) => c.id === routeID)[0];
+  // $: console.log(comp, "Components", routeID);
   $: fileName =
     comp.name
       .split(" ")
@@ -87,11 +81,11 @@
           <CodeBlock code={comp.code} {fileName} />
         {/key}
       {:else if comp.code instanceof Array}
-        {#each comp.code as { filename, code }}
-          <div>
+        <div class="space-y-5">
+          {#each comp.code as { filename, code }}
             <CodeBlock {code} fileName={filename} />
-          </div>
-        {/each}
+          {/each}
+        </div>
       {/if}
     </div>
     {#if comp?.tailwind}

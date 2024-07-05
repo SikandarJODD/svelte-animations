@@ -14,10 +14,6 @@
           name: "Browse Components",
           link: "/magic",
         },
-        // {
-        //   name: "Usage & Installation",
-        //   link: "/magicui/usage",
-        // },
       ],
     },
     {
@@ -45,6 +41,32 @@
         {
           name: "Shimmer Button",
           link: "/magic/shimmer-button",
+        },
+      ],
+    },
+    {
+      id: 4,
+      heading: "Text Animations",
+      sub: [
+        {
+          id: 1,
+          name: "Number Ticker",
+          link: "/magic/number-ticker",
+        },
+        {
+          id: 2,
+          name: "Animated Gradient Text",
+          link: "/magic/animated-gradient-text",
+        },
+        {
+          id: 3,
+          name: "Animated Shiny Text",
+          link: "/magic/animated-shiny-text",
+        },
+        {
+          id: 4,
+          name: "Text Reveal",
+          link: "/magic/text-reveal",
         },
       ],
     },

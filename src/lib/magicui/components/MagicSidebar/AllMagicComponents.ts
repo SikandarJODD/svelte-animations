@@ -1,6 +1,7 @@
 
 import { backgroundMagic } from "$lib/magicui/backgrounds/backgroundMagic";
 import { buttonMagic } from "$lib/magicui/buttons/buttonMagic";
+import { allMagicText } from "$lib/magicui/text-animations/AllMagicText";
 
 
 
@@ -39,27 +40,5 @@ type AllMagic = {
 
 }
 
-export let allMagicComponents: AllMagic[] = [
-    {
-        id: 1,
-        heading: "Getting Started",
-        sub: [
-            {
-                id: "getting-started",
-                name: "Browse Components",
-                link: "/magic",
-            },
-        ],
-    },
-    {
-        id: 'backgrounds',
-        heading: "Backgrounds",
-        sub: backgroundMagic
-    },
-    {
-        id: 'buttons',
-        heading: "Buttons",
-        sub: buttonMagic
-    }
-];
+export let allMagicComponents = [...buttonMagic, ...backgroundMagic, ...allMagicText];
 
