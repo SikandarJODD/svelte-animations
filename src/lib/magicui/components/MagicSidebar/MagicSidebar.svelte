@@ -34,6 +34,11 @@
           link: "/magic/marquee",
           isNew: true,
         },
+        {
+          name: "Bento Grid",
+          link: "/magic/bento-grid",
+          isNew: true,
+        },
       ],
     },
     {

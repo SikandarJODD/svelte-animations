@@ -32,7 +32,7 @@
 </svelte:head>
 
 <div class="my-0 md:my-14 mx-2 md:mx-5">
-  <a href="/luxe" class="flex items-center gap-1 text-muted-foreground">
+  <a href="/luxe" class="flex items-center gap-1 text-muted-foreground w-fit">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="17"
@@ -65,15 +65,12 @@
       </ComponentView>
     </div>
     {#if typeof comp.code === "string"}
-      <!-- content here -->
       {#key comp}
         <CodeBlock code={comp.code} {fileName} />
       {/key}
     {:else if comp.code instanceof Array}
       {#each comp.code as { filename, code }}
-        <div>
           <CodeBlock {code} fileName={filename} />
-        </div>
       {/each}
     {/if}
   </div>

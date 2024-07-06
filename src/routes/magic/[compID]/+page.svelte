@@ -58,7 +58,7 @@
         {comp.name}
       </h1>
       <p class="text-muted-foreground text-lg">
-        {comp.desc}
+        {@html comp.desc}
       </p>
     </div>
     {#if comp?.examples}
@@ -100,7 +100,7 @@
                   <svelte:component this={example.component} />
                 </ComponentView>
               </div>
-              <div>
+              <div class="space-y-4">
                 {#if typeof example.code === "string"}
                   {#key example}
                     <CodeBlock
