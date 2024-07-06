@@ -1,7 +1,5 @@
 <script>
   import { page } from "$app/stores";
-  import HeadingOne from "$lib/components/dev/tags/HeadingOne.svelte";
-  import Para from "$lib/components/dev/tags/Para.svelte";
   import { motionLearnings } from "$lib/framer-motion/MotionsLearnings";
   import CodeBlock from "$lib/luxe/components/codeblock/CodeBlock.svelte";
   import ComponentView from "$lib/luxe/components/codeblock/ComponentView.svelte";
@@ -66,7 +64,7 @@
     <h1 class="text-2xl font-bold mt-4 md:text-3xl capitalize my-6">
       {singlePage.name}
     </h1>
-    <ComponentView class="relative {singlePage.class}">
+    <ComponentView class="relative {singlePage.class} touch-none">
       <GradientLine />
       <svelte:component this={singlePage.component} />
     </ComponentView>

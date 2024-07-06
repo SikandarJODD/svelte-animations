@@ -9,7 +9,7 @@
 
 <div
   class={cn(
-    "p-3 md:p-8 min-h-[250px] flex items-center justify-center shadow border border-neutral-900 rounded-xl touch-none",
+    "p-3 md:p-8 min-h-[250px] flex items-center justify-center shadow border border-neutral-900 rounded-xl ",
     className
   )}
   {...$$restProps}

@@ -23,8 +23,8 @@
     <div class="mt-[1.5rem]">
       <p>
         -&gt; 20+ free and open-source animated components built with
-        <span class="font-semibold text-[#5046e6]"> React</span>,
-        <span class="font-semibold text-[#5046e6]"> Typescript</span>,
+        <span class="font-semibold text-[#5046e6]"> Svelte</span>,
+        <span class="font-semibold text-[#5046e6]"> Svelte-Inview</span>,
         <span class="font-semibold text-[#5046e6]"> Tailwind CSS</span>, and
         <span class="font-semibold text-[#5046e6]"> Framer Motion</span>
         . <br />

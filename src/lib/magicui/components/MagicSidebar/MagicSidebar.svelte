@@ -1,6 +1,7 @@
 <script lang="ts">
   import { page } from "$app/stores";
   import { navs } from "$lib";
+  import Badge from "$lib/components/ui/badge/badge.svelte";
   import { onMount } from "svelte";
   import { slide } from "svelte/transition";
 
@@ -37,7 +38,6 @@
         {
           name: "Bento Grid",
           link: "/magic/bento-grid",
-          isNew: true,
         },
       ],
     },
@@ -76,7 +76,6 @@
         {
           name: "Text Reveal",
           link: "/magic/text-reveal",
-          isNew: true,
         },
         {
           name: "Number Ticker",
@@ -89,6 +88,36 @@
         {
           name: "Animated Shiny Text",
           link: "/magic/animated-shiny-text",
+        },
+        {
+          name: "Box Reveal",
+          link: "/magic/box-reveal",
+          isNew: true,
+        },
+        {
+          name: "Flip Text",
+          link: "/magic/flip-text",
+          isNew: true,
+        },
+        {
+          name: "Gradual Spacing",
+          link: "/magic/gradual-spacing",
+          isNew: true,
+        },
+        {
+          name: "Letter Pull up",
+          link: "/magic/letter-pull-up",
+          isNew: true,
+        },
+        {
+          name: "Words Fade In",
+          link: "/magic/words-fade-in",
+          isNew: true,
+        },
+        {
+          name: "Words Pull Up",
+          link: "/magic/words-pull-up",
+          isNew: true,
         },
       ],
     },
@@ -282,10 +311,7 @@
                       >
                         {subItem.name}
                         {#if subItem?.isNew}
-                          <span
-                            class="inline-flex items-center rounded-full bg-green-500/10 px-3 py-1 text-xs font-medium text-green-400 ring-1 ring-inset ring-green-500/20"
-                            >New</span
-                          >
+                          <Badge variant='success'>New</Badge>
                         {/if}
                       </a>
                     </li>

@@ -1,12 +1,18 @@
 <script>
   import { Calendar, TextSearch, ReceiptText, CodeXml } from "lucide-svelte";
+
+  //  4 Minor Components :
   import BentoMarquee from "./BentoMarquee.svelte";
   import BentoCommand from "./BentoCommand.svelte";
   import BentoResizable from "./BentoResizable.svelte";
   import BentoCalendar from "./BentoCalendar.svelte";
+
+  // Main Component : 
   import BentoGrid from "../BentoGrid.svelte";
   import BentoCard from "../BentoCard.svelte";
-  const features = [
+
+  // Features Array
+  let features = [
     {
       Icon: TextSearch,
       name: "Save your files",

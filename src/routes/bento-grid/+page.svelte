@@ -1,15 +1,33 @@
 <script>
-  import BentoGrid from "./BentoGrid.svelte";
-  import BentoCard from "./BentoCard.svelte";
+  import Button from "$lib/components/ui/button/button.svelte";
   import { Calendar, TextSearch, ReceiptText, CodeXml } from "lucide-svelte";
+
+  // Minor Components Code
+  import BentoExampleCode from "$lib/magicui/components/BentoGrid/example/BentoExample.svelte?raw";
+  import BentoMarqueeCode from "./BentoMarquee.svelte?raw";
+  import BentoCalendarCode from "./BentoCalendar.svelte?raw";
+  import BentoComposableCode from "./BentoResizable.svelte?raw"; // BentoResizable.svelte
+  import BentoCommandCode from "./BentoCommand.svelte?raw";
+
+  //  Minor Components
+  import BentoCalendar from "./BentoCalendar.svelte";
+  import BentoComposable from "./BentoResizable.svelte";
   import BentoMarquee from "./BentoMarquee.svelte";
   import BentoCommand from "./BentoCommand.svelte";
-  import BentoComposable from "./BentoResizable.svelte";
-  import BentoCalendar from "./BentoCalendar.svelte";
-  import Button from "$lib/components/ui/button/button.svelte";
+
+  // Main Components
+  import BentoCard from "./BentoCard.svelte";
+  import BentoGrid from "./BentoGrid.svelte";
+
+  // Main Components Code
+  import BentoCardCode from "./BentoCard.svelte?raw";
+  import BentoGridCode from "./BentoGrid.svelte?raw";
+
+  //  2 Images
   import BentoCodeImg from "$lib/svg/BentoCode.png";
   import BentoGridImg from "$lib/svg/BentoPage.png";
-  import BentoExampleCode from "$lib/magicui/components/BentoGrid/example/BentoExample.svelte?raw";
+
+  //  Codeblock
   import CodeBlock from "$lib/luxe/components/codeblock/CodeBlock.svelte";
   const features = [
     {
@@ -49,6 +67,37 @@
       class: "col-span-3 lg:col-span-1",
     },
   ];
+
+  let allCodes = [
+    {
+      code: BentoCardCode,
+      fileName: "BentoCard.svelte",
+    },
+    {
+      code: BentoExampleCode,
+      fileName: "BentoCodeExample.svelte",
+    },
+    {
+      code: BentoMarqueeCode,
+      fileName: "BentoMarquee.svelte",
+    },
+    {
+      code: BentoComposableCode,
+      fileName: "BentoResizable.svelte",
+    },
+    {
+      code: BentoCommandCode,
+      fileName: "BentoCommand.svelte",
+    },
+    {
+      code: BentoGridCode,
+      fileName: "BentoGrid.svelte",
+    },
+    {
+      code: BentoCalendarCode,
+      fileName: "BentoCalendar.svelte",
+    },
+  ];
 </script>
 
 <Button
@@ -72,7 +121,7 @@
   >
   Back</Button
 >
-<div class="flex justify-center items-center px-64 h-screen">
+<div class="flex justify-center items-center px-3 md:px-64 mt-4 md:h-screen">
   <BentoGrid>
     {#each features as item}
       <BentoCard {...item} />
@@ -87,12 +136,18 @@
     Github Bento Page</a
   > for detailed code.
 </div>
-<div class="w-full my-10 flex justify-center items-center gap-10">
+<div
+  class="w-full my-10 flex justify-center items-center gap-3 md:gap-10 flex-wrap"
+>
   <img class="w-2/5 rounded-3xl" src={BentoGridImg} alt="bento-grid" />
   <img class="w-2/5 rounded-3xl" src={BentoCodeImg} alt="bento-codeimage" />
 </div>
-<div class="flex justify-center items-center mb-10">
-  <CodeBlock code={BentoExampleCode} fileName="BentoCodeExample.svelte" />
+<div
+  class="grid grid-cols-1 md:grid-cols-2 gap-4 mx-3 mb-10 md:mx-32 place-items-start place-content-center *:w-full"
+>
+  {#each allCodes as { code, fileName }}
+    <CodeBlock {code} {fileName} />
+  {/each}
 </div>
 <div class="flex justify-center items-center mb-10">
   Visit the <a

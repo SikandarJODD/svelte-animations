@@ -10,13 +10,14 @@ import OribtingExampleCode from "./orbitingCircles/OribtingExample.svelte?raw";
 import Marquee from "./Marquee/Marquee.svelte";
 import MarqueeCode from "./Marquee/Marquee.svelte?raw";
 import MarqueExample from "./Marquee/example/MarqueExample.svelte";
+import MarqueExampleCode from "./Marquee/example/MarqueExample.svelte?raw";
 import ReviewcardCode from "./Marquee/example/Reviewcard.svelte?raw";
 
 // Bento Grid
-import BentoGrid from "./BentoGrid/BentoGrid.svelte";
 import BentoGridCode from "./BentoGrid/BentoGrid.svelte?raw";
 import BentoCardCode from "./BentoGrid/BentoCard.svelte?raw";
 import BentoExample from "./BentoGrid/example/BentoExample.svelte";
+import BentoExampleCode from "./BentoGrid/example/BentoExample.svelte?raw";
 import BentoCalendarCode from "./BentoGrid/example/BentoCalendar.svelte?raw";
 import BentoCommandCode from "./BentoGrid/example/BentoCommand.svelte?raw";
 import BentoMarqueeCode from "./BentoGrid/example/BentoMarquee.svelte?raw";
@@ -46,20 +47,24 @@ export let allSubMagicComps: MagicComponent[] = [
                 component: BentoExample,
                 code: [
                     {
-                        filename: 'BentoCalendar.svelte',
-                        code: BentoCalendarCode
+                        filename: 'BentoGridExample.svelte',
+                        code: BentoExampleCode,
                     },
-                    {
-                        filename: 'BentoCommand.svelte',
-                        code: BentoCommandCode
-                    }, {
-                        filename: 'BentoResizable.svelte',
-                        code: BentoResizableCode
-                    },
-                    {
-                        filename: 'BentoMarquee.svelte',
-                        code: BentoMarqueeCode
-                    }
+                    // {
+                    //     filename: 'BentoCalendar.svelte',
+                    //     code: BentoCalendarCode
+                    // },
+                    // {
+                    //     filename: 'BentoCommand.svelte',
+                    //     code: BentoCommandCode
+                    // }, {
+                    //     filename: 'BentoResizable.svelte',
+                    //     code: BentoResizableCode
+                    // },
+                    // {
+                    //     filename: 'BentoMarquee.svelte',
+                    //     code: BentoMarqueeCode
+                    // }
                 ]
             }
         ]
@@ -98,8 +103,8 @@ export let allSubMagicComps: MagicComponent[] = [
                 component: MarqueExample,
                 code: [
                     {
-                        filename: 'Marquee.svelte',
-                        code: MarqueeCode
+                        filename: 'MarqueeExample.svelte',
+                        code: MarqueExampleCode
                     },
                     {
                         filename: 'Reviewcard.svelte',
