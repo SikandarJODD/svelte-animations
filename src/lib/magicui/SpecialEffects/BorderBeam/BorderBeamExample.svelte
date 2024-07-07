@@ -3,7 +3,7 @@
 </script>
 
 <article
-  class="flex max-w-xl flex-col items-start justify-between relative rounded-3xl p-7 border border-gray-700/70"
+  class="flex max-w-xl flex-col items-start justify-between relative rounded-3xl p-7 border border-gray-700/70 bg-background"
 >
   <BorderBeam size={150} duration={12} />
   <div class="flex items-center gap-x-4 text-xs">
@@ -18,7 +18,7 @@
     <h3
       class="mt-3 text-lg font-semibold leading-6 text-gray-200 group-hover:text-gray-50"
     >
-      <a href="#">
+      <a href="/">
         <span class="absolute inset-0"></span>
         Animation Svelte
       </a>

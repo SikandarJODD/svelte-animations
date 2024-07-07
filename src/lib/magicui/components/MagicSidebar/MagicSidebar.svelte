@@ -42,6 +42,22 @@
       ],
     },
     {
+      id: 6,
+      heading: "Special Effects",
+      sub: [
+        {
+          name: "Meteors",
+          link: "/magic/meteors",
+          isNew: true,
+        },
+        {
+          name: "Border Beam",
+          link: "/magic/border-beam",
+          isNew: true,
+        },
+      ],
+    },
+    {
       id: 2,
       heading: "Backgrounds",
       sub: [
@@ -311,7 +327,7 @@
                       >
                         {subItem.name}
                         {#if subItem?.isNew}
-                          <Badge variant='success'>New</Badge>
+                          <Badge variant="success">New</Badge>
                         {/if}
                       </a>
                     </li>

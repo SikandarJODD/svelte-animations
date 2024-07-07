@@ -23,9 +23,16 @@ import DashedStrokeGrid from "$lib/magicui/backgrounds/GridPattern/examples/Dash
 import DashedStrokeGridCode from "$lib/magicui/backgrounds/GridPattern/examples/DashedStrokeGrid.svelte?raw";
 import SkewGridExample from "$lib/magicui/backgrounds/GridPattern/examples/SkewGridExample.svelte";
 import SkewGridExampleCode from "$lib/magicui/backgrounds/GridPattern/examples/SkewGridExample.svelte?raw";
+
+
+// Retro Grid
+import RetroGrid from "./RetroGrid/RetroGrid.svelte";
+import RetroGridCode from "./RetroGrid/RetroGrid.svelte?raw";
+import RgExample from "./RetroGrid/example/RGExample.svelte";
+import RgExampleCode from "./RetroGrid/example/RGExample.svelte?raw";
+
+
 import { allMagicTailwinds } from "../AllMagicTailwinds";
-
-
 
 type MagicComponent = {
     id: string;
@@ -57,80 +64,99 @@ type ExampleComponent = {
     showDots?: boolean
 }
 // Create a list of all Magic Components 
-export let backgroundMagic: MagicComponent[] = [{
-    id: 'dot-pattern',
-    name: 'Dot Pattern',
-    desc: 'A background dot pattern made with SVGs, fully customizable using Tailwind CSS.',
-    component: DotPattern,
-    previewComp: DotsCenterExample,
-    link: "/magic-components/dot-pattern",
-    code: DotPatternCode,
-    previewCode: DotsCenterExampleCode,
-    class: 'relative overflow-hidden',
-    examples: [{
-        id: 1,
-        name: 'Center Dots',
-        fileName: 'DotsCenterExample.svelte',
-        code: DotsCenterExampleCode,
-        component: DotsCenterExample,
-        showGrid: true
-    },
+export let backgroundMagic: MagicComponent[] = [
     {
-        id: 2,
-        name: 'Linear Gradient Dots',
-        fileName: 'LinerGradientDotPattern.svelte',
-        code: LinerGradientDotPatternCode,
-        component: LinerGradientDotPattern,
-        showGrid: true
-    }]
-},
-{
-    id: 'ripple',
-    name: 'Ripple',
-    desc: 'A ripple effect component made with SVGs and Tailwind CSS.',
-    component: Ripple,
-    link: "/magic-components/ripple",
-    code: RippleCode,
-    class: 'relative overflow-hidden h-[440px]',
-    tailwind: allMagicTailwinds['ripple'],
-    examples: [{
-        id: 1,
-        name: 'Ripple Effect',
-        fileName: 'Ripple.svelte',
-        component: RippleExample,
-        code: RippleExampleCode,
-    }]
-}, {
-    id: 'grid-pattern',
-    name: 'Grid Pattern',
-    desc: 'A background grid pattern made with SVGs, fully customizable using Tailwind CSS.',
-    component: GridPattern,
-    link: '/magic/grid-pattern',
-    code: GridPatternCode,
-    class: 'relative overflow-hidden',
-    examples: [
-        {
-            id: 0,
-            name: 'Grid Pattern',
-            fileName: 'GridPattern.svelte',
-            component: SkewGridExample,
-            code: SkewGridExampleCode,
-            showDots: true
-
+        id: 'dot-pattern',
+        name: 'Dot Pattern',
+        desc: 'A background dot pattern made with SVGs, fully customizable using Tailwind CSS.',
+        component: DotPattern,
+        previewComp: DotsCenterExample,
+        link: "/magic-components/dot-pattern",
+        code: DotPatternCode,
+        previewCode: DotsCenterExampleCode,
+        class: 'relative overflow-hidden',
+        examples: [{
+            id: 1,
+            name: 'Center Dots',
+            fileName: 'DotsCenterExample.svelte',
+            code: DotsCenterExampleCode,
+            component: DotsCenterExample,
+            showGrid: true
         },
         {
-            id: 1,
-            name: 'Linear Gradient Grid Pattern',
-            fileName: 'LinearGradientGridPattern.svelte',
-            component: LinearGradientGridPattern,
-            code: LinearGradientGridPatternCode,
-        }, {
             id: 2,
-            name: 'Dashed Stroke',
-            fileName: 'DashedStrokeGrid.svelte',
-            component: DashedStrokeGrid,
-            code: DashedStrokeGridCode
-        }
-    ]
-}
+            name: 'Linear Gradient Dots',
+            fileName: 'LinerGradientDotPattern.svelte',
+            code: LinerGradientDotPatternCode,
+            component: LinerGradientDotPattern,
+            showGrid: true
+        }]
+    },
+    {
+        id: 'ripple',
+        name: 'Ripple',
+        desc: 'A ripple effect component made with SVGs and Tailwind CSS.',
+        component: Ripple,
+        link: "/magic-components/ripple",
+        code: RippleCode,
+        class: 'relative overflow-hidden h-[440px]',
+        tailwind: allMagicTailwinds['ripple'],
+        examples: [{
+            id: 1,
+            name: 'Ripple Effect',
+            fileName: 'Ripple.svelte',
+            component: RippleExample,
+            code: RippleExampleCode,
+        }]
+    }, {
+        id: 'grid-pattern',
+        name: 'Grid Pattern',
+        desc: 'A background grid pattern made with SVGs, fully customizable using Tailwind CSS.',
+        component: GridPattern,
+        link: '/magic/grid-pattern',
+        code: GridPatternCode,
+        class: 'relative overflow-hidden',
+        examples: [
+            {
+                id: 0,
+                name: 'Grid Pattern',
+                fileName: 'GridPattern.svelte',
+                component: SkewGridExample,
+                code: SkewGridExampleCode,
+                showDots: true
+
+            },
+            {
+                id: 1,
+                name: 'Linear Gradient Grid Pattern',
+                fileName: 'LinearGradientGridPattern.svelte',
+                component: LinearGradientGridPattern,
+                code: LinearGradientGridPatternCode,
+            }, {
+                id: 2,
+                name: 'Dashed Stroke',
+                fileName: 'DashedStrokeGrid.svelte',
+                component: DashedStrokeGrid,
+                code: DashedStrokeGridCode
+            }
+        ]
+    },
+    {
+        id: 'retro-grid',
+        name: 'Retro Grid',
+        desc: 'A retro grid pattern made with SVGs, fully customizable using Tailwind CSS.',
+        component: RetroGrid,
+        code: RetroGridCode,
+        tailwind: allMagicTailwinds['retro-grid'],
+        link: '/magic/retro-grid',
+        examples: [
+            {
+                id: 1,
+                name: 'Retro Grid',
+                fileName: 'RetroGridExample.svelte',
+                component: RgExample,
+                code: RgExampleCode
+            }
+        ]
+    },
 ]
