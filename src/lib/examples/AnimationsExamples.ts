@@ -50,8 +50,8 @@ type Component = {
 export let animationExamples: Component[] = [
     {
         id: 1,
-        name: 'Emil Kowal Effect',
-        desc: 'Emil Kowal Transition Effect using spring and blur',
+        name: 'Dynamic Island Effect',
+        desc: 'Dynamic Island Transition Effect using spring and blur',
         component: ExampleEmilKowal,
         link: '/examples/1',
         code: ExampleEmilKowalCode

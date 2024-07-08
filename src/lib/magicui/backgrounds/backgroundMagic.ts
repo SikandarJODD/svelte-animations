@@ -34,11 +34,28 @@ import RgExampleCode from "./RetroGrid/example/RGExample.svelte?raw";
 
 import { allMagicTailwinds } from "../AllMagicTailwinds";
 
+//  Background Boxes
+// import BgDarkTiles from "./backgroundLights/BgDarkTiles.svelte";
+import BgDarkTilesCode from "./backgroundLights/BgDarkTiles.svelte?raw";
+import BgDarkTilesExample from "./backgroundLights/examples/BgDarkTilesExample.svelte";
+import BgDarkTilesExampleCode from "./backgroundLights/examples/BgDarkTilesExample.svelte?raw";
+// import SkewBgBoxesExample from "./backgroundLights/examples/SkewBgBoxesExample.svelte";
+// import SkewBgBoxesExampleCode from "./backgroundLights/examples/SkewBgBoxesExample.svelte?raw";
+import BackgroundLights from "./backgroundLights/examples/BackgroundLights.svelte";
+import BackgroundLightsCode from "./backgroundLights/examples/BackgroundLights.svelte?raw";
+
+import LightsCode from "./backgroundLights/Lights.svelte?raw";
+import BgDarkTiles from "./backgroundLights/BgDarkTiles.svelte";
+
+import GridBeamExample from "./backgroundLights/examples/GridBeamExample.svelte";
+import GridBeamExampleCode from "./backgroundLights/examples/GridBeamExample.svelte?raw";
+import GridBeamCode from "./backgroundLights/GridBeam.svelte?raw";
+
 type MagicComponent = {
     id: string;
     name: string;
     desc: string;
-    component: any;
+    component?: any;
     link: string;
     code: string | Code[];
     class?: string;
@@ -159,4 +176,72 @@ export let backgroundMagic: MagicComponent[] = [
             }
         ]
     },
+    {
+        id: 'bg-boxes',
+        name: 'Background Boxes Examples',
+        desc: 'A background box pattern made with SVGs, fully customizable using Tailwind CSS.',
+        code: BgDarkTilesCode,
+        component: BgDarkTiles,
+        link: '/magic/bg-boxes',
+        class: ' overflow-hidden relative justify-center items-start md:h-[300px]',
+        examples: [
+            {
+                id: 4,
+                name: 'Background Grid Beam',
+                fileName: 'GridBeamExample.svelte',
+                component: GridBeamExample,
+                code: [
+                    {
+                        filename: 'GridBeamExample.svelte',
+                        code: GridBeamExampleCode,
+                    },
+                    {
+                        filename: 'GridBeam.svelte',
+                        code: GridBeamCode
+                    }
+
+                ]
+            },
+            {
+                id: 1,
+                name: 'Hover Dark Tiles',
+                fileName: 'BgDarkTilesExample.svelte',
+                component: BgDarkTilesExample,
+                code: [
+                    {
+                        filename: 'BgDarkTilesExample.svelte',
+                        code: BgDarkTilesExampleCode
+                    },
+                    {
+                        filename: 'BgDarkTiles.svelte',
+                        code: BgDarkTilesCode
+                    }
+                ]
+            },
+            // {
+            //     id: 2,
+            //     name: 'Hover Skew Tiles',
+            //     fileName: 'BgSkewExample.svelte',
+            //     component: SkewBgBoxesExample,
+            //     code: SkewBgBoxesExampleCode
+            // },
+            {
+                id: 3,
+                name: 'Background Grid Hero',
+                fileName: 'BgGridHero.svelte',
+                component: BackgroundLights,
+                code: [
+                    {
+                        filename: 'BackgroundLights.svelte',
+                        code: BackgroundLightsCode
+                    },
+                    {
+                        filename: 'Lights.svelte',
+                        code: LightsCode
+                    }
+                ]
+            },
+
+        ]
+    }
 ]

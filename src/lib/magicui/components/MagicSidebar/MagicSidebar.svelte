@@ -73,6 +73,11 @@
           name: "Grid Pattern",
           link: "/magic/grid-pattern",
         },
+        {
+          name:'Background Boxes',
+          link:'/magic/bg-boxes',
+          isNew:true
+        }
       ],
     },
     {

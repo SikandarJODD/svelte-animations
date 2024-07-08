@@ -90,6 +90,9 @@ const config: Config = {
 				grid: "grid 15s linear infinite",
 				meteor: "meteor 5s linear infinite",
 				"border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
+				// Lukacho UI Effects 
+				moveUp: 'moveUp 1.4s ease forwards',
+				appear: 'appear 1s 1s forwards'
 
 			},
 			"keyframes": {
@@ -266,6 +269,14 @@ const config: Config = {
 						"offset-distance": "100%",
 					},
 				},
+				moveUp: {
+					'0%': { transform: 'translateY(5%)', opacity: '0' },
+					'100%': { transform: 'translateY(0%)', opacity: '1' }
+				},
+				appear: {
+					from: { opacity: '0' },
+					to: { opacity: '1' }
+				}
 			},
 		},
 	},

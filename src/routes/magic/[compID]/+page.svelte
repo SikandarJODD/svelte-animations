@@ -124,6 +124,7 @@
         {/each}
       </Tabs.Root>
     {/if}
+    <Separator class="mb-4" />
     {#if comp?.component}
       <div>
         <h1 class="text-2xl font-bold mt-4 md:text-3xl capitalize mb-4">
