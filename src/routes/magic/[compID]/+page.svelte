@@ -146,28 +146,32 @@
       </div>
     {/if}
 
-    <div>
-      <h1 class="text-2xl font-bold mt-0 md:text-3xl capitalize mb-3">
-        Component Code
-      </h1>
-      {#if typeof comp.code === "string"}
-        {#key comp}
-          <CodeBlock code={comp.code} {fileName} />
-        {/key}
-      {:else if comp.code instanceof Array}
-        <div class="space-y-5">
-          {#each comp.code as { filename, code }}
-            <CodeBlock {code} fileName={filename} />
-          {/each}
-        </div>
-      {/if}
-    </div>
+    {#if comp?.code}
+      <div>
+        <h1 class="text-2xl font-bold mt-0 md:text-3xl capitalize mb-3">
+          Component Code
+        </h1>
+        {#if typeof comp.code === "string"}
+          {#key comp}
+            <CodeBlock code={comp.code} {fileName} />
+          {/key}
+        {:else if comp.code instanceof Array}
+          <div class="space-y-5">
+            {#each comp.code as { filename, code }}
+              <CodeBlock {code} fileName={filename} />
+            {/each}
+          </div>
+        {/if}
+      </div>
+    {/if}
     {#if comp?.tailwind}
-      <CodeBlock
-        code={comp.tailwind}
-        fileName="tailwind.config.ts"
-        lang="json"
-      />
+      {#key comp?.tailwind}
+        <CodeBlock
+          code={comp.tailwind}
+          fileName="tailwind.config.ts"
+          lang="json"
+        />
+      {/key}
     {/if}
   </div>
 </div>

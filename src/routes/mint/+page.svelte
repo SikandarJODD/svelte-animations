@@ -1,5 +1,10 @@
 <script>
-  import GridBeamExample from "$lib/magicui/backgrounds/backgroundLights/examples/GridBeamExample.svelte";
+  import SimpleVariant from "$lib/magicui/components/Cards/simpleVairant/SimpleVariant.svelte";
+  import SimpleVariant3 from "$lib/magicui/components/Cards/simpleVariant3/SimpleVariant3.svelte";
+
 </script>
 
-<GridBeamExample />
+<div class='flex items-center justify-center h-screen'>
+  <!-- <SimpleVariant/> -->
+   <SimpleVariant3/>
+</div>

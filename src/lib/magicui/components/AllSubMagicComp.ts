@@ -18,10 +18,21 @@ import BentoGridCode from "./BentoGrid/BentoGrid.svelte?raw";
 import BentoCardCode from "./BentoGrid/BentoCard.svelte?raw";
 import BentoExample from "./BentoGrid/example/BentoExample.svelte";
 import BentoExampleCode from "./BentoGrid/example/BentoExample.svelte?raw";
-import BentoCalendarCode from "./BentoGrid/example/BentoCalendar.svelte?raw";
-import BentoCommandCode from "./BentoGrid/example/BentoCommand.svelte?raw";
-import BentoMarqueeCode from "./BentoGrid/example/BentoMarquee.svelte?raw";
-import BentoResizableCode from "./BentoGrid/example/BentoResizable.svelte?raw";
+
+
+// Cards from Lukacho UI
+// Simple Variant 
+import SimpleVariant from "./Cards/simpleVairant/SimpleVariant.svelte";
+import SimpleVariantCode from "./Cards/simpleVairant/SimpleVariant.svelte?raw";
+import CardContainerCode from "./Cards/simpleVairant/CardContainer.svelte?raw";
+import CardBodyCode from "./Cards/simpleVairant/CardBody.svelte?raw";
+import EllipsesCode from "./Cards/simpleVairant/Ellipses.svelte?raw";
+
+//  Square Border Card
+import SimpleVariant3 from "./Cards/simpleVariant3/SimpleVariant3.svelte";
+import SimpleVariant3Code from "./Cards/simpleVariant3/SimpleVariant3.svelte?raw";
+import CardBody3Code from "./Cards/simpleVariant3/CardBody.svelte?raw";
+import CardIconCode from "./Cards/simpleVariant3/CardIcon.svelte?raw";
 
 export let allSubMagicComps: MagicComponent[] = [
     {
@@ -80,6 +91,7 @@ export let allSubMagicComps: MagicComponent[] = [
         examples: [
             {
                 id: 1,
+                showGrid: true,
                 name: 'Orbiting Circles',
                 fileName: 'OrbitingCircles.svelte',
                 component: OribtingExample,
@@ -113,6 +125,60 @@ export let allSubMagicComps: MagicComponent[] = [
                 ]
             }
         ]
-    }
+    },
+    {
+        id: 'simple-cards',
+        name: 'Simple Cards',
+        link: '/magic/simple-cards',
+        desc: 'Simple cards with good border effect',
+        examples: [
+            {
+                id: 1,
+                name: 'Simple Cards',
+                fileName: 'SimpleCardExample.svelte',
+                component: SimpleVariant,
+                showGrid: true,
+                code: [
+                    {
+                        filename: 'SimpleVariant.svelte',
+                        code: SimpleVariantCode,
+                    },
+                    {
+                        filename: 'CardContainer.svelte',
+                        code: CardContainerCode,
+                    },
+                    {
+                        filename: 'CardBody.svelte',
+                        code: CardBodyCode,
+                    },
+                    {
+                        filename: 'Ellipses.svelte',
+                        code: EllipsesCode,
+                    }
+                ]
+            },
+            {
+                id: 2,
+                name: 'Square Border Card',
+                fileName: 'SquareCardExample.svelte',
+                component: SimpleVariant3,
+                showGrid: true,
+                code: [
+                    {
+                        filename: 'SquareCard.svelte',
+                        code: SimpleVariant3Code,
+                    },
+                    {
+                        filename: 'CardBody.svelte',
+                        code: CardBody3Code,
+                    },
+                    {
+                        filename: 'CardIcon.svelte',
+                        code: CardIconCode,
+                    }
+                ]
+            }
+        ]
+    },
 
 ]

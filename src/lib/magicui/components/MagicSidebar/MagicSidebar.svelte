@@ -28,17 +28,20 @@
         {
           name: "Orbiting Circles",
           link: "/magic/orbiting-circles",
-          isNew: true,
         },
         {
           name: "Marquee",
           link: "/magic/marquee",
-          isNew: true,
         },
         {
           name: "Bento Grid",
           link: "/magic/bento-grid",
         },
+        {
+          name:'Simple Cards',
+          link:'/magic/simple-cards',
+          isNew:true,
+        }
       ],
     },
     {
@@ -76,7 +79,6 @@
         {
           name:'Background Boxes',
           link:'/magic/bg-boxes',
-          isNew:true
         }
       ],
     },
@@ -118,27 +120,22 @@
         {
           name: "Flip Text",
           link: "/magic/flip-text",
-          isNew: true,
         },
         {
           name: "Gradual Spacing",
           link: "/magic/gradual-spacing",
-          isNew: true,
         },
         {
           name: "Letter Pull up",
           link: "/magic/letter-pull-up",
-          isNew: true,
         },
         {
           name: "Words Fade In",
           link: "/magic/words-fade-in",
-          isNew: true,
         },
         {
           name: "Words Pull Up",
           link: "/magic/words-pull-up",
-          isNew: true,
         },
       ],
     },

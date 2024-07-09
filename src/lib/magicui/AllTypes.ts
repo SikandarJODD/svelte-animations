@@ -5,7 +5,7 @@ export type MagicComponent = {
     desc: string;
     component?: any;
     link: string;
-    code: string | Code[];
+    code?: string | Code[];
     class?: string;
     showGrid?: boolean;
     previewComp?: any;
