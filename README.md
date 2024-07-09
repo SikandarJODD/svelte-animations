@@ -8,25 +8,25 @@ Hosted on Vercel : [Svelte Components](https://animation-svelte.vercel.app/)
 
 ## New Components
 
-| Name                    | Desc                                                                     | Section       |
-| ----------------------- | ------------------------------------------------------------------------ | ------------- |
-| Dock Menu               | [Visit](https://animation-svelte.vercel.app/luxe/dock-menu)              | Luxe          |
-| Input Spotlight Border  | [Visit](https://animation-svelte.vercel.app/luxe/input-spotlight-border) | Luxe          |
-| Input Pulse Border      | [Visit](https://animation-svelte.vercel.app/luxe/input-pulse-border)     | Luxe          |
-| Color Interpolation     | [Visit](https://animation-svelte.vercel.app/learnings/15)                | Framer-Motion |
-| Morph SVG               | [Visit](https://animation-svelte.vercel.app/learnings/16)                | Framer-Motion |
-| Scroll Progress         | [Visit](https://animation-svelte.vercel.app/learnings/17)                | Framer-Motion |
-| Animates Presence Stack | [Visit](https://animation-svelte.vercel.app/learnings/19)                | Framer-Motion |
+| Name         | Preview                                                         | Section      |
+| ------------ | --------------------------------------------------------------- | ------------ |
+| Blur Fade    | [Visit](https://animation-svelte.vercel.app/magic/blur-fade)    | Magic UI New |
+| Simple Cards | [Visit](https://animation-svelte.vercel.app/magic/simple-cards) | Indie UI     |
+| Border Beam  | [Visit](https://animation-svelte.vercel.app/magic/border-beam)  | Magic UI     |
+| Meteors      | [Visit](https://animation-svelte.vercel.app/magic/meteors)      | Magic UI     |
+| Box Reveal   | [Visit](https://animation-svelte.vercel.app/magic/box-reveal)   | Magic UI     |
+| Marquee      | [Visit](https://animation-svelte.vercel.app/magic/marquee)      | Magic UI     |
+| Bento Grid   | [Visit](https://animation-svelte.vercel.app/magic/bento-grid)   | Magic UI     |
 
 ### Svelte Spring, Crossfade, Svelte-Motion Examples
 
-| Effects     | Description                                            |
-| ----------- | ------------------------------------------------------ |
-| Link Hover  | It's show small Image after hovering `a` tag           |
-| Modul Div   | Crossfade Animation on Div, Inspired from modul.so     |
-| Spring Div  | Simple Usage of Spring on Extending div height & width |
-| Emil Kowal  | Effect inspired from Emil Kowal : Time, Ring, Silent   |
-| Reveal Link | Reveal Link on Hover, Inspired from hover.dev          |
+| Effects        | Description                                             |
+| -------------- | ------------------------------------------------------- |
+| Link Hover     | It's show small Image after hovering `a` tag            |
+| Modul Div      | Crossfade Animation on Div, Inspired from modul.so      |
+| Spring Div     | Simple Usage of Spring on Extending div height & width  |
+| Dynamic Island | Effect inspired from Emil Kowalski : Time, Ring, Silent |
+| Reveal Link    | Reveal Link on Hover, Inspired from hover.dev           |
 
 # Framer Motion Examples
 
@@ -40,3 +40,13 @@ Hosted on Vercel : [Svelte Components](https://animation-svelte.vercel.app/)
 | Animation Sequence     | going through sequence of animations       |
 | Drag                   | Constraints, Direction Locking             |
 | Drag                   | Transform, 3D Transform                    |
+
+## Feedback
+
+If you have any feedback, please reach out at [Twitter](https://twitter.com/Sikandar_Bhide)
+
+## Support
+
+- For support, You can sponsor me on [GitHub](https://github.com/sponsors/SikandarJODD)
+- Share this project with your friends and colleagues [Share on Twitter](https://twitter.com/intent/tweet?url=https://animation-svelte.vercel.app%0A&text=Svelte%20Animation%20Components%20Built%20using%20Svelte%20Motion%20and%20Tailwind%20CSS%0A&via=Sikandar_Bhide&hashtags=sveltejs,tailwindcss,webdev,frontend)
+

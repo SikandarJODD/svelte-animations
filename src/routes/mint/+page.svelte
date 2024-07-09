@@ -1,10 +1,26 @@
 <script>
-  import SimpleVariant from "$lib/magicui/components/Cards/simpleVairant/SimpleVariant.svelte";
-  import SimpleVariant3 from "$lib/magicui/components/Cards/simpleVariant3/SimpleVariant3.svelte";
+  import BlurFade from "$lib/magicui/animations/BlurFade/BlurFade.svelte";
 
+  let images = Array.from({ length: 9 }, (_, i) => {
+    let isLandscape = i % 2 === 0;
+    const width = isLandscape ? 800 : 600;
+    const height = isLandscape ? 600 : 800;
+    return `https://picsum.photos/seed/${i + 1}/${width}/${height}`;
+  });
 </script>
 
-<div class='flex items-center justify-center h-screen'>
-  <!-- <SimpleVariant/> -->
-   <SimpleVariant3/>
+<div>
+  <section id="photos">
+    <div class="columns-2 gap-4 sm:columns-3">
+      {#each images as imageUrl, idx}
+        <BlurFade id={idx.toString()} delay={0.25 + idx * 0.05}>
+          <img
+            class="mb-4 size-full rounded-lg object-contain"
+            src={imageUrl}
+            alt={`Random stock image ${idx + 1}`}
+          />
+        </BlurFade>
+      {/each}
+    </div>
+  </section>
 </div>

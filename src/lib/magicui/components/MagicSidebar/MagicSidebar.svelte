@@ -38,10 +38,10 @@
           link: "/magic/bento-grid",
         },
         {
-          name:'Simple Cards',
-          link:'/magic/simple-cards',
-          isNew:true,
-        }
+          name: "Simple Cards",
+          link: "/magic/simple-cards",
+          isNew: true,
+        },
       ],
     },
     {
@@ -51,11 +51,20 @@
         {
           name: "Meteors",
           link: "/magic/meteors",
-          isNew: true,
         },
         {
           name: "Border Beam",
           link: "/magic/border-beam",
+        },
+      ],
+    },
+    {
+      id: 7,
+      heading: "Animations",
+      sub: [
+        {
+          name: "Blur Fade",
+          link: "/magic/blur-fade",
           isNew: true,
         },
       ],
@@ -77,9 +86,9 @@
           link: "/magic/grid-pattern",
         },
         {
-          name:'Background Boxes',
-          link:'/magic/bg-boxes',
-        }
+          name: "Background Boxes",
+          link: "/magic/bg-boxes",
+        },
       ],
     },
     {
