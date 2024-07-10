@@ -34,6 +34,18 @@ import SimpleVariant3Code from "./Cards/simpleVariant3/SimpleVariant3.svelte?raw
 import CardBody3Code from "./Cards/simpleVariant3/CardBody.svelte?raw";
 import CardIconCode from "./Cards/simpleVariant3/CardIcon.svelte?raw";
 
+// Animated Beam
+import AnimatedBeam from "./AnimatedBeam/AnimatedBeam.svelte";
+import AnimatedBeamUniDirection from "./AnimatedBeam/examples/AnimatedBeamUniDirection.svelte";
+import AnimatedBeamBiDirectional from "./AnimatedBeam/examples/AnimatedBeamBiDirectional.svelte";
+import AnimatedBeamMultipleInput from "./AnimatedBeam/examples/AnimatedBeamMultipleInput.svelte";
+// Animated Beam Codes
+import AnimatedBeamCode from "./AnimatedBeam/AnimatedBeam.svelte?raw";
+import CircleCode from "./AnimatedBeam/Circle.svelte?raw";
+import AnimatedBeamUniDirectionCode from "./AnimatedBeam/examples/AnimatedBeamUniDirection.svelte?raw";
+import AnimatedBeamBiDirectionalCode from "./AnimatedBeam/examples/AnimatedBeamBiDirectional.svelte?raw";
+import AnimatedBeamMultipleInputCode from "./AnimatedBeam/examples/AnimatedBeamMultipleInput.svelte?raw";
+
 export let allSubMagicComps: MagicComponent[] = [
     {
         id: 'bento-grid',
@@ -180,5 +192,69 @@ export let allSubMagicComps: MagicComponent[] = [
             }
         ]
     },
-
+    {
+        id: 'animated-beam',
+        name: 'Animated Beam',
+        link: '/magic/animated-beam',
+        desc: 'A simple animation of a beam. Preview :  <a href="/mint" class="underline underline-offset-2 text-primary">Visit</a>',
+        code: [
+            {
+                filename: 'AnimatedBeam.svelte',
+                code: AnimatedBeamCode
+            },
+        ],
+        examples: [
+            {
+                id: 1,
+                name: 'Animated Beam Uni-Directional',
+                fileName: 'AnimatedBeamUniDirection.svelte',
+                component: AnimatedBeamUniDirection,
+                showGrid: true,
+                code: [
+                    {
+                        filename: 'AnimatedBeamUniDirection.svelte',
+                        code: AnimatedBeamUniDirectionCode
+                    },
+                    {
+                        filename: 'Circle.svelte',
+                        code: CircleCode
+                    }
+                ]
+            },
+            {
+                id: 2,
+                name: 'Animated Beam Bi-Directional',
+                fileName: 'AnimatedBeamBiDirection.svelte',
+                component: AnimatedBeamBiDirectional,
+                showGrid: true,
+                code: [
+                    {
+                        filename: 'AnimatedBeamBiDirectional.svelte',
+                        code: AnimatedBeamBiDirectionalCode
+                    },
+                    {
+                        filename: 'Circle.svelte',
+                        code: CircleCode
+                    }
+                ],
+            },
+            {
+                id: 3,
+                name: 'Animated Beam Multiple Inputs',
+                fileName: 'AnimatedBeamMultipleInputs.svelte',
+                component: AnimatedBeamMultipleInput,
+                showGrid: true,
+                code: [
+                    {
+                        filename: 'AnimatedBeamMultipleInput.svelte',
+                        code: AnimatedBeamMultipleInputCode
+                    },
+                    {
+                        filename: 'Circle.svelte',
+                        code: CircleCode
+                    }
+                ]
+            }
+        ]
+    }
 ]

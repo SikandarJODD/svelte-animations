@@ -40,8 +40,12 @@
         {
           name: "Simple Cards",
           link: "/magic/simple-cards",
-          isNew: true,
         },
+        {
+          name:'Animated Beam',
+          link:'/magic/animated-beam',
+          isNew:true
+        }
       ],
     },
     {
@@ -124,7 +128,6 @@
         {
           name: "Box Reveal",
           link: "/magic/box-reveal",
-          isNew: true,
         },
         {
           name: "Flip Text",
