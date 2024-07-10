@@ -38,7 +38,6 @@ Hosted on Vercel : [Svelte Components](https://animation-svelte.vercel.app/)
 | Gestures               | While Hover, While Tap, While Drag         |
 | Cycling through States | manuallt going via .next() and .prev()     |
 | Animation Sequence     | going through sequence of animations       |
-| Drag                   | Constraints, Direction Locking             |
 | Drag                   | Transform, 3D Transform                    |
 
 ## Feedback
