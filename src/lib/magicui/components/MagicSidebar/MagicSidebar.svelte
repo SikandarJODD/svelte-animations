@@ -336,8 +336,8 @@
                       <a
                         href={subItem.link}
                         class="group {subItem.link == routeID
-                          ? 'text-primary bg-neutral-900 border-border font-medium'
-                          : 'text-primary/60 '} capitalize flex justify-between items-center gap-x-3 p-2 mt-px text-sm leading-6 select-none pl-3 py-1.5 border border-transparent rounded-sm hover:bg-neutral-900 transition-all duration-300"
+                          ? 'text-primary bg-sky-100 dark:bg-neutral-900 border-border font-medium'
+                          : 'text-primary/60 '} capitalize flex justify-between items-center gap-x-3 p-2 mt-px text-sm leading-6 select-none pl-3 py-1.5 border border-transparent rounded-sm dark:hover:bg-neutral-900 transition-all duration-300"
                       >
                         {subItem.name}
                         {#if subItem?.isNew}

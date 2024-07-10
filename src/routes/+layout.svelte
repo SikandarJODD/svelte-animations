@@ -6,6 +6,9 @@
   import "./global.css";
   import { ModeWatcher } from "mode-watcher";
   $: routeID = $page.url.pathname.split("/");
+   
+  import { resetMode, setMode } from "mode-watcher";
+  setMode('dark');
   let pageWidth = 0;
  
 </script>
