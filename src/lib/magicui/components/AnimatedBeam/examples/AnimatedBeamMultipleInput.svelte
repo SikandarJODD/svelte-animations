@@ -1,5 +1,5 @@
-<script>
-  import GradientLine from "$lib/luxe/components/codeblock/GradientLine.svelte";
+<script lang='ts'>
+  import { cn } from "$lib/utils";
   import AnimatedBeam from "../AnimatedBeam.svelte";
   import Circle from "../Circle.svelte";
   let containerRef;
@@ -11,18 +11,23 @@
   let div5Ref;
   let div6Ref;
   let div7Ref;
+  let className: any = "";
+  export { className as class };
 </script>
 
 <div
   bind:this={containerRef}
-  class="relative flex w-full max-w-[500px] items-center justify-center overflow-hidden rounded-lg border bg-background p-10 md:shadow-2xl dark:shadow-[#121112]"
+  class={cn(
+    "relative flex w-full max-w-[500px] items-center justify-center overflow-hidden rounded-lg border bg-background p-10  md:shadow-2xl dark:shadow-[#121112]",
+    className
+  )}
 >
   <!--  Gradient Line -->
   <div
     class="absolute right-5 top-0 h-px w-1/2 bg-gradient-to-l from-transparent via-white/30 via-10% to-transparent"
   />
   <!-- Main Component  -->
-   
+
   <div
     class="flex h-full w-full flex-row justify-between gap-10 max-w-lg items-center"
   >

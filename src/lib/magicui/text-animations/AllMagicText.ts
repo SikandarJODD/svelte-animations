@@ -97,7 +97,8 @@ export let allMagicText: MagicComponent[] = [
                 fileName: 'AnimatedShinyText.svelte',
                 name: 'Animated Shiny Text',
                 component: AnimatedShinyTextExample,
-                code: AnimatedShinyTextExampleCode
+                code: AnimatedShinyTextExampleCode,
+                showDots: true
             }
         ]
     },

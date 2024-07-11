@@ -3,7 +3,7 @@
   import { cn } from "$lib/utils";
 </script>
 
-<div class="z-10 flex min-h-[16rem] items-center justify-center">
+<div class="z-10 flex  items-center justify-center">
   <AnimatedGradientText>
     🎉 <hr class="mx-2 h-4 w-[1px] shrink-0 bg-gray-300" />
     {" "}

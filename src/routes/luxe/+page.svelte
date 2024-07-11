@@ -11,7 +11,7 @@ import { allLuxeComponents } from "$lib/luxe/components/AllLuxeComponents";
 <SvelteSeo
   title="Luxe Svelte Components"
   description="Luxe Svelte – Library of components copy and paste to illuminate your applications with elegance and sophistication."
-  canonical="https://animation-svelte.vercel.app"
+  canonical="https://animation-svelte.vercel.app/luxe"
   keywords="luxe svelte, luxe componetns, svelte, sveltekit, UI Design, animation-svelte.vercel.app, svelte animation, svelte components, svelte library, svelte ui, sveltekit components, sveltekit library, sveltekit ui, sveltekit animation, sveltekit ui library, sveltekit components library, sveltekit ui components, luxe svelte, copy paste svelte components, svelte components library, svelte ui library, svelte animation library, sveltekit animation library, sveltekit ui library, sveltekit components library, sveltekit ui components, sveltekit components library, sveltekit animation components"
   twitter={{
     card: "summary_large_image",
@@ -21,9 +21,10 @@ import { allLuxeComponents } from "$lib/luxe/components/AllLuxeComponents";
       "Luxe Svelte – Library of components copy and paste to illuminate your applications with elegance and sophistication.",
     image:
       "https://i.pinimg.com/736x/8f/88/8a/8f888ad7286306bbbf10a138c687ca5d.jpg",
+      
   }}
   openGraph={{
-    url: "https://animation-svelte.vercel.app",
+    url: "https://animation-svelte.vercel.app/luxe",
     title: "Luxe Svelte Components",
     description:
       "Luxe Svelte – Library of components copy and paste to illuminate your applications with elegance and sophistication.",
@@ -46,7 +47,7 @@ import { allLuxeComponents } from "$lib/luxe/components/AllLuxeComponents";
         Svelte Luxe Components
       </h1>
       <p class=" font-normal text-neutral-500">
-        Luxe Svelte – Library of components, <span class="text-primary"
+        Luxe Svelte – Free components, <span class="text-primary"
           >Copy</span
         >
         and <span class="text-primary">Paste</span> to illuminate your applications
