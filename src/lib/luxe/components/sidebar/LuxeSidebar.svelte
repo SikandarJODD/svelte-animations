@@ -1,20 +1,14 @@
 <script>
+  import { allLuxeComponents } from "$lib/luxe/components/AllLuxeComponents";
   import { page } from "$app/stores";
   import { navs } from "$lib";
   import { onMount } from "svelte";
   import { blur, slide } from "svelte/transition";
-  import { allLuxeComponents } from "../AllLuxeComponents";
 
-  export let examplesList = [
-    {
-      name: "Div Hover",
-      link: "/examples/1",
-    },
-    {
-      name: "Example 2",
-      link: "/examples/2",
-    },
-  ];
+  let sortedcomps = allLuxeComponents.toSorted((a, b) => {
+    return a.name.localeCompare(b.name);
+  });
+
   export let componentsNav = [
     {
       id: 1,
@@ -33,7 +27,7 @@
     {
       id: 2,
       heading: "Components",
-      sub: allLuxeComponents,
+      sub: sortedcomps,
     },
   ];
 
@@ -143,15 +137,7 @@
                       <div class="font-medium">
                         {cnavs.heading}
                       </div>
-                      {#each cnavs.sub.sort((a, b) => {
-                        if (a.name > b.name) {
-                          return 1;
-                        }
-                        if (b.name > a.name) {
-                          return -1;
-                        }
-                        return 0;
-                      }) as item}
+                      {#each cnavs.sub as item}
                         <li>
                           <a
                             on:click={() => {
@@ -200,15 +186,7 @@
                       {item.heading}
                     </div>
                   </li>
-                  {#each item.sub.sort((a, b) => {
-                    if (a.name > b.name) {
-                      return 1;
-                    }
-                    if (b.name > a.name) {
-                      return -1;
-                    }
-                    return 0;
-                  }) as subItem}
+                  {#each item.sub as subItem}
                     <li>
                       <a
                         href={subItem.link}

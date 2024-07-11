@@ -102,6 +102,7 @@ import InputGradientBorderCode from "../inputs/InputGradientBorder.svelte?raw";
 // Input Pulse Border
 import InputPulseBorder from "../inputs/InputPulseBorder.svelte";
 import InputPulseBorderCode from "../inputs/InputPulseBorder.svelte?raw";
+import { allLuxeTailwind } from "./AllLuxeTailwind";
 
 
 type LuxeComponent = {
@@ -111,7 +112,10 @@ type LuxeComponent = {
   component: any;
   link: any | string;
   code: string | Code[];
-  showGrid?: boolean
+  showGrid?: boolean;
+  tailwind?: any;
+  colSpan?: boolean;
+  download?: string;
 }
 type Code = {
   filename: string;
@@ -135,7 +139,9 @@ export let allLuxeComponents: LuxeComponent[] = [
         filename: 'DockItem.svelte',
         code: DockMenuItemCode
       }
-    ]
+    ],
+    colSpan: true,
+    download: "npm i svelte-motion clsx tailwind-merge lucide-svelte",
   },
   {
     id: 'badge-animated-border',
@@ -144,6 +150,7 @@ export let allLuxeComponents: LuxeComponent[] = [
     component: BadgeAnimatedBorder,
     link: "/luxe/badge-animated-border",
     code: BadgeAnimatedBorderCode,
+    tailwind: allLuxeTailwind['animated-border']
   },
   {
     id: 'badge-background-shine',
@@ -151,7 +158,8 @@ export let allLuxeComponents: LuxeComponent[] = [
     description: 'A badge with a background shine effect',
     component: BadgeBackgroundShine,
     link: "/luxe/badge-background-shine",
-    code: BadgeBackgroundShineCode
+    code: BadgeBackgroundShineCode,
+    tailwind: allLuxeTailwind['shine']
   },
   {
     id: 'badge-rotate-shine',
@@ -162,12 +170,23 @@ export let allLuxeComponents: LuxeComponent[] = [
     code: BadgeRotateBorderCode
   },
   {
+    id: 'animated-tabs',
+    name: 'Animated Tabs',
+    component: AnimatedTabs,
+    description: 'Animated Tabs from Luxe Components',
+    link: '/luxe/animated-tabs',
+    code: AnimatedTabsCode,
+    colSpan: true,
+    download: "npm i svelte-motion clsx tailwind-merge",
+  },
+  {
     id: 'button-animated-border',
     name: 'Button Animated Border',
     description: 'An animated border button',
     component: ButtonAnimatedBorder,
     link: "/luxe/button-animated-border",
-    code: ButtonAnimatedBorderCode
+    code: ButtonAnimatedBorderCode,
+    tailwind: allLuxeTailwind['animated-border']
   },
   {
     id: 'button-background-shine',
@@ -175,7 +194,8 @@ export let allLuxeComponents: LuxeComponent[] = [
     description: 'A button with a background shine effect',
     component: ButtonBackgroundShine,
     link: "/luxe/button-background-shine",
-    code: ButtonBackgroundShineCode
+    code: ButtonBackgroundShineCode,
+    tailwind: allLuxeTailwind['shine']
   },
   {
     id: 'button-destructive',
@@ -215,7 +235,8 @@ export let allLuxeComponents: LuxeComponent[] = [
     description: 'An animated border card',
     component: CardAnimatedBorder,
     link: "/luxe/card-animated-border",
-    code: CardAnimatedBorderCode
+    code: CardAnimatedBorderCode,
+    tailwind: allLuxeTailwind['animated-border']
   },
   {
     id: 'card-background-shine',
@@ -223,31 +244,8 @@ export let allLuxeComponents: LuxeComponent[] = [
     description: 'A card with a background shine effect',
     component: CardBackgroundShine,
     link: "/luxe/card-background-shine",
-    code: CardBackgroundShineCode
-  },
-  {
-    id: 'card-comment',
-    name: 'Card Comment',
-    description: 'A card for comments',
-    component: CardComment,
-    link: '/luxe/card-comment',
-    code: CardCommentCode
-  },
-  {
-    id: 'card-hover-effect',
-    name: 'Card Hover Effect',
-    description: 'A card with hover effect',
-    component: CardHoverEffect,
-    link: '/luxe/card-hover-effect',
-    code: CardHoverEffectCode
-  },
-  {
-    id: 'card-product',
-    name: 'Card Product',
-    description: 'A card product',
-    component: CardProduct,
-    link: '/luxe/card-product',
-    code: CardProductCode
+    code: CardBackgroundShineCode,
+    tailwind: allLuxeTailwind['shine']
   },
   {
     id: 'card-revealed-pointer',
@@ -255,8 +253,39 @@ export let allLuxeComponents: LuxeComponent[] = [
     description: 'A card with a revealed pointer',
     component: CardRevealedPointer,
     link: '/luxe/card-revealed-pointer',
-    code: CardRevealedPointerCode
+    code: CardRevealedPointerCode,
+    download: "npm i svelte-motion",
   },
+  {
+    id: 'card-comment',
+    name: 'Card Comment',
+    description: 'A card for comments',
+    component: CardComment,
+    link: '/luxe/card-comment',
+    code: CardCommentCode,
+    colSpan: true
+  },
+  {
+    id: 'card-hover-effect',
+    name: 'Card Hover Effect',
+    description: 'A card with hover effect',
+    component: CardHoverEffect,
+    link: '/luxe/card-hover-effect',
+    code: CardHoverEffectCode,
+    colSpan: true,
+    download: "npm i svelte-motion clsx tailwind-merge",
+  },
+  {
+    id: 'card-product',
+    name: 'Card Product',
+    description: 'A card product',
+    component: CardProduct,
+    link: '/luxe/card-product',
+    code: CardProductCode,
+    colSpan: true,
+    download: "npm i svelte-motion",
+  },
+
   {
     id: 'text-animated-decoration',
     name: 'Text Animated Decoration',
@@ -271,7 +300,8 @@ export let allLuxeComponents: LuxeComponent[] = [
     description: 'Text with animated decoration',
     component: TextAnimatedGradient,
     link: '/luxe/text-animated-gradient',
-    code: TextAnimatedGradientCode
+    code: TextAnimatedGradientCode,
+    tailwind: allLuxeTailwind['text-gradient']
   },
   {
     id: 'text-glitch',
@@ -295,7 +325,8 @@ export let allLuxeComponents: LuxeComponent[] = [
     description: 'Text Shake',
     link: '/luxe/text-shake',
     component: TextShake,
-    code: TextShakeCode
+    code: TextShakeCode,
+    tailwind: allLuxeTailwind['text-shake']
   },
   {
     id: 'text-shine',
@@ -303,16 +334,10 @@ export let allLuxeComponents: LuxeComponent[] = [
     description: 'Text with shine effect',
     link: '/luxe/text-shine',
     component: TextShine,
-    code: TextShineCode
+    code: TextShineCode,
+    tailwind: allLuxeTailwind['shine']
   },
-  {
-    id: 'animated-tabs',
-    name: 'Animated Tabs',
-    component: AnimatedTabs,
-    description: 'Animated Tabs from Luxe Components',
-    link: '/luxe/animated-tabs',
-    code: AnimatedTabsCode
-  },
+
   {
     id: 'input-spotlight-border',
     name: 'Input Spotlight Border',
