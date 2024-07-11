@@ -42,10 +42,10 @@
           link: "/magic/simple-cards",
         },
         {
-          name:'Animated Beam',
-          link:'/magic/animated-beam',
-          isNew:true
-        }
+          name: "Animated Beam",
+          link: "/magic/animated-beam",
+          isNew: true,
+        },
       ],
     },
     {
@@ -217,33 +217,19 @@
         <!-- Sidebar component, swap this element with another sidebar if you like -->
         <div class="flex grow flex-col overflow-y-auto px-6 m-0 p-0">
           <div
-            class="flex h-16 shrink-0 items-center border-b border-primary/50"
+            class="flex h-14 shrink-0 items-center border-b border-primary/50"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="22"
-              height="22"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.4"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-tornado"
-              ><path d="M21 4H3" /><path d="M18 8H6" /><path
-                d="M19 12H9"
-              /><path d="M16 16h-6" /><path d="M11 20H9" /></svg
-            >
-            <span class="ml-2 mt-px">Svelte Animations</span>
+            
+            <a href='/' class="ml-2 mt-px text-xl font-semibold">Svelte Components</a>
           </div>
           <nav class="flex flex-1 flex-col">
             {#key mobileMenu}
-              <div class="transition-all duration-150" transition:slide>
+              <div class="transition-all duration-150 bg-[#161616dc] px-3" transition:slide>
                 {#each navs as item}
                   <a
                     href={item.link}
                     class="group {item.link === routeID
-                      ? 'text-primary font-medium rounded-md'
+                      ? 'text-primary font-medium rounded-md bg-background/80'
                       : 'text-primary/60'} flex gap-x-3 p-2 text-sm leading-6"
                   >
                     {item.name}
@@ -255,8 +241,8 @@
               <li>
                 <ul role="list" class="-mx-2">
                   {#each componentsNav as cnavs}
-                    <div class="mb-4">
-                      <div class="font-medium">
+                    <div class="mb-3">
+                      <div class="font-medium mb-0.5">
                         {cnavs.heading}
                       </div>
                       {#each cnavs.sub.sort((a, b) => {
@@ -275,8 +261,8 @@
                             }}
                             href={item.link}
                             class="group {item.link === routeID
-                              ? 'text-primary'
-                              : 'text-primary/60'} flex gap-x-3 rounded-md p-2 text-sm leading-6"
+                              ? 'text-primary  bg-gray-600/20'
+                              : 'text-primary/60'} flex gap-x-3 rounded-md py-[6px] px-3 text-sm leading-6"
                           >
                             {item.name}
                           </a>
@@ -304,14 +290,10 @@
         class="flex grow flex-col gap-y-0 overflow-y-auto dark:border-primary/40 dark:bg-background bg-white pl-6 pr-4"
       >
         <nav class="flex flex-1 flex-col mt-2 mb-32">
-          <a href="/" class="font-bold text-xl mx-1 mt-3 mb-1"
+          <a href="/" class="font-bold text-xl mx-1 mt-3 mb-2"
             >Svelte Animations</a
           >
-          <a
-            href="/magicui"
-            class="font-mono text-md mx-1 mb-4 mt-1 w-fit px-5 rounded-lg bg-neutral-500/10 text-neutral-300"
-            >Svelte Magic UI</a
-          >
+
           <ul role="list" class="flex flex-1 flex-col">
             {#each componentsNav as item}
               <li>
@@ -379,9 +361,9 @@
         />
       </svg>
     </button>
-    <div class="flex-1 text-sm font-semibold leading-6 text-primary">
+    <a href="/" class="flex-1 text-sm font-semibold leading-6 text-primary">
       Svelte Components
-    </div>
+    </a>
   </div>
 
   <main class="py-6 lg:pl-64">

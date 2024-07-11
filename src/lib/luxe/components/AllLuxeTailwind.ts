@@ -1,6 +1,6 @@
 
 export let allLuxeTailwind = {
-    ["animated-border"]: {
+    ["animated-border"]: `   {
       animation: {
         flip: "flip 6s infinite steps(2, end)",
         rotate: "rotate 3s linear infinite both",
@@ -17,8 +17,8 @@ export let allLuxeTailwind = {
           },
         },
       },
-    },
-    ["shine"]: {
+    }`,
+    ["shine"]: `    {
       animation: {
         shine: "shine 2s linear infinite",
       },
@@ -28,8 +28,8 @@ export let allLuxeTailwind = {
           to: { backgroundPosition: "-200% 0" },
         },
       },
-    },
-    ["border-width"]: {
+    }`,
+    ["border-width"]: `{
       animation: {
         "border-width": "border-width 3s infinite alternate",
       },
@@ -39,8 +39,8 @@ export let allLuxeTailwind = {
           to: { width: "100px", opacity: "1" },
         },
       },
-    },
-    ["text-gradient"]: {
+    }`,
+    ["text-gradient"]: `{
       animation: {
         "text-gradient": "text-gradient 1.5s linear infinite",
       },
@@ -51,8 +51,8 @@ export let allLuxeTailwind = {
           },
         },
       },
-    },
-    ["text-shake"]: {
+    }`,
+    ["text-shake"]: `{
       animation: {
         "text-shake": "text-shake 1s ease 1",
       },
@@ -65,5 +65,5 @@ export let allLuxeTailwind = {
           "100%": { transform: "translateX(0)" },
         },
       },
-    },
+    }`,
   };

@@ -108,7 +108,7 @@ module.exports = {
     extend: {
       animation: {
         "spin-around": "spin-around calc(var(--speed) * 2) infinite linear",
-        slide: "slide var(--speed) ease-in-out infinite alternate",
+        magicslide: "magicslide var(--speed) ease-in-out infinite alternate",
       },
       keyframes: {
         "spin-around": {
@@ -125,7 +125,7 @@ module.exports = {
             transform: "translateZ(0) rotate(360deg)",
           },
         },
-        slide: {
+        magicslide: {
           to: {
             transform: "translate(calc(100cqw - 100%), 0)",
           },

@@ -8,10 +8,10 @@
   let opacity = 0;
   let handleMouseMove = (e: MouseEvent) => {
     const rect = divRef.getBoundingClientRect();
-    console.log("rect", rect);
+    // console.log("rect", rect);
     positionX.set(e.clientX - rect.left);
     positionY.set(e.clientY - rect.top);
-    console.log("rect", $positionX, $positionY);
+    // console.log("rect", $positionX, $positionY);
   };
   let handleFocus = () => {
     isFocused = true;

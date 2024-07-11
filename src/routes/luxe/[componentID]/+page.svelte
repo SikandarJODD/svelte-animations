@@ -31,7 +31,7 @@
   <meta name="twitter:site" content="@Sikandar_Bhide" />
 </svelte:head>
 
-<div class="my-0 md:my-14 mx-2 md:mx-5">
+<div class="my-0 md:my-14 mx-px md:mx-5">
   <a href="/luxe" class="flex items-center gap-1 text-muted-foreground w-fit">
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -64,14 +64,23 @@
         <svelte:component this={comp.component} />
       </ComponentView>
     </div>
+    {#if comp?.download}
+      <CodeBlock code={comp.download} lang='shellscript' fileName="Install dependencies" />
+    {/if}
     {#if typeof comp.code === "string"}
       {#key comp}
         <CodeBlock code={comp.code} {fileName} />
       {/key}
     {:else if comp.code instanceof Array}
       {#each comp.code as { filename, code }}
-          <CodeBlock {code} fileName={filename} />
+        <CodeBlock {code} fileName={filename} />
       {/each}
+    {/if}
+    
+    {#if comp?.tailwind}
+      {#key comp}
+        <CodeBlock code={comp?.tailwind} fileName="tailwind.config.ts" />
+      {/key}
     {/if}
   </div>
 </div>

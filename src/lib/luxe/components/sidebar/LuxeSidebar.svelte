@@ -95,33 +95,18 @@
         <!-- Sidebar component, swap this element with another sidebar if you like -->
         <div class="flex grow flex-col overflow-y-auto px-6 m-0 p-0">
           <div
-            class="flex h-16 shrink-0 items-center border-b border-primary/50"
+            class="flex h-14 shrink-0 items-center border-b border-primary/50"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="22"
-              height="22"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.4"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-tornado"
-              ><path d="M21 4H3" /><path d="M18 8H6" /><path
-                d="M19 12H9"
-              /><path d="M16 16h-6" /><path d="M11 20H9" /></svg
-            >
-            <span class="ml-2 overpass-mono mt-px">Svelte Animations</span>
+            <a href='/' class="ml-2 mt-px text-xl">Svelte Animations</a>
           </div>
           <nav class="flex flex-1 flex-col">
             {#key mobileMenu}
-              <div class="transition-all duration-150" transition:slide>
+              <div class="transition-all duration-150 bg-[#161616dc] px-3 " transition:slide>
                 {#each navs as item}
                   <a
                     href={item.link}
                     class="group {item.link === routeID
-                      ? 'text-primary font-medium rounded-md'
+                      ? 'text-primary font-medium rounded-md bg-background/80'
                       : 'text-primary/60'} flex gap-x-3 p-2 text-sm leading-6"
                   >
                     {item.name}
@@ -231,9 +216,9 @@
         />
       </svg>
     </button>
-    <div class="flex-1 text-sm font-semibold leading-6 text-primary">
+    <a href='/' class="flex-1 text-sm font-semibold leading-6 text-primary">
       Svelte Components
-    </div>
+    </a>
   </div>
 
   <main class="py-6 lg:pl-60">

@@ -263,7 +263,8 @@ export let allLuxeComponents: LuxeComponent[] = [
     component: CardComment,
     link: '/luxe/card-comment',
     code: CardCommentCode,
-    colSpan: true
+    colSpan: true,
+    showGrid: true,
   },
   {
     id: 'card-hover-effect',
@@ -284,6 +285,7 @@ export let allLuxeComponents: LuxeComponent[] = [
     code: CardProductCode,
     colSpan: true,
     download: "npm i svelte-motion",
+    showGrid: true
   },
 
   {

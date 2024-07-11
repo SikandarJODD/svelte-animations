@@ -6,17 +6,21 @@ export let navs = [
 		link: "/",
 	},
 	{
+		name: 'Magic UI Components',
+		link: '/magic'
+	},
+	{
+		name: "Luxe Components",
+		link: '/luxe'
+	},
+	{
 		name: "Examples",
 		link: "/examples",
 	},
 	{
-		name: "Framer Motion",
+		name: "Framer Motion Learnings",
 		link: "/learnings",
 	},
-	{
-		name: "Luxe",
-		link: '/luxe'
-	}
 ];
 
 export let tailwindCode = `// tailwind.config.js
@@ -145,3 +149,12 @@ module.exports = {
 };  // Module Exports
 `
 
+export let utilsCode = `
+import { type ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
+
+`;

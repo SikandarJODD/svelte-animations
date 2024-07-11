@@ -1,5 +1,6 @@
 <script>
-  import { allLuxeComponents } from "$lib/luxe/components/AllLuxeComponents";
+  import Separator from "$lib/components/ui/separator/separator.svelte";
+import { allLuxeComponents } from "$lib/luxe/components/AllLuxeComponents";
   import ComponentView from "$lib/luxe/components/codeblock/ComponentView.svelte";
   import GradientLine from "$lib/luxe/components/codeblock/GradientLine.svelte";
   import { cn } from "$lib/utils";
@@ -38,13 +39,18 @@
   }}
 />
 
-<main class="my-2 xl:my-24 space-y-6 md:space-y-10 mx-2 md:mx-4">
+<main class="my-2 xl:my-8 space-y-6 md:space-y-10 mx-2 md:mx-4">
   <section class="flex flex-col gap-6">
-    <div class="space-y-4">
-      <h1 class="text-3xl font-semibold text-primary">Browse Components</h1>
-      <p class="max-w-lg font-normal text-primary opacity-70">
-        Navigate to all the components that will make your application
-        sophisticated and luxurious.
+    <div class="space-y-2">
+      <h1 class="text-3xl md:text-4xl font-semibold text-primary">
+        Svelte Luxe Components
+      </h1>
+      <p class=" font-normal text-neutral-500">
+        Luxe Svelte – Library of components, <span class="text-primary"
+          >Copy</span
+        >
+        and <span class="text-primary">Paste</span> to illuminate your applications
+        with elegance.
       </p>
     </div>
   </section>
