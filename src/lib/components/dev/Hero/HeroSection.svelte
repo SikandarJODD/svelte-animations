@@ -1,10 +1,6 @@
 <script lang="ts">
   import Button from "$lib/components/ui/button/button.svelte";
   import DotBackground from "$lib/components/ui/GridDotBg/DotBackground.svelte";
-  import GridAndDotBg from "$lib/components/ui/GridDotBg/GridAndDotBg.svelte";
-  import Spotlight from "$lib/components/ui/spotlight/Spotlight.svelte";
-  import ButtonAnimatedBorder from "$lib/luxe/buttons/ButtonAnimatedBorder.svelte";
-  import { draw } from "svelte/transition";
   import HomeLuxeButton from "../tags/HomeLuxeButton.svelte";
   let getStarsCount = async () => {
     let res = await fetch(
@@ -66,7 +62,7 @@
         {/await}
         <div class="flex justify-center items-center gap-3">
           <HomeLuxeButton href="/luxe">Luxe Component</HomeLuxeButton>
-          <HomeLuxeButton href="/magic/dot-pattern">Magic UI</HomeLuxeButton>
+          <HomeLuxeButton href="/magic">Magic UI</HomeLuxeButton>
         </div>
       </div>
     </div>

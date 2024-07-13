@@ -50,6 +50,7 @@ import BgDarkTiles from "./backgroundLights/BgDarkTiles.svelte";
 import GridBeamExample from "./backgroundLights/examples/GridBeamExample.svelte";
 import GridBeamExampleCode from "./backgroundLights/examples/GridBeamExample.svelte?raw";
 import GridBeamCode from "./backgroundLights/GridBeam.svelte?raw";
+import { cncode } from "$lib/cncode";
 
 type MagicComponent = {
     id: string;
@@ -65,6 +66,8 @@ type MagicComponent = {
     examples?: ExampleComponent[];
     tailwind?: string;
     showDots?: boolean
+    cncode?: string;
+    download?: string;
 }
 type Code = {
     filename: string;
@@ -107,7 +110,9 @@ export let backgroundMagic: MagicComponent[] = [
             code: LinerGradientDotPatternCode,
             component: LinerGradientDotPattern,
             showGrid: true
-        }]
+        }],
+        cncode: cncode,
+        download: `npm i clsx tailwind-merge`
     },
     {
         id: 'ripple',
@@ -156,7 +161,9 @@ export let backgroundMagic: MagicComponent[] = [
                 component: DashedStrokeGrid,
                 code: DashedStrokeGridCode
             }
-        ]
+        ],
+        cncode: cncode,
+        download: `npm i clsx tailwind-merge`
     },
     {
         id: 'retro-grid',
@@ -241,7 +248,9 @@ export let backgroundMagic: MagicComponent[] = [
                     }
                 ]
             },
+        ],
+        cncode: cncode,
+        download: `npm i svelte-motion clsx tailwind-merge`
 
-        ]
     }
 ]

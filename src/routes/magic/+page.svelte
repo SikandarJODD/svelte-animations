@@ -1,5 +1,4 @@
 <script>
-  import { allLuxeComponents } from "$lib/luxe/components/AllLuxeComponents";
   import ComponentView from "$lib/luxe/components/codeblock/ComponentView.svelte";
   import GradientLine from "$lib/luxe/components/codeblock/GradientLine.svelte";
   import DotPattern from "$lib/magicui/backgrounds/DotPattern/DotPattern.svelte";
@@ -11,8 +10,6 @@
   import BorderBeamExample from "$lib/magicui/SpecialEffects/BorderBeam/BorderBeamExample.svelte";
   import MeteorsExample from "$lib/magicui/SpecialEffects/Meteors/MeteorsExample.svelte";
   import AnimatedExample from "$lib/magicui/text-animations/AnimatedGradientText/AnimatedExample.svelte";
-  import AnimatedGradientText from "$lib/magicui/text-animations/AnimatedGradientText/AnimatedGradientText.svelte";
-  import AnimatedShinyText from "$lib/magicui/text-animations/AnimatedShinyText/AnimatedShinyText.svelte";
   import AnimatedShinyTextExample from "$lib/magicui/text-animations/AnimatedShinyText/AnimatedShinyTextExample.svelte";
   import BoxRevealExample from "$lib/magicui/text-animations/BoxReveal/BoxRevealExample.svelte";
   import { cn } from "$lib/utils";

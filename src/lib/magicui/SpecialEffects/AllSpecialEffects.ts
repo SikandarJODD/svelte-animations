@@ -1,3 +1,4 @@
+import { cncode } from "$lib/cncode";
 import { allMagicTailwinds } from "../AllMagicTailwinds";
 import type { MagicComponent } from "../AllTypes";
 
@@ -30,7 +31,9 @@ export let allSpecialEffects: MagicComponent[] = [
                 code: BorderBeamExampleCode,
                 showGrid: true
             }
-        ]
+        ],
+        cncode: cncode,
+        download: 'npm i clsx tailwind-merge'
     },
     {
         id: 'meteors',
@@ -49,6 +52,8 @@ export let allSpecialEffects: MagicComponent[] = [
                 class:'relative overflow-hidden',
                 showGrid: true
             }
-        ]
+        ],
+        cncode: cncode,
+        download: 'npm i clsx tailwind-merge'
     }
 ]

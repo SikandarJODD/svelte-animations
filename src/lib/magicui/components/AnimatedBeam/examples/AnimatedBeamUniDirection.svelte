@@ -1,6 +1,5 @@
 <script>
-  import GradientLine from "$lib/luxe/components/codeblock/GradientLine.svelte";
-  import BorderBeam from "$lib/magicui/SpecialEffects/BorderBeam/BorderBeam.svelte";
+  import BorderBeam from "$lib/magicui/SpecialEffects/BorderBeam/BorderBeam.svelte"; // Checkout BorderBeam Component from Special Effects
   import AnimatedBeam from "../AnimatedBeam.svelte";
   import Circle from "../Circle.svelte";
   let containerRef;

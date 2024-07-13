@@ -92,7 +92,10 @@ const config: Config = {
 				"border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
 				// Lukacho UI Effects 
 				moveUp: 'moveUp 1.4s ease forwards',
-				appear: 'appear 1s 1s forwards'
+				appear: 'appear 1s 1s forwards',
+				// Syntax UI
+				'skew-scroll': 'skew-scroll 20s linear infinite',
+
 
 			},
 			"keyframes": {
@@ -276,7 +279,18 @@ const config: Config = {
 				appear: {
 					from: { opacity: '0' },
 					to: { opacity: '1' }
-				}
+				},
+				// Syntax UI
+				'skew-scroll': {
+					'0%': {
+						transform:
+							'rotatex(20deg) rotateZ(-20deg) skewX(20deg) translateZ(0) translateY(0)',
+					},
+					'100%': {
+						transform:
+							'rotatex(20deg) rotateZ(-20deg) skewX(20deg) translateZ(0) translateY(-100%)',
+					},
+				},
 			},
 		},
 	},

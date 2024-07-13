@@ -1,3 +1,4 @@
+import { cncode } from "$lib/cncode";
 import type { MagicComponent } from "../AllTypes";
 
 
@@ -32,6 +33,7 @@ export let allMagicAnimation: MagicComponent[] = [
                 component: ImagesBlurFade,
                 code: ImagesBlurFadeCode
             }
-        ]
+        ],
+        download: `npm i svelte-inview svelte-motion`
     }
 ]

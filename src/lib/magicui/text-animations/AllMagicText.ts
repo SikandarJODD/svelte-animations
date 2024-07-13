@@ -61,6 +61,7 @@ import WordsFadeIn from "./WordsFadeIn/WordsFadeIn.svelte";
 import WordsFadeInCode from "./WordsFadeIn/WordsFadeIn.svelte?raw";
 import WordsFadeInExample from "./WordsFadeIn/WordsFadeInExample.svelte";
 import WordsFadeInExampleCode from "./WordsFadeIn/WordsFadeInExample.svelte?raw";
+import { cncode } from "$lib/cncode";
 
 
 
@@ -81,7 +82,9 @@ export let allMagicText: MagicComponent[] = [
                 component: NumTickerExample,
                 code: NumTickerExampleCode
             }
-        ]
+        ],
+        cncode: cncode,
+        download: 'npm i clsx tailwind-merge'
     },
     {
         id: 'animated-shiny-text',
@@ -100,7 +103,9 @@ export let allMagicText: MagicComponent[] = [
                 code: AnimatedShinyTextExampleCode,
                 showDots: true
             }
-        ]
+        ],
+        cncode: cncode,
+        download: 'npm i clsx tailwind-merge'
     },
     {
         id: 'animated-gradient-text',
@@ -119,7 +124,9 @@ export let allMagicText: MagicComponent[] = [
                 code: AnimatedExampleCode,
                 showDots: true
             }
-        ]
+        ],
+        cncode: cncode,
+        download: 'npm i clsx tailwind-merge'
     },
     {
         id: 'text-reveal',
@@ -147,7 +154,9 @@ export let allMagicText: MagicComponent[] = [
                 name: 'Text Reveal Example',
                 class: 'relative'
             }
-        ]
+        ],
+        cncode: cncode,
+        download: 'npm i svelte-motion clsx tailwind-merge'
     },
     {
         id: 'box-reveal',
@@ -163,7 +172,8 @@ export let allMagicText: MagicComponent[] = [
                 code: BoxRevealExampleCode,
                 fileName: 'BoxRevealExample.svelte'
             }
-        ]
+        ],
+        download: 'npm i svelte-motion svelte-inview'
     },
     {
         id: 'flip-text',
@@ -180,7 +190,9 @@ export let allMagicText: MagicComponent[] = [
                 component: FlipTextExample,
                 code: FlipTextExampleCode
             }
-        ]
+        ],
+        cncode: cncode,
+        download: 'npm i svelte-motion clsx tailwind-merge'
     },
     {
         id: 'gradual-spacing',
@@ -212,7 +224,9 @@ export let allMagicText: MagicComponent[] = [
                 component: LpuExample,
                 code: LpuExampleCode
             }
-        ]
+        ],
+        cncode: cncode,
+        download: 'npm i svelte-motion clsx tailwind-merge'
     },
     {
         id: 'words-pull-up',
@@ -246,6 +260,8 @@ export let allMagicText: MagicComponent[] = [
                 component: WordsFadeInExample,
                 code: WordsFadeInExampleCode
             }
-        ]
+        ],
+        cncode: cncode,
+        download: 'npm i svelte-motion clsx tailwind-merge'
     }
 ]

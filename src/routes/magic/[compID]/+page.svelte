@@ -5,7 +5,6 @@
   import CodeBlock from "$lib/luxe/components/codeblock/CodeBlock.svelte";
   import { allMagicComponents } from "$lib/magicui/AllMagicComponents";
   import * as Tabs from "$lib/components/ui/tabs";
-  import DotsCenterExample from "$lib/magicui/backgrounds/DotPattern/examples/DotsCenterExample.svelte";
   import DotPattern from "$lib/magicui/backgrounds/DotPattern/DotPattern.svelte";
 
   $: routeID = $page.params.compID;
@@ -65,64 +64,68 @@
       <!-- <h1 class="text-2xl font-bold mt-4 md:text-3xl capitalize mb-3">
         Examples
       </h1> -->
-      <Tabs.Root value={comp.examples[0].name}>
-        {#each comp.examples as example}
-          <Tabs.List class="bg-transparent">
-            <Tabs.Trigger value={example.name}>{example.name}</Tabs.Trigger>
-          </Tabs.List>
-        {/each}
-        <Separator class="mb-4 -mt-0.5 ml-1  pt-0" />
-        {#each comp.examples as example}
-          <Tabs.Content value={example.name}>
-            <div class="space-y-4">
-              <div>
-                <ComponentView
-                  class="{example?.showGrid === true
-                    ? ' relative overflow-hidden '
-                    : ''} {example.class} {example?.showDots === true
-                    ? ' relative overflow-hidden '
-                    : ''}"
-                >
-                  {#if example?.showGrid}
-                    <div
-                      class="absolute h-full w-full bg-[linear-gradient(to_right,#b1b1b12e_1px,transparent_1px),linear-gradient(to_bottom,#b1b1b12e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_10%,transparent_100%)]"
-                    ></div>
-                  {:else if example?.showDots}
-                    <div
-                      class="[mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_30%,transparent_100%)] absolute h-full w-full"
-                    >
-                      <DotPattern
-                        class="[mask-image:radial-gradient(600px_circle_at_center,white,transparent)] "
-                        fillColor="rgba(120, 120, 120,0.4)"
-                      />
-                    </div>
-                  {/if}
-                  <svelte:component this={example.component} />
-                </ComponentView>
-              </div>
+      {#key comp}
+        <Tabs.Root value={comp.examples[0].name}>
+          {#each comp.examples as example}
+            <Tabs.List class="bg-transparent">
+              <Tabs.Trigger value={example.name}>{example.name}</Tabs.Trigger>
+            </Tabs.List>
+          {/each}
+          <Separator class="mb-4 -mt-0.5 ml-1  pt-0" />
+          {#each comp.examples as example}
+            <Tabs.Content value={example.name}>
               <div class="space-y-4">
-                {#if typeof example.code === "string"}
-                  {#key example}
-                    <CodeBlock
-                      code={example.code}
-                      fileName={example.fileName}
-                    />
+                <div>
+                  {#key comp}
+                    <ComponentView
+                      class="{example?.showGrid === true
+                        ? ' relative overflow-hidden '
+                        : ''} {example.class} {example?.showDots === true
+                        ? ' relative overflow-hidden '
+                        : ''}"
+                    >
+                      {#if example?.showGrid}
+                        <div
+                          class="absolute h-full w-full bg-[linear-gradient(to_right,#b1b1b12e_1px,transparent_1px),linear-gradient(to_bottom,#b1b1b12e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_10%,transparent_100%)]"
+                        ></div>
+                      {:else if example?.showDots}
+                        <div
+                          class="[mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_30%,transparent_100%)] absolute h-full w-full"
+                        >
+                          <DotPattern
+                            class="[mask-image:radial-gradient(600px_circle_at_center,white,transparent)] "
+                            fillColor="rgba(120, 120, 120,0.4)"
+                          />
+                        </div>
+                      {/if}
+                      <svelte:component this={example.component} />
+                    </ComponentView>
                   {/key}
-                {:else if example.code instanceof Array}
-                  {#each example.code as singleCode}
-                    <div>
+                </div>
+                <div class="space-y-4">
+                  {#if typeof example.code === "string"}
+                    {#key example}
                       <CodeBlock
-                        code={singleCode.code}
-                        fileName={singleCode.filename}
+                        code={example.code}
+                        fileName={example.fileName}
                       />
-                    </div>
-                  {/each}
-                {/if}
+                    {/key}
+                  {:else if example.code instanceof Array}
+                    {#each example.code as singleCode}
+                      <div>
+                        <CodeBlock
+                          code={singleCode.code}
+                          fileName={singleCode.filename}
+                        />
+                      </div>
+                    {/each}
+                  {/if}
+                </div>
               </div>
-            </div>
-          </Tabs.Content>
-        {/each}
-      </Tabs.Root>
+            </Tabs.Content>
+          {/each}
+        </Tabs.Root>
+      {/key}
     {/if}
     <Separator class="mb-4" />
     {#if comp?.component}
@@ -147,10 +150,33 @@
     {/if}
 
     {#if comp?.code}
-      <div>
-        <h1 class="text-2xl font-bold mt-0 md:text-3xl capitalize mb-3">
-          Component Code
-        </h1>
+      <div class="space-y-4">
+        <div>
+          <h1 class="text-2xl font-bold mt-0 md:text-3xl capitalize mb-1">
+            Component Usage
+          </h1>
+          <p class="mb-3 ml-1 text-muted-foreground">
+            Follow the steps to copy the component
+          </p>
+        </div>
+        {#if comp?.download}
+          {#key comp}
+            <CodeBlock
+              code={comp.download}
+              fileName="Install Dependencies"
+              lang="shellscript"
+            />
+          {/key}
+        {/if}
+        {#if comp?.cncode}
+          {#key comp}
+            <CodeBlock
+              code={comp.cncode}
+              fileName="lib/utils.ts"
+              lang="typescript"
+            />
+          {/key}
+        {/if}
         {#if typeof comp.code === "string"}
           {#key comp}
             <CodeBlock code={comp.code} {fileName} />
@@ -163,6 +189,21 @@
           </div>
         {/if}
       </div>
+    {:else if comp?.download && comp?.cncode}
+      {#key comp}
+        <CodeBlock
+          code={comp.download}
+          fileName="Install Dependencies"
+          lang="shellscript"
+        />
+      {/key}
+      {#key comp}
+        <CodeBlock
+          code={comp.cncode}
+          fileName="lib/utils.ts"
+          lang="typescript"
+        />
+      {/key}
     {/if}
     {#if comp?.tailwind}
       {#key comp?.tailwind}

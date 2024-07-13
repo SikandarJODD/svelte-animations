@@ -13,6 +13,8 @@ export type MagicComponent = {
     examples?: ExampleComponent[];
     tailwind?: string;
     showDots?: boolean;
+    cncode?: string;
+    download?: string;
 }
 export type Code = {
     filename: string;

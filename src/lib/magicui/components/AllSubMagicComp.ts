@@ -45,6 +45,7 @@ import CircleCode from "./AnimatedBeam/Circle.svelte?raw";
 import AnimatedBeamUniDirectionCode from "./AnimatedBeam/examples/AnimatedBeamUniDirection.svelte?raw";
 import AnimatedBeamBiDirectionalCode from "./AnimatedBeam/examples/AnimatedBeamBiDirectional.svelte?raw";
 import AnimatedBeamMultipleInputCode from "./AnimatedBeam/examples/AnimatedBeamMultipleInput.svelte?raw";
+import { cncode } from "$lib/cncode";
 
 export let allSubMagicComps: MagicComponent[] = [
     {
@@ -90,7 +91,11 @@ export let allSubMagicComps: MagicComponent[] = [
                     // }
                 ]
             }
-        ]
+        ],
+        cncode: cncode,
+        download: `    npm i clsx tailwind-merge
+    npx shadcn-svelte@latest init
+    npx shadcn-svelte@latest add button`
 
     },
     {
@@ -109,7 +114,9 @@ export let allSubMagicComps: MagicComponent[] = [
                 component: OribtingExample,
                 code: OribtingExampleCode
             }
-        ]
+        ],
+        cncode: cncode,
+        download: 'npm i clsx tailwind-merge'
     },
     {
         id: 'marquee',
@@ -136,11 +143,13 @@ export let allSubMagicComps: MagicComponent[] = [
                     }
                 ]
             }
-        ]
+        ],
+        cncode: cncode,
+        download: 'npm i clsx tailwind-merge'
     },
     {
         id: 'simple-cards',
-        name: 'Simple Cards',
+        name: 'Simple Cards Examples',
         link: '/magic/simple-cards',
         desc: 'Simple cards with good border effect',
         examples: [
@@ -190,7 +199,9 @@ export let allSubMagicComps: MagicComponent[] = [
                     }
                 ]
             }
-        ]
+        ],
+        cncode: cncode,
+        download: 'npm i clsx tailwind-merge'
     },
     {
         id: 'animated-beam',
@@ -255,6 +266,8 @@ export let allSubMagicComps: MagicComponent[] = [
                     }
                 ]
             }
-        ]
+        ],
+        cncode: cncode,
+        download: 'npm i svelte-motion clsx tailwind-merge'
     }
 ]
