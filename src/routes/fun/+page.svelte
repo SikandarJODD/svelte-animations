@@ -1,5 +1,9 @@
 <script>
-  import SkewedInfiniteScroll from "$lib/syntaxUI/animations/skewedEffect/SkewedInfiniteScroll.svelte";
+  import LucidSvelteTree from "$lib/magicui/components/FileTree/LucideTree/LucidSvelteTree.svelte";
+  import SimpleSvelteTree from "$lib/magicui/components/FileTree/SimpleTree/SimpleSvelteTree.svelte";
 </script>
 
-<SkewedInfiniteScroll />
+<div class="flex justify-center items-center h-screen gap-4">
+  <LucidSvelteTree />
+  <SimpleSvelteTree />
+</div>

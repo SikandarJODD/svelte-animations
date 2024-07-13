@@ -46,6 +46,11 @@
           link: "/magic/animated-beam",
           isNew: true,
         },
+        {
+          name: "File Tree",
+          link: "/magic/file-tree",
+          isNew: true,
+        },
       ],
     },
     {
@@ -219,12 +224,16 @@
           <div
             class="flex h-14 shrink-0 items-center border-b border-primary/50"
           >
-            
-            <a href='/' class="ml-2 mt-px text-xl font-semibold">Svelte Components</a>
+            <a href="/" class="ml-2 mt-px text-xl font-semibold"
+              >Svelte Components</a
+            >
           </div>
           <nav class="flex flex-1 flex-col">
             {#key mobileMenu}
-              <div class="transition-all duration-150 bg-[#161616dc] px-3" transition:slide>
+              <div
+                class="transition-all duration-150 bg-[#161616dc] px-3"
+                transition:slide
+              >
                 {#each navs as item}
                   <a
                     href={item.link}

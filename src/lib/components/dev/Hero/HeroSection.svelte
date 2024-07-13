@@ -14,7 +14,7 @@
 
 <DotBackground>
   <div
-    class="relative flex h-[100vh] overflow-hidden rounded-md px-4 antialiased md:items-center md:justify-center lg:px-32"
+    class="relative flex h-[100vh] overflow-hidden rounded-md px-4 antialiased md:items-center md:justify-center lg:px-32 "
   >
     <!-- <Spotlight className="-top-40 left-0 md:left-72 md:-top-32" fill="#BAFAFF" /> -->
     <div class="relative z-10 mx-auto w-full max-w-7xl p-4 pt-20 md:pt-0">

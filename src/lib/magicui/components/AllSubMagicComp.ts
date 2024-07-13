@@ -1,3 +1,4 @@
+import { cncode } from "$lib/cncode";
 import { allMagicTailwinds } from "../AllMagicTailwinds";
 import type { MagicComponent } from "../AllTypes";
 
@@ -45,7 +46,18 @@ import CircleCode from "./AnimatedBeam/Circle.svelte?raw";
 import AnimatedBeamUniDirectionCode from "./AnimatedBeam/examples/AnimatedBeamUniDirection.svelte?raw";
 import AnimatedBeamBiDirectionalCode from "./AnimatedBeam/examples/AnimatedBeamBiDirectional.svelte?raw";
 import AnimatedBeamMultipleInputCode from "./AnimatedBeam/examples/AnimatedBeamMultipleInput.svelte?raw";
-import { cncode } from "$lib/cncode";
+
+//  File Tree
+import LucidSvelteTree from "./FileTree/LucideTree/LucidSvelteTree.svelte";
+import LucidSvelteTreeCode from "./FileTree/LucideTree/LucidSvelteTree.svelte?raw";
+import LucidFolderCode from "./FileTree/LucideTree/Folder.svelte?raw";
+import LucidFileCode from "./FileTree/LucideTree/File.svelte?raw";
+
+import SimpleSvelteTree from "./FileTree/SimpleTree/SimpleSvelteTree.svelte";
+import SimpleSvelteTreeCode from "./FileTree/SimpleTree/SimpleSvelteTree.svelte?raw";
+import SimpleFolderCode from "./FileTree/SimpleTree/Folder.svelte?raw";
+import SimpleFileCode from "./FileTree/SimpleTree/File.svelte?raw";
+
 
 export let allSubMagicComps: MagicComponent[] = [
     {
@@ -269,5 +281,54 @@ export let allSubMagicComps: MagicComponent[] = [
         ],
         cncode: cncode,
         download: 'npm i svelte-motion clsx tailwind-merge'
+    },
+    {
+        id: 'file-tree',
+        name: 'File Tree',
+        link: '/magic/file-tree',
+        desc: 'A simple file tree component build using Svelte',
+        examples: [
+            {
+                id: 1,
+                fileName: 'FileTree.svelte',
+                name: 'Lucide File Tree',
+                component: LucidSvelteTree,
+                showGrid: true,
+                code: [
+                    {
+                        filename: 'LucidSvelteTree.svelte',
+                        code: LucidSvelteTreeCode,
+                    },
+                    {
+                        filename: 'Folder.svelte',
+                        code: LucidFolderCode,
+                    },
+                    {
+                        filename: 'File.svelte',
+                        code: LucidFileCode,
+                    }
+                ]
+            },
+            {
+                id: 2,
+                fileName: 'FileTree.svelte',
+                name: 'Simple File Tree',
+                component: SimpleSvelteTree,
+                code: [
+                    {
+                        filename: 'SimpleSvelteTree.svelte',
+                        code: SimpleSvelteTreeCode,
+                    },
+                    {
+                        filename: 'Folder.svelte',
+                        code: SimpleFolderCode,
+                    },
+                    {
+                        filename: 'File.svelte',
+                        code: SimpleFileCode,
+                    }
+                ]
+            }
+        ]
     }
 ]
