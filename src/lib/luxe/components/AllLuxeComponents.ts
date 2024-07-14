@@ -104,6 +104,10 @@ import InputPulseBorder from "../inputs/InputPulseBorder.svelte";
 import InputPulseBorderCode from "../inputs/InputPulseBorder.svelte?raw";
 import { allLuxeTailwind } from "./AllLuxeTailwind";
 
+// Dropdown Menu
+import DropDown from "../dropdown/DropDown.svelte";
+import DropDownCode from "../dropdown/DropDown.svelte?raw";
+
 
 type LuxeComponent = {
   id: string;
@@ -116,6 +120,7 @@ type LuxeComponent = {
   tailwind?: any;
   colSpan?: boolean;
   download?: string;
+  class?: string;
 }
 type Code = {
   filename: string;
@@ -142,6 +147,16 @@ export let allLuxeComponents: LuxeComponent[] = [
     ],
     colSpan: true,
     download: "npm i svelte-motion clsx tailwind-merge lucide-svelte",
+  },
+  {
+    id: 'dropdown-menu',
+    name: 'Dropdown Menu',
+    description: 'A dropdown menu',
+    link: '/luxe/dropdown-menu',
+    code: DropDownCode,
+    component: DropDown,
+    download: "npm i svelte-motion clsx tailwind-merge",
+    colSpan: true,
   },
   {
     id: 'badge-animated-border',
@@ -367,4 +382,5 @@ export let allLuxeComponents: LuxeComponent[] = [
     code: InputPulseBorderCode,
     showGrid: true
   },
+
 ]

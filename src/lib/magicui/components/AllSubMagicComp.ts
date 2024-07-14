@@ -327,7 +327,8 @@ export let allSubMagicComps: MagicComponent[] = [
                         filename: 'File.svelte',
                         code: SimpleFileCode,
                     }
-                ]
+                ],
+                showGrid: true
             }
         ]
     }

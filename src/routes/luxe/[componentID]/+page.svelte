@@ -54,7 +54,7 @@
     </h1>
     <div>
       <ComponentView
-        class={comp?.showGrid === true ? " relative overflow-hidden " : ""}
+        class='{comp?.showGrid === true ? " relative overflow-hidden" : ""} {comp?.class}'
       >
         {#if comp?.showGrid}
           <div
