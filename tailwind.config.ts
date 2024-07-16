@@ -74,10 +74,12 @@ const config: Config = {
 				"text-glitch-from": "text-glitch-from 0.6s ease-in-out infinite",
 				"text-scale": "text-scale 1s linear infinite forwards",
 				'spin': 'spin 2s linear infinite',
+
 				// From UI-Snippets : https://ui.ibelick.com
 				// 'text-gradient': 'text-gradient 1.5s linear infinite',
 				'background-shine': 'background-shine 2s linear infinite',
 				'pulse-slow': 'pulse 6s infinite cubic-bezier(0.4, 0, 0.6, 1)',
+				
 				// Magic UI 
 				'ripple': 'ripple 3400ms ease infinite',
 				"spin-around": "spin-around calc(var(--speed) * 2) infinite linear",
@@ -90,9 +92,12 @@ const config: Config = {
 				grid: "grid 15s linear infinite",
 				meteor: "meteor 5s linear infinite",
 				"border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
+
 				// Lukacho UI Effects 
 				moveUp: 'moveUp 1.4s ease forwards',
 				appear: 'appear 1s 1s forwards',
+
+
 				// Syntax UI
 				'skew-scroll': 'skew-scroll 20s linear infinite',
 

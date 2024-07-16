@@ -3,7 +3,7 @@ export let allLuxeTailwind = {
     ["animated-border"]: `   {
       animation: {
         flip: "flip 6s infinite steps(2, end)",
-        rotate: "rotate 3s linear infinite both",
+        kitrotate: "kitrotate 3s linear infinite both",
       },
       keyframes: {
         flip: {
@@ -11,7 +11,7 @@ export let allLuxeTailwind = {
             transform: "rotate(360deg)",
           },
         },
-        rotate: {
+        kitrotate: {
           to: {
             transform: "rotate(90deg)",
           },
