@@ -130,6 +130,7 @@ export let allMagicText: MagicComponent[] = [
     },
     {
         id: 'text-reveal',
+        tags: ['Svelte Motion'],
         name: 'Text Reveal',
         desc: 'A simple text reveal animation',
         component: TextReveal,
@@ -160,6 +161,7 @@ export let allMagicText: MagicComponent[] = [
     },
     {
         id: 'box-reveal',
+        tags: ['Svelte Motion', 'Svelte Inview'],
         name: 'Box Reveal',
         desc: 'A simple box reveal animation',
         code: BoxRevealCode,
@@ -178,6 +180,7 @@ export let allMagicText: MagicComponent[] = [
     {
         id: 'flip-text',
         name: 'Flip Text',
+        tags: ['Svelte Motion'],
         desc: 'A simple flip text animation',
         component: FlipText,
         code: FlipTextCode,
@@ -196,6 +199,7 @@ export let allMagicText: MagicComponent[] = [
     },
     {
         id: 'gradual-spacing',
+        tags: ['Svelte Motion'],
         name: 'Gradual Spacing',
         desc: 'Word animation for gradual spacing between letters',
         component: GradualSpacing,
@@ -207,10 +211,13 @@ export let allMagicText: MagicComponent[] = [
             fileName: 'GradualSpacingExample.svelte',
             component: GsExample,
             code: GsExampleCode
-        }]
+        }],
+        download: 'npm i svelte-motion',
+        cncode: cncode
     },
     {
         id: 'letter-pull-up',
+        tags: ['Svelte Motion'],
         name: 'Staggered Letter Pull Up Animation',
         desc: 'A simple letter pull up animation',
         component: LetterPullUp,
@@ -247,6 +254,7 @@ export let allMagicText: MagicComponent[] = [
     },
     {
         id: 'words-fade-in',
+        tags: ['Svelte Motion'],
         name: 'Words Fade In',
         desc: 'Text animation which fades in word by word',
         component: WordsFadeIn,

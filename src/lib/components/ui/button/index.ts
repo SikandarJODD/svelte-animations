@@ -14,6 +14,11 @@ const buttonVariants = tv({
 			secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
 			ghost: "hover:bg-accent hover:text-accent-foreground",
 			link: "text-primary underline-offset-4 hover:underline",
+			shine: "inline-flex animate-shine items-center justify-center rounded-xl text-sm border border-neutral-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-4 py-2 font-medium text-neutral-400 transition-colors",
+			success: 'rounded-xl text-sm font-medium bg-emerald-950 text-emerald-500 border border-emerald-900',
+			animated: 'group relative grid overflow-hidden rounded-xl px-4 py-2 shadow-[0_1000px_0_0_hsl(0_0%_20%)_inset] transition-colors duration-200',
+			danger: 'rounded-xl text-sm font-medium bg-red-950 text-red-500 border border-red-900'
+
 		},
 		size: {
 			default: "h-10 px-4 py-2",

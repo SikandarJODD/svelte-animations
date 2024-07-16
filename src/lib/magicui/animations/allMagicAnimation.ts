@@ -12,6 +12,7 @@ import TextBlurFadeCode from "./BlurFade/examples/TextBlurFade.svelte?raw";
 export let allMagicAnimation: MagicComponent[] = [
     {
         id: 'blur-fade',
+        tags :['Svelte Motion','Svelte Inview'],
         name: 'Blur Fade',
         link: '/magic/blur-fade',
         component: BlurFade,

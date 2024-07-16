@@ -1,6 +1,3 @@
-<script>
-</script>
-
 <div class="relative">
   <div class="absolute top-0 flex w-full justify-center">
     <div

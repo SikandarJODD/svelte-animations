@@ -4,6 +4,7 @@
   import { navs } from "$lib";
   import { onMount } from "svelte";
   import { blur, slide } from "svelte/transition";
+  import SearchComp from "$lib/components/dev/searchComp/SearchComp.svelte";
 
   let sortedcomps = allLuxeComponents.toSorted((a, b) => {
     return a.name.localeCompare(b.name);
@@ -97,11 +98,14 @@
           <div
             class="flex h-14 shrink-0 items-center border-b border-primary/50"
           >
-            <a href='/' class="ml-2 mt-px text-xl">Svelte Animations</a>
+            <a href="/" class="ml-2 mt-px text-xl">Svelte Animations</a>
           </div>
           <nav class="flex flex-1 flex-col">
             {#key mobileMenu}
-              <div class="transition-all duration-150 bg-[#161616dc] px-3 " transition:slide>
+              <div
+                class="transition-all duration-150 bg-[#161616dc] px-3"
+                transition:slide
+              >
                 {#each navs as item}
                   <a
                     href={item.link}
@@ -160,6 +164,9 @@
       >
         <nav class="flex flex-1 flex-col mt-2 mb-32">
           <a href="/" class="font-bold text-xl mx-1 my-3">Svelte Animations</a>
+          <div>
+            <SearchComp />
+          </div>
           <ul role="list" class="flex flex-1 flex-col">
             {#each componentsNav as item}
               <li>
@@ -216,7 +223,7 @@
         />
       </svg>
     </button>
-    <a href='/' class="flex-1 text-sm font-semibold leading-6 text-primary">
+    <a href="/" class="flex-1 text-sm font-semibold leading-6 text-primary">
       Svelte Components
     </a>
   </div>

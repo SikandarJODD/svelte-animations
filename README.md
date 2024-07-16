@@ -1,12 +1,14 @@
 # Simple Components
 
-Build using _Svelte Motion_ and Tailwind CSS
+Build using Tailwind CSS and **Svelte Motion**.
 
-Svelte Motion Docs : [svelte/motion](https://svelte.dev/docs/svelte-motion)
+Svelte Motion Docs : [svelte-motion](https://svelte.dev/docs/svelte-motion)
 
 Hosted on Vercel : [Svelte Components](https://animation-svelte.vercel.app/)
 
-## New Components
+---
+
+### New Components
 
 | Name         | Preview                                                         | Section      |
 | ------------ | --------------------------------------------------------------- | ------------ |
@@ -40,11 +42,11 @@ Hosted on Vercel : [Svelte Components](https://animation-svelte.vercel.app/)
 | Animation Sequence     | going through sequence of animations       |
 | Drag                   | Transform, 3D Transform                    |
 
-## Feedback
+### Feedback
 
 If you have any feedback, please reach out at [Twitter](https://twitter.com/Sikandar_Bhide)
 
-## Support
+### Support
 
 - For support, You can sponsor me on [GitHub](https://github.com/sponsors/SikandarJODD)
 - Share this project with your friends and colleagues [Share on Twitter](https://twitter.com/intent/tweet?url=https://animation-svelte.vercel.app%0A&text=Svelte%20Animation%20Components%20Built%20using%20Svelte%20Motion%20and%20Tailwind%20CSS%0A&via=Sikandar_Bhide&hashtags=sveltejs,tailwindcss,webdev,frontend)

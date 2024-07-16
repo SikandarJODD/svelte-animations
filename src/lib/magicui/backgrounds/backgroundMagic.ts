@@ -68,6 +68,7 @@ type MagicComponent = {
     showDots?: boolean
     cncode?: string;
     download?: string;
+    tags?:string[];
 }
 type Code = {
     filename: string;
@@ -186,6 +187,7 @@ export let backgroundMagic: MagicComponent[] = [
     {
         id: 'bg-boxes',
         name: 'Background Boxes Examples',
+        tags: ['Svelte Motion'],
         desc: 'A background box pattern made with SVGs, fully customizable using Tailwind CSS.',
         code: BgDarkTilesCode,
         component: BgDarkTiles,

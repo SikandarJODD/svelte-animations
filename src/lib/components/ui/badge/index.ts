@@ -13,6 +13,9 @@ export const badgeVariants = tv({
 			success:
 				"text-green-400/80 border-green-400/70",
 			outline: "text-foreground",
+			shine: 'inline-flex animate-shine \n items-center justify-center rounded-full text-xs border \n border-neutral-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-3 py-1 font-medium text-neutral-400 transition-colors',
+			animated: 'group relative grid overflow-hidden rounded-full px-3 py-1 shadow-[0_1000px_0_0_hsl(0_0%_30%)_inset] transition-colors duration-200',
+			rotate_shine: 'border-none'
 		},
 	},
 	defaultVariants: {

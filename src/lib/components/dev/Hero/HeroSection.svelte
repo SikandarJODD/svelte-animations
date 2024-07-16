@@ -1,6 +1,8 @@
 <script lang="ts">
   import Button from "$lib/components/ui/button/button.svelte";
   import DotBackground from "$lib/components/ui/GridDotBg/DotBackground.svelte";
+  import GradientLine from "$lib/luxe/components/codeblock/GradientLine.svelte";
+  import SearchComp from "../searchComp/SearchComp.svelte";
   import HomeLuxeButton from "../tags/HomeLuxeButton.svelte";
   let getStarsCount = async () => {
     let res = await fetch(
@@ -10,32 +12,34 @@
     let starsCount = data.stargazers_count;
     return starsCount;
   };
+  let navItems = [
+    { name: "Luxe Components", href: "/luxe" },
+    { name: "Framer", href: "/learnings" },
+    { name: "Examples", href: "/examples" },
+    { name: "Magic UI", href: "/magic" },
+  ];
 </script>
 
 <DotBackground>
   <div
-    class="relative flex h-[100vh] overflow-hidden rounded-md px-4 antialiased md:items-center md:justify-center lg:px-32 "
+    class="relative flex h-[100vh] overflow-hidden rounded-md px-4 antialiased md:items-center md:justify-center lg:px-32"
   >
     <!-- <Spotlight className="-top-40 left-0 md:left-72 md:-top-32" fill="#BAFAFF" /> -->
-    <div class="relative z-10 mx-auto w-full max-w-7xl p-4 pt-20 md:pt-0">
+    <div class=" z-10 mx-auto w-full max-w-7xl p-4 pt-20 md:pt-0">
       <h2
-        class="bg-opacity-50 bg-gradient-to-r from-neutral-100 via-neutral-200 to-neutral-500 bg-clip-text text-center text-4xl font-bold text-transparent md:text-7xl"
+        class="bg-opacity-50 pb-4 bg-gradient-to-r from-neutral-100 via-neutral-300 to-neutral-500 bg-clip-text text-center text-4xl font-bold text-transparent md:text-7xl"
       >
-        Svelte Tailwind Components
+        Svelte Components
       </h2>
       <p
         class="mx-auto mt-4 max-w-lg text-center text-base md:text-lg font-normal text-neutral-300"
       >
-        Components are build using Tailwind CSS,Tweened, Spring and <a
+        Components are build using Tailwind CSS, Tweened, Spring and <a
           href="https://svelte-motion.gradientdescent.de"
           class=" text-teal-300">Svelte Motion</a
         >
       </p>
-      <div class="flex justify-center items-center mt-6 gap-3 flex-wrap">
-        <Button href="/examples">Components</Button>
-        <Button href="/learnings">Framer Motion</Button>
-      </div>
-      <div class="flex justify-center items-center mt-4 flex-col gap-4">
+      <div class="flex justify-center items-center mt-4">
         {#await getStarsCount()}
           <p class="text-neutral-400">Loading...</p>
         {:then value}
@@ -60,12 +64,29 @@
             {value}</Button
           >
         {/await}
-        <div class="flex justify-center items-center gap-3">
-          <HomeLuxeButton href="/luxe">Luxe Component</HomeLuxeButton>
-          <HomeLuxeButton href="/magic">Magic UI</HomeLuxeButton>
+      </div>
+
+      <div
+        class="flex flex-col my-4 md:w-[290px] mx-auto p-4 rounded-xl border justify-center items-center gap-3 bg-neutral-900/10"
+      >
+        <div class="flex justify-between w-full items-center gap-3">
+          <Button href="/examples" variant="outline">Examples</Button>
+          <Button href="/learnings" variant="outline">Framer Learnings</Button>
+        </div>
+        <div class="flex justify-between w-full items-center gap-3">
+          <Button href="/luxe" variant="animated">Luxe Components</Button>
+          <Button href="/magic" variant="shine">Magic UI</Button>
+        </div>
+      </div>
+      <div class="flex justify-center items-center">
+        <div class="absolute bottom-2 font-mono text-neutral-300">
+          Build by <a
+            href="https://github.com/SikandarJODD"
+            target="_blank"
+            class=" underline-offset-2 underline">Sikandar.S.Bhide</a
+          >
         </div>
       </div>
     </div>
   </div>
 </DotBackground>
-

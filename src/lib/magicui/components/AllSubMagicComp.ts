@@ -218,6 +218,7 @@ export let allSubMagicComps: MagicComponent[] = [
     {
         id: 'animated-beam',
         name: 'Animated Beam',
+        tags: ['Svelte Motion'],
         link: '/magic/animated-beam',
         desc: 'A simple animation of a beam. Preview :  <a href="/mint" class="underline underline-offset-2 text-primary">Visit</a>',
         code: [

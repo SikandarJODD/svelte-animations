@@ -1,6 +1,7 @@
 <script lang="ts">
   import { page } from "$app/stores";
   import { navs } from "$lib";
+  import SearchComp from "$lib/components/dev/searchComp/SearchComp.svelte";
   import Badge from "$lib/components/ui/badge/badge.svelte";
   import { onMount } from "svelte";
   import { slide } from "svelte/transition";
@@ -299,17 +300,20 @@
         class="flex grow flex-col gap-y-0 overflow-y-auto dark:border-primary/40 dark:bg-background bg-white pl-6 pr-4"
       >
         <nav class="flex flex-1 flex-col mt-2 mb-32">
-          <a href="/" class="font-bold text-xl mx-1 mt-3 mb-2"
+          <a href="/" class="font-bold text-xl mx-1 mt-3 mb-2 text-center"
             >Svelte Animations</a
           >
+          <div class="mb-4">
+            <SearchComp />
+          </div>
 
           <ul role="list" class="flex flex-1 flex-col">
             {#each componentsNav as item}
-              <li>
-                <ul role="list" class="">
-                  <li class="mt-1">
+              <li class="mb-1">
+                <ul role="list">
+                  <li>
                     <div
-                      class="text-primary/95 font-semibold text-md leading-6 pt-2 pb-1"
+                      class="text-primary/95 font-semibold text-md leading-6 pt-2 pb-0.5"
                     >
                       {item.heading}
                     </div>
@@ -328,7 +332,7 @@
                         href={subItem.link}
                         class="group {subItem.link == routeID
                           ? 'text-primary bg-sky-100 dark:bg-neutral-900 border-border font-medium'
-                          : 'text-primary/60 '} capitalize flex justify-between items-center gap-x-3 p-2 mt-px text-sm leading-6 select-none pl-3 py-1.5 border border-transparent rounded-sm dark:hover:bg-neutral-900 transition-all duration-300"
+                          : 'text-primary/60 '} capitalize flex justify-between items-center gap-x-3 p-2  text-sm leading-6 select-none pl-3 py-[5.2px] border border-transparent rounded-sm dark:hover:bg-neutral-900 transition-all duration-300"
                       >
                         {subItem.name}
                         {#if subItem?.isNew}

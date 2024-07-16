@@ -21,6 +21,7 @@ type MagicComponent = {
     previewCode?: string | Code[];
     examples?: ExampleComponent[];
     tailwind?: string;
+    tags?: string[];
 }
 type Code = {
     filename: string;

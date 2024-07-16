@@ -121,6 +121,7 @@ type LuxeComponent = {
   colSpan?: boolean;
   download?: string;
   class?: string;
+  tags?: string[]
 }
 type Code = {
   filename: string;
@@ -131,6 +132,7 @@ type Code = {
 export let allLuxeComponents: LuxeComponent[] = [
   {
     id: 'dock-menu',
+    tags: ['Svelte Motion'],
     name: 'Dock Menu',
     description: 'An animated border badge',
     component: DockMenu,
@@ -150,6 +152,7 @@ export let allLuxeComponents: LuxeComponent[] = [
   },
   {
     id: 'dropdown-menu',
+    tags: ['Svelte Motion'],
     name: 'Dropdown Menu',
     description: 'A dropdown menu',
     link: '/luxe/dropdown-menu',
@@ -186,6 +189,7 @@ export let allLuxeComponents: LuxeComponent[] = [
   },
   {
     id: 'animated-tabs',
+    tags: ['Svelte Motion'],
     name: 'Animated Tabs',
     component: AnimatedTabs,
     description: 'Animated Tabs from Luxe Components',
@@ -264,6 +268,7 @@ export let allLuxeComponents: LuxeComponent[] = [
   },
   {
     id: 'card-revealed-pointer',
+    tags: ['Svelte Motion'],
     name: 'Card Revealed Pointer',
     description: 'A card with a revealed pointer',
     component: CardRevealedPointer,
@@ -283,6 +288,7 @@ export let allLuxeComponents: LuxeComponent[] = [
   },
   {
     id: 'card-hover-effect',
+    tags: ['Svelte Motion'],
     name: 'Card Hover Effect',
     description: 'A card with hover effect',
     component: CardHoverEffect,
@@ -293,6 +299,7 @@ export let allLuxeComponents: LuxeComponent[] = [
   },
   {
     id: 'card-product',
+    tags: ['Svelte Motion'],
     name: 'Card Product',
     description: 'A card product',
     component: CardProduct,
@@ -357,12 +364,14 @@ export let allLuxeComponents: LuxeComponent[] = [
 
   {
     id: 'input-spotlight-border',
+    tags: ['Svelte Motion'],
     name: 'Input Spotlight Border',
     component: InputSpotlightBorder,
     link: '/luxe/input-spotlight-border',
     description: 'Input Spotlight using Svelte Motion',
     code: InputSpotlightBorderCode,
-    showGrid: true
+    showGrid: true,
+    download: 'npm i svelte-motion',
   },
   {
     id: 'input-gradient-border',

@@ -15,6 +15,7 @@ export type MagicComponent = {
     showDots?: boolean;
     cncode?: string;
     download?: string;
+    tags?: string[];
 }
 export type Code = {
     filename: string;
