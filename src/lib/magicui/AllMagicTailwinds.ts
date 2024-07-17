@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        ripple: "ripple 3400ms ease infinite",
+        // ripple: "ripple 3400ms ease infinite",
+        ripple:'ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite',
       },
       keyframes: {
         ripple: {
