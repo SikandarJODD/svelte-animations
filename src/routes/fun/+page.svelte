@@ -11,12 +11,20 @@
   import Bento6variant2 from "$lib/indieui/components/bentogrids/bento6/Bento6variant2.svelte";
   import Bento6Variant3 from "$lib/indieui/components/bentogrids/bento6/Bento6Variant3.svelte";
   import Bento6Variant4 from "$lib/indieui/components/bentogrids/bento6/Bento6Variant4.svelte";
+  import SimpleCardVariant1 from "$lib/indieui/components/cards/simple/SimpleCardVariant1.svelte";
+  import SimpleCardVariant2 from "$lib/indieui/components/cards/simple/SimpleCardVariant2.svelte";
+  import SimpleCardVariant3 from "$lib/indieui/components/cards/simple/SimpleCardVariant3.svelte";
+  import SimpleCardVariant4 from "$lib/indieui/components/cards/simple/SimpleCardVariant4.svelte";
+  import SimpleCardVariant5 from "$lib/indieui/components/cards/simple/SimpleCardVariant5.svelte";
+  import SimpleCardVariant6 from "$lib/indieui/components/cards/simple/SimpleCardVariant6.svelte";
   import SkeletonVariant1 from "$lib/indieui/components/loaders/skeleton/skeletonVariant1.svelte";
   import SkeletonVariant2 from "$lib/indieui/components/loaders/skeleton/skeletonVariant2.svelte";
+  import HeaderExample from "$lib/indieui/components/other/header/examples/HeaderExample.svelte";
   import Separator from "$lib/indieui/components/other/separator/Separator.svelte";
 </script>
 
-<div class="w-full flex p-4 flex-col md:flex-row gap-2">
+<HeaderExample />
+<div class="w-full flex p-4 flex-col md:flex-row gap-2 mt-2">
   <div
     class="flex justify-center items-center min-h-[60vh] w-full md:w-1/4 flex-col border border-dashed gap-8 p-6 md:p-0"
   >
@@ -114,4 +122,58 @@
       >
     </div>
   </Separator>
+</div>
+<div
+  class="w-full flex flex-col items-center md:flex-row min-h-64 gap-4 bg-zinc-950 px-10 py-5"
+>
+  <div
+    class="w-1/2 min-h-64 items-center p-0 border border-dashed flex justify-center"
+  >
+    <div class="w-[80%]">
+      <SimpleCardVariant1 />
+    </div>
+  </div>
+  <div
+    class="w-1/2 min-h-64 items-center p-10 border border-dashed flex justify-center"
+  >
+    <div class="w-[80%]">
+      <SimpleCardVariant2 />
+    </div>
+  </div>
+</div>
+<div
+  class="w-full flex flex-col items-center md:flex-row min-h-64 gap-4 bg-zinc-950 px-10 py-5"
+>
+  <div
+    class="w-1/2 min-h-64 items-center p-10 border border-dashed flex justify-center"
+  >
+    <div class="w-[80%]">
+      <SimpleCardVariant3 />
+    </div>
+  </div>
+  <div
+    class="w-1/2 min-h-64 items-center p-10 border border-dashed flex justify-center"
+  >
+    <div class="w-[80%]">
+      <SimpleCardVariant4 />
+    </div>
+  </div>
+</div>
+<div
+  class="w-full flex flex-col items-center md:flex-row min-h-64 gap-4 bg-zinc-950 px-10 py-5"
+>
+  <div
+    class="w-1/2 min-h-64 items-center p-10 border border-dashed flex justify-center dark:bg-zinc-900/50"
+  >
+    <div class="w-[80%]">
+      <SimpleCardVariant5 />
+    </div>
+  </div>
+  <div
+    class="w-1/2 min-h-64 items-center p-10 border border-dashed flex justify-center"
+  >
+    <div class="w-[80%]">
+      <SimpleCardVariant6 />
+    </div>
+  </div>
 </div>
