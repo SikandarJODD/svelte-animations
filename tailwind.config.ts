@@ -81,7 +81,8 @@ const config: Config = {
 				'pulse-slow': 'pulse 6s infinite cubic-bezier(0.4, 0, 0.6, 1)',
 				
 				// Magic UI 
-				'ripple': 'ripple 3400ms ease infinite',
+				// 'ripple': 'ripple 3400ms ease infinite',  // Previous 
+				ripple:'ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite',  // New 
 				"spin-around": "spin-around calc(var(--speed) * 2) infinite linear",
 				magicslide: "magicslide var(--speed) ease-in-out infinite alternate",
 				shimmer: "shimmer 8s infinite",

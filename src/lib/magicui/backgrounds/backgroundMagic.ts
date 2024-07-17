@@ -122,7 +122,7 @@ export let backgroundMagic: MagicComponent[] = [
         component: Ripple,
         link: "/magic-components/ripple",
         code: RippleCode,
-        class: 'relative overflow-hidden h-[440px]',
+        class: 'relative overflow-hidden h-[500px]',
         tailwind: allMagicTailwinds['ripple'],
         examples: [{
             id: 1,

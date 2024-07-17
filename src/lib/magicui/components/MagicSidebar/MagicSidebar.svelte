@@ -90,6 +90,7 @@
         {
           name: "Ripple",
           link: "/magic/ripple",
+          isNew: true,
         },
         {
           name: "Grid Pattern",
