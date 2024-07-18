@@ -4,10 +4,10 @@
 
 <div class="rounded-2xl relative aspect-[4/3] overflow-hidden group">
   <img
-    src="https://i.pinimg.com/564x/c4/a7/93/c4a79308ecda9db51aeac2bb8bc37147.jpg"
+    src="https://i.pinimg.com/564x/e7/e4/a2/e7e4a2bc3409fc3e18fcd2c4c0792cc2.jpg"
     placeholder="blur"
     alt="don corleone"
-    class="w-full object-cover m-0"
+    class="w-full object-cover object-center m-0"
   />
   <!-- Overlay -->
   <div

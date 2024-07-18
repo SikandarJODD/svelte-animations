@@ -29,10 +29,37 @@
   import SkeletonVariant2 from "$lib/indieui/components/loaders/skeleton/skeletonVariant2.svelte";
   import HeaderExample from "$lib/indieui/components/other/header/examples/HeaderExample.svelte";
   import Separator from "$lib/indieui/components/other/separator/Separator.svelte";
+  import { Construction } from "lucide-svelte";
 </script>
 
 <HeaderExample />
-<div class="w-full flex p-4 flex-col md:flex-row gap-2 mt-2">
+<div
+  class="flex justify-center items-center text-center w-full min-h-14 bg-gradient-to-r from-transparent via-zinc-900/70 to-transparent backdrop-blur-sm text-primary/60 sticky top-0 z-50"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="1.4"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    class="lucide lucide-construction mr-2"
+    ><rect x="2" y="6" width="20" height="8" rx="1" /><path d="M17 14v7" /><path
+      d="M7 14v7"
+    /><path d="M17 3v3" /><path d="M7 3v3" /><path d="M10 14 2.3 6.3" /><path
+      d="m14 6 7.7 7.7"
+    /><path d="m8 6 8 8" /></svg
+  >
+  <p>
+    Visit <a href="/magic" class="text-primary">Magic UI</a>
+    and
+    <a href="/magic" class=" text-primary">Luxe Components</a> for Amazing components.
+  </p>
+</div>
+<div class="w-full flex p-4 flex-col md:flex-row gap-2 mt-0">
   <div
     class="flex justify-center items-center min-h-[60vh] w-full md:w-1/4 flex-col border border-dashed gap-8 p-6 md:p-0"
   >
@@ -57,15 +84,15 @@
     </div>
   </div>
 </div>
-<div class="w-full px-4 flex flex-col md:flex-row gap-2">
+<!-- <div class="w-full px-4 flex flex-col md:flex-row gap-2">
   <div class="w-2/5 p-4 border border-dashed">
     <Bento4Variant4 />
   </div>
   <div class="w-3/5 p-4 border h-full border-dashed">
     <Bento5Variant2 />
   </div>
-</div>
-<div class="w-full px-4 flex flex-col md:flex-row gap-2 mt-4">
+</div> -->
+<!-- <div class="w-full px-4 flex flex-col md:flex-row gap-2 mt-4">
   <div class="w-1/2 p-4 border border-dashed">
     <Bento5Variant1 />
   </div>
@@ -80,20 +107,152 @@
   <div class="w-full md:w-3/5 p-4 border h-full border-dashed">
     <Bento6variant2 />
   </div>
-</div>
-<div class="w-full px-4 flex flex-col md:flex-row gap-2 mt-4">
+</div> -->
+<!-- <div class="w-full px-4 flex flex-col md:flex-row gap-2 mt-4">
   <div class="w-full md:w-3/5 mx-auto p-4 border border-dashed">
     <Bento6Variant3 />
   </div>
-</div>
-<div class="w-full px-4 flex flex-col md:flex-row gap-2 mt-4">
-  <div class="w-full md:w-1/2 p-4 border border-dashed">
-    <Bento6Variant1 />
+</div> -->
+
+<!-- Card with Images -->
+<div
+  class="w-full flex flex-col items-center md:flex-row min-h-64 gap-4 bg-zinc-950 px-2 md:px-10 py-2 md:py-5"
+>
+  <div
+    class="w-full md:w-1/2 min-h-64 items-center p-3 md:p-10 border border-dashed flex justify-center"
+  >
+    <div class="w-full md:w-[80%]">
+      <CardImage1 />
+    </div>
   </div>
-  <div class="w-full md:w-1/2 p-4 border border-dashed">
-    <Bento6Variant4 />
+  <div
+    class="w-full md:w-1/2 min-h-64 items-center p-3 md:p-10 border border-dashed flex justify-center"
+  >
+    <div class="w-full md:w-[80%]">
+      <CardImage2 />
+    </div>
   </div>
 </div>
+<!-- Card with Images Variant 3,4 -->
+<div
+  class="w-full flex flex-col items-center md:flex-row min-h-64 gap-4 bg-zinc-950 px-2 md:px-10 py-2 md:py-5"
+>
+  <div
+    class="w-full md:w-1/2 min-h-64 items-center p-3 md:p-10 border border-dashed flex justify-center"
+  >
+    <div class="w-full md:w-[80%]">
+      <CardImage3 />
+    </div>
+  </div>
+  <div
+    class="w-full md:w-1/2 min-h-64 items-center p-3 md:p-6 border border-dashed flex justify-center"
+  >
+    <div class="w-full md:w-[80%]">
+      <CardImage4 />
+    </div>
+  </div>
+</div>
+
+<!-- Simple Cards -->
+
+<div
+  class="w-full flex flex-col items-center md:flex-row min-h-64 gap-4 bg-zinc-950 px-2 md:px-10 md:py-5"
+>
+  <div
+    class="w-full md:w-1/2 min-h-64 items-center p-4 md:p-0 border border-dashed flex justify-center"
+  >
+    <div class="w-full md:w-[80%]">
+      <SimpleCardVariant1 />
+    </div>
+  </div>
+  <div
+    class="w-full md:w-1/2 min-h-64 items-center p-4 md:p-10 border border-dashed flex justify-center"
+  >
+    <div class="w-full md:w-[80%]">
+      <SimpleCardVariant2 />
+    </div>
+  </div>
+</div>
+
+<div
+  class="w-full flex flex-col items-center md:flex-row min-h-64 gap-4 bg-zinc-950 px-2 md:px-10 md:py-5"
+>
+  <div
+    class="w-full md:w-1/2 min-h-64 items-center p-3 md:p-10 border border-dashed flex justify-center"
+  >
+    <div class="w-full md:w-[80%]">
+      <SimpleCardVariant3 />
+    </div>
+  </div>
+  <div
+    class="w-full md:w-1/2 min-h-64 items-center p-3 md:p-10 border border-dashed flex justify-center"
+  >
+    <div class="w-full md:w-[80%]">
+      <SimpleCardVariant4 />
+    </div>
+  </div>
+</div>
+
+<div
+  class="w-full flex flex-col items-center md:flex-row min-h-64 gap-4 bg-zinc-950 px-2 md:px-10 md:py-5"
+>
+  <div
+    class="w-full md:w-1/2 min-h-64 items-center p-3 md:p-10 border border-dashed flex justify-center dark:bg-zinc-900/50"
+  >
+    <div class="w-full md:w-[80%]">
+      <SimpleCardVariant5 />
+    </div>
+  </div>
+  <div
+    class="w-full md:w-1/2 min-h-64 items-center p-2 md:p-10 border border-dashed flex justify-center"
+  >
+    <div class="w-full md:w-[80%]">
+      <SimpleCardVariant6 />
+    </div>
+  </div>
+</div>
+
+<!-- Multi Layer Cards -->
+<div
+  class="w-full flex flex-col items-center md:flex-row min-h-64 gap-4 bg-zinc-950 px-2 md:px-10 md:py-5"
+>
+  <div
+    class="w-full md:w-1/2 min-h-64 items-center p-5 md:p-10 border border-dashed flex justify-center"
+  >
+    <div class="w-full md:w-[80%]">
+      <MultiLayerCard4 />
+    </div>
+  </div>
+  <div
+    class="w-full md:w-1/2 min-h-64 items-center p-3 md:p-10 border border-dashed flex justify-center"
+  >
+    <div class="w-full md:w-[80%]">
+      <MultiLayerCard1 />
+    </div>
+  </div>
+</div>
+
+<!--  Muilt Layer Card 2,3 -->
+<div
+  class="w-full flex flex-col items-center md:flex-row min-h-64 gap-4 bg-zinc-950 px-2 md:px-10 py-2 md:py-5"
+>
+  <div
+    class="w-full md:w-1/2 min-h-64 items-center p-2 md:p-10 border border-dashed flex justify-center"
+  >
+    <div class="w-full md:w-[80%]">
+      <MultiLayerCard3 />
+    </div>
+  </div>
+  <div
+    class="w-full md:w-1/2 min-h-64 items-center p-2 md:p-10 border border-dashed flex justify-center"
+  >
+    <div class="w-full md:w-[80%]">
+      <MultiLayerCard2 />
+    </div>
+  </div>
+</div>
+
+<!-- Separators -->
 <div
   class="flex justify-center items-center w-full min-h-64 px-20 flex-col gap-10 my-6"
 >
@@ -131,137 +290,22 @@
     </div>
   </Separator>
 </div>
-<div
-  class="w-full flex flex-col items-center md:flex-row min-h-64 gap-4 bg-zinc-950 px-1 md:px-10  md:py-5"
->
-  <div
-    class="w-full md:w-1/2 min-h-64 items-center p-0 border border-dashed flex justify-center"
-  >
-    <div class="w-full md:w-[80%]">
-      <SimpleCardVariant1 />
-    </div>
-  </div>
-  <div
-    class="w-full md:w-1/2 min-h-64 items-center p-10 border border-dashed flex justify-center"
-  >
-    <div class="w-full md:w-[80%]">
-      <SimpleCardVariant2 />
-    </div>
-  </div>
-</div>
-<div
-  class="w-full flex flex-col items-center md:flex-row min-h-64 gap-4 bg-zinc-950 px-1 md:px-10 md:py-5"
->
-  <div
-    class="w-full md:w-1/2 min-h-64 items-center p-2 md:p-10 border border-dashed flex justify-center"
-  >
-    <div class="w-full md:w-[80%]">
-      <SimpleCardVariant3 />
-    </div>
-  </div>
-  <div
-    class="w-full md:w-1/2 min-h-64 items-center p-2 md:p-10 border border-dashed flex justify-center"
-  >
-    <div class="w-full md:w-[80%]">
-      <SimpleCardVariant4 />
-    </div>
-  </div>
-</div>
 
-<div
-  class="w-full flex flex-col items-center md:flex-row min-h-64 gap-4 bg-zinc-950 px-1 md:px-10 md:py-5"
->
-  <div
-    class="w-full md:w-1/2 min-h-64 items-center p-1 md:p-10 border border-dashed flex justify-center dark:bg-zinc-900/50"
-  >
-    <div class="w-full md:w-[80%]">
-      <SimpleCardVariant5 />
-    </div>
+<!-- Bento Grid  6-->
+<div class="hidden md:flex w-full px-4 flex-col md:flex-row gap-2 mt-4">
+  <div class="w-full md:w-1/2 p-4 border border-dashed">
+    <Bento6Variant1 />
   </div>
-  <div
-    class="w-full md:w-1/2 min-h-64 items-center p-1 md:p-10 border border-dashed flex justify-center"
-  >
-    <div class="w-full md:w-[80%]">
-      <SimpleCardVariant6 />
-    </div>
+  <div class="w-full md:w-1/2 p-4 border border-dashed">
+    <Bento6Variant4 />
   </div>
 </div>
-
-<!-- Multi Layer Cards -->
 <div
-  class="w-full flex flex-col items-center md:flex-row min-h-64 gap-4 bg-zinc-950 md:px-10 md:py-5"
+  class="flex justify-center items-center text-center w-full min-h-14 text-primary/60 bg-zinc-900 mt-3"
 >
-  <div
-    class="w-full md:w-1/2 min-h-64 items-center p-1 md:p-10 border border-dashed flex justify-center"
-  >
-    <div class="w-full md:w-[80%]">
-      <MultiLayerCard4 />
-    </div>
-  </div>
-  <div
-    class="w-full md:w-1/2 min-h-64 items-center p-1 md:p-10 border border-dashed flex justify-center"
-  >
-    <div class="w-full md:w-[80%]">
-      <MultiLayerCard1 />
-    </div>
-  </div>
-</div>
-
-<!--  Muilt Layer Card 2,3 -->
-<div
-  class="w-full flex flex-col items-center md:flex-row min-h-64 gap-4 bg-zinc-950 px-2 md:px-10 py-2 md:py-5"
->
-  <div
-    class="w-full md:w-1/2 min-h-64 items-center md:p-10 border border-dashed flex justify-center"
-  >
-    <div class="w-full md:w-[80%]">
-      <MultiLayerCard3 />
-    </div>
-  </div>
-  <div
-    class="w-full md:w-1/2 min-h-64 items-center p-1 md:p-10 border border-dashed flex justify-center"
-  >
-    <div class="w-full md:w-[80%]">
-      <MultiLayerCard2 />
-    </div>
-  </div>
-</div>
-
-<!-- Card with Images -->
-<div
-  class="w-full flex flex-col items-center md:flex-row min-h-64 gap-4 bg-zinc-950 px-2 md:px-10 py-2 md:py-5"
->
-  <div
-    class="w-full md:w-1/2 min-h-64 items-center p-1 md:p-10 border border-dashed flex justify-center"
-  >
-    <div class="w-full md:w-[80%]">
-      <CardImage1 />
-    </div>
-  </div>
-  <div
-    class="w-full md:w-1/2 min-h-64 items-center p-1 md:p-10 border border-dashed flex justify-center"
-  >
-    <div class="w-full md:w-[80%]">
-      <CardImage2 />
-    </div>
-  </div>
-</div>
-<!-- Card with Images Variant 3,4 -->
-<div
-  class="w-full flex flex-col items-center md:flex-row min-h-64 gap-4 bg-zinc-950 px-2 md:px-10 py-2 md:py-5"
->
-  <div
-    class="w-full md:w-1/2 min-h-64 items-center p-1 md:p-10 border border-dashed flex justify-center"
-  >
-    <div class="w-full md:w-[80%]">
-      <CardImage3 />
-    </div>
-  </div>
-  <div
-    class="w-full md:w-1/2 min-h-64 items-center p-1 md:p-6 border border-dashed flex justify-center"
-  >
-    <div class="w-full md:w-[80%]">
-      <CardImage4 />
-    </div>
-  </div>
+  <p>
+    Visit <a href="/magic" class="text-primary">Magic UI</a>
+    and
+    <a href="/magic" class=" text-primary">Luxe Components</a> for Amazing components
+  </p>
 </div>

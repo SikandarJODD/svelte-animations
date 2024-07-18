@@ -8,24 +8,25 @@ import ShimmerExampleBtn from "./shimmer/example/ShimmerExampleBtn.svelte";
 import ShimmerExampleBtnCode from "./shimmer/example/ShimmerExampleBtn.svelte?raw";
 
 export let buttonMagic: MagicComponent[] = [
-    {
-        id: 'shimmer-button',
-        name: 'Shimmer Button',
-        desc: 'A button with shimmer effect.',
-        component: ShimmerButton,
-        code: ShimmerButtonCode,
-        link: "/magic/shimmer-button",
-        showGrid: true,
-        tailwind: allMagicTailwinds['shimmer'],
-        examples: [
-            {
-                id: 1,
-                name: 'Shimmer Button',
-                fileName: 'ShimmerButton.svelte',
-                code: ShimmerExampleBtnCode,
-                component: ShimmerExampleBtn,
-                showDots: true
-            }
-        ]
-    }
-]
+  {
+    id: "shimmer-button",
+    name: "Shimmer Button",
+    tags: ["Tailwind CSS"],
+    desc: "A button with shimmer effect.",
+    component: ShimmerButton,
+    code: ShimmerButtonCode,
+    link: "/magic/shimmer-button",
+    showGrid: true,
+    tailwind: allMagicTailwinds["shimmer"],
+    examples: [
+      {
+        id: 1,
+        name: "Shimmer Button",
+        fileName: "ShimmerButton.svelte",
+        code: ShimmerExampleBtnCode,
+        component: ShimmerExampleBtn,
+        showDots: true,
+      },
+    ],
+  },
+];

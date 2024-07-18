@@ -6,6 +6,7 @@
   import { allMagicComponents } from "$lib/magicui/AllMagicComponents";
   import * as Tabs from "$lib/components/ui/tabs";
   import DotPattern from "$lib/magicui/backgrounds/DotPattern/DotPattern.svelte";
+  import Badge from "$lib/components/ui/badge/badge.svelte";
 
   $: routeID = $page.params.compID;
   $: comp = allMagicComponents.filter((c) => c.id === routeID)[0];
@@ -59,6 +60,13 @@
       <p class="text-muted-foreground text-lg">
         {@html comp.desc}
       </p>
+      {#if comp?.tags}
+        <div class="flex gap-2 mt-2">
+          {#each comp.tags as item}
+            <Badge variant="outline" class="py-1 px-3">{item}</Badge>
+          {/each}
+        </div>
+      {/if}
     </div>
     {#if comp?.examples}
       <!-- <h1 class="text-2xl font-bold mt-4 md:text-3xl capitalize mb-3">

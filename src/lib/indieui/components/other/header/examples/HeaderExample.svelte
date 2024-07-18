@@ -3,9 +3,9 @@
   import GithubSvg from "./github.svg";
   import HeaderNav from "../HeaderNav.svelte";
   let headerLinks = [
-    { name: "Features", href: "/header-demo/#features" },
-    { name: "Pricing", href: "/header-demo/#pricing" },
-    { name: "FAQs", href: "/header-demo/#faqs" },
+    { name: "Features", href: "/" },
+    { name: "Pricing", href: "/" },
+    { name: "FAQs", href: "/" },
   ];
   let icons = [
     {
@@ -23,6 +23,8 @@
 
 <HeaderNav sticky={false} {headerLinks}>
   <div slot="Logo">
-    <a href="/header-demo" class="text-2xl font-bold text-white"> IndieUI </a>
+    <a href="/" class="text-2xl font-bold text-white"
+      >Svelte IndieUI
+    </a>
   </div>
 </HeaderNav>

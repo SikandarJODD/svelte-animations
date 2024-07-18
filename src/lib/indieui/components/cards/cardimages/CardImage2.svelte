@@ -16,7 +16,7 @@
   <!-- Add Any Content inside Slot -->
   <slot>
     <CardBodyImg
-      class="absolute px-4 pb-4 inset-x-0 bottom-2 flex flex-col justify-end size-full "
+      class="absolute pb-1 px-4 md:pb-4 inset-x-0 bottom-2 flex flex-col justify-end size-full "
     />
   </slot>
 </div>

@@ -4,6 +4,7 @@
   import { page } from "$app/stores";
   import CodeBlock from "$lib/luxe/components/codeblock/CodeBlock.svelte";
   import Code from "$lib/luxe/components/codeblock/Code.svelte";
+  import Badge from "$lib/components/ui/badge/badge.svelte";
 
   $: routeID = $page.params.componentID;
   $: comp = allLuxeComponents.filter((comp) => comp.id == routeID)[0];
@@ -48,13 +49,24 @@
     >
     Back
   </a>
-  <div class="space-y-7">
-    <h1 class="text-2xl font-bold mt-4 md:text-3xl capitalize my-6">
-      {comp.name}
-    </h1>
+  <div class="space-y-5">
+    <div>
+      <h1 class="text-2xl font-bold mt-4 md:text-3xl capitalize mb-2">
+        {comp.name}
+      </h1>
+      {#if comp?.tags}
+        <div class="flex gap-2 items-center">
+          {#each comp.tags as item}
+            <Badge variant='outline' class="py-1 px-3">{item}</Badge>
+          {/each}
+        </div>
+      {/if}
+    </div>
     <div>
       <ComponentView
-        class='{comp?.showGrid === true ? " relative overflow-hidden" : ""} {comp?.class}'
+        class="{comp?.showGrid === true
+          ? ' relative overflow-hidden'
+          : ''} {comp?.class}"
       >
         {#if comp?.showGrid}
           <div
@@ -65,8 +77,20 @@
       </ComponentView>
     </div>
     {#if comp?.download}
-      <CodeBlock code={comp.download} lang='shellscript' fileName="Install dependencies" />
+      {#key comp}
+        <CodeBlock
+          code={comp.download}
+          lang="shellscript"
+          fileName="Install dependencies"
+        />
+      {/key}
     {/if}
+    {#if comp?.cncode}
+      {#key comp}
+        <CodeBlock code={comp.cncode} lang="ts" fileName="lib/utils.ts" />
+      {/key}
+    {/if}
+
     {#if typeof comp.code === "string"}
       {#key comp}
         <CodeBlock code={comp.code} {fileName} />
@@ -76,7 +100,7 @@
         <CodeBlock {code} fileName={filename} />
       {/each}
     {/if}
-    
+
     {#if comp?.tailwind}
       {#key comp}
         <CodeBlock code={comp?.tailwind} fileName="tailwind.config.ts" />

@@ -15,7 +15,7 @@
 
   onMount(() => {
     function handleKeydown(e: KeyboardEvent) {
-      console.log(e.key, "Pressed");
+      // console.log(e.key, "Pressed");
       if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
         e.preventDefault();
         open = !open;

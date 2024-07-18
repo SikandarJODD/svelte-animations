@@ -88,14 +88,14 @@ import TextShineCode from "../text/TextShine.svelte?raw";
 
 // Dock Menu
 import DockMenu from "../dock/DockMenu.svelte";
-import DockMenuCode from "../dock/DockMenu.svelte?raw"
-import DockMenuItemCode from "../dock/DockItem.svelte?raw"
+import DockMenuCode from "../dock/DockMenu.svelte?raw";
+import DockMenuItemCode from "../dock/DockItem.svelte?raw";
 
 // Input Spotlight Border
 import InputSpotlightBorder from "../inputs/InputSpotlightBorder.svelte";
 import InputSpotlightBorderCode from "../inputs/InputSpotlightBorder.svelte?raw";
 
-// Input Gradient Bordeer 
+// Input Gradient Bordeer
 import InputGradientBorder from "../inputs/InputGradientBorder.svelte";
 import InputGradientBorderCode from "../inputs/InputGradientBorder.svelte?raw";
 
@@ -107,7 +107,7 @@ import { allLuxeTailwind } from "./AllLuxeTailwind";
 // Dropdown Menu
 import DropDown from "../dropdown/DropDown.svelte";
 import DropDownCode from "../dropdown/DropDown.svelte?raw";
-
+import { cncode } from "$lib/cncode";
 
 type LuxeComponent = {
   id: string;
@@ -121,275 +121,278 @@ type LuxeComponent = {
   colSpan?: boolean;
   download?: string;
   class?: string;
-  tags?: string[]
-}
+  tags?: string[];
+  cncode?: string;
+};
 type Code = {
   filename: string;
-  code: string
-}
-
+  code: string;
+};
 
 export let allLuxeComponents: LuxeComponent[] = [
   {
-    id: 'dock-menu',
-    tags: ['Svelte Motion'],
-    name: 'Dock Menu',
-    description: 'An animated border badge',
+    id: "dock-menu",
+    tags: ["Svelte Motion"],
+    name: "Dock Menu",
+    description: "An animated border badge",
     component: DockMenu,
     link: "/luxe/dock-menu",
     code: [
       {
-        filename: 'DockMenu.svelte',
-        code: DockMenuCode
+        filename: "DockMenu.svelte",
+        code: DockMenuCode,
       },
       {
-        filename: 'DockItem.svelte',
-        code: DockMenuItemCode
-      }
+        filename: "DockItem.svelte",
+        code: DockMenuItemCode,
+      },
     ],
     colSpan: true,
     download: "npm i svelte-motion clsx tailwind-merge lucide-svelte",
+    cncode: cncode,
   },
   {
-    id: 'dropdown-menu',
-    tags: ['Svelte Motion'],
-    name: 'Dropdown Menu',
-    description: 'A dropdown menu',
-    link: '/luxe/dropdown-menu',
+    id: "dropdown-menu",
+    tags: ["Svelte Motion"],
+    name: "Dropdown Menu",
+    description: "A dropdown menu",
+    link: "/luxe/dropdown-menu",
     code: DropDownCode,
     component: DropDown,
     download: "npm i svelte-motion clsx tailwind-merge",
     colSpan: true,
+    cncode: cncode,
   },
   {
-    id: 'badge-animated-border',
-    name: 'Badge Animated Border',
-    description: 'An animated border badge',
+    id: "badge-animated-border",
+    name: "Badge Animated Border",
+    description: "An animated border badge",
     component: BadgeAnimatedBorder,
     link: "/luxe/badge-animated-border",
     code: BadgeAnimatedBorderCode,
-    tailwind: allLuxeTailwind['animated-border']
+    tailwind: allLuxeTailwind["animated-border"],
   },
   {
-    id: 'badge-background-shine',
-    name: 'Badge Background Shine',
-    description: 'A badge with a background shine effect',
+    id: "badge-background-shine",
+    name: "Badge Background Shine",
+    description: "A badge with a background shine effect",
     component: BadgeBackgroundShine,
     link: "/luxe/badge-background-shine",
     code: BadgeBackgroundShineCode,
-    tailwind: allLuxeTailwind['shine']
+    tailwind: allLuxeTailwind["shine"],
   },
   {
-    id: 'badge-rotate-shine',
-    name: 'Badge Rotate Shine',
-    description: 'A badge with a rotate shine effect',
+    id: "badge-rotate-shine",
+    name: "Badge Rotate Shine",
+    description: "A badge with a rotate shine effect",
     component: BadgeRotateBorder,
     link: "/luxe/badge-rotate-shine",
-    code: BadgeRotateBorderCode
+    code: BadgeRotateBorderCode,
   },
   {
-    id: 'animated-tabs',
-    tags: ['Svelte Motion'],
-    name: 'Animated Tabs',
+    id: "animated-tabs",
+    tags: ["Svelte Motion"],
+    name: "Animated Tabs",
     component: AnimatedTabs,
-    description: 'Animated Tabs from Luxe Components',
-    link: '/luxe/animated-tabs',
+    description: "Animated Tabs from Luxe Components",
+    link: "/luxe/animated-tabs",
     code: AnimatedTabsCode,
     colSpan: true,
     download: "npm i svelte-motion clsx tailwind-merge",
+    cncode: cncode,
   },
   {
-    id: 'button-animated-border',
-    name: 'Button Animated Border',
-    description: 'An animated border button',
+    id: "button-animated-border",
+    name: "Button Animated Border",
+    description: "An animated border button",
     component: ButtonAnimatedBorder,
     link: "/luxe/button-animated-border",
     code: ButtonAnimatedBorderCode,
-    tailwind: allLuxeTailwind['animated-border']
+    tailwind: allLuxeTailwind["animated-border"],
   },
   {
-    id: 'button-background-shine',
-    name: 'Button Background Shine',
-    description: 'A button with a background shine effect',
+    id: "button-background-shine",
+    name: "Button Background Shine",
+    description: "A button with a background shine effect",
     component: ButtonBackgroundShine,
     link: "/luxe/button-background-shine",
     code: ButtonBackgroundShineCode,
-    tailwind: allLuxeTailwind['shine']
+    tailwind: allLuxeTailwind["shine"],
   },
   {
-    id: 'button-destructive',
-    name: 'Button Destructive',
-    description: 'A button with a destructive style',
+    id: "button-destructive",
+    name: "Button Destructive",
+    description: "A button with a destructive style",
     component: ButtonDestructive,
     link: "/luxe/button-destructive",
-    code: ButtonDestructiveCode
+    code: ButtonDestructiveCode,
   },
   {
-    id: 'button-loading',
-    name: 'Button Loading',
-    description: 'A button with a loading state',
+    id: "button-loading",
+    name: "Button Loading",
+    description: "A button with a loading state",
     component: ButtonLoading,
     link: "/luxe/button-loading",
-    code: ButtonLoadingCode
+    code: ButtonLoadingCode,
   },
   {
-    id: 'button-rotate-border',
-    name: 'Button Rotate Border',
-    description: 'A button with a rotating border',
+    id: "button-rotate-border",
+    name: "Button Rotate Border",
+    description: "A button with a rotating border",
     component: ButtonRotateBorder,
     link: "/luxe/button-rotate-border",
-    code: ButtonRotateBorderCode
+    code: ButtonRotateBorderCode,
   },
   {
-    id: 'button-success',
-    name: 'Button Success',
-    description: 'A button with a success style',
+    id: "button-success",
+    name: "Button Success",
+    description: "A button with a success style",
     component: ButtonSuccess,
     link: "/luxe/button-success",
-    code: ButtonSuccessCode
+    code: ButtonSuccessCode,
   },
   {
-    id: 'card-animated-border',
-    name: 'Card Animated Border',
-    description: 'An animated border card',
+    id: "card-animated-border",
+    name: "Card Animated Border",
+    description: "An animated border card",
     component: CardAnimatedBorder,
     link: "/luxe/card-animated-border",
     code: CardAnimatedBorderCode,
-    tailwind: allLuxeTailwind['animated-border']
+    tailwind: allLuxeTailwind["animated-border"],
   },
   {
-    id: 'card-background-shine',
-    name: 'Card Background Shine',
-    description: 'A card with a background shine effect',
+    id: "card-background-shine",
+    name: "Card Background Shine",
+    description: "A card with a background shine effect",
     component: CardBackgroundShine,
     link: "/luxe/card-background-shine",
     code: CardBackgroundShineCode,
-    tailwind: allLuxeTailwind['shine']
+    tailwind: allLuxeTailwind["shine"],
   },
   {
-    id: 'card-revealed-pointer',
-    tags: ['Svelte Motion'],
-    name: 'Card Revealed Pointer',
-    description: 'A card with a revealed pointer',
+    id: "card-revealed-pointer",
+    tags: ["Svelte Motion"],
+    name: "Card Revealed Pointer",
+    description: "A card with a revealed pointer",
     component: CardRevealedPointer,
-    link: '/luxe/card-revealed-pointer',
+    link: "/luxe/card-revealed-pointer",
     code: CardRevealedPointerCode,
     download: "npm i svelte-motion",
   },
   {
-    id: 'card-comment',
-    name: 'Card Comment',
-    description: 'A card for comments',
+    id: "card-comment",
+    name: "Card Comment",
+    description: "A card for comments",
     component: CardComment,
-    link: '/luxe/card-comment',
+    link: "/luxe/card-comment",
     code: CardCommentCode,
     colSpan: true,
     showGrid: true,
   },
   {
-    id: 'card-hover-effect',
-    tags: ['Svelte Motion'],
-    name: 'Card Hover Effect',
-    description: 'A card with hover effect',
+    id: "card-hover-effect",
+    tags: ["Svelte Motion"],
+    name: "Card Hover Effect",
+    description: "A card with hover effect",
     component: CardHoverEffect,
-    link: '/luxe/card-hover-effect',
+    link: "/luxe/card-hover-effect",
     code: CardHoverEffectCode,
     colSpan: true,
     download: "npm i svelte-motion clsx tailwind-merge",
+    cncode: cncode,
   },
   {
-    id: 'card-product',
-    tags: ['Svelte Motion'],
-    name: 'Card Product',
-    description: 'A card product',
+    id: "card-product",
+    tags: ["Svelte Motion"],
+    name: "Card Product",
+    description: "A card product",
     component: CardProduct,
-    link: '/luxe/card-product',
+    link: "/luxe/card-product",
     code: CardProductCode,
     colSpan: true,
     download: "npm i svelte-motion",
-    showGrid: true
+    showGrid: true,
   },
 
   {
-    id: 'text-animated-decoration',
-    name: 'Text Animated Decoration',
-    description: 'Text with animated decoration',
+    id: "text-animated-decoration",
+    name: "Text Animated Decoration",
+    description: "Text with animated decoration",
     component: TextAnimatedDecoration,
-    link: '/luxe/text-animated-decoration',
-    code: TextAnimatedDecorationCode
+    link: "/luxe/text-animated-decoration",
+    code: TextAnimatedDecorationCode,
   },
   {
-    id: 'text-animated-gradient',
-    name: 'Text Animated Gradient',
-    description: 'Text with animated decoration',
+    id: "text-animated-gradient",
+    name: "Text Animated Gradient",
+    description: "Text with animated decoration",
     component: TextAnimatedGradient,
-    link: '/luxe/text-animated-gradient',
+    link: "/luxe/text-animated-gradient",
     code: TextAnimatedGradientCode,
-    tailwind: allLuxeTailwind['text-gradient']
+    tailwind: allLuxeTailwind["text-gradient"],
   },
   {
-    id: 'text-glitch',
-    name: 'Text Glitch',
-    description: 'Text with glitch effect',
-    link: '/luxe/text-glitch',
+    id: "text-glitch",
+    name: "Text Glitch",
+    description: "Text with glitch effect",
+    link: "/luxe/text-glitch",
     component: TextGlitch,
-    code: TextGlitchCode
+    code: TextGlitchCode,
   },
   {
-    id: 'text-gradient',
-    name: 'Text Gradient',
-    description: 'Text with gradient',
-    link: '/luxe/text-gradient',
+    id: "text-gradient",
+    name: "Text Gradient",
+    description: "Text with gradient",
+    link: "/luxe/text-gradient",
     component: TextGradient,
-    code: TextGradientCode
+    code: TextGradientCode,
   },
   {
-    id: 'text-shake',
-    name: 'Text Shake',
-    description: 'Text Shake',
-    link: '/luxe/text-shake',
+    id: "text-shake",
+    name: "Text Shake",
+    description: "Text Shake",
+    link: "/luxe/text-shake",
     component: TextShake,
     code: TextShakeCode,
-    tailwind: allLuxeTailwind['text-shake']
+    tailwind: allLuxeTailwind["text-shake"],
   },
   {
-    id: 'text-shine',
-    name: 'Text Shine',
-    description: 'Text with shine effect',
-    link: '/luxe/text-shine',
+    id: "text-shine",
+    name: "Text Shine",
+    description: "Text with shine effect",
+    link: "/luxe/text-shine",
     component: TextShine,
     code: TextShineCode,
-    tailwind: allLuxeTailwind['shine']
+    tailwind: allLuxeTailwind["shine"],
   },
 
   {
-    id: 'input-spotlight-border',
-    tags: ['Svelte Motion'],
-    name: 'Input Spotlight Border',
+    id: "input-spotlight-border",
+    tags: ["Svelte Motion"],
+    name: "Input Spotlight Border",
     component: InputSpotlightBorder,
-    link: '/luxe/input-spotlight-border',
-    description: 'Input Spotlight using Svelte Motion',
+    link: "/luxe/input-spotlight-border",
+    description: "Input Spotlight using Svelte Motion",
     code: InputSpotlightBorderCode,
     showGrid: true,
-    download: 'npm i svelte-motion',
+    download: "npm i svelte-motion",
   },
   {
-    id: 'input-gradient-border',
-    name: 'Input Gradient Border',
+    id: "input-gradient-border",
+    name: "Input Gradient Border",
     component: InputGradientBorder,
-    link: '/luxe/input-gradient-border',
-    description: 'Input Gradient Border using Tailwind CSS',
+    link: "/luxe/input-gradient-border",
+    description: "Input Gradient Border using Tailwind CSS",
     code: InputGradientBorderCode,
-    showGrid: false
+    showGrid: false,
   },
   {
-    id: 'input-pulse-border',
-    name: 'Input Pulse Border',
+    id: "input-pulse-border",
+    name: "Input Pulse Border",
     component: InputPulseBorder,
-    link: '/luxe/input-pulse-border',
-    description: 'Input Pulse Border using Tailwind CSS',
+    link: "/luxe/input-pulse-border",
+    description: "Input Pulse Border using Tailwind CSS",
     code: InputPulseBorderCode,
-    showGrid: true
+    showGrid: true,
   },
-
-]
+];
