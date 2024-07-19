@@ -1,26 +1,30 @@
 // place files you want to import through the `$lib` alias in this folder.
 // Navbar
 export let navs = [
-	{
-		name: "Home",
-		link: "/",
-	},
-	{
-		name: 'Magic UI Components',
-		link: '/magic'
-	},
-	{
-		name: "Luxe Components",
-		link: '/luxe'
-	},
-	{
-		name: "Examples",
-		link: "/examples",
-	},
-	{
-		name: "Framer Motion Learnings",
-		link: "/learnings",
-	},
+  {
+    name: "Home",
+    link: "/",
+  },
+  {
+    name: "Magic UI Components",
+    link: "/magic",
+  },
+  {
+    name: "Luxe Components",
+    link: "/luxe",
+  },
+  {
+    name: "Svelte Indie UI",
+    link: "/in",
+  },
+  {
+    name: "Examples",
+    link: "/examples",
+  },
+  {
+    name: "Framer Motion Learnings",
+    link: "/learnings",
+  },
 ];
 
 export let tailwindCode = `// tailwind.config.js
@@ -147,7 +151,7 @@ module.exports = {
     },  // Extend
   },  // Theme
 };  // Module Exports
-`
+`;
 
 export let utilsCode = `
 import { type ClassValue, clsx } from "clsx";

@@ -1,4 +1,5 @@
 <script>
+  import { page } from "$app/stores";
   import Badge from "$lib/components/ui/badge/badge.svelte";
   import Bento4Variant1 from "$lib/indieui/components/bentogrids/bento4/bento4Variant1.svelte";
   import Bento4Variant2 from "$lib/indieui/components/bentogrids/bento4/bento4Variant2.svelte";
@@ -31,29 +32,21 @@
   import HeaderExample from "$lib/indieui/components/other/header/examples/HeaderExample.svelte";
   import Separator from "$lib/indieui/components/other/separator/Separator.svelte";
   import { fade, slide } from "svelte/transition";
+  $: routeId = $page.url.pathname;
+  let innerWidth = 0;
 </script>
 
-<HeaderExample />
+<svelte:window bind:innerWidth />
+{#if innerWidth > 600}
+  <HeaderExample />
+{/if}
 <div
-  class="flex justify-center items-center text-center w-full min-h-14 bg-gradient-to-r from-transparent via-zinc-900/70 to-transparent backdrop-blur-sm text-primary/60 sticky top-0 z-50"
+  class="flex justify-center items-center text-center w-full min-h-14 bg-gradient-to-r from-transparent via-zinc-900/70 to-transparent backdrop-blur-sm text-primary/60 {routeId ===
+  '/fun'
+    ? 'sticky top-0'
+    : ''}  z-20"
 >
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="1.4"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    class="lucide lucide-construction mr-2"
-    ><rect x="2" y="6" width="20" height="8" rx="1" /><path d="M17 14v7" /><path
-      d="M7 14v7"
-    /><path d="M17 3v3" /><path d="M7 3v3" /><path d="M10 14 2.3 6.3" /><path
-      d="m14 6 7.7 7.7"
-    /><path d="m8 6 8 8" /></svg
-  >
+  
   <p>
     Visit <a href="/magic" class="text-primary">Magic UI</a>
     and
