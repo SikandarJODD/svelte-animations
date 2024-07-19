@@ -1,6 +1,6 @@
 <script lang="ts">
   import Badge from "$lib/components/ui/badge/badge.svelte";
-import Button from "$lib/components/ui/button/button.svelte";
+  import Button from "$lib/components/ui/button/button.svelte";
   import DotBackground from "$lib/components/ui/GridDotBg/DotBackground.svelte";
   import GradientLine from "$lib/luxe/components/codeblock/GradientLine.svelte";
   import SearchComp from "../searchComp/SearchComp.svelte";
@@ -71,8 +71,33 @@ import Button from "$lib/components/ui/button/button.svelte";
         class="flex flex-col my-4 md:w-[290px] mx-auto p-4 rounded-xl border justify-center items-center gap-3 bg-neutral-900/10"
       >
         <div class="flex justify-between w-full items-center">
-          <Button href="/fun" class="w-full flex justify-center gap-3" variant="outline">Indie UI
-            <Badge variant='success'>New</Badge>
+          <Button
+            href="/in"
+            class="flex justify-center gap-3"
+            variant="outline"
+            >Svelte Indie UI
+            <Badge variant="success">New</Badge>
+          </Button>
+          <Button
+            href="/fun"
+            class="flex justify-center gap-3"
+            variant='shine'
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-circle-play"
+              ><circle cx="12" cy="12" r="10" /><polygon
+                points="10 8 16 12 10 16 10 8"
+              /></svg
+            >
           </Button>
         </div>
         <div class="flex justify-between w-full items-center gap-3">

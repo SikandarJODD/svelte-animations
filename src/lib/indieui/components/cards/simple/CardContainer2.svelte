@@ -1,10 +1,8 @@
 <script>
   import Line from "./Line.svelte";
-
- 
 </script>
 
-<div class="relative mx-auto w-full px-4 sm:px-6 md:px-8">
+<div class="relative mx-auto w-fit px-4 sm:px-6 md:px-8">
   <Line class="bg-gradient-to-l left-0 top-2 sm:top-4 md:top-6" />
   <Line class="bg-gradient-to-r bottom-2 sm:bottom-4 md:bottom-6 left-0" />
 

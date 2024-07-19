@@ -1,4 +1,7 @@
+<script>
+  import IndieUIsidebar from "$lib/indieui/ui/sidebar/IndieUIsidebar.svelte";
+</script>
 
-<slot>
-    
-</slot>
+<IndieUIsidebar>
+  <slot></slot>
+</IndieUIsidebar>

@@ -4,7 +4,7 @@
   let cells = [1, 2, 3, 4, 5];
 </script>
 
-<div>
+<div class='w-full'>
   <div class="grid sm:grid-cols-2 md:grid-cols-9 gap-2">
     {#each cells as item, i}
       <div

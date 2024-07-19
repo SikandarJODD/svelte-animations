@@ -4,7 +4,7 @@
 </script>
 
 <div
-  class="rounded-xl dark:bg-zinc-950 bg-zinc-50 overflow-hidden p-2.5 border pb-3"
+  class="rounded-xl dark:bg-zinc-950 bg-zinc-50 overflow-hidden p-2.5 border pb-3 z-20"
 >
   <div class="relative w-full h-[266px]">
     <img

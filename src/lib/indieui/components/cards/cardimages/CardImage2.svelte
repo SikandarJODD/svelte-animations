@@ -4,7 +4,7 @@
 
 <div class="rounded-2xl relative aspect-[4/3] overflow-hidden group">
   <img
-    src="https://img.freepik.com/free-vector/music-mobile-phone-app_23-2148827274.jpg?t=st=1721317069~exp=1721320669~hmac=7a354d76ecefd3bbb15211f271361718f60ccac5e55dacc642e2762d5702d5ec&w=996"
+    src="https://i.pinimg.com/564x/e2/3c/fb/e23cfb960318ded88fde45ad4601c4d8.jpg"
     placeholder="blur"
     alt="don corleone"
     class="w-full object-cover m-0"

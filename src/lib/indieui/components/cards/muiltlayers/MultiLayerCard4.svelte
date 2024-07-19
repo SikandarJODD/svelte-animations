@@ -2,8 +2,8 @@
   import MCardBody1 from "./cardbody/MCardBody1.svelte";
 </script>
 
-<div class="py-4">
-  <div class="relative mx-auto h-72 sm:h-48">
+<div class="py-4 w-full">
+  <div class="relative max-w-xl mx-auto h-72 sm:h-48">
     <div
       class="dark:bg-zinc-900/30 bg-zinc-50 absolute size-full rounded-3xl border border-neutral-200 dark:border-zinc-800 scale-[0.95] -top-6"
       style="transform-origin: top center"

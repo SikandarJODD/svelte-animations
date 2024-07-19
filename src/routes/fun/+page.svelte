@@ -1,4 +1,5 @@
 <script>
+  import Badge from "$lib/components/ui/badge/badge.svelte";
   import Bento4Variant1 from "$lib/indieui/components/bentogrids/bento4/bento4Variant1.svelte";
   import Bento4Variant2 from "$lib/indieui/components/bentogrids/bento4/bento4Variant2.svelte";
   import Bento4Variant4 from "$lib/indieui/components/bentogrids/bento4/bento4Variant4.svelte";
@@ -29,7 +30,7 @@
   import SkeletonVariant2 from "$lib/indieui/components/loaders/skeleton/skeletonVariant2.svelte";
   import HeaderExample from "$lib/indieui/components/other/header/examples/HeaderExample.svelte";
   import Separator from "$lib/indieui/components/other/separator/Separator.svelte";
-  import { Construction } from "lucide-svelte";
+  import { fade, slide } from "svelte/transition";
 </script>
 
 <HeaderExample />
@@ -61,14 +62,20 @@
 </div>
 <div class="w-full flex p-4 flex-col md:flex-row gap-2 mt-0">
   <div
-    class="flex justify-center items-center min-h-[60vh] w-full md:w-1/4 flex-col border border-dashed gap-8 p-6 md:p-0"
+    class="relative group flex justify-center items-center min-h-[60vh] w-full md:w-1/4 flex-col border border-dashed gap-8 p-6 md:p-0"
   >
+    <div class="absolute top-3 left-3 group-hover:flex hidden">
+      <Badge href="/in/skeleton" variant="default">Skeleton</Badge>
+    </div>
     <SkeletonVariant1 />
     <SkeletonVariant2 />
   </div>
-  <div class="w-full md:w-3/4">
+  <div class="w-full md:w-3/4 group">
     <div class="flex p-4 gap-2 w-full h-fit border border-dashed">
-      <div class="w-1/2 h-fit">
+      <div class="w-1/2 h-fit relative">
+        <div class="absolute top-3 left-3 group-hover:flex hidden">
+          <Badge href="/in/bento-4" variant="default">Bento 4</Badge>
+        </div>
         <Bento4Variant1 />
       </div>
       <div class="w-1/2 h-fit">
@@ -119,15 +126,21 @@
   class="w-full flex flex-col items-center md:flex-row min-h-64 gap-4 bg-zinc-950 px-2 md:px-10 py-2 md:py-5"
 >
   <div
-    class="w-full md:w-1/2 min-h-64 items-center p-3 md:p-10 border border-dashed flex justify-center"
+    class="w-full md:w-1/2 min-h-64 relative items-center group p-3 md:p-10 border border-dashed flex justify-center"
   >
+    <div class="absolute top-3 left-3 group-hover:flex hidden">
+      <Badge href="/in/cards-image" variant="default">Cards</Badge>
+    </div>
     <div class="w-full md:w-[80%]">
       <CardImage1 />
     </div>
   </div>
   <div
-    class="w-full md:w-1/2 min-h-64 items-center p-3 md:p-10 border border-dashed flex justify-center"
+    class="w-full md:w-1/2 min-h-64 relative group items-center p-3 md:p-10 border border-dashed flex justify-center"
   >
+    <div class="absolute top-3 left-3 group-hover:flex hidden">
+      <Badge href="/in/cards-image" variant="default">Cards</Badge>
+    </div>
     <div class="w-full md:w-[80%]">
       <CardImage2 />
     </div>
@@ -138,15 +151,21 @@
   class="w-full flex flex-col items-center md:flex-row min-h-64 gap-4 bg-zinc-950 px-2 md:px-10 py-2 md:py-5"
 >
   <div
-    class="w-full md:w-1/2 min-h-64 items-center p-3 md:p-10 border border-dashed flex justify-center"
+    class="w-full md:w-1/2 relative group min-h-64 items-center p-3 md:p-10 border border-dashed flex justify-center"
   >
+    <div class="absolute top-3 left-3 group-hover:flex hidden">
+      <Badge href="/in/cards-image" variant="default">Cards</Badge>
+    </div>
     <div class="w-full md:w-[80%]">
       <CardImage3 />
     </div>
   </div>
   <div
-    class="w-full md:w-1/2 min-h-64 items-center p-3 md:p-6 border border-dashed flex justify-center"
+    class="w-full md:w-1/2 min-h-64 relative group items-center p-3 md:p-6 border border-dashed flex justify-center"
   >
+    <div class="absolute top-3 left-3 group-hover:flex hidden">
+      <Badge href="/in/cards-image" variant="default">Cards</Badge>
+    </div>
     <div class="w-full md:w-[80%]">
       <CardImage4 />
     </div>
@@ -159,15 +178,21 @@
   class="w-full flex flex-col items-center md:flex-row min-h-64 gap-4 bg-zinc-950 px-2 md:px-10 md:py-5"
 >
   <div
-    class="w-full md:w-1/2 min-h-64 items-center p-4 md:p-0 border border-dashed flex justify-center"
+    class="w-full md:w-1/2 min-h-64 relative group items-center p-4 md:p-0 border border-dashed flex justify-center"
   >
+    <div class="absolute top-2 left-2 group-hover:flex hidden">
+      <Badge href="/in/cards-simple" variant="default">Cards</Badge>
+    </div>
     <div class="w-full md:w-[80%]">
       <SimpleCardVariant1 />
     </div>
   </div>
   <div
-    class="w-full md:w-1/2 min-h-64 items-center p-4 md:p-10 border border-dashed flex justify-center"
+    class="w-full md:w-1/2 min-h-64 relative group items-center p-4 md:p-10 border border-dashed flex justify-center"
   >
+    <div class="absolute top-2 left-2 group-hover:flex hidden">
+      <Badge href="/in/cards-simple" variant="default">Cards</Badge>
+    </div>
     <div class="w-full md:w-[80%]">
       <SimpleCardVariant2 />
     </div>
@@ -178,15 +203,21 @@
   class="w-full flex flex-col items-center md:flex-row min-h-64 gap-4 bg-zinc-950 px-2 md:px-10 md:py-5"
 >
   <div
-    class="w-full md:w-1/2 min-h-64 items-center p-3 md:p-10 border border-dashed flex justify-center"
+    class="w-full md:w-1/2 min-h-64 relative group items-center p-3 md:p-10 border border-dashed flex justify-center"
   >
+    <div class="absolute top-2 left-2 group-hover:flex hidden">
+      <Badge href="/in/cards-simple" variant="default">Cards</Badge>
+    </div>
     <div class="w-full md:w-[80%]">
       <SimpleCardVariant3 />
     </div>
   </div>
   <div
-    class="w-full md:w-1/2 min-h-64 items-center p-3 md:p-10 border border-dashed flex justify-center"
+    class="w-full md:w-1/2 min-h-64 relative group items-center p-3 md:p-10 border border-dashed flex justify-center"
   >
+    <div class="absolute top-2 left-2 group-hover:flex hidden">
+      <Badge href="/in/cards-simple" variant="default">Cards</Badge>
+    </div>
     <div class="w-full md:w-[80%]">
       <SimpleCardVariant4 />
     </div>
@@ -197,15 +228,21 @@
   class="w-full flex flex-col items-center md:flex-row min-h-64 gap-4 bg-zinc-950 px-2 md:px-10 md:py-5"
 >
   <div
-    class="w-full md:w-1/2 min-h-64 items-center p-3 md:p-10 border border-dashed flex justify-center dark:bg-zinc-900/50"
+    class="w-full md:w-1/2 min-h-64 relative group items-center p-3 md:p-10 border border-dashed flex justify-center dark:bg-zinc-900/50"
   >
+    <div class="absolute top-2 left-2 group-hover:flex hidden">
+      <Badge href="/in/cards-simple" variant="default">Cards</Badge>
+    </div>
     <div class="w-full md:w-[80%]">
       <SimpleCardVariant5 />
     </div>
   </div>
   <div
-    class="w-full md:w-1/2 min-h-64 items-center p-2 md:p-10 border border-dashed flex justify-center"
+    class="w-full md:w-1/2 min-h-64 relative group items-center p-2 md:p-10 border border-dashed flex justify-center"
   >
+    <div class="absolute top-2 left-2 group-hover:flex hidden">
+      <Badge href="/in/cards-simple" variant="default">Cards</Badge>
+    </div>
     <div class="w-full md:w-[80%]">
       <SimpleCardVariant6 />
     </div>
@@ -217,15 +254,21 @@
   class="w-full flex flex-col items-center md:flex-row min-h-64 gap-4 bg-zinc-950 px-2 md:px-10 md:py-5"
 >
   <div
-    class="w-full md:w-1/2 min-h-64 items-center p-5 md:p-10 border border-dashed flex justify-center"
+    class="w-full md:w-1/2 min-h-64 relative group items-center p-5 md:p-10 border border-dashed flex justify-center"
   >
+    <div class="absolute top-2 left-2 group-hover:flex hidden">
+      <Badge href="/in/cards-multi-layers" variant="default">Layers</Badge>
+    </div>
     <div class="w-full md:w-[80%]">
       <MultiLayerCard4 />
     </div>
   </div>
   <div
-    class="w-full md:w-1/2 min-h-64 items-center p-3 md:p-10 border border-dashed flex justify-center"
+    class="w-full md:w-1/2 min-h-64 items-center relative group p-3 md:p-10 border border-dashed flex justify-center"
   >
+    <div class="absolute top-2 left-2 group-hover:flex hidden">
+      <Badge href="/in/cards-multi-layers" variant="default">Layers</Badge>
+    </div>
     <div class="w-full md:w-[80%]">
       <MultiLayerCard1 />
     </div>
@@ -237,15 +280,21 @@
   class="w-full flex flex-col items-center md:flex-row min-h-64 gap-4 bg-zinc-950 px-2 md:px-10 py-2 md:py-5"
 >
   <div
-    class="w-full md:w-1/2 min-h-64 items-center p-2 md:p-10 border border-dashed flex justify-center"
+    class="w-full md:w-1/2 min-h-64 relative group items-center p-2 md:p-10 border border-dashed flex justify-center"
   >
+    <div class="absolute top-2 left-2 group-hover:flex hidden">
+      <Badge href="/in/cards-multi-layers" variant="default">Layers</Badge>
+    </div>
     <div class="w-full md:w-[80%]">
       <MultiLayerCard3 />
     </div>
   </div>
   <div
-    class="w-full md:w-1/2 min-h-64 items-center p-2 md:p-10 border border-dashed flex justify-center"
+    class="w-full md:w-1/2 min-h-64 relative group items-center p-2 md:p-10 border border-dashed flex justify-center"
   >
+    <div class="absolute top-2 left-2 group-hover:flex hidden">
+      <Badge href="/in/cards-multi-layers" variant="default">Layers</Badge>
+    </div>
     <div class="w-full md:w-[80%]">
       <MultiLayerCard2 />
     </div>
@@ -254,8 +303,11 @@
 
 <!-- Separators -->
 <div
-  class="flex justify-center items-center w-full min-h-64 px-20 flex-col gap-10 my-6"
+  class="flex justify-center relative group items-center w-full min-h-64 px-20 flex-col gap-10 my-6"
 >
+  <div class="absolute top-2 left-2/5 group-hover:flex hidden">
+    <Badge href="/in/separator" variant="default">Separator</Badge>
+  </div>
   <Separator gradient={true} />
   <Separator />
   <Separator gradient={true}>
@@ -293,10 +345,16 @@
 
 <!-- Bento Grid  6-->
 <div class="hidden md:flex w-full px-4 flex-col md:flex-row gap-2 mt-4">
-  <div class="w-full md:w-1/2 p-4 border border-dashed">
+  <div class="w-full md:w-1/2 p-4 relative group border border-dashed">
+    <div class="absolute top-2 left-2 group-hover:flex hidden">
+      <Badge href="/in/bento-6" variant="default">Bento 6</Badge>
+    </div>
     <Bento6Variant1 />
   </div>
-  <div class="w-full md:w-1/2 p-4 border border-dashed">
+  <div class="w-full md:w-1/2 p-4 border border-dashed relative group">
+    <div class="absolute top-2 left-2 group-hover:flex hidden">
+      <Badge href="/in/bento-6" variant="default">Bento 6</Badge>
+    </div>
     <Bento6Variant4 />
   </div>
 </div>

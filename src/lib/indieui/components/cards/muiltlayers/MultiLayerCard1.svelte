@@ -3,7 +3,7 @@
 </script>
 
 <div class="py-8">
-  <div class="relative w-full">
+  <div class="relative max-w-xl">
     <div
       class="absolute scale-x-95 inset-0 -rotate-[5deg] rounded-lg bg-gray-200 dark:bg-zinc-800 py-10"
     />

@@ -3,7 +3,6 @@
   import { allLuxeComponents } from "$lib/luxe/components/AllLuxeComponents";
   import { page } from "$app/stores";
   import CodeBlock from "$lib/luxe/components/codeblock/CodeBlock.svelte";
-  import Code from "$lib/luxe/components/codeblock/Code.svelte";
   import Badge from "$lib/components/ui/badge/badge.svelte";
 
   $: routeID = $page.params.componentID;
