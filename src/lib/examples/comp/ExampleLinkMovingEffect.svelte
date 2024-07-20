@@ -21,16 +21,13 @@
   });
 
   let linkEffect = (node: HTMLElement) => {
-
     node.addEventListener("mouseenter", (e) => {
-      y.set(node.getBoundingClientRect().top-200)
-      // console.log("hover", e.clientY, e.clientX, e.offsetY, e.offsetX);
+      y.set(node.getBoundingClientRect().top - 200);
       isHover = true;
     });
     node.addEventListener("mousemove", (e) => {
       x.set(e.clientX - 120);
       // y.set(e.clientY + -200);
-
     });
     node.addEventListener("mouseleave", (e) => {
       isHover = false;

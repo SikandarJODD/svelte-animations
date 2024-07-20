@@ -10,7 +10,6 @@
 
   $: routeID = $page.params.compID;
   $: comp = allMagicComponents.filter((c) => c.id === routeID)[0];
-  // $: console.log(comp, "Components", routeID);
   $: fileName =
     comp.name
       .split(" ")

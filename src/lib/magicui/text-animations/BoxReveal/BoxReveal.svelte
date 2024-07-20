@@ -11,12 +11,10 @@
   let sideControls = useAnimation();
 
   let viewEnter = () => {
-    // console.log("view entered");
     mainControls.start("visible");
     sideControls.start("visible");
   };
   let viewLeave = () => {
-    // console.log("view exited");
     mainControls.start("hidden");
     sideControls.start("hidden");
   };

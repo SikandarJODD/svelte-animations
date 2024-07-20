@@ -1,5 +1,5 @@
-<script lang='ts'>
-  import { fade,blur, scale } from "svelte/transition";
+<script lang="ts">
+  import { fade, blur, scale } from "svelte/transition";
 
   export let hrefDetails = {
     href: "https://in.pinterest.com/pin/724375921339895692/",
@@ -10,7 +10,7 @@
   };
   let isHover = false;
 
-  let linkEffect = (node:HTMLElement) => {
+  let linkEffect = (node: HTMLElement) => {
     node.addEventListener("mouseenter", () => {
       isHover = true;
     });
@@ -23,7 +23,8 @@
 <div class="relative w-full flex justify-center items-center z-50">
   {#if isHover}
     <img
-      in:blur={{duration:300}}
+      in:blur={{ duration: 300 }}
+      out:blur={{ duration: 150 }}
       style="position:absolute;  bottom:40px;"
       src={hrefDetails.imgSrc}
       alt={hrefDetails.imgAlt}
