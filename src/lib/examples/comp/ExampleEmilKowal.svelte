@@ -67,112 +67,101 @@
   };
 </script>
 
-<div
-  class="flex justify-center items-center min-h-[300px] flex-col bg-gray-100 w-full"
->
-  <div class="min-h-60 flex justify-center items-center">
-    <div
-      class="bg-black"
-      style="width: {$x}px; height:{$y}px; border-radius: {$rounded}px;"
-    >
-      {#if isHovered}
-        <div
-          class="px-4 flex justify-between text-white items-center h-full"
-          in:blur={{ amount: 15 }}
-        >
-          <div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              ><path in:draw d={paths[0]} /><path in:draw d={paths[1]} /><path
-                in:draw={{ delay: 300 }}
-                d={paths[2]}
-              /><path in:draw={{ delay: 300 }} d={paths[3]} /></svg
-            >
-          </div>
-          {#key text}
-            <div
-              class="text-xs font-medium {isSvgRing
-                ? 'text-white'
-                : 'text-red-500'}"
-              in:blur
-            >
-              {text}
-            </div>
-          {/key}
-        </div>
-      {:else if isTimeHovered}
-        <div
-          class="px-4 flex justify-between text-white items-center h-full"
-          in:blur={{ amount: 2 }}
-        >
-          <div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="22"
-              height="22"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.4"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-monitor-dot"
-              ><circle cx="19" cy="6" r="3" /><path
-                d="M22 12v3a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9"
-              /><path d="M12 17v4" /><path d="M8 21h8" /></svg
-            >
-          </div>
-          {#key text}
-            <div class="text-sm font-medium" in:blur>Desktop</div>
-          {/key}
-        </div>
-      {:else}
-        <div
-          class="px-2 flex justify-between text-white items-center h-full"
-          in:blur={{ amount: 2 }}
-        >
-          <div></div>
-          {#key text}
-            <div in:blur>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="#1F1F1F"
-                stroke="currentColor"
-                stroke-width="1.4"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-circle"
-                ><circle cx="12" cy="12" r="10" /></svg
-              >
-            </div>
-          {/key}
-        </div>
-      {/if}
-    </div>
-  </div>
-  <div class="flex justify-center items-center gap-4">
-    <Button
-      class="rounded-full outline-none  border border-black"
-      on:click={originalSize}>Idle</Button
-    >
-    <Button
-      class="rounded-full  outline-none border border-black"
-      on:click={clickEffect}>Ring</Button
-    >
-    <Button
-      on:click={timerSize}
-      class="rounded-full  outline-none border border-black">Timer</Button
-    >
-  </div>
+<div class="flex justify-center items-center min-h-[300px] flex-col bg-gray-100 w-full">
+	<div class="min-h-60 flex justify-center items-center">
+		<div class="bg-black" style="width: {$x}px; height:{$y}px; border-radius: {$rounded}px;">
+			{#if isHovered}
+				<div
+					class="px-4 flex justify-between text-white items-center h-full"
+					in:blur={{ amount: 15 }}
+				>
+					<div>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="16"
+							height="16"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="1.5"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							><path in:draw d={paths[0]} /><path in:draw d={paths[1]} /><path
+								in:draw={{ delay: 300 }}
+								d={paths[2]}
+							/><path in:draw={{ delay: 300 }} d={paths[3]} /></svg
+						>
+					</div>
+					{#key text}
+						<div
+							class="text-xs font-medium {isSvgRing ? 'text-white' : 'text-red-500'}"
+							in:blur
+						>
+							{text}
+						</div>
+					{/key}
+				</div>
+			{:else if isTimeHovered}
+				<div
+					class="px-4 flex justify-between text-white items-center h-full"
+					in:blur={{ amount: 2 }}
+				>
+					<div>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="22"
+							height="22"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="1.4"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							class="lucide lucide-monitor-dot"
+							><circle cx="19" cy="6" r="3" /><path
+								d="M22 12v3a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9"
+							/><path d="M12 17v4" /><path d="M8 21h8" /></svg
+						>
+					</div>
+					{#key text}
+						<div class="text-sm font-medium" in:blur>Desktop</div>
+					{/key}
+				</div>
+			{:else}
+				<div
+					class="px-2 flex justify-between text-white items-center h-full"
+					in:blur={{ amount: 2 }}
+				>
+					<div></div>
+					{#key text}
+						<div in:blur>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="16"
+								height="16"
+								viewBox="0 0 24 24"
+								fill="#1F1F1F"
+								stroke="currentColor"
+								stroke-width="1.4"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								class="lucide lucide-circle"><circle cx="12" cy="12" r="10" /></svg
+							>
+						</div>
+					{/key}
+				</div>
+			{/if}
+		</div>
+	</div>
+	<div class="flex justify-center items-center gap-4">
+		<Button class="rounded-full outline-none  border border-black" on:click={originalSize}
+			>Idle</Button
+		>
+		<Button class="rounded-full  outline-none border border-black" on:click={clickEffect}
+			>Ring</Button
+		>
+		<Button on:click={timerSize} class="rounded-full  outline-none border border-black"
+			>Timer</Button
+		>
+	</div>
 </div>
