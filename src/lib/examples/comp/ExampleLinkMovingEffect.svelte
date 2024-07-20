@@ -29,6 +29,7 @@
 		});
 		node.addEventListener("mouseleave", (e) => {
 			isHover = false;
+			x.set(0);
 		});
 	};
 </script>
@@ -37,10 +38,10 @@
 	<img
 		in:scale={{ duration: 200, delay: 200 }}
 		out:scale={{ duration: 200 }}
-		style="position: absolute; top:{$y}px; left:{$x}px; z-indez: 100;"
+		style="top:{$y}px; left:{$x}px;"
 		src={hrefDetails.imgSrc}
 		alt={hrefDetails.imgAlt}
-		class="h-44 w-56 rounded-lg shadow-lg object-cover object-center"
+		class={`h-44 w-56 rounded-lg shadow-lg object-cover absolute object-center`}
 	/>
 {/if}
 <a

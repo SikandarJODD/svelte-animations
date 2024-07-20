@@ -1,10 +1,10 @@
 <script lang="ts">
-  import { crossfade } from "svelte/transition";
-  let layout = "layouta";
+	import { crossfade } from "svelte/transition";
+	let layout = "layouta";
 
-  let [send, receive] = crossfade({
-    duration: 400,
-  });
+	let [send, receive] = crossfade({
+		duration: 400,
+	});
 </script>
 
 <div class="w-full h-full flex justify-center items-center flex-col md:my-44 cursor-pointer">
@@ -82,7 +82,7 @@
 </div>
 
 <style>
-  .layouta {
-    position: absolute;
-  }
+	.layouta {
+		position: absolute;
+	}
 </style>
