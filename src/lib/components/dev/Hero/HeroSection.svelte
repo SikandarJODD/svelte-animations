@@ -2,9 +2,7 @@
   import Badge from "$lib/components/ui/badge/badge.svelte";
   import Button from "$lib/components/ui/button/button.svelte";
   import DotBackground from "$lib/components/ui/GridDotBg/DotBackground.svelte";
-  import GradientLine from "$lib/luxe/components/codeblock/GradientLine.svelte";
-  import SearchComp from "../searchComp/SearchComp.svelte";
-  import HomeLuxeButton from "../tags/HomeLuxeButton.svelte";
+  import Spotlight from "$lib/components/ui/spotlight/Spotlight.svelte";
   let getStarsCount = async () => {
     let res = await fetch(
       "https://api.github.com/repos/SikandarJODD/svelte-animations"
@@ -23,9 +21,9 @@
 
 <DotBackground>
   <div
-    class="relative flex h-[100vh] overflow-hidden rounded-md px-4 antialiased md:items-center md:justify-center lg:px-32"
+    class="relative flex h-[92vh] overflow-hidden rounded-md px-4 antialiased md:items-center md:justify-center lg:px-32"
   >
-    <!-- <Spotlight className="-top-40 left-0 md:left-72 md:-top-32" fill="#BAFAFF" /> -->
+    <!-- <Spotlight className="-top-40 left-0 md:left-32 md:-top-40"  /> -->
     <div class=" z-10 mx-auto w-full max-w-7xl p-4 pt-20 md:pt-0">
       <h2
         class="bg-opacity-50 pb-4 bg-gradient-to-r from-neutral-100 via-neutral-300 to-neutral-500 bg-clip-text text-center text-4xl font-bold text-transparent md:text-7xl"
@@ -71,18 +69,11 @@
         class="flex flex-col my-4 md:w-[290px] mx-auto p-4 rounded-xl border justify-center items-center gap-3 bg-neutral-900/10"
       >
         <div class="flex justify-between w-full items-center">
-          <Button
-            href="/in"
-            class="flex justify-center gap-3"
-            variant="outline"
+          <Button href="/in" class="flex justify-center gap-3" variant="outline"
             >Svelte Indie UI
             <Badge variant="success">New</Badge>
           </Button>
-          <Button
-            href="/fun"
-            class="flex justify-center gap-3"
-            variant='shine'
-          >
+          <Button href="/fun" class="flex justify-center gap-3" variant="shine">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="22"

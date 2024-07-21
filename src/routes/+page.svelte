@@ -1,7 +1,9 @@
 <script>
   import HeroPage from "$lib/components/dev/Hero/HeroPage.svelte";
   import HeroSection from "$lib/components/dev/Hero/HeroSection.svelte";
+  import NewNavbar from "$lib/components/dev/Navbar/NewNavbar.svelte";
 </script>
+
 
 <HeroSection />
 <svelte:head>

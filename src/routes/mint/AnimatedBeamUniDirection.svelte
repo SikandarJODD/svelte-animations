@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import GradientLine from "$lib/luxe/components/codeblock/GradientLine.svelte";
   import BorderBeam from "$lib/magicui/SpecialEffects/BorderBeam/BorderBeam.svelte";
   import AnimatedBeam from "./AnimatedBeam.svelte";
@@ -20,7 +20,6 @@
     class="relative flex w-full max-w-[500px] items-center justify-center overflow-hidden rounded-lg border bg-background p-10 md:shadow-2xl dark:shadow-[#121112]"
   >
     <BorderBeam size={80} duration={8} />
-    
 
     <GradientLine />
     <div
@@ -60,12 +59,6 @@
         </Circle>
       </div>
     </div>
-
-    <AnimatedBeam
-      duration={3}
-      bind:containerRef
-      bind:fromRef={div1Ref}
-      bind:toRef={div2Ref}
-    />
+    <AnimatedBeam fromRef={div1Ref} toRef={div2Ref} {containerRef} />
   </div>
 </div>

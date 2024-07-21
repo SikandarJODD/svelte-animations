@@ -48,7 +48,7 @@
 
 <header
   class="{cn(
-    'w-full dark:bg-transparent  bg-zinc-50 z-50',
+    'w-full dark:bg-transparent  bg-zinc-50 z-40',
     sticky && variant == 'centered' && 'md:sticky top-3',
     sticky && variant == 'default' && 'md:sticky top-0 backdrop-blur'
   )} "

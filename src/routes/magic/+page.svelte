@@ -160,8 +160,13 @@
       <ComponentView class="relative">
         <GradientLine />
         <div
-          class="absolute h-full w-full bg-[linear-gradient(to_right,#b1b1b12e_1px,transparent_1px),linear-gradient(to_bottom,#b1b1b12e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_10%,transparent_100%)]"
-        ></div>
+          class="[mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_30%,transparent_100%)] absolute h-full w-full"
+        >
+          <DotPattern
+            class="[mask-image:radial-gradient(600px_circle_at_center,white,transparent)] "
+            fillColor="rgba(120, 120, 120,0.4)"
+          />
+        </div>
 
         <!-- Component -->
         <AnimatedExample />

@@ -294,7 +294,7 @@
   <!-- Static sidebar for desktop -->
   {#if isLoading}
     <div
-      class="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-64 lg:flex-col mt-6"
+      class="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-64 lg:flex-col mt-16"
     >
       <!-- Sidebar component, swap this element with another sidebar if you like -->
       <div
@@ -333,7 +333,7 @@
                         href={subItem.link}
                         class="group {subItem.link == routeID
                           ? 'text-primary bg-sky-100 dark:bg-neutral-900 border-border font-medium'
-                          : 'text-primary/60 '} capitalize flex justify-between items-center gap-x-3 p-2  text-sm leading-6 select-none pl-3 py-[5.2px] border border-transparent rounded-sm dark:hover:bg-neutral-900 transition-all duration-300"
+                          : 'text-primary/60 '} capitalize flex justify-between items-center gap-x-3 p-2 text-sm leading-6 select-none pl-3 py-[5.2px] border border-transparent rounded-sm dark:hover:bg-neutral-900 transition-all duration-300"
                       >
                         {subItem.name}
                         {#if subItem?.isNew}

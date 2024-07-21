@@ -31,7 +31,7 @@
   <meta name="twitter:site" content="@Sikandar_Bhide" />
 </svelte:head>
 
-<div class="my-0 md:my-14 mx-px md:mx-5">
+<div class="my-0 md:my-4 mx-px md:mx-5">
   <a href="/luxe" class="flex items-center gap-1 text-muted-foreground w-fit">
     <svg
       xmlns="http://www.w3.org/2000/svg"

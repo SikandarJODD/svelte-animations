@@ -35,7 +35,7 @@
 >
   <span class="flex items-center gap-2 text-neutral-500">
     <SearchIcon size={14} />
-    Search...
+    Components..
   </span>
   <span
     class="border border-border px-1.5 rounded-[6px] text-[10px] flex items-center gap-0.5"
@@ -45,7 +45,7 @@
 </button>
 <Command.Dialog bind:open>
   <Command.Input placeholder="Type a Magic UI, Luxe Component..." />
-  <Command.List>
+  <Command.List >
     <Command.Empty>No results found.</Command.Empty>
     <Command.Group heading="Magic UI Components" class="text-neutral-400">
       {#each allMagicComponents as item}

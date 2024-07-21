@@ -78,6 +78,7 @@
       if (containerRef) {
         resizeObserver.observe(containerRef);
       }
+     
     });
   });
 </script>

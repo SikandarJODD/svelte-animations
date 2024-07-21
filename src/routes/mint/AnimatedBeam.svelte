@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { browser } from "$app/environment";
   import { cn } from "$lib/utils";
   import { onMount, tick } from "svelte";
   import { M, Motion } from "svelte-motion";
@@ -41,7 +40,7 @@
         y1: ["0%", "0%"],
         y2: ["0%", "0%"],
       };
-
+  $: console.log(fromRef, toRef, "Refs");
   let updatePath = () => {
     let containerRect = containerRef?.getBoundingClientRect();
     let rectA = fromRef?.getBoundingClientRect();
@@ -78,6 +77,12 @@
       // Observe the container element
       if (containerRef) {
         resizeObserver.observe(containerRef);
+      }
+      if (fromRef) {
+        resizeObserver.observe(fromRef);
+      }
+      if (toRef) {
+        resizeObserver.observe(toRef);
       }
     });
   });
