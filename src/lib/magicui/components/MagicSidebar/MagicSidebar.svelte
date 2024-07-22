@@ -45,11 +45,14 @@
         {
           name: "Animated Beam",
           link: "/magic/animated-beam",
-          isNew: true,
         },
         {
           name: "File Tree",
           link: "/magic/file-tree",
+        },
+        {
+          name: "Globe",
+          link: "/magic/globe",
           isNew: true,
         },
       ],
@@ -99,6 +102,11 @@
         {
           name: "Background Boxes",
           link: "/magic/bg-boxes",
+        },
+        {
+          name: "Retro Grid",
+          link: "/magic/retro-grid",
+          isNew: true,
         },
       ],
     },

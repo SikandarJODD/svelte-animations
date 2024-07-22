@@ -6,6 +6,14 @@
   import SvelteImg from "./svgs/svelte.svg";
   import JsImg from "./svgs/js.svg";
   import Img from "./svgs/image.svg";
+  // All SVG Files are downloaded from
+  /*
+  Twitter : https://simpleicons.org/?q=twitter
+  Svelte : https://svgl.app/?search=svelte
+  TS : https://svgl.app/?search=typescript
+  Image,folder open, close icons from ; https://lucide.dev/icons/ 
+  */
+
   let allFiles: any = {
     svelte: SvelteImg,
     ts: TsImg,
@@ -14,9 +22,7 @@
   };
 </script>
 
-<span
-  class=" w-fit"
->
+<span class=" w-fit">
   <img src={allFiles[type]} class=" h-[16px] w-[15px] mt-1" alt={type} />
   {name}</span
 >

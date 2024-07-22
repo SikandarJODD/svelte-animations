@@ -1,4 +1,5 @@
 <script>
+  // Checkout BorderBeam Component from Special Effects
   import BorderBeam from "$lib/magicui/SpecialEffects/BorderBeam/BorderBeam.svelte"; // Checkout BorderBeam Component from Special Effects
   import AnimatedBeam from "../AnimatedBeam.svelte";
   import Circle from "../Circle.svelte";

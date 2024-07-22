@@ -1,5 +1,4 @@
 <script lang="ts">
-  import GradientLine from "$lib/luxe/components/codeblock/GradientLine.svelte";
   import { cn } from "$lib/utils";
   import AnimatedShinyText from "./AnimatedShinyText.svelte";
 </script>

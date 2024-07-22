@@ -1,5 +1,5 @@
 <script>
-  import Marquee from "$lib/magicui/components/Marquee/Marquee.svelte";
+  import Marquee from "../Marquee.svelte";
   import Reviewcard from "./Reviewcard.svelte";
 
   const reviews = [

@@ -1,5 +1,5 @@
 <script>
-  import AnimatedGradientText from "$lib/magicui/text-animations/AnimatedGradientText/AnimatedGradientText.svelte";
+  import AnimatedGradientText from "./AnimatedGradientText.svelte";
   import { cn } from "$lib/utils";
 </script>
 

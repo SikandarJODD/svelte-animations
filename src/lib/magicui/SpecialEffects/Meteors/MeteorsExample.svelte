@@ -1,5 +1,5 @@
 <script>
-  import Meteors from "$lib/magicui/SpecialEffects/Meteors/Meteors.svelte";
+  import Meteors from "./Meteors.svelte";
 </script>
 
 <div

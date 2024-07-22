@@ -1,5 +1,5 @@
 <script>
-    import BlurFade from "$lib/magicui/animations/BlurFade/BlurFade.svelte";
+    import BlurFade from "../BlurFade.svelte";
   
     let images = Array.from({ length: 9 }, (_, i) => {
       let isLandscape = i % 2 === 0;

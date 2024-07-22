@@ -1,5 +1,5 @@
 <script>
-  import DotPattern from "$lib/magicui/backgrounds/DotPattern/DotPattern.svelte";
+  import DotPattern from "../DotPattern.svelte";
 </script>
 
 <div

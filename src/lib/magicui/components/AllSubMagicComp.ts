@@ -56,6 +56,11 @@ import SimpleSvelteTreeCode from "./FileTree/SimpleTree/SimpleSvelteTree.svelte?
 import SimpleFolderCode from "./FileTree/SimpleTree/Folder.svelte?raw";
 import SimpleFileCode from "./FileTree/SimpleTree/File.svelte?raw";
 
+import Globe from "./Globe/Globe.svelte";
+import GlobeCode from "./Globe/Globe.svelte?raw";
+import GlobeExample from "./Globe/GlobeExample.svelte";
+import GlobeExampleCode from "./Globe/GlobeExample.svelte?raw";
+
 export let allSubMagicComps: MagicComponent[] = [
   {
     id: "bento-grid",
@@ -161,7 +166,7 @@ export let allSubMagicComps: MagicComponent[] = [
   {
     id: "simple-cards",
     name: "Simple Cards Examples",
-    tags: ['Tailwind CSS'],
+    tags: ["Tailwind CSS"],
     link: "/magic/simple-cards",
     desc: "Simple cards with good border effect",
     examples: [
@@ -330,6 +335,27 @@ export let allSubMagicComps: MagicComponent[] = [
           },
         ],
         showGrid: true,
+      },
+    ],
+  },
+  {
+    id: "globe",
+    name: "Globe",
+    link: "/magic/globe",
+    desc: "A simple globe animation using Cobe. Checkout <a href='https://cobe.vercel.app/docs' class='underline underline-offset-2 text-primary'>Cobe</a> for more Information. <br/>  Refresh Page after visiting other components",
+    cncode: cncode,
+    download: "npm i cobe tailwind-merge clsx",
+    component: Globe,
+    code: GlobeCode,
+    class: "relative overflow-hidden h-[520px]",
+    examples: [
+      {
+        id: 1,
+        name: "Globe Example",
+        fileName: "GlobeExample.svelte",
+        component: GlobeExample,
+        showGrid: true,
+        code: GlobeExampleCode,
       },
     ],
   },

@@ -139,7 +139,7 @@ export let backgroundMagic: MagicComponent[] = [
   {
     id: "grid-pattern",
     name: "Grid Pattern",
-    tags: ['Tailwind CSS'],
+    tags: ["Tailwind CSS"],
     desc: "A background grid pattern made with SVGs, fully customizable using Tailwind CSS.",
     component: GridPattern,
     link: "/magic/grid-pattern",
@@ -178,7 +178,7 @@ export let backgroundMagic: MagicComponent[] = [
     desc: "A retro grid pattern made with SVGs, fully customizable using Tailwind CSS.",
     component: RetroGrid,
     code: RetroGridCode,
-    tailwind: allMagicTailwinds["retro-grid"],
+    tailwind: allMagicTailwinds["retroGrid"],
     link: "/magic/retro-grid",
     examples: [
       {
@@ -189,6 +189,7 @@ export let backgroundMagic: MagicComponent[] = [
         code: RgExampleCode,
       },
     ],
+    class: "relative overflow-hidden",
   },
   {
     id: "bg-boxes",

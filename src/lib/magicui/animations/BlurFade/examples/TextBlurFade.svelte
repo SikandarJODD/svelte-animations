@@ -1,5 +1,5 @@
 <script>
-  import BlurFade from "$lib/magicui/animations/BlurFade/BlurFade.svelte";
+  import BlurFade from "../BlurFade.svelte";
 </script>
 
 <section id="header">

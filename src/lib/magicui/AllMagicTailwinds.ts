@@ -136,7 +136,7 @@ module.exports = {
   },
 };
 `,
-  'retro-grid': `/** @type {import('tailwindcss').Config} */
+  'retroGrid': `/** @type {import('tailwindcss').Config} */
 module.exports = {
   theme: {
     extend: {

@@ -1,5 +1,5 @@
 <script>
-  import GradientLine from "$lib/luxe/components/codeblock/GradientLine.svelte";
+  // Scroll down to see the original Component
   import AnimatedBeam from "../AnimatedBeam.svelte";
   import Circle from "../Circle.svelte";
   let containerRef;

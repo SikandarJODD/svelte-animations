@@ -1,5 +1,5 @@
 <script>
-    import TextReveal from "$lib/magicui/text-animations/TextReveal/TextReveal.svelte";
+    import TextReveal from "./TextReveal.svelte";
   </script>
   
   <div

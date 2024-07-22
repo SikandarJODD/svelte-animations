@@ -1,4 +1,5 @@
-<script lang='ts'>
+<script lang="ts">
+  // Scroll down to see the original Component
   import { cn } from "$lib/utils";
   import AnimatedBeam from "../AnimatedBeam.svelte";
   import Circle from "../Circle.svelte";

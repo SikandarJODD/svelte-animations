@@ -1,5 +1,5 @@
 <script>
-  import BorderBeam from "$lib/magicui/SpecialEffects/BorderBeam/BorderBeam.svelte";
+  import BorderBeam from "./BorderBeam.svelte";
 </script>
 
 <article

@@ -1,5 +1,5 @@
 <script>
-  import FlipText from "$lib/magicui/text-animations/FlipText/FlipText.svelte";
+  import FlipText from "./FlipText.svelte";
 </script>
 
 <FlipText
