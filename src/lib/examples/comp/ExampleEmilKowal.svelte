@@ -22,11 +22,17 @@
     "M22 8c0-2.3-.8-4.3-2-6",
   ];
 
-  let run;
+  let run: NodeJS.Timeout;
+  let timeoutId: NodeJS.Timeout;
   //  Effects run on Click
   let isSvgRing = true;
 
   let clickEffect = () => {
+    if (run) clearInterval(run);
+    if (timeoutId) clearTimeout(timeoutId);
+    originalSize();
+    text = "Ring";
+    isSvgRing = true;
     isHovered = true;
     isTimeHovered = false;
     x.set(140);
@@ -37,7 +43,7 @@
       text = isSvgRing ? "Ring" : "Silent";
       isSvgRing ? x.set(140) : x.set(155);
     }, 1500);
-    setTimeout(() => {
+    timeoutId = setTimeout(() => {
       clearInterval(run);
       originalSize();
     }, 10000);
@@ -158,18 +164,15 @@
   <div class="flex justify-center items-center gap-4">
     <Button
       class="rounded-full outline-none  border border-black"
-      
       on:click={originalSize}>Idle</Button
     >
     <Button
       class="rounded-full  outline-none border border-black"
-      
-      on:click|once={clickEffect}>Ring</Button
+      on:click={clickEffect}>Ring</Button
     >
     <Button
       on:click={timerSize}
-      class="rounded-full  outline-none border border-black"
-      >Timer</Button
+      class="rounded-full  outline-none border border-black">Timer</Button
     >
   </div>
 </div>
