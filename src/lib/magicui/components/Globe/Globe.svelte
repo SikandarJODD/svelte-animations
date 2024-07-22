@@ -10,23 +10,38 @@
   });
   let className = "";
   export { className as class };
-  let pointerInteracting = null;
+  let pointerInteracting: any = null;
   let pointerInteractionMovement = 0;
-  let canvas;
+  let canvas: HTMLElement;
 
   let phi = 0;
+  let width = 0;
+  $: console.log(width, "X");
+  let onResize = () => {
+    width = canvas.offsetWidth;
+  };
+  let onRender = (state: any) => {
+    if (!pointerInteracting) {
+      phi += 0.005;
+    }
+    state.phi = phi + $x;
+    state.width = width * 2;
+    state.height = width * 2;
+  };
   onMount(() => {
+    window.addEventListener("resize", onResize);
+    onResize();
     const globe = createGlobe(canvas, {
       devicePixelRatio: 2,
-      width: 1000,
-      height: 1000,
+      width: width,
+      height: width,
       phi: 0,
       theta: 0.3,
       dark: 1,
       diffuse: 0.4, // 1.2
       mapSamples: 16000,
       mapBrightness: 1.2, // 6
-      baseColor: [0.3, 0.3, 0.3], 
+      baseColor: [0.3, 0.3, 0.3],
       markerColor: [251 / 255, 100 / 255, 21 / 255],
       glowColor: [1, 1, 1],
       markers: [
@@ -41,15 +56,17 @@
         { location: [34.6937, 135.5022], size: 0.05 },
         { location: [41.0082, 28.9784], size: 0.06 },
       ],
-      onRender: (state) => {
-        if (!pointerInteracting) {
-          // Called on every animation frame.
-          // `state` will be an empty object, return updated params.
-          phi += 0.009;
-        }
-        state.phi = phi + $x;
-        // phi += 0.01;
-      },
+      // onRender: (state) => {
+      //   if (!pointerInteracting) {
+      //     // Called on every animation frame.
+      //     // `state` will be an empty object, return updated params.
+      //     phi += 0.009;
+      //   }
+      //   state.phi = phi + $x;
+
+      //   // phi += 0.01;
+      // },
+      onRender: onRender,
     });
   });
 </script>

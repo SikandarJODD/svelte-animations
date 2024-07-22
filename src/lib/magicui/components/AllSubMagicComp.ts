@@ -200,7 +200,7 @@ export let allSubMagicComps: MagicComponent[] = [
         name: "Square Border Card",
         fileName: "SquareCardExample.svelte",
         component: SimpleVariant3,
-        showGrid: true,
+        showDots: true,
         code: [
           {
             filename: "SquareCard.svelte",
@@ -354,7 +354,7 @@ export let allSubMagicComps: MagicComponent[] = [
         name: "Globe Example",
         fileName: "GlobeExample.svelte",
         component: GlobeExample,
-        showGrid: true,
+        showDots: true,
         code: GlobeExampleCode,
       },
     ],

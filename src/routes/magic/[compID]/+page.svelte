@@ -98,7 +98,7 @@
                         ></div>
                       {:else if example?.showDots}
                         <div
-                          class="[mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_30%,transparent_100%)] absolute h-full w-full"
+                          class="[mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_35%,transparent_100%)] absolute h-full w-full"
                         >
                           <DotPattern
                             class="[mask-image:radial-gradient(600px_circle_at_center,white,transparent)] "

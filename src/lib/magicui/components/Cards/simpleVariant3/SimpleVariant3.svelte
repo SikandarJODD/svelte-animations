@@ -5,7 +5,7 @@
 
 <div>
   <div
-    class="border  border-dashed border-zinc-400 dark:border-zinc-700 relative dark:bg-[#09090B]"
+    class="border  border-dashed border-zinc-400 dark:border-zinc-700 relative dark:bg-[#0b0b0b]"
   >
     <CardIcon class="-top-3 -left-3" />
     <CardIcon class="-top-3 -right-3" />

@@ -160,6 +160,7 @@ export let backgroundMagic: MagicComponent[] = [
         fileName: "LinearGradientGridPattern.svelte",
         component: LinearGradientGridPattern,
         code: LinearGradientGridPatternCode,
+        showDots: true,
       },
       {
         id: 2,
@@ -167,6 +168,7 @@ export let backgroundMagic: MagicComponent[] = [
         fileName: "DashedStrokeGrid.svelte",
         component: DashedStrokeGrid,
         code: DashedStrokeGridCode,
+        showDots: true,
       },
     ],
     cncode: cncode,
@@ -187,6 +189,7 @@ export let backgroundMagic: MagicComponent[] = [
         fileName: "RetroGridExample.svelte",
         component: RgExample,
         code: RgExampleCode,
+        showGrid: true,
       },
     ],
     class: "relative overflow-hidden",
