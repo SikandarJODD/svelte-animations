@@ -52,7 +52,7 @@
         <a
           href="/magic/{item.id}"
           on:click={() => {
-            open = !open;
+            open = false;
           }}
         >
           <Command.Item>
@@ -77,7 +77,7 @@
         <a
           href="/luxe/{item.id}"
           on:click={() => {
-            open = !open;
+            open = false;
           }}
         >
           <Command.Item>

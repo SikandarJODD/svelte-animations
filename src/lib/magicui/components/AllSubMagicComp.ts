@@ -56,10 +56,22 @@ import SimpleSvelteTreeCode from "./FileTree/SimpleTree/SimpleSvelteTree.svelte?
 import SimpleFolderCode from "./FileTree/SimpleTree/Folder.svelte?raw";
 import SimpleFileCode from "./FileTree/SimpleTree/File.svelte?raw";
 
+// Globe
 import Globe from "./Globe/Globe.svelte";
 import GlobeCode from "./Globe/Globe.svelte?raw";
 import GlobeExample from "./Globe/GlobeExample.svelte";
 import GlobeExampleCode from "./Globe/GlobeExample.svelte?raw";
+
+// Dock Menu
+import Dock from "./DockClaude/Dock.svelte";
+import DockCode from "./DockClaude/Dock.svelte?raw";
+import DockIconCode from "./DockClaude/DockIcon.svelte?raw";
+import DExample from "./DockClaude/example/DExample.svelte";
+import DExampleCode from "./DockClaude/example/DExample.svelte?raw";
+import DSvgExample from "./DockClaude/example/DSvgExample.svelte";
+import DSvgExampleCode from "./DockClaude/example/DSvgExample.svelte?raw";
+import DockExample1 from "./DockClaude/example/DockExample1.svelte";
+import DockExample1Code from "./DockClaude/example/DockExample1.svelte?raw";
 
 export let allSubMagicComps: MagicComponent[] = [
   {
@@ -356,6 +368,52 @@ export let allSubMagicComps: MagicComponent[] = [
         component: GlobeExample,
         showDots: true,
         code: GlobeExampleCode,
+      },
+    ],
+  },
+  {
+    id: "dock",
+    name: "Dock Menu",
+    link: "/magic/dock",
+    desc: "An implementation of the MacOS dock using Svlete, Tailwind CSS, Svelte Motion. <br/> Checkout Dock from Luxe UI <a href='/luxe/dock-menu' class='underline underline-offset-2 text-primary'>Visit</a>",
+    cncode: cncode,
+    download:
+      "npm i svelte-motion clsx tailwind-merge class-variance-authority",
+    component: Dock,
+    code: [
+      {
+        filename: "Dock.svelte",
+        code: DockCode,
+      },
+      {
+        filename: "DockIcon.svelte",
+        code: DockIconCode,
+      },
+    ],
+    examples: [
+      {
+        id: 1,
+        name: "Profile",
+        fileName: "DockExample.svelte",
+        component: DockExample1,
+        showDots: true,
+        code: DockExample1Code,
+      },
+      {
+        id: 2,
+        name: "Custom Magnification",
+        fileName: "DockExample.svelte",
+        component: DSvgExample,
+        code: DSvgExampleCode,
+        showDots: true,
+      },
+      {
+        id: 3,
+        name: "Custom Direction",
+        fileName: "DockExample.svelte",
+        component: DExample,
+        showDots: true,
+        code: DExampleCode,
       },
     ],
   },

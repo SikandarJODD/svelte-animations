@@ -55,6 +55,11 @@
           link: "/magic/globe",
           isNew: true,
         },
+        {
+          name: "Dock Menu",
+          link: "/magic/dock",
+          isNew: true,
+        },
       ],
     },
     {

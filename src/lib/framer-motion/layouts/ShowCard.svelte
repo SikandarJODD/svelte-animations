@@ -15,7 +15,7 @@
  
 >
   <Card.Root
-    class="w-[350px] md:rounded-3xl transition-all duration-200 hover:border-gray-400/70 dark:bg-[#020817] "
+    class="w-[350px] md:rounded-3xl transition-all duration-200 hover:border-gray-400/70 dark:bg-background "
   >
 
     <Card.Content class="pt-6 pb-0">

@@ -146,13 +146,13 @@
   <!-- Static sidebar for desktop -->
   {#if isLoading}
     <div
-      class="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-60 lg:flex-col mt-0"
+      class="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-60 lg:flex-col mt-16"
     >
       <!-- Sidebar component, swap this element with another sidebar if you like -->
       <div
-        class="flex grow flex-col gap-y-0 overflow-y-auto border-r border-gray-300 dark:border-primary/40 {routeID==='/learnings'? 'dark:bg-slate-950/90':'dark:bg-background'} bg-white px-6"
+        class="flex grow flex-col gap-y-0 overflow-y-auto border-r border-gray-300 dark:border-primary/40 bg-background  px-6"
       >
-        <a href="/" class="mt-16 mb-0 font-semibold text-xl"
+        <a href="/" class="mt-4 mb-0 font-semibold text-xl"
           >Svelte Animations</a
         >
         <nav class="flex flex-1 flex-col mt-2 mb-16">
@@ -226,7 +226,7 @@
     </div>
   </div>
 
-  <main class="py-6 lg:pl-60 {routeID==='/learnings'? 'dark:bg-slate-950':'dark:bg-background'}  min-h-screen">
+  <main class="py-6 lg:pl-60 bg-background  min-h-screen">
     <div class="px-4 sm:px-6 lg:px-8">
       <slot></slot>
     </div>

@@ -43,7 +43,7 @@
   <meta name="twitter:site" content="@Sikandar_Bhide" />
 </svelte:head>
 
-<div class="my-0 md:my-14 mx-2 md:mx-5">
+<div class="my-0 md:my-0 mx-2 md:mx-5">
   <a href="/learnings" class="flex items-center gap-1 text-muted-foreground">
     <svg
       xmlns="http://www.w3.org/2000/svg"
