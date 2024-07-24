@@ -15,7 +15,6 @@
 
   onMount(() => {
     function handleKeydown(e: KeyboardEvent) {
-      // console.log(e.key, "Pressed");
       if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
         e.preventDefault();
         open = !open;
@@ -62,7 +61,9 @@
               {#if item?.tags}
                 <div class="flex gap-1">
                   {#each item?.tags as tag}
-                    <Badge variant="outline"  class="border-neutral-500/60">{tag}</Badge>
+                    <Badge variant="outline" class="border-neutral-500/60"
+                      >{tag}</Badge
+                    >
                   {/each}
                 </div>
               {/if}

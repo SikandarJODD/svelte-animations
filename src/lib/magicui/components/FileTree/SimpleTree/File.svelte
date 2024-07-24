@@ -1,7 +1,6 @@
 <script lang="ts">
   export let name;
   $: type = name.slice(name.lastIndexOf(".") + 1);
-  $: console.log(type, "Code");
   import TsImg from "./svgs/ts.svg";
   import SvelteImg from "./svgs/svelte.svg";
   import JsImg from "./svgs/js.svg";
