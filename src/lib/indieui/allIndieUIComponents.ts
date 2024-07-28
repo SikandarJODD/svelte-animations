@@ -103,6 +103,7 @@ type IndieUIComponentVariant = {
   fileName?: string;
   showGrid?: boolean;
   showDots?: boolean;
+  class?: string;
 };
 type Code = {
   filename: string;

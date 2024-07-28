@@ -1,0 +1,41 @@
+<script>
+  import Separator from "$lib/components/ui/separator/separator.svelte";
+  import { marked } from "marked";
+  import GithubSvg from "$lib/svg/web/github.svg";
+  let markdown = `
+   ### Date - 28 July 2024
+   - Launch [Startup Template](https://startup-sve.vercel.app) for SvelteKit, Inspired by Magic UI. <img src=${GithubSvg} alt="drawing" width="18" height="18" class='inline-block' /> [Github](https://github.com/SikandarJODD/startup-template)
+   - Launch [Developer Portfolio](https://portfolio-sve.vercel.app) Template, built with SvelteKit and Svelte Animations. <img src=${GithubSvg} alt="drawing" width="18" height="18" class='inline-block' /> [Github](https://github.com/SikandarJODD/portfolio-template)
+  ---
+  ### Date - 25 July 2024
+  - Added [Svelte Globe](https://animation-svelte.vercel.app/magic/globe) Component from Magic UI
+  - Update [Ripple Effect](https://animation-svelte.vercel.app/magic/ripple) Component from Magic UI
+  - Added [Dock Menu](https://animation-svelte.vercel.app/magic/dock) Component from Magic UI
+  - Added [Retro Grid](https://animation-svelte.vercel.app/magic/retro-grid) Component from Magic UI
+  `;
+</script>
+
+<main class="my-8 xl:my-8 space-y-6 md:space-y-10 mx-4 sm:mx-6 md:mx-[138px]">
+  <section class="flex flex-col">
+    <div class="space-y-2">
+      <h1 class="text-3xl md:text-4xl font-bold text-primary">
+        Changelog & Overview
+      </h1>
+      <p class=" font-normal text-neutral-500">
+        Svelte Animation Provides Free Components, <span class="text-primary"
+          >Copy</span
+        >
+        and <span class="text-primary">Paste</span> to illuminate your applications
+        with elegance.
+      </p>
+      <Separator />
+    </div>
+    <div
+      class="max-w-full prose dark:prose-invert my-6 prose-hr:my-3 prose-img:mx-0 prose-img:mb-0 prose-img:-mt-1 prose-a:underline-offset-2"
+    >
+      {#key markdown}
+        {@html marked(markdown)}
+      {/key}
+    </div>
+  </section>
+</main>

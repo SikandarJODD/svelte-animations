@@ -6,7 +6,8 @@
   export let mainNavs = [
     { link: "/", name: "Home" },
     { link: "/", name: "Components" },
-    { link: "/", name: "Changelog" },
+    { link: "/changelog", name: "Changelog" },
+    // { link: "/templates", name: "Templates" },
   ];
   let miniNav = [
     { link: "/magic", name: "Magic UI" },

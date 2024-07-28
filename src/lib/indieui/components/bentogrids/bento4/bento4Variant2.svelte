@@ -9,7 +9,7 @@
     {#each cells as item, i}
       <div
         class={cn(
-          "p-1 rounded-lg h-32",
+          "p-1 rounded-lg h-40",
           i == 0 && "md:col-span-3",
           i > 1 && "md:col-span-2"
         )}

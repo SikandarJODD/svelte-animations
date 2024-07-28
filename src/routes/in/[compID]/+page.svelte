@@ -79,7 +79,7 @@ class="{example?.showGrid === true
                           ? ' relative overflow-hidden '
                           : ''} {item?.showDots === true
                           ? ' relative overflow-hidden '
-                          : ''}"
+                          : ''} {item?.class}"
                       >
                         {#if item?.showGrid}
                           <div
