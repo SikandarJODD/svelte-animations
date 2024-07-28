@@ -4,8 +4,8 @@
   import GithubSvg from "$lib/svg/web/github.svg";
   let markdown = `
    ### Date - 28 July 2024
-   - Launch [Startup Template](https://startup-sve.vercel.app) for SvelteKit, Inspired by Magic UI. <img src=${GithubSvg} alt="drawing" width="18" height="18" class='inline-block' /> [Github](https://github.com/SikandarJODD/startup-template)
-   - Launch [Developer Portfolio](https://portfolio-sve.vercel.app) Template, built with SvelteKit and Svelte Animations. <img src=${GithubSvg} alt="drawing" width="18" height="18" class='inline-block' /> [Github](https://github.com/SikandarJODD/portfolio-template)
+   - Launch [Startup Template](https://startup-sve.vercel.app) for SvelteKit, Inspired by Magic UI. ![](${GithubSvg}) [Github](https://github.com/SikandarJODD/startup-template)
+   - Launch [Developer Portfolio](https://portfolio-sve.vercel.app) Template, built with SvelteKit and Svelte Animations. ![](${GithubSvg}) [Github](https://github.com/SikandarJODD/portfolio-template)
   ---
   ### Date - 25 July 2024
   - Added [Svelte Globe](https://animation-svelte.vercel.app/magic/globe) Component from Magic UI
@@ -31,7 +31,7 @@
       <Separator />
     </div>
     <div
-      class="max-w-full prose dark:prose-invert my-6 prose-hr:my-3 prose-img:mx-0 prose-img:mb-0 prose-img:-mt-1 prose-a:underline-offset-2"
+      class="max-w-full prose-img:size-4 prose-img:inline-block prose dark:prose-invert my-6 prose-hr:my-3 prose-img:mx-0 prose-img:mb-0 prose-img:-mt-1 prose-a:underline-offset-2"
     >
       {#key markdown}
         {@html marked(markdown)}

@@ -26,14 +26,14 @@
     <!-- <Spotlight className="-top-40 left-0 md:left-32 md:-top-40"  /> -->
     <div class=" z-10 mx-auto w-full max-w-7xl p-4 pt-20 md:pt-0">
       <h2
-        class="bg-opacity-50 pb-4 bg-gradient-to-r from-neutral-100 via-neutral-300 to-neutral-500 bg-clip-text text-center text-4xl font-bold text-transparent md:text-7xl"
+        class="bg-opacity-50 pb-2 bg-gradient-to-r from-neutral-100 via-neutral-300 to-neutral-500 bg-clip-text text-center text-4xl font-bold text-transparent md:text-7xl"
       >
         Svelte Components
       </h2>
       <p
-        class="mx-auto mt-4 max-w-lg text-center text-base md:text-lg font-normal text-neutral-300"
+        class="mx-auto mt-2 max-w-lg text-center text-base md:text-lg font-normal text-neutral-300"
       >
-        Components are build using Tailwind CSS, Tweened, Spring and <a
+        Free Components are build using Tailwind CSS, <a
           href="https://svelte-motion.gradientdescent.de"
           class=" text-teal-300">Svelte Motion</a
         >
