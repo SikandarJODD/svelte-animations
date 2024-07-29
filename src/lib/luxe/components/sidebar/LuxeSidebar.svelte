@@ -5,6 +5,7 @@
   import { onMount } from "svelte";
   import { blur, slide } from "svelte/transition";
   import SearchComp from "$lib/components/dev/searchComp/SearchComp.svelte";
+  import Separator from "$lib/components/ui/separator/separator.svelte";
 
   let sortedcomps = allLuxeComponents.toSorted((a, b) => {
     return a.name.localeCompare(b.name);
@@ -164,9 +165,7 @@
       >
         <nav class="flex flex-1 flex-col mb-32">
           <a href="/" class="font-bold text-xl mx-1 my-3">Svelte Animations</a>
-          <div>
-            <SearchComp />
-          </div>
+          <Separator />
           <ul role="list" class="flex flex-1 flex-col">
             {#each componentsNav as item}
               <li>

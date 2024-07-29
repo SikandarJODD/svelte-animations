@@ -317,7 +317,7 @@
           <a href="/" class="font-bold text-xl mx-1 mt-3 mb-2"
             >Svelte Animations</a
           >
-          <Separator />
+          <Separator class='mb-2' />
           <ul role="list" class="flex flex-1 flex-col">
             {#each componentsNav as item}
               <li class="mb-1">

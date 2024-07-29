@@ -3,6 +3,7 @@
   import { navs } from "$lib";
   import SearchComp from "$lib/components/dev/searchComp/SearchComp.svelte";
   import Badge from "$lib/components/ui/badge/badge.svelte";
+  import Separator from "$lib/components/ui/separator/separator.svelte";
   import { onMount } from "svelte";
   import { slide } from "svelte/transition";
 
@@ -217,13 +218,10 @@
         class="flex grow flex-col gap-y-0 overflow-y-auto dark:border-primary/40 dark:bg-background bg-white pl-6 pr-4"
       >
         <nav class="flex flex-1 flex-col mb-32">
-          <a href="/" class="font-bold text-xl mx-1 mt-3 mb-2 text-center"
+          <a href="/" class="font-bold text-xl mx-1 mt-3 mb-2"
             >Svelte Animations</a
           >
-          <div class="mb-4">
-            <SearchComp />
-          </div>
-
+          <Separator class='mb-2'/>
           <ul role="list" class="flex flex-1 flex-col">
             {#each componentsNav as item}
               <li class="mb-1.5">

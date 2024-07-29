@@ -7,7 +7,7 @@
     { link: "/", name: "Home" },
     { link: "/", name: "Components" },
     { link: "/changelog", name: "Changelog" },
-    { link: "/templates", name: "Templates" },
+    { link: "/templates/developer-portfolio", name: "Templates" },
   ];
   let miniNav = [
     { link: "/magic", name: "Magic UI" },

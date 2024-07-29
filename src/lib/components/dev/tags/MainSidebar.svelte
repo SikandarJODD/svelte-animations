@@ -1,6 +1,7 @@
 <script>
   import { page } from "$app/stores";
   import { navs } from "$lib";
+  import Separator from "$lib/components/ui/separator/separator.svelte";
   import { animationExamples } from "$lib/examples/AnimationsExamples";
   import { onMount } from "svelte";
   import { blur, slide } from "svelte/transition";
@@ -166,6 +167,7 @@
       >
         <nav class="flex flex-1 flex-col mb-32">
           <a href="/" class="font-bold text-xl mx-1 my-3">Svelte Animations</a>
+          <Separator class="mb-2" />
           <ul role="list" class="flex flex-1 flex-col">
             {#each componentsNav as item}
               <li>

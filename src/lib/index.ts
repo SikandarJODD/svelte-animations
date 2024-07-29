@@ -17,7 +17,7 @@ export let navs = [
     name: "Svelte Indie UI",
     link: "/in",
   },
-  { link: "/templates", name: "Templates" },
+  { link: "/templates/developer-portfolio", name: "Templates" },
   { link: "/changelog", name: "Changelog" },
   {
     name: "Examples",
