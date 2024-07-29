@@ -1,7 +1,7 @@
 <script lang="ts">
+  import Separator from "$lib/components/ui/separator/separator.svelte";
   import { page } from "$app/stores";
   import { navs } from "$lib";
-  import SearchComp from "$lib/components/dev/searchComp/SearchComp.svelte";
   import Badge from "$lib/components/ui/badge/badge.svelte";
   import { onMount } from "svelte";
   import { slide } from "svelte/transition";
@@ -311,23 +311,20 @@
     >
       <!-- Sidebar component, swap this element with another sidebar if you like -->
       <div
-        class="flex grow flex-col gap-y-0 overflow-y-auto dark:border-primary/40 dark:bg-background bg-white pl-6 pr-4"
+        class="flex grow flex-col gap-y-0 overflow-y-auto dark:border-primary/20 border-r dark:bg-background bg-white pl-6 pr-4"
       >
         <nav class="flex flex-1 flex-col mt-2 mb-32">
-          <a href="/" class="font-bold text-xl mx-1 mt-3 mb-2 text-center"
+          <a href="/" class="font-bold text-xl mx-1 mt-3 mb-2"
             >Svelte Animations</a
           >
-          <div class="mb-4">
-            <SearchComp />
-          </div>
-
+          <Separator />
           <ul role="list" class="flex flex-1 flex-col">
             {#each componentsNav as item}
               <li class="mb-1">
                 <ul role="list">
                   <li>
                     <div
-                      class="text-primary/95 font-semibold text-md leading-6 pt-2 pb-0.5"
+                      class="text-primary/95 font-semibold text-md leading-6 pt-2 pb-1"
                     >
                       {item.heading}
                     </div>
@@ -389,7 +386,7 @@
       </svg>
     </button>
     <a href="/" class="flex-1 text-sm font-semibold leading-6 text-primary">
-      Svelte Components
+      Svelte Animations
     </a>
   </div>
 

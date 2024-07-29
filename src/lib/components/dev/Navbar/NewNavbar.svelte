@@ -7,7 +7,7 @@
     { link: "/", name: "Home" },
     { link: "/", name: "Components" },
     { link: "/changelog", name: "Changelog" },
-    // { link: "/templates", name: "Templates" },
+    { link: "/templates", name: "Templates" },
   ];
   let miniNav = [
     { link: "/magic", name: "Magic UI" },
@@ -22,10 +22,8 @@
   let ismobileMenuOpen = false;
   let openComponents = false;
   $: routeId = $page.url.pathname;
-  let innerWidth = 0;
 </script>
 
-<svelte:window bind:innerWidth />
 <nav class="bg-background/50 border-b sticky top-0 z-50 backdrop-blur-md">
   <div class="mx-auto max-w-7xl px-2 sm:px-4 lg:px-8">
     <div class="relative flex h-14 items-center justify-between">
@@ -113,16 +111,14 @@
           </div>
         </div>
       </div>
-      {#if routeId === "/" || innerWidth < 810}
-        <div
-          transition:fade
-          class="flex flex-1 justify-center px-2 lg:ml-6 lg:justify-end items-center"
-        >
-          <div class="w-full max-w-lg lg:max-w-52">
-            <SearchComp />
-          </div>
+      <div
+        transition:fade
+        class="flex flex-1 justify-center px-2 lg:ml-6 lg:justify-end items-center"
+      >
+        <div class="w-full max-w-lg lg:max-w-52">
+          <SearchComp />
         </div>
-      {/if}
+      </div>
       <div class="flex lg:hidden">
         <!-- Mobile menu button -->
         <button
