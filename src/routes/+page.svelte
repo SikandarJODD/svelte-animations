@@ -1,11 +1,8 @@
 <script>
-  import HeroPage from "$lib/components/dev/Hero/HeroPage.svelte";
+  import HeroLayout from "$lib/components/dev/Hero/HeroLayout.svelte";
   import HeroSection from "$lib/components/dev/Hero/HeroSection.svelte";
-  import NewNavbar from "$lib/components/dev/Navbar/NewNavbar.svelte";
 </script>
 
-
-<HeroSection />
 <svelte:head>
   <title>Svelte Animations Components</title>
   <meta property="twitter:title" content="Svelte Animations Components" />
@@ -35,3 +32,7 @@
   />
   <meta name="twitter:site" content="@Sikandar_Bhide" />
 </svelte:head>
+<div>
+  <HeroSection />
+  <HeroLayout />
+</div>

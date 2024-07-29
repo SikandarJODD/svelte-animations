@@ -19,7 +19,7 @@
   ];
 </script>
 
-<DotBackground>
+<DotBackground >
   <div
     class="relative flex h-[92vh] overflow-hidden rounded-md px-4 antialiased md:items-center md:justify-center lg:px-32"
   >
@@ -100,7 +100,7 @@
           <Button href="/magic" variant="shine">Magic UI</Button>
         </div>
       </div>
-      <div class="flex justify-center items-center">
+      <!-- <div class="flex justify-center items-center">
         <div class="absolute bottom-2 font-mono text-neutral-300">
           Build by <a
             href="https://github.com/SikandarJODD"
@@ -108,7 +108,7 @@
             class=" underline-offset-2 underline">Sikandar.S.Bhide</a
           >
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </DotBackground>

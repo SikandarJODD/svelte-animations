@@ -42,6 +42,8 @@
 		"clsx": "^2.1.1",
 		"cmdk-sv": "^0.0.17",
 		"cobe": "^0.6.3",
+		"embla-carousel-svelte": "^8.1.7",
+		"embla-carousel-wheel-gestures": "^8.0.1",
 		"lucide-svelte": "^0.399.0",
 		"marked": "^13.0.2",
 		"mini-svg-data-uri": "^1.4.4",
