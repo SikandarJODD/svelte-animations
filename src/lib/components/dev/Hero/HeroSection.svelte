@@ -2,7 +2,6 @@
   import Badge from "$lib/components/ui/badge/badge.svelte";
   import Button from "$lib/components/ui/button/button.svelte";
   import DotBackground from "$lib/components/ui/GridDotBg/DotBackground.svelte";
-  import Spotlight from "$lib/components/ui/spotlight/Spotlight.svelte";
   let getStarsCount = async () => {
     let res = await fetch(
       "https://api.github.com/repos/SikandarJODD/svelte-animations"
@@ -19,7 +18,7 @@
   ];
 </script>
 
-<DotBackground >
+<DotBackground>
   <div
     class="relative flex h-[92vh] overflow-hidden rounded-md px-4 antialiased md:items-center md:justify-center lg:px-32"
   >
@@ -100,15 +99,31 @@
           <Button href="/magic" variant="shine">Magic UI</Button>
         </div>
       </div>
-      <!-- <div class="flex justify-center items-center">
-        <div class="absolute bottom-2 font-mono text-neutral-300">
-          Build by <a
+      <div class="flex justify-center items-center">
+        <div
+          class="absolute bottom-5 flex justify-center items-center flex-col"
+        >
+          <a
             href="https://github.com/SikandarJODD"
-            target="_blank"
-            class=" underline-offset-2 underline">Sikandar.S.Bhide</a
+            class="font-mono text-neutral-300 underline underline-offset-2"
+          >
+            Build by Sikandar.S.Bhide
+          </a>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-chevron-down animate-bounce mt-2 "
+            ><path d="m6 9 6 6 6-6" /></svg
           >
         </div>
-      </div> -->
+      </div>
     </div>
   </div>
 </DotBackground>

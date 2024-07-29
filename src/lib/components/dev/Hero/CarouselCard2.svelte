@@ -27,31 +27,37 @@
       id: 0,
       title: "Button Animated Border",
       comp: ButtonAnimatedBorder,
+      link: "/luxe/button-animated-border",
     },
     {
       id: 1,
       title: "Button Background Shine",
       comp: ButtonBackgroundShine,
+      link: "/luxe/button-background-shine",
     },
     {
       id: 2,
       title: "Button Rotate Border",
       comp: ButtonRotateBorder,
+      link: "/luxe/button-rotate-border",
     },
     {
       id: 3,
       title: " Button Loading",
       comp: ButtonLoading,
+      link: "/luxe/button-loading",
     },
     {
       id: 4,
       title: " Button Destructive",
       comp: ButtonDestructive,
+      link: "/luxe/button-destructive",
     },
     {
       id: 5,
       title: " Button Success",
       comp: ButtonSuccess,
+      link: "/luxe/button-success",
     },
   ];
 </script>
@@ -61,40 +67,38 @@
     loop: true,
   }}
   bind:api={carouselApi}
-  class="h-full w-full p-3"
+  class="w-full h-full p-3"
 >
-  <Carousel.Content class="h-52 md:h-64">
-    {#each comps as comp, i (i)}
-      <Carousel.Item class="h-full">
-        <div class="p-1 h-full">
-          <Card.Root class="h-full">
-            <Card.Content
-              class="relative h-full w-full flex items-center justify-center p-6"
-            >
-              <a
-                href="/"
-                class="absolute top-2.5 flex items-center gap-1 hover:underline underline-offset-2 text-zinc-300"
-                >{comp.title}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-external-link"
-                  ><path d="M15 3h6v6" /><path d="M10 14 21 3" /><path
-                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                  /></svg
-                >
-              </a>
-              <svelte:component this={comp.comp} />
-            </Card.Content>
-          </Card.Root>
-        </div>
+  <Carousel.Content>
+    {#each comps as item, i (i)}
+      <Carousel.Item>
+        <Card.Root class="bg-background">
+          <Card.Content
+            class="flex relative min-h-[14rem] w-full items-center justify-center p-6"
+          >
+            <a
+              href={item.link}
+              class="absolute top-2.5 flex items-center gap-1 hover:underline  underline-offset-2 text-zinc-400 hover:text-zinc-100 transition-all duration-150 text-sm font-medium"
+              >{item.title}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-external-link"
+                ><path d="M15 3h6v6" /><path d="M10 14 21 3" /><path
+                  d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                /></svg
+              >
+            </a>
+            <svelte:component this={item.comp} />
+          </Card.Content>
+        </Card.Root>
       </Carousel.Item>
     {/each}
   </Carousel.Content>

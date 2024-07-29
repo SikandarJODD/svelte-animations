@@ -1,6 +1,7 @@
 <script>
-  import HeroLayout from "$lib/components/dev/Hero/HeroLayout.svelte";
+  import HeroGrid from "$lib/components/dev/Hero/HeroGrid.svelte";
   import HeroSection from "$lib/components/dev/Hero/HeroSection.svelte";
+  import HeroMagic from "$lib/components/dev/landing/HeroMagic.svelte";
 </script>
 
 <svelte:head>
@@ -34,5 +35,6 @@
 </svelte:head>
 <div>
   <HeroSection />
-  <HeroLayout />
+  <HeroGrid />
+  <HeroMagic />
 </div>
