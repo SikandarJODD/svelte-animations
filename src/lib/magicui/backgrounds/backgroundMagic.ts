@@ -261,6 +261,7 @@ export let backgroundMagic: MagicComponent[] = [
       },
     ],
     cncode: cncode,
-    download: `npm i svelte-motion clsx tailwind-merge`,
+    download: `npm i svelte-motion clsx tailwind-merge mini-svg-data-uri`,
+    tailwind: allMagicTailwinds["bg-boxes"],
   },
 ];

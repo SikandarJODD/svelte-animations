@@ -1,5 +1,7 @@
 <script>
   import GridBeam from "../GridBeam.svelte";
+  // for bg-grid : please scroll to the bottom of the page to see the bg-grid :  tailwind.config.ts file.
+  // No need to install base components for this example. just checkout tailwind.config.ts file. 
 </script>
 
 <div
@@ -12,7 +14,7 @@
       </h1>
       <p class="text-neutral-500 max-w-lg">
         Beautiful beam which I btw reverse engineered from <span
-          class="text-primary">Aceternity</span
+          class="text-primary">Aceternity UI</span
         >
       </p>
       <p class="text-neutral-500 max-w-lg">
