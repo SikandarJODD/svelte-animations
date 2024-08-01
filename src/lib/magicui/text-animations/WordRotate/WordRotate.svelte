@@ -3,7 +3,7 @@
   import { onMount } from "svelte";
   import { fly } from "svelte/transition";
 
-  export let words: string[] = ["Hello"];
+  export let words: string[] = ["Hello", "Svelte", "Coders"];
   export let duration: number = 2800;
 
   let className: string = "";
@@ -23,9 +23,10 @@
 
 <div class="overflow-hidden py-2">
   {#key index}
+    <!-- Change In, Out Animation for Rotate Effects -->
     <h1
       in:fly={{ y: -50, delay: 200 }}
-      out:fly={{ y: 60, duration: 200 }}
+      out:fly={{ y: 40, duration: 200 }}
       class={cn(className, "text-center")}
     >
       {words[index]}

@@ -100,6 +100,7 @@ const config: Config = {
 
         // Syntax UI
         "skew-scroll": "skew-scroll 20s linear infinite",
+        pulse: "pulse var(--duration) ease-out infinite",
       },
       keyframes: {
         spin: {
@@ -282,6 +283,10 @@ const config: Config = {
         appear: {
           from: { opacity: "0" },
           to: { opacity: "1" },
+        },
+        pulse: {
+          "0%, 100%": { boxShadow: "0 0 0 0 var(--pulse-color)" },
+          "50%": { boxShadow: "0 0 0 8px var(--pulse-color)" },
         },
         // Syntax UI
         "skew-scroll": {

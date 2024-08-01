@@ -31,7 +31,7 @@
     <Breadcrumb.Root>
       <Breadcrumb.List>
         <Breadcrumb.Item>
-          <Breadcrumb.Link href="/">Docs</Breadcrumb.Link>
+          <Breadcrumb.Link href="#">Docs</Breadcrumb.Link>
         </Breadcrumb.Item>
         <Breadcrumb.Separator />
         <Breadcrumb.Item>
@@ -49,15 +49,18 @@
       {template.desc}
     </p>
     <!-- img -->
-    <div class="mt-4 w-full md:max-w-4xl h-64 md:h-[35rem]">
+    <div class="mt-4 w-full md:max-w-4xl h-fit md:h-fit">
       <img
         src={template.img}
         alt={template.title}
-        class="h-full object-cover object-center rounded-xl"
+        class="h-fit object-contain object-top rounded-xl border border-zinc-300/20 shadow-lg dark:shadow-zinc-950"
       />
     </div>
-    <div class="my-4 w-full md:w-3/6 flex justify-center items-center gap-3">
-      <Button download={template.title} href={template.downloadLink} class="w-full"
+    <div class="my-6 w-full md:w-4/5 flex justify-center items-center gap-3">
+      <Button
+        download={template.title}
+        href={template.downloadLink}
+        class="w-full"
         ><svg
           xmlns="http://www.w3.org/2000/svg"
           width="18"
@@ -110,7 +113,7 @@
       <div>
         <h2 class="text-xl font-semibold mt-4 md:text-2xl">Tech Stack</h2>
       </div>
-      <div class="mt-4 flex items-center gap-2.5">
+      <div class="mt-4 flex items-center gap-2.5 flex-wrap">
         {#each template.techstack as item}
           <Button variant="outline" class="capitalize ">
             {#if allIcons.hasOwnProperty(item)}
@@ -121,14 +124,16 @@
         {/each}
       </div>
     </div>
-    <Separator />
-    <div class="my-4">
+    <div
+      class="bg-zinc-900/40 px-3 py-4 border-l-4 border"
+      id="credits_{template.title}"
+    >
       <h3 class="font-semibold text-2xl mb-1.5">Credits</h3>
-      <p>
+      <p class="text-zinc-400">
         <a
           href="https://magicui.design/"
           target="_blank"
-          class="underline underline-offset-2 text-cyan-400">Magic UI</a
+          class="underline underline-offset-2 text-primary">Magic UI</a
         >
         : This template is Inspired from Magic UI. He is GOD, do visit for Amazing
         Components and Templates.

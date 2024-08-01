@@ -98,7 +98,6 @@
         {
           name: "Ripple",
           link: "/magic/ripple",
-          isNew: true,
         },
         {
           name: "Grid Pattern",
@@ -111,7 +110,6 @@
         {
           name: "Retro Grid",
           link: "/magic/retro-grid",
-          isNew: true,
         },
       ],
     },
@@ -122,6 +120,16 @@
         {
           name: "Shimmer Button",
           link: "/magic/shimmer-button",
+        },
+        {
+          name: "Pulsating Button",
+          link: "/magic/pulsating-button",
+          isNew: true,
+        },
+        {
+          name: "Animated Subscribe",
+          link: "/magic/animated-subscribe",
+          isNew: true,
         },
       ],
     },
@@ -169,6 +177,16 @@
           name: "Words Pull Up",
           link: "/magic/words-pull-up",
         },
+        {
+          name: 'Blur In',
+          link: '/magic/blur-in',
+          isNew: true,
+        },
+        {
+          name: 'Word Rotate',
+          link: '/magic/word-rotate',
+          isNew: true,
+        }
       ],
     },
   ];
@@ -317,7 +335,7 @@
           <a href="/" class="font-bold text-xl mx-1 mt-3 mb-2"
             >Svelte Animations</a
           >
-          <Separator class='mb-2' />
+          <Separator class="mb-2" />
           <ul role="list" class="flex flex-1 flex-col">
             {#each componentsNav as item}
               <li class="mb-1">

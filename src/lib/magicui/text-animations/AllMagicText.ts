@@ -60,7 +60,20 @@ import WordsFadeIn from "./WordsFadeIn/WordsFadeIn.svelte";
 import WordsFadeInCode from "./WordsFadeIn/WordsFadeIn.svelte?raw";
 import WordsFadeInExample from "./WordsFadeIn/WordsFadeInExample.svelte";
 import WordsFadeInExampleCode from "./WordsFadeIn/WordsFadeInExample.svelte?raw";
+
 import { cncode } from "$lib/cncode";
+
+// Blur In
+import BlurInText from "./BlurIn/BlurInText.svelte";
+import BlurInTextCode from "./BlurIn/BlurInText.svelte?raw";
+import BlurInExmaple from "./BlurIn/BlurInExmaple.svelte";
+import BlurInExmapleCode from "./BlurIn/BlurInExmaple.svelte?raw";
+
+// Word Rotate
+import WordRotate from "./WordRotate/WordRotate.svelte";
+import WordRotateCode from "./WordRotate/WordRotate.svelte?raw";
+import WordRotateExample from "./WordRotate/WordRotateExample.svelte";
+import WordRotateExampleCode from "./WordRotate/WordRotateExample.svelte?raw";
 
 export let allMagicText: MagicComponent[] = [
   {
@@ -86,7 +99,7 @@ export let allMagicText: MagicComponent[] = [
   {
     id: "animated-shiny-text",
     name: "Animated Shiny Text",
-    tags: ['Tailwind CSS'],
+    tags: ["Tailwind CSS"],
     desc: "A simple animated shiny text",
     component: AnimatedShinyText,
     code: AnimatedShinyTextCode,
@@ -108,7 +121,7 @@ export let allMagicText: MagicComponent[] = [
   {
     id: "animated-gradient-text",
     name: "Animated Gradient Text",
-    tags: ['Tailwind CSS'],
+    tags: ["Tailwind CSS"],
     desc: "A simple animated gradient text",
     component: AnimatedGradientText,
     code: AnimatedGradientTextCode,
@@ -129,7 +142,7 @@ export let allMagicText: MagicComponent[] = [
   },
   {
     id: "text-reveal",
-    tags: ["Svelte Motion","Tailwind CSS"],
+    tags: ["Svelte Motion", "Tailwind CSS"],
     name: "Text Reveal",
     desc: "A simple text reveal animation",
     component: TextReveal,
@@ -273,5 +286,42 @@ export let allMagicText: MagicComponent[] = [
     ],
     cncode: cncode,
     download: "npm i svelte-motion clsx tailwind-merge",
+  },
+  {
+    id: "blur-in",
+    name: "Blur In",
+    tags: ["Svelte Motion"],
+    desc: "A simple blur in animation",
+    component: BlurInText,
+    code: BlurInTextCode,
+    link: "/magic/blur-in",
+    download: "npm i svelte-motion",
+    cncode: cncode,
+    examples: [
+      {
+        id: 1,
+        name: "Blur In Example",
+        fileName: "BlurInExample.svelte",
+        component: BlurInExmaple,
+        code: BlurInExmapleCode,
+      },
+    ],
+  },
+  {
+    id: "word-rotate",
+    name: "Word Rotate",
+    link: "/magic/word-rotate",
+    desc: "A simple word rotate animation",
+    component: WordRotate,
+    code: WordRotateCode,
+    examples: [
+      {
+        id: 1,
+        name: "Word Rotate Example",
+        fileName: "WordRotateExample.svelte",
+        component: WordRotateExample,
+        code: WordRotateExampleCode,
+      },
+    ],
   },
 ];

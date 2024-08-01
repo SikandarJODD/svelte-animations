@@ -145,12 +145,23 @@
         <ComponentView
           class="{comp?.showGrid === true
             ? ' relative overflow-hidden '
-            : ''} {comp.class}"
+            : ''} {comp.class} {comp?.showDots === true
+            ? ' relative overflow-hidden '
+            : ''}"
         >
           {#if comp?.showGrid}
             <div
               class="absolute h-full w-full bg-[linear-gradient(to_right,#b1b1b12e_1px,transparent_1px),linear-gradient(to_bottom,#b1b1b12e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_10%,transparent_100%)]"
             ></div>
+          {:else if comp?.showDots}
+            <div
+              class="[mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_35%,transparent_100%)] absolute h-full w-full"
+            >
+              <DotPattern
+                class="[mask-image:radial-gradient(600px_circle_at_center,white,transparent)] "
+                fillColor="rgba(120, 120, 120,0.4)"
+              />
+            </div>
           {/if}
           <svelte:component this={comp.component} />
         </ComponentView>
@@ -164,7 +175,8 @@
             Component Usage
           </h1>
           <p class="mb-3 ml-1 text-muted-foreground">
-            Follow the steps to copy the component
+            Copy the below component code and paste it. Checkout Above Example
+            for Usage
           </p>
         </div>
         {#if comp?.download}
