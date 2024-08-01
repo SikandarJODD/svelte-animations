@@ -3,6 +3,12 @@
   import { marked } from "marked";
   import GithubSvg from "$lib/svg/web/github.svg";
   let markdown = `
+  ### Date - 1 August 2024
+  - Added [Word Rotate](https://animation-svelte.vercel.app/magic/word-rotate) Component from Magic UI
+  - Added [Blur In](https://animation-svelte.vercel.app/magic/blur-in) Component from Magic UI
+  - Added [Pulsating Button](https://animation-svelte.vercel.app/magic/pulsating-button) Component from Magic UI
+  - Added [Animation Subscribe Button](https://animation-svelte.vercel.app/magic/animated-subscribe) Component from Magic UI
+  ---
    ### Date - 28 July 2024
    - Launch [Startup Template](https://startup-sve.vercel.app) for SvelteKit, Inspired by Magic UI. ![](${GithubSvg}) [Github](https://github.com/SikandarJODD/startup-template)
    - Launch [Developer Portfolio](https://portfolio-sve.vercel.app) Template, built with SvelteKit and Svelte Animations. ![](${GithubSvg}) [Github](https://github.com/SikandarJODD/portfolio-template)

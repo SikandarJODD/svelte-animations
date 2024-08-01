@@ -24,15 +24,15 @@
   >
     <!-- <Spotlight className="-top-40 left-0 md:left-32 md:-top-40"  /> -->
     <div class=" z-10 mx-auto w-full max-w-7xl p-4 pt-20 md:pt-0">
-      <h2
+      <h1
         class="bg-opacity-50 pb-2 bg-gradient-to-r from-neutral-100 via-neutral-300 to-neutral-500 bg-clip-text text-center text-4xl font-bold text-transparent md:text-7xl"
       >
-        Svelte Components
-      </h2>
+        Svelte Animation Components
+      </h1>
       <p
         class="mx-auto mt-2 max-w-lg text-center text-base md:text-lg font-normal text-neutral-300"
       >
-        Free Components are build using Tailwind CSS, <a
+        Free Components, Build using Tailwind CSS, <a
           href="https://svelte-motion.gradientdescent.de"
           class=" text-teal-300">Svelte Motion</a
         >
@@ -67,36 +67,30 @@
       <div
         class="flex flex-col my-4 md:w-[290px] mx-auto p-4 rounded-xl border justify-center items-center gap-3 bg-neutral-900/10"
       >
-        <div class="flex justify-between w-full items-center">
-          <Button href="/in" class="flex justify-center gap-3" variant="outline"
-            >Svelte Indie UI
-            <Badge variant="success">New</Badge>
-          </Button>
-          <Button href="/fun" class="flex justify-center gap-3" variant="shine">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="22"
-              height="22"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.4"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-circle-play"
-              ><circle cx="12" cy="12" r="10" /><polygon
-                points="10 8 16 12 10 16 10 8"
-              /></svg
-            >
+        <div class="w-full">
+          <Button
+            href="/magic"
+            variant="secondary"
+            class="flex justify-center gap-3 w-full"
+            >Svelte Magic UI
+            <Badge>New</Badge>
           </Button>
         </div>
-        <div class="flex justify-between w-full items-center gap-3">
-          <Button href="/examples" variant="outline">Examples</Button>
-          <Button href="/learnings" variant="outline">Framer Learnings</Button>
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-3">
+          <Button href="/examples" variant="outline" class="md:col-span-2"
+            >Examples</Button
+          >
+          <Button href="/learnings" variant="outline" class="md:col-span-3"
+            >Framer Learnings</Button
+          >
         </div>
-        <div class="flex justify-between w-full items-center gap-3">
-          <Button href="/luxe" variant="animated">Luxe Components</Button>
-          <Button href="/magic" variant="shine">Magic UI</Button>
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-3">
+          <Button href="/luxe" variant="animated" class="md:col-span-3"
+            >Luxe Components</Button
+          >
+          <Button href="/in" variant="shine" class="md:col-span-2"
+            >Indie UI</Button
+          >
         </div>
       </div>
       <div class="flex justify-center items-center">
@@ -119,7 +113,7 @@
             stroke-width="1.4"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="lucide lucide-chevron-down animate-bounce mt-2 "
+            class="lucide lucide-chevron-down animate-bounce mt-2"
             ><path d="m6 9 6 6 6-6" /></svg
           >
         </div>

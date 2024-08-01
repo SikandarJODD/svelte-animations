@@ -11,9 +11,10 @@
     name="description"
     content="List of Svelte Components build using Magic UI, Luxe, Indie UI"
   />
+  <meta property="og:title" content="Svelte Animations Components" />
   <meta
     property="og:image"
-    content="https://i.pinimg.com/736x/15/1a/06/151a0655f530b8f95481bedc62ca90e6.jpg"
+    content="https://i.pinimg.com/736x/cc/87/09/cc8709ac326053127dcd233d241404c8.jpg"
   />
   <meta property="og:site_name" content="Svelte Animations Components" />
   <meta
@@ -24,7 +25,7 @@
 
   <meta
     property="twitter:image"
-    content="https://i.pinimg.com/736x/15/1a/06/151a0655f530b8f95481bedc62ca90e6.jpg"
+    content="https://i.pinimg.com/736x/cc/87/09/cc8709ac326053127dcd233d241404c8.jpg"
   />
   <meta property="twitter:card" content="summary_large_image" />
   <meta

@@ -69,7 +69,7 @@ export let buttonMagic: MagicComponent[] = [
     id: "animated-subscribe",
     name: "Animated Subscribe Button",
     desc: "A button with animated subscribe effect.",
-    tags: ["Tailwind CSS", "Svelte Motion"],
+    tags: ["Svelte Motion"],
     component: AnimatedSubscribeButton,
     code: AnimatedSubscribeButtonCode,
     showDots: true,

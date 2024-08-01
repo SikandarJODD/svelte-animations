@@ -35,7 +35,7 @@
 >
   <span class="flex items-center gap-2 text-neutral-500">
     <SearchIcon size={14} />
-    Components..
+    Search Components
   </span>
   <span
     class="border border-border px-1.5 rounded-[6px] text-[10px] flex items-center gap-0.5"

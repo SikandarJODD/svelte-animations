@@ -115,7 +115,7 @@
         transition:fade
         class="flex flex-1 justify-center px-2 lg:ml-6 lg:justify-end items-center"
       >
-        <div class="w-full max-w-lg lg:max-w-52">
+        <div class="w-full max-w-lg lg:max-w-60">
           <SearchComp />
         </div>
       </div>
