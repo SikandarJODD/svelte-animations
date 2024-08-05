@@ -50,9 +50,9 @@ module.exports = {
         gradient: "gradient 8s linear infinite",
       },
       keyframes: {
-        gradient: {
+       gradient: {
           to: {
-            backgroundPosition: "var(--bg-size) 0",
+            "background-position": "200% center",
           },
         },
       },
@@ -236,7 +236,7 @@ function addVariablesForColors({ addBase, theme }: any) {
 }
   for more details visit : https://github.com/SikandarJODD/svelte-animations/blob/master/tailwind.config.ts
 `,
-'pulsaing-button':`
+  "pulsaing-button": `
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   theme: {
@@ -253,5 +253,5 @@ module.exports = {
     },
   },
 };
-`
+`,
 };

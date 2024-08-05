@@ -238,7 +238,7 @@ const config: Config = {
         },
         gradient: {
           to: {
-            backgroundPosition: "var(--bg-size) 0",
+            "background-position": "200% center",
           },
         },
         orbit: {

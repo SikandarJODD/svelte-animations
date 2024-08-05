@@ -51,13 +51,27 @@
               {#if name === "Components"}
                 <HoverCard.Root
                   open={openComponents}
-                  openDelay={200}
+                  openDelay={150}
                   closeDelay={200}
                   onOpenChange={(isOpen) => (openComponents = isOpen)}
                 >
                   <HoverCard.Trigger
-                    class="rounded-md px-3 py-2 text-sm text-gray-300 hover:bg-gray-700/20 transition-all duration-200 hover:text-white"
+                    class="flex gap-0.5 items-center rounded-md px-3 py-2 text-sm text-gray-300 hover:bg-gray-700/20 transition-all duration-200 hover:text-white"
                     >Components
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide transition-all duration-200 lucide-chevron-right mt-0.5 {openComponents
+                        ? 'rotate-90 '
+                        : ''}"><path d="m9 18 6-6-6-6" /></svg
+                    >
                   </HoverCard.Trigger>
                   <HoverCard.Content class="z-50 w-fit">
                     <div class="w-fit">

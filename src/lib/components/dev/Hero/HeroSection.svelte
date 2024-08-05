@@ -2,6 +2,7 @@
   import Badge from "$lib/components/ui/badge/badge.svelte";
   import Button from "$lib/components/ui/button/button.svelte";
   import DotBackground from "$lib/components/ui/GridDotBg/DotBackground.svelte";
+  import GradientLine from "$lib/luxe/components/codeblock/GradientLine.svelte";
   let getStarsCount = async () => {
     let res = await fetch(
       "https://api.github.com/repos/SikandarJODD/svelte-animations"
@@ -65,7 +66,7 @@
       </div>
 
       <div
-        class="flex flex-col my-4 md:w-[290px] mx-auto p-4 rounded-xl border justify-center items-center gap-3 bg-neutral-900/10"
+        class="relative flex flex-col my-4 md:w-[290px] mx-auto p-4 rounded-xl border justify-center items-center gap-3 bg-neutral-900/15"
       >
         <div class="w-full">
           <Button
