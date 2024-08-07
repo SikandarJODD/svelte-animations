@@ -73,6 +73,12 @@ import DSvgExampleCode from "./DockClaude/example/DSvgExample.svelte?raw";
 import DockExample1 from "./DockClaude/example/DockExample1.svelte";
 import DockExample1Code from "./DockClaude/example/DockExample1.svelte?raw";
 
+//  Circular Progress Bar
+import CircularProgressBar from "./CircularProgressBar/CircularProgressBar.svelte";
+import CircularProgressBarCode from "./CircularProgressBar/CircularProgressBar.svelte?raw";
+import CpbExample from "./CircularProgressBar/CPBExample.svelte";
+import CpbExampleCode from "./CircularProgressBar/CPBExample.svelte?raw";
+
 export let allSubMagicComps: MagicComponent[] = [
   {
     id: "bento-grid",
@@ -414,6 +420,26 @@ export let allSubMagicComps: MagicComponent[] = [
         component: DExample,
         showDots: true,
         code: DExampleCode,
+      },
+    ],
+  },
+  {
+    id: "circular-progress-bar",
+    tags: ["Tailwind CSS"],
+    name: "Animated Circular Progress Bar",
+    desc: "Animated Circular Progress Bar is a component that displays a circular gauge with a percentage value.",
+    link: "/magic/circular-progress-bar",
+    cncode: cncode,
+    download: "npm i svelte-motion clsx tailwind-merge",
+    component: CircularProgressBar,
+    code: CircularProgressBarCode,
+    examples: [
+      {
+        id: 1,
+        name: "Circular Progess Example",
+        component: CpbExample,
+        code: CpbExampleCode,
+        fileName: "CircularProgessExample.svelte",
       },
     ],
   },

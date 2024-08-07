@@ -1,6 +1,6 @@
 <script>
   import { onMount } from "svelte";
-  import CircularPorgressBar from "./CircularPorgressBar.svelte";
+  import CircularProgressBar from "./CircularProgressBar.svelte";
   import { spring, tweened } from "svelte/motion";
   // try out with spring or tweened to see the difference
   let value = spring(0, {
@@ -21,7 +21,7 @@
 </script>
 
 {#key $value}
-  <CircularPorgressBar
+  <CircularProgressBar
     max={100}
     min={0}
     value={$value}
