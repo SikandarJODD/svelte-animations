@@ -1,4 +1,3 @@
-
 <script lang="ts">
   import ComponentView from "$lib/luxe/components/codeblock/ComponentView.svelte";
   import { page } from "$app/stores";
@@ -19,7 +18,10 @@
 </script>
 
 <div class="my-0 md:my-2 mx-2 md:mx-5">
-  <a href="/examples" class="flex items-center gap-1 text-muted-foreground w-fit">
+  <a
+    href="/examples"
+    class="flex items-center gap-1 text-muted-foreground w-fit"
+  >
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="17"
@@ -35,19 +37,21 @@
     >
     Back
   </a>
-  <div class="space-y-7">
-    <h1 class="text-2xl font-bold mt-4 md:text-3xl capitalize my-6">
-      {comp.name}
-    </h1>
-    <div>
-      <ComponentView>
-        <svelte:component this={comp.component} />
-      </ComponentView>
+  {#key comp}
+    <div class="space-y-7">
+      <h1 class="text-2xl font-bold mt-4 md:text-3xl capitalize my-6">
+        {comp.name}
+      </h1>
+      <div>
+        <ComponentView>
+          <svelte:component this={comp.component} />
+        </ComponentView>
+      </div>
+      <div>
+        {#key comp}
+          <CodeBlock code={comp.code} {fileName} />
+        {/key}
+      </div>
     </div>
-    <div>
-      {#key comp}
-        <CodeBlock code={comp.code} {fileName} />
-      {/key}
-    </div>
-  </div>
+  {/key}
 </div>

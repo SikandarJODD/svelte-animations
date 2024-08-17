@@ -38,6 +38,11 @@ import ExampleTextHoverBounceEffectCode from "./comp/ExampleTextHoverBounceEffec
 import ExShiftDropDown from "./comp/shiftingDropDown/ExShiftDropDown.svelte";
 import ExShiftDropDownCode from "./comp/shiftingDropDown/ExShiftDropDown.svelte?raw";
 
+// Encrypt Button Example
+import ExampleEncryptButton from "./comp/ExampleEncryptButton.svelte";
+import ExampleEncryptButtonCode from "./comp/ExampleEncryptButton.svelte?raw";
+
+
 type Component = {
     id: number;
     name: string;
@@ -127,4 +132,12 @@ export let animationExamples: Component[] = [
         link: '/examples/9',
         code: ExampleSlideTabCode
     },
+    {
+        id:11,
+        name:'Encrypt Button',
+        desc:'Encrypt Button Effect using Svelte',
+        component: ExampleEncryptButton,
+        link:'/examples/11',
+        code: ExampleEncryptButtonCode
+    }
 ]

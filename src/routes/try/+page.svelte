@@ -1,31 +1,51 @@
 <script>
-  import { onMount } from "svelte";
-  import CircularPorgressBar from "./CircularPorgressBar.svelte";
-  import { spring, tweened } from "svelte/motion";
-  // try out with spring or tweened to see the difference
-  let value = spring(0, {
-    stiffness: 0.03,
-    damping: 0.9,
-  });
-  onMount(async () => {
-    value.set(20);
-    await new Promise((r) => setTimeout(r, 1800));
-    value.set(40);
-    await new Promise((r) => setTimeout(r, 1600));
-    value.set(60);
-    await new Promise((r) => setTimeout(r, 1200));
-    value.set(80);
-    await new Promise((r) => setTimeout(r, 1200));
-    value.set(100);
-  });
+  import MagicCard from "$lib/magicui/SpecialEffects/MagicCard/MagicCard.svelte";
+  import SvelteSvg from "$lib/svg/web/svelte.svg";
+  import SupabaseSvg from "$lib/svg/web/supabase.svg";
+  import ShineBorder from "$lib/magicui/SpecialEffects/ShineBorder/ShineBorder.svelte";
+  let color = "#fff";
 </script>
 
-{#key $value}
-  <CircularPorgressBar
-    max={100}
-    min={0}
-    value={$value}
-    gaugePrimaryColor="rgb(79 70 229)"
-    gaugeSecondaryColor="rgba(0, 50, 100, 0.1)"
-  />
-{/key}
+<!-- 
+<div
+  class="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl"
+>
+  <span
+    class="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10"
+  >
+    Particles
+  </span>
+  <Particles className="absolute inset-0" refresh={true} />
+</div> -->
+<div
+  class={"flex h-[500px] w-full flex-col gap-4 lg:h-[250px] lg:flex-row px-32 mt-32"}
+>
+  <MagicCard
+    class="cursor-pointer flex-col items-center justify-center shadow-2xl whitespace-nowrap text-4xl group"
+    gradientColor="#043634"
+    gradientSize={300}
+  >
+    <div
+      class="group-hover:text-[#2EFFBD] transition-all duration-500 flex gap-1.5 justify-center items-center font-semibold"
+    >
+      <img src={SupabaseSvg} alt="svelte_logo" class="size-10 mt-1.5" />
+      Supabase
+    </div>
+  </MagicCard>
+  <MagicCard
+    class="cursor-pointer flex-col items-center justify-center shadow-2xl whitespace-nowrap text-4xl group"
+    gradientColor="#4D2506"
+  >
+    <div
+      class="group-hover:text-[#FF7700] transition-all duration-500 flex gap-1.5 justify-center items-center font-semibold"
+    >
+      <img src={SvelteSvg} alt="svelte_logo" class="size-10 mt-1.5" />
+      Svelte
+    </div>
+  </MagicCard>
+</div>
+<div class="flex justify-center items-center w-full min-h-52">
+  <ShineBorder class="text-center text-2xl font-bold capitalize" color="white">
+    Shine
+  </ShineBorder>
+</div>

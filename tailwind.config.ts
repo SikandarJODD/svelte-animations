@@ -288,6 +288,17 @@ const config: Config = {
           "0%, 100%": { boxShadow: "0 0 0 0 var(--pulse-color)" },
           "50%": { boxShadow: "0 0 0 8px var(--pulse-color)" },
         },
+        "shine-pulse": {
+          "0%": {
+            "background-position": "0% 0%",
+          },
+          "50%": {
+            "background-position": "100% 100%",
+          },
+          to: {
+            "background-position": "0% 0%",
+          },
+        },
         // Syntax UI
         "skew-scroll": {
           "0%": {
