@@ -53,18 +53,16 @@
         {
           name: "Globe",
           link: "/magic/globe",
-          isNew: true,
         },
         {
           name: "Dock Menu",
           link: "/magic/dock",
-          isNew: true,
         },
         {
-          name:'Circular Progress Bar',
-          link:'/magic/circular-progress-bar',
-          isNew:true
-        }
+          name: "Circular Progress Bar",
+          link: "/magic/circular-progress-bar",
+          isNew: true,
+        },
       ],
     },
     {
@@ -79,6 +77,26 @@
           name: "Border Beam",
           link: "/magic/border-beam",
         },
+        {
+          name: "Shine Border",
+          link: "/magic/shine-border",
+          isNew: true,
+        },
+        {
+          name: "Cool Mode",
+          link: "/magic/cool-mode",
+          isNew: true,
+        },
+        {
+          name: "Magic Card",
+          link: "/magic/magic-card",
+          isNew: true,
+        },
+        {
+          name: "Particles",
+          link: "/magic/particles",
+          isNew: true,
+        }
       ],
     },
     {
@@ -134,7 +152,6 @@
         {
           name: "Animated Subscribe",
           link: "/magic/animated-subscribe",
-          isNew: true,
         },
       ],
     },
@@ -183,15 +200,15 @@
           link: "/magic/words-pull-up",
         },
         {
-          name: 'Blur In',
-          link: '/magic/blur-in',
+          name: "Blur In",
+          link: "/magic/blur-in",
           isNew: true,
         },
         {
-          name: 'Word Rotate',
-          link: '/magic/word-rotate',
+          name: "Word Rotate",
+          link: "/magic/word-rotate",
           isNew: true,
-        }
+        },
       ],
     },
   ];

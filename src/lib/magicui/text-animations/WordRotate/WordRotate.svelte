@@ -4,7 +4,7 @@
   import { fly } from "svelte/transition";
 
   export let words: string[] = ["Hello", "Svelte", "Coders"];
-  export let duration: number = 2800;
+  export let duration: number = 2100;
 
   let className: string = "";
   export { className as class };

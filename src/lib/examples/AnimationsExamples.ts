@@ -138,6 +138,7 @@ export let animationExamples: Component[] = [
         desc:'Encrypt Button Effect using Svelte',
         component: ExampleEncryptButton,
         link:'/examples/11',
-        code: ExampleEncryptButtonCode
+        code: ExampleEncryptButtonCode,
+        
     }
 ]

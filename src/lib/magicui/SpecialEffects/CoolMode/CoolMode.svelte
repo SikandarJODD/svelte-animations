@@ -1,6 +1,5 @@
 <script lang="ts">
   import { onMount, onDestroy } from "svelte";
-  import { writable } from "svelte/store";
 
   interface BaseParticle {
     element: HTMLElement | SVGSVGElement;
@@ -222,7 +221,7 @@
     };
   }
 
-  let options: CoolParticleOptions;
+  export let options: CoolParticleOptions;
   let containerElement: HTMLElement;
 
   onMount(() => {
@@ -233,10 +232,6 @@
   });
 </script>
 
-<div bind:this={containerElement}>
+<div bind:this={containerElement} class="z-50">
   <slot>Hello</slot>
 </div>
-
-<style>
-  /* Add any styles you need here */
-</style>

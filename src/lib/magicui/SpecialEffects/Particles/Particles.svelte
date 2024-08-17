@@ -1,6 +1,5 @@
 <script lang="ts">
-  import { onMount, onDestroy } from "svelte";
-  import { tick } from "svelte";
+  import { onMount } from "svelte";
 
   export let className: string = "";
   export let quantity: number = 100;

@@ -6,7 +6,7 @@
   export let borderRadius: number = 8;
   export let borderWidth: number = 1;
   export let duration: number = 14;
-  export let color: TColorProp = "#000000";
+  export let color: TColorProp = ["#4FF9FF"];
   let className: string = "";
   export { className as class };
 </script>
@@ -34,5 +34,6 @@
       "
     class="before:bg-shine-size before:absolute before:inset-0 before:aspect-square before:size-full before:rounded-[var(--border-radius)] before:p-[var(--border-width)] before:will-change-[background-position] before:content-[''] before:![-webkit-mask-composite:xor] before:![mask-composite:exclude] before:[background-image:var(--background-radial-gradient)] before:[background-size:300%_300%] before:[mask:var(--mask-linear-gradient)] motion-safe:before:animate-[shine-pulse_var(--shine-pulse-duration)_infinite_linear]"
   ></div>
-  <slot />
+  <!-- This is Default Slot -->
+  <slot>Default</slot>
 </div>

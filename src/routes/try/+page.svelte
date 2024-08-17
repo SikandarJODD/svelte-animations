@@ -3,7 +3,6 @@
   import SvelteSvg from "$lib/svg/web/svelte.svg";
   import SupabaseSvg from "$lib/svg/web/supabase.svg";
   import ShineBorder from "$lib/magicui/SpecialEffects/ShineBorder/ShineBorder.svelte";
-  let color = "#fff";
 </script>
 
 <!-- 

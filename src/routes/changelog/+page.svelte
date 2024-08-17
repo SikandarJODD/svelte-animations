@@ -3,6 +3,14 @@
   import { marked } from "marked";
   import GithubSvg from "$lib/svg/web/github.svg";
   let markdown = `
+
+  ### Date - 18 August 2024
+  - Added [Particles Component](https://animation-svelte.vercel.app/magic/particles) from Magic UI
+  - Added [Cool Mode](https://animation-svelte.vercel.app/magic/cool-mode) from Magic UI
+  - Added [Shine Border](https://animation-svelte.vercel.app/magic/shine-border) from Magic UI
+  - Added [Magic Card](https://animation-svelte.vercel.app/magic/magic-card) from Magic UI
+  - Added [Encrypt Button](https://animation-svelte.vercel.app/examples/11) from Hover.dev
+
   ### Date - 1 August 2024
   - Added [Word Rotate](https://animation-svelte.vercel.app/magic/word-rotate) Component from Magic UI
   - Added [Blur In](https://animation-svelte.vercel.app/magic/blur-in) Component from Magic UI

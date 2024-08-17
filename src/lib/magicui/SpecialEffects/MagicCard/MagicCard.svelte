@@ -1,13 +1,13 @@
 <script lang="ts">
   import { Motion, useMotionValue, useMotionTemplate } from "svelte-motion";
   import { onMount } from "svelte";
+  import { cn } from "$lib/utils";
 
   export let gradientSize: number = 200;
   export let gradientColor: string = "#262626";
   export let gradientOpacity: number = 0.8;
   let className: string = "";
   export { className as class };
-
 
   let gradSize = useMotionValue(gradientSize);
   let gradColor = useMotionValue(gradientColor);
@@ -33,20 +33,28 @@
 </script>
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
+<!-- I have added py-4 in below code, you can customize the component as per needs -->
 <div
   on:mousemove={handleMouseMove}
   on:mouseleave={handleMouseLeave}
-  class="group relative flex size-full overflow-hidden rounded-xl bg-neutral-100 dark:bg-neutral-900 border text-black dark:text-white {className}"
+  class={cn(
+    "group relative flex size-full overflow-hidden rounded-xl bg-neutral-100 dark:bg-neutral-900 border text-black dark:text-white justify-center py-4",
+    className
+  )}
 >
   <div class="relative z-10">
-    <slot />
+    <!-- Default  -->
+    <slot>
+      <div class="flex items-center justify-center h-full text-center">
+        <p class="text-2xl">Magic Card</p>
+      </div>
+    </slot>
   </div>
   <Motion
     style={{
       background: bg,
       opacity: gradientOpacity,
     }}
-   
     let:motion
   >
     <div
