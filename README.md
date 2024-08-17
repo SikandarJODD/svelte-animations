@@ -1,6 +1,6 @@
 # Simple Components
 
-Build using Tailwind CSS and [**Svelte motion**]().
+Build using Tailwind CSS and [**Svelte motion**](https://svelte-motion.gradientdescent.de).
 
 ---
 
@@ -11,43 +11,31 @@ Build using Tailwind CSS and [**Svelte motion**]().
 - GitHub : [Repo](https://github.com/SikandarJODD/portfolio-template)
   ![Preview](/static/portfolio_svelte.png)
 
-#### [Startup Landing Page](https://startup-sve.vercel.app)
+#### [Start-up Landing Page](https://startup-sve.vercel.app)
 
 - GitHub : [Repo](https://github.com/SikandarJODD/startup-template)
   ![Preview](/static//startup_sve.png)
 
 ### New Components
 
-| Name                      | Preview                                                               | Section  |
-| ------------------------- | --------------------------------------------------------------------- | -------- |
-| Box Reveal                | [Visit](https://animation-svelte.vercel.app/magic/box-reveal)         | Magic UI |
-| Dock Menu                 | [Visit](https://animation-svelte.vercel.app/magic/dock)               | Magic UI |
-| Animated Subscribe Button | [Visit](https://animation-svelte.vercel.app/magic/animated-subscribe) | Magic UI |
-| Pulsating Button          | [Visit](https://animation-svelte.vercel.app/magic/pulsating-button)   | Magic UI |
-| Blur In                   | [Visit](https://animation-svelte.vercel.app/magic/blur-in)            | Magic UI |
-| Word Rotate               | [Visit](https://animation-svelte.vercel.app/magic/word-rotate)        | Magic UI |
+| Name           | Preview                                                        | Section  |
+| -------------- | -------------------------------------------------------------- | -------- |
+| Particles      | [Visit](https://animation-svelte.vercel.app/magic/particles)  | Magic UI |
+| Cool Mode      | [Visit](https://animation-svelte.vercel.app/magic/cool-mode)  | Magic UI |
+| Shine Border   | [Visit](https://animation-svelte.vercel.app/magic/shine-border)  | Magic UI |
+| Magic Card     | [Visit](https://animation-svelte.vercel.app/magic/magic-card)  | Magic UI |
+| Encrypt Button | [Visit](https://animation-svelte.vercel.app/magic/examples/11)  | Magic UI |
 
 ### Svelte Animations Examples
 
 | Effects        | Description                                             |
 | -------------- | ------------------------------------------------------- |
 | Link Hover     | It's show small Image after hovering `a` tag            |
-| Modul Div      | Crossfade Animation on Div, Inspired from modul.so      |
+| Modul Div.     | Crossfade Animation on Div, Inspired from modul.so      |
 | Spring Div     | Simple Usage of Spring on Extending div height & width  |
 | Dynamic Island | Effect inspired from Emil Kowalski : Time, Ring, Silent |
 | Reveal Link    | Reveal Link on Hover, Inspired from hover.dev           |
 
-# Framer Motion Examples
-
-| Effects                | Description                                |
-| ---------------------- | ------------------------------------------ |
-| Tweened, Spring        | Simple tweened and spring                  |
-| Duration Based Spring  | includes, stiffness, bounce                |
-| Repeat Reverse         | repeat : infinity, reverseType : 'reverse' |
-| Gestures               | While Hover, While Tap, While Drag         |
-| Cycling through States | manuallt going via .next() and .prev()     |
-| Animation Sequence     | going through sequence of animations       |
-| Drag                   | Transform, 3D Transform                    |
 
 ### Feedback
 
