@@ -79,6 +79,16 @@ import CircularProgressBarCode from "./CircularProgressBar/CircularProgressBar.s
 import CpbExample from "./CircularProgressBar/CPBExample.svelte";
 import CpbExampleCode from "./CircularProgressBar/CPBExample.svelte?raw";
 
+// Hero Video Dialog
+import HeroVideoDialog from "./HeroVideoDialog/HeroVideoDialog.svelte";
+import HeroVideoDialogCode from "./HeroVideoDialog/HeroVideoDialog.svelte?raw";
+import HvDex1 from "./HeroVideoDialog/examples/HVDex1.svelte";
+import HvDex1Code from "./HeroVideoDialog/examples/HVDex1.svelte?raw";
+import HvDex2 from "./HeroVideoDialog/examples/HVDex2.svelte";
+import HvDex2Code from "./HeroVideoDialog/examples/HVDex2.svelte?raw";
+import HvDex3 from "./HeroVideoDialog/examples/HVDex3.svelte";
+import HvDex3Code from "./HeroVideoDialog/examples/HVDex3.svelte?raw";
+
 export let allSubMagicComps: MagicComponent[] = [
   {
     id: "bento-grid",
@@ -440,6 +450,39 @@ export let allSubMagicComps: MagicComponent[] = [
         component: CpbExample,
         code: CpbExampleCode,
         fileName: "CircularProgessExample.svelte",
+      },
+    ],
+  },
+  {
+    id: "hero-video-dialog",
+    name: "Hero Video Dialog",
+    tags: ["Tailwind CSS", "Svelte-Motion"],
+    desc: "A simple hero video dialog component from Magic UI",
+    link: "/magic/hero-video-dialog",
+    cncode: cncode,
+    download: "npm i svelte-motion clsx tailwind-merge",
+    code: HeroVideoDialogCode,
+    examples: [
+      {
+        id: 1,
+        name: "Example",
+        component: HvDex1,
+        code: HvDex1Code,
+        fileName: "VideoDialogExample.svelte",
+      },
+      {
+        id: 2,
+        name: "Top-in-bottom-out",
+        component: HvDex2,
+        code: HvDex2Code,
+        fileName: "VideoDialogExample.svelte",
+      },
+      {
+        id: 3,
+        name: "From-right",
+        component: HvDex3,
+        code: HvDex3Code,
+        fileName: "VideoDialogExample.svelte",
       },
     ],
   },

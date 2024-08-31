@@ -27,6 +27,11 @@
       heading: "Components",
       sub: [
         {
+          name:'Hero Video Dialog',
+          link:'/magic/hero-video-dialog',
+          isNew:true
+        },
+        {
           name: "Orbiting Circles",
           link: "/magic/orbiting-circles",
         },
