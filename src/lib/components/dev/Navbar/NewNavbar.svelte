@@ -1,4 +1,6 @@
 <script>
+  import GithubSvg from "$lib/svg/web/github.svg";
+  import TwitterSvg from "$lib/svg/web/x.svg";
   import { page } from "$app/stores";
   import SearchComp from "../searchComp/SearchComp.svelte";
   import { fade } from "svelte/transition";
@@ -19,6 +21,7 @@
   import { cn } from "$lib/utils";
   import { navs } from "$lib";
   import { slide } from "svelte/transition";
+  import Button from "$lib/components/ui/button/button.svelte";
   let ismobileMenuOpen = false;
   let openComponents = false;
   $: routeId = $page.url.pathname;
@@ -28,7 +31,7 @@
   <div class="mx-auto max-w-7xl px-2 sm:px-4 lg:px-8">
     <div class="relative flex h-14 items-center justify-between">
       <div class="flex items-center px-2 lg:px-0">
-        <div class="flex-shrink-0">
+        <a href="/" class="flex-shrink-0">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="28"
@@ -36,15 +39,15 @@
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="1"
+            stroke-width="1.5"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="lucide lucide-floor-plan"
-            ><path
-              d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-5"
-            /><path d="M9 3v7" /><path d="M21 10h-7" /><path d="M3 15h9" /></svg
+            class="lucide lucide-tab-slash"
+            ><path d="m14.5 9.5-5 5" /><path
+              d="M4 20V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v14"
+            /><path d="M22 20H2" /></svg
           >
-        </div>
+        </a>
         <div class="hidden lg:ml-6 lg:block">
           <div class="flex space-x-3">
             {#each mainNavs as { link, name }}
@@ -129,8 +132,27 @@
         transition:fade
         class="flex flex-1 justify-center px-2 lg:ml-6 lg:justify-end items-center"
       >
-        <div class="w-full max-w-lg lg:max-w-60">
+        <div
+          class="w-full max-w-lg lg:max-w-80 flex justify-center items-center gap-3"
+        >
           <SearchComp />
+          <Button
+            variant="link"
+            href="https://github.com/SikandarJODD/svelte-animations?tab=readme-ov-file#simple-components"
+            target="_blank"
+            size="icon"
+            class='hidden sm:block'
+          >
+            <img src={GithubSvg} alt="twitter_logo" class="size-6" />
+          </Button>
+          <Button
+            variant="link"
+            href="https://twitter.com/Sikandar_Bhide"
+            target="_blank"
+            size="icon"
+          >
+            <img src={TwitterSvg} alt="twitter_logo" class="size-5" />
+          </Button>
         </div>
       </div>
       <div class="flex lg:hidden">

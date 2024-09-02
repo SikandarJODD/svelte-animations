@@ -34,8 +34,8 @@
   class="w-full bg-background-muted flex items-center justify-between gap-2 px-3 py-2 rounded-lg border text-sm border-border duration-300 hover:bg-neutral-900"
 >
   <span class="flex items-center gap-2 text-neutral-500">
-    <SearchIcon size={14} />
-    Search Components
+    <SearchIcon size={14} class='mt-px' />
+    Components 
   </span>
   <span
     class="border border-border px-1.5 rounded-[6px] text-[10px] flex items-center gap-0.5"

@@ -1,4 +1,4 @@
-# Simple Components
+# Svelte Components 
 
 Build using Tailwind CSS and [**Svelte motion**](https://svelte-motion.gradientdescent.de).
 
