@@ -75,6 +75,10 @@ import WordRotateCode from "./WordRotate/WordRotate.svelte?raw";
 import WordRotateExample from "./WordRotate/WordRotateExample.svelte";
 import WordRotateExampleCode from "./WordRotate/WordRotateExample.svelte?raw";
 
+// Sparkle Text
+import SparklesText from "./SparklesText/SparklesText.svelte";
+import SparklesTextCode from "./SparklesText/SparklesText.svelte?raw";
+
 export let allMagicText: MagicComponent[] = [
   {
     id: "number-ticker",
@@ -323,5 +327,16 @@ export let allMagicText: MagicComponent[] = [
         code: WordRotateExampleCode,
       },
     ],
+  },
+  {
+    id: "sparkles-text",
+    name: "Sparkles Text",
+    link: "/magic/sparkles-text",
+    desc: "A dynamic text that generates continous sparkles with smooth",
+    component: SparklesText,
+    download: "npm i clsx tailwind-merge",
+    cncode: cncode,
+    code: SparklesTextCode,
+    
   },
 ];

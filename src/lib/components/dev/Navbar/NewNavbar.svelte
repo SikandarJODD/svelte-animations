@@ -133,7 +133,7 @@
         class="flex flex-1 justify-center px-2 lg:ml-6 lg:justify-end items-center"
       >
         <div
-          class="w-full max-w-lg lg:max-w-80 flex justify-center items-center gap-3"
+          class="w-full max-w-lg lg:max-w-80 flex justify-center items-center gap-1 md:gap-3"
         >
           <SearchComp />
           <Button
@@ -141,7 +141,7 @@
             href="https://github.com/SikandarJODD/svelte-animations?tab=readme-ov-file#simple-components"
             target="_blank"
             size="icon"
-            class='hidden sm:block'
+            class='hidden sm:flex'
           >
             <img src={GithubSvg} alt="twitter_logo" class="size-6" />
           </Button>

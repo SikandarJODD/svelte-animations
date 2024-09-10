@@ -90,7 +90,6 @@
         {
           name: "Cool Mode",
           link: "/magic/cool-mode",
-          isNew: true,
         },
         {
           name: "Magic Card",
@@ -111,7 +110,6 @@
         {
           name: "Blur Fade",
           link: "/magic/blur-fade",
-          isNew: true,
         },
       ],
     },
@@ -139,6 +137,11 @@
           name: "Retro Grid",
           link: "/magic/retro-grid",
         },
+        {
+          name:'Flickering Grid',
+          link:'/magic/flickering-grid',
+          isNew:true
+        }
       ],
     },
     {
@@ -152,7 +155,6 @@
         {
           name: "Pulsating Button",
           link: "/magic/pulsating-button",
-          isNew: true,
         },
         {
           name: "Animated Subscribe",
@@ -212,8 +214,12 @@
         {
           name: "Word Rotate",
           link: "/magic/word-rotate",
-          isNew: true,
         },
+        {
+          name: "Sparkles Text",
+          link: "/magic/sparkles-text",
+          isNew: true,
+        }
       ],
     },
   ];

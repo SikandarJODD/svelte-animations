@@ -48,6 +48,15 @@ import BgDarkTiles from "./backgroundLights/BgDarkTiles.svelte";
 import GridBeamExample from "./backgroundLights/examples/GridBeamExample.svelte";
 import GridBeamExampleCode from "./backgroundLights/examples/GridBeamExample.svelte?raw";
 import GridBeamCode from "./backgroundLights/GridBeam.svelte?raw";
+
+// Flickering Grid
+import FlickeringGrid from "./FlickeringGrid/FlickeringGrid.svelte";
+import Fg1 from "./FlickeringGrid/examples/FG1.svelte";
+import Fg2 from "./FlickeringGrid/examples/FG2.svelte";
+import FlickeringGridCode from "./FlickeringGrid/FlickeringGrid.svelte?raw";
+import Fg1Code from "./FlickeringGrid/examples/FG1.svelte?raw";
+import Fg2Code from "./FlickeringGrid/examples/FG2.svelte?raw";
+
 import { cncode } from "$lib/cncode";
 
 type MagicComponent = {
@@ -263,5 +272,31 @@ export let backgroundMagic: MagicComponent[] = [
     cncode: cncode,
     download: `npm i svelte-motion clsx tailwind-merge mini-svg-data-uri`,
     tailwind: allMagicTailwinds["bg-boxes"],
+  },
+  {
+    id: "flickering-grid",
+    name: "Flickering Grid",
+    tags: ["Tailwind CSS"],
+    desc: "A flickering grid pattern made with SVGs, fully customizable using Tailwind CSS.",
+    link: "/magic/flickering-grid",
+    code: FlickeringGridCode,
+    examples: [
+      {
+        id: 1,
+        name: "Flickering Grid",
+        fileName: "FlickeringGrid.svelte",
+        component: Fg1,
+        code: Fg1Code,
+        showGrid: true,
+      },
+      {
+        id:2,
+        name:'Masked Flickering Grid',
+        fileName:'MaskedFlickeringGrid.svelte',
+        component:Fg2,
+        code:Fg2Code,
+        showGrid:true
+      }
+    ],
   },
 ];
