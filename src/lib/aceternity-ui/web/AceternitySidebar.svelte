@@ -9,217 +9,55 @@
   type compNavs = {
     id: number;
     heading: string;
-    sub: { name: string; link: string; isNew?: boolean }[];
+    sub: {
+      name: string;
+      link: string;
+      isNew?: boolean;
+      target_blank?: boolean;
+    }[];
   };
   export let componentsNav: compNavs[] = [
     {
       id: 1,
-      heading: "Getting Started",
+      heading: "Follow for Updates",
       sub: [
         {
-          name: "Browse Components",
-          link: "/magic",
-        },
-      ],
-    },
-    {
-      id: 5,
-      heading: "Components",
-      sub: [
-        {
-          name:'Hero Video Dialog',
-          link:'/magic/hero-video-dialog',
-          isNew:true
-        },
-        {
-          name: "Orbiting Circles",
-          link: "/magic/orbiting-circles",
-        },
-        {
-          name: "Marquee",
-          link: "/magic/marquee",
-        },
-        {
-          name: "Bento Grid",
-          link: "/magic/bento-grid",
-        },
-        {
-          name: "Simple Cards",
-          link: "/magic/simple-cards",
-        },
-        {
-          name: "Animated Beam",
-          link: "/magic/animated-beam",
-        },
-        {
-          name: "File Tree",
-          link: "/magic/file-tree",
-        },
-        {
-          name: "Globe",
-          link: "/magic/globe",
-        },
-        {
-          name: "Dock Menu",
-          link: "/magic/dock",
-        },
-        {
-          name: "Circular Progress Bar",
-          link: "/magic/circular-progress-bar",
-          isNew: true,
-        },
-      ],
-    },
-    {
-      id: 6,
-      heading: "Special Effects",
-      sub: [
-        {
-          name: "Meteors",
-          link: "/magic/meteors",
-        },
-        {
-          name: "Border Beam",
-          link: "/magic/border-beam",
-        },
-        {
-          name: "Shine Border",
-          link: "/magic/shine-border",
-          isNew: true,
-        },
-        {
-          name: "Cool Mode",
-          link: "/magic/cool-mode",
-        },
-        {
-          name: "Magic Card",
-          link: "/magic/magic-card",
-          isNew: true,
-        },
-        {
-          name: "Particles",
-          link: "/magic/particles",
-          isNew: true,
-        }
-      ],
-    },
-    {
-      id: 7,
-      heading: "Animations",
-      sub: [
-        {
-          name: "Blur Fade",
-          link: "/magic/blur-fade",
+          name: "Twitter @Sikandar_Bhide",
+          link: "https://twitter.com/Sikandar_Bhide",
+          target_blank: true,
         },
       ],
     },
     {
       id: 2,
-      heading: "Backgrounds",
+      heading: "Installation",
       sub: [
         {
-          name: "Dot Pattern",
-          link: "/magic/dot-pattern",
+          name: "Install Sveltekit",
+          link: "/a/install-sveltekit",
         },
         {
-          name: "Ripple",
-          link: "/magic/ripple",
+          name: "Install Tailwind CSS",
+          link: "/a/install-tailwindcss",
         },
         {
-          name: "Grid Pattern",
-          link: "/magic/grid-pattern",
+          name: "Add Utilities",
+          link: "/a/add-utilities",
         },
-        {
-          name: "Background Boxes",
-          link: "/magic/bg-boxes",
-        },
-        {
-          name: "Retro Grid",
-          link: "/magic/retro-grid",
-        },
-        {
-          name:'Flickering Grid',
-          link:'/magic/flickering-grid',
-          isNew:true
-        }
       ],
     },
     {
       id: 3,
-      heading: "Buttons",
+      heading: "Components",
       sub: [
         {
-          name: "Shimmer Button",
-          link: "/magic/shimmer-button",
+          name: "Lens",
+          link: "/a/components/lens",
         },
         {
-          name: "Pulsating Button",
-          link: "/magic/pulsating-button",
+          name: "Bento Grid",
+          link: "/a/components/bento-grid",
         },
-        {
-          name: "Animated Subscribe",
-          link: "/magic/animated-subscribe",
-        },
-      ],
-    },
-    {
-      id: 4,
-      heading: "Text Animations",
-      sub: [
-        {
-          name: "Text Reveal",
-          link: "/magic/text-reveal",
-        },
-        {
-          name: "Number Ticker",
-          link: "/magic/number-ticker",
-        },
-        {
-          name: "Animated Gradient Text",
-          link: "/magic/animated-gradient-text",
-        },
-        {
-          name: "Animated Shiny Text",
-          link: "/magic/animated-shiny-text",
-        },
-        {
-          name: "Box Reveal",
-          link: "/magic/box-reveal",
-        },
-        {
-          name: "Flip Text",
-          link: "/magic/flip-text",
-        },
-        {
-          name: "Gradual Spacing",
-          link: "/magic/gradual-spacing",
-        },
-        {
-          name: "Letter Pull up",
-          link: "/magic/letter-pull-up",
-        },
-        {
-          name: "Words Fade In",
-          link: "/magic/words-fade-in",
-        },
-        {
-          name: "Words Pull Up",
-          link: "/magic/words-pull-up",
-        },
-        {
-          name: "Blur In",
-          link: "/magic/blur-in",
-          isNew: true,
-        },
-        {
-          name: "Word Rotate",
-          link: "/magic/word-rotate",
-        },
-        {
-          name: "Sparkles Text",
-          link: "/magic/sparkles-text",
-          isNew: true,
-        }
       ],
     },
   ];
@@ -251,8 +89,8 @@
       class="{mobileMenu
         ? '-translate-x-full'
         : 'translate-x-0'} fixed inset-0 flex
-        transition ease-in-out duration-300 transform
-        "
+          transition ease-in-out duration-300 transform
+          "
     >
       <div
         class="{mobileMenu
@@ -291,7 +129,7 @@
             class="flex h-14 shrink-0 items-center border-b border-primary/50"
           >
             <a href="/" class="ml-2 mt-px text-xl font-semibold"
-              >Svelte Components</a
+              >Svelte Aceternity UI</a
             >
           </div>
           <nav class="flex flex-1 flex-col">
@@ -320,15 +158,7 @@
                       <div class="font-medium mb-0.5">
                         {cnavs.heading}
                       </div>
-                      {#each cnavs.sub.sort((a, b) => {
-                        if (a.name > b.name) {
-                          return 1;
-                        }
-                        if (b.name > a.name) {
-                          return -1;
-                        }
-                        return 0;
-                      }) as item}
+                      {#each cnavs.sub as item}
                         <li>
                           <a
                             on:click={() => {
@@ -358,7 +188,7 @@
   <!-- Static sidebar for desktop -->
   {#if isLoading}
     <div
-      class="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-64 lg:flex-col mt-16"
+      class="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-64 lg:flex-col mt-[57.9px]"
     >
       <!-- Sidebar component, swap this element with another sidebar if you like -->
       <div
@@ -366,9 +196,8 @@
       >
         <nav class="flex flex-1 flex-col mt-2 mb-32">
           <a href="/" class="font-bold text-xl mx-1 mt-3 mb-2"
-            >Svelte Animations</a
+            >Svelte Aceternity UI</a
           >
-          <Separator class="mb-2" />
           <ul role="list" class="flex flex-1 flex-col">
             {#each componentsNav as item}
               <li class="mb-1">
@@ -380,21 +209,14 @@
                       {item.heading}
                     </div>
                   </li>
-                  {#each item.sub.sort((a, b) => {
-                    if (a.name > b.name) {
-                      return 1;
-                    }
-                    if (b.name > a.name) {
-                      return -1;
-                    }
-                    return 0;
-                  }) as subItem}
+                  {#each item.sub as subItem}
                     <li>
                       <a
                         href={subItem.link}
+                        target={subItem.target_blank ? "_blank" : ""}
                         class="group {subItem.link == routeID
-                          ? 'text-primary bg-sky-100 dark:bg-neutral-900 border-border font-medium'
-                          : 'text-primary/60 '} capitalize flex justify-between items-center gap-x-2.5 p-2 text-sm leading-6 select-none pl-3 py-[5.2px] border border-transparent rounded-sm dark:hover:bg-neutral-900 transition-all duration-300"
+                          ? 'text-primary  border-border font-medium'
+                          : 'text-primary/60 '} capitalize flex justify-between items-center gap-x-2.5 p-2 text-sm leading-6 select-none pl-3 py-[5.2px] border border-transparent rounded-sm hover:translate-x-1.5 hover:text-emerald-500 tracking-normal transition-all duration-200"
                       >
                         {subItem.name}
                         {#if subItem?.isNew}

@@ -21,7 +21,7 @@
 
 <DotBackground>
   <div
-    class="relative flex h-[92vh] overflow-hidden rounded-md px-4 antialiased md:items-center md:justify-center lg:px-32"
+    class="relative flex h-[97vh] md:h-[92vh] overflow-hidden rounded-md px-4 antialiased md:items-center md:justify-center lg:px-32"
   >
     <!-- <Spotlight className="-top-40 left-0 md:left-32 md:-top-40"  /> -->
     <div class=" z-10 mx-auto w-full max-w-7xl p-4 pt-20 md:pt-0">
@@ -93,6 +93,15 @@
             >Indie UI</Button
           >
         </div>
+        <!-- <div class="w-full">
+          <Button
+            href="/a"
+            variant="secondary"
+            class="flex justify-center gap-3 w-full"
+            >Svelte Acterenity UI
+            <Badge>New</Badge>
+          </Button>
+        </div> -->
       </div>
       <div class="flex justify-center items-center">
         <div
