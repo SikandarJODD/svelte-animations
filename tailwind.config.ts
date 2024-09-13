@@ -1,7 +1,7 @@
 import { fontFamily } from "tailwindcss/defaultTheme";
 import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
-import type { Config } from "tailwindcss";
 import svgToDataUri from "mini-svg-data-uri";
+import type { Config } from "tailwindcss";
 
 const config: Config = {
   darkMode: ["class"],

@@ -93,7 +93,7 @@
             >Indie UI</Button
           >
         </div>
-        <!-- <div class="w-full">
+        <div class="w-full">
           <Button
             href="/a"
             variant="secondary"
@@ -101,7 +101,7 @@
             >Svelte Acterenity UI
             <Badge>New</Badge>
           </Button>
-        </div> -->
+        </div>
       </div>
       <div class="flex justify-center items-center">
         <div

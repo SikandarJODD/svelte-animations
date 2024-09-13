@@ -34,15 +34,15 @@
       sub: [
         {
           name: "Install Sveltekit",
-          link: "/a/install-sveltekit",
+          link: "/a/docs/install-sveltekit",
         },
         {
           name: "Install Tailwind CSS",
-          link: "/a/install-tailwindcss",
+          link: "/a/docs/install-tailwindcss",
         },
         {
           name: "Add Utilities",
-          link: "/a/add-utilities",
+          link: "/a/docs/add-utilities",
         },
       ],
     },
@@ -53,10 +53,6 @@
         {
           name: "Lens",
           link: "/a/components/lens",
-        },
-        {
-          name: "Bento Grid",
-          link: "/a/components/bento-grid",
         },
       ],
     },
@@ -194,7 +190,7 @@
       <div
         class="flex grow flex-col gap-y-0 overflow-y-auto dark:border-primary/20 border-r dark:bg-background bg-white pl-6 pr-4"
       >
-        <nav class="flex flex-1 flex-col mt-2 mb-32">
+        <nav class="flex flex-1 flex-col mt-10 mb-32">
           <a href="/" class="font-bold text-xl mx-1 mt-3 mb-2"
             >Svelte Aceternity UI</a
           >
@@ -263,7 +259,7 @@
     </a>
   </div>
 
-  <main class="py-6 lg:pl-64">
+  <main class="py-10 lg:pl-64">
     <div class="px-4 sm:px-6 lg:px-10">
       <slot></slot>
     </div>
