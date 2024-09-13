@@ -1,17 +1,13 @@
 <script>
-  import FlickeringGrid from "$lib/magicui/backgrounds/FlickeringGrid/FlickeringGrid.svelte";
+  import Compare from "$lib/aceternity-ui/components/Compare/Compare.svelte";
 </script>
-<div
-  class="relative h-[500px] rounded-lg w-full bg-background overflow-hidden border"
->
-  <FlickeringGrid
-    className="z-0 absolute inset-0 size-full"
-    squareSize={4}
-    gridGap={6}
-    color="#6B7280"
-    maxOpacity={0.5}
-    flickerChance={0.1}
-    height={800}
-    width={800}
+<div class="p-4 border rounded-3xl dark:bg-neutral-900 bg-neutral-100  border-neutral-200 dark:border-neutral-800 px-4">
+  <Compare
+    firstImage="https://assets.aceternity.com/code-problem.png"
+    secondImage="https://assets.aceternity.com/code-solution.png"
+    firstImageClassName="object-cover object-left-top"
+    secondImageClassname="object-cover object-left-top"
+    className="h-[250px] w-[200px] md:h-[500px] md:w-[500px]"
+    slideMode="hover"
   />
 </div>

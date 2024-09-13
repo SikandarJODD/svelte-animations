@@ -1,9 +1,9 @@
 <script lang="ts">
-  import { blur, fade, scale } from "svelte/transition";
+  import {  scale } from "svelte/transition";
 
   export let zoomFactor = 1.5;
   export let lensSize = 170;
-  export let isStatic = true;
+  export let isStatic = false;
   export let position = { x: 200, y: 150 };
   export let hovering: boolean;
 
