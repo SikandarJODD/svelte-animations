@@ -19,6 +19,5 @@
     class={cn(
       "[mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)] "
     )}
-    fillColor="transparent"
   />
 </div>

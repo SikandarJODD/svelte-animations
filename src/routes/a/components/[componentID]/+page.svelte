@@ -6,6 +6,8 @@
   import Separator from "$lib/components/ui/separator/separator.svelte";
   import ComponentView from "$lib/luxe/components/codeblock/ComponentView.svelte";
   import CodeBlock from "$lib/luxe/components/codeblock/CodeBlock.svelte";
+  import GridPattern from "$lib/magicui/backgrounds/GridPattern/GridPattern.svelte";
+  import { cn } from "$lib/utils";
 
   $: routeID = $page.params.componentID;
   $: comp = allAceternityUI.filter((c) => c.id === routeID)[0];
@@ -64,22 +66,87 @@
       <div id="{comp.title}-tabs">
         <Tabs.Root value={comp.title}>
           <Tabs.List class="bg-transparent">
-            <Tabs.Trigger value={comp.title}>Preview</Tabs.Trigger>
-            <Tabs.Trigger value="{comp.title}-code">Code</Tabs.Trigger>
+            <Tabs.Trigger value={comp.title}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-app-window-mac mr-1"
+                ><rect width="20" height="16" x="2" y="4" rx="2" /><path
+                  d="M6 8h.01"
+                /><path d="M10 8h.01" /><path d="M14 8h.01" /></svg
+              >
+              Preview</Tabs.Trigger
+            >
+            <Tabs.Trigger value="{comp.title}-code">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-square-terminal mr-1"
+                ><path d="m7 11 2-2-2-2" /><path d="M11 13h4" /><rect
+                  width="18"
+                  height="18"
+                  x="3"
+                  y="3"
+                  rx="2"
+                  ry="2"
+                /></svg
+              >
+              Code</Tabs.Trigger
+            >
           </Tabs.List>
           <Separator class="mb-4 -mt-0.5 ml-1  pt-0" />
           <Tabs.Content value={comp.title}>
             <ComponentView>
-              <svelte:component this={comp.preview.comp} />
+              {#if comp.preview.isgrid}
+                <GridPattern
+                  width={14}
+                  height={14}
+                  x={-1}
+                  y={-1}
+                  fillColor="rgb(16, 16, 16)"
+                  class={cn(
+                    "[mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)] "
+                  )}
+                />
+              {:else if comp.preview.isgridCenter}
+                <GridPattern
+                  width={25}
+                  height={25}
+                  strokeDashArray="2.21 2"
+                  class={cn(
+                    "[mask-image:radial-gradient(400px_circle_at_center,white,transparent)]"
+                  )}
+                />
+              {/if}
+              <div class="z-10">
+                <svelte:component this={comp.preview.comp} />
+              </div>
             </ComponentView>
           </Tabs.Content>
           <Tabs.Content value="{comp.title}-code">
             {#each comp.preview.allcode as item}
-              <CodeBlock
-                lang="svelte"
-                code={item.code}
-                fileName={item.filename}
-              />
+              <div class="mb-5">
+                <CodeBlock
+                  lang="svelte"
+                  code={item.code}
+                  fileName={item.filename}
+                  class={item.class}
+                />
+              </div>
             {/each}
           </Tabs.Content>
         </Tabs.Root>
@@ -88,9 +155,13 @@
 
       <!-- Installation Part -->
       <div>
-        <h1 class="text-2xl md:text-3xl font-bold mt-4 capitalize mb-2">
+        <a
+          href="#install-{comp.title}"
+          id="install-{comp.title}"
+          class="text-2xl md:text-3xl font-bold mt-4 capitalize mb-2"
+        >
           Installation • {comp.title} Component
-        </h1>
+        </a>
         <div>
           {#each comp.installations as item}
             <div>
@@ -121,16 +192,16 @@
       <!-- Examples -->
       {#if comp.examples}
         <div>
-          <h1 class="text-2xl md:text-2xl font-bold mt-4 capitalize mb-2">
+          <h1 class="text-2xl md:text-2xl font-bold mt-10 capitalize mb-2">
             Examples • {comp.title} Component
           </h1>
           <Separator class="my-4" />
           <div>
-            {#each comp.examples as item,index}
+            {#each comp.examples as item, index}
               <div>
                 <div class="mb-2 ml-1">
                   <h4 class="text-xl font-medium mt-4">
-                    {index+1}. {item.title}
+                    {index + 1}. {item.title}
                   </h4>
                   <!-- <p class=" text-muted-foreground text-md">
                     {item.desc}
@@ -139,23 +210,93 @@
                 <div>
                   <Tabs.Root value={item.title}>
                     <Tabs.List class="bg-transparent">
-                      <Tabs.Trigger value={item.title}>Preview</Tabs.Trigger>
-                      <Tabs.Trigger value="{item.title}-code">Code</Tabs.Trigger
+                      <Tabs.Trigger value={item.title}>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-app-window-mac mr-1"
+                          ><rect
+                            width="20"
+                            height="16"
+                            x="2"
+                            y="4"
+                            rx="2"
+                          /><path d="M6 8h.01" /><path d="M10 8h.01" /><path
+                            d="M14 8h.01"
+                          /></svg
+                        >
+                        Preview</Tabs.Trigger
+                      >
+                      <Tabs.Trigger value="{item.title}-code">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-square-terminal mr-1"
+                          ><path d="m7 11 2-2-2-2" /><path d="M11 13h4" /><rect
+                            width="18"
+                            height="18"
+                            x="3"
+                            y="3"
+                            rx="2"
+                            ry="2"
+                          /></svg
+                        >
+                        Code</Tabs.Trigger
                       >
                     </Tabs.List>
                     <Separator class="mb-4 -mt-0.5 ml-1  pt-0" />
                     <Tabs.Content value={item.title}>
                       <ComponentView>
-                        <svelte:component this={item.preview.comp} />
+                        {#if comp.preview.isgrid}
+                          <GridPattern
+                            width={14}
+                            height={14}
+                            x={-1}
+                            y={-1}
+                            fillColor="rgb(16, 16, 16)"
+                            class={cn(
+                              "[mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)] "
+                            )}
+                          />
+                        {:else if comp.preview.isgridCenter}
+                          <GridPattern
+                            width={25}
+                            height={25}
+                            strokeDashArray="2.21 2"
+                            class={cn(
+                              "[mask-image:radial-gradient(450px_circle_at_center,white,transparent)]"
+                            )}
+                          />
+                        {/if}
+                        <div class="z-10">
+                          <svelte:component this={item.preview.comp} />
+                        </div>
                       </ComponentView>
                     </Tabs.Content>
                     <Tabs.Content value="{item.title}-code">
                       {#each item.preview.allcode as compCode}
-                        <CodeBlock
-                          lang="svelte"
-                          code={compCode.code}
-                          fileName={compCode.filename}
-                        />
+                        <div class="mb-5">
+                          <CodeBlock
+                            lang="svelte"
+                            code={compCode.code}
+                            fileName={compCode.filename}
+                            class={compCode.class}
+                          />
+                        </div>
                       {/each}
                     </Tabs.Content>
                   </Tabs.Root>
