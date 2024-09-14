@@ -18,6 +18,5 @@
     class={cn(
       "[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]"
     )}
-    fillColor="transparent"
   />
 </div>

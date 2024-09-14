@@ -27,6 +27,8 @@ type InstallationCode = {
 type PreviewComponent = {
   comp: ComponentType; // Preview
   allcode: SingleCode[];
+  isgrid?: boolean;
+  isgridCenter?: boolean;
 };
 
 type Examples = {
@@ -38,4 +40,5 @@ type SingleCode = {
   code: string;
   language?: string;
   filename?: string;
+  class ? : string;
 };

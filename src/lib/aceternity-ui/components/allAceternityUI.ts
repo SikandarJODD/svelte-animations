@@ -10,6 +10,12 @@ import LensWholeCompCode from "./Lens/examples/LensWholeComp.svelte?raw";
 import BaiscWithAnimation from "./Lens/examples/BaiscWithAnimation.svelte";
 import BaiscWithAnimationCode from "./Lens/examples/BaiscWithAnimation.svelte?raw";
 
+import BasicBento from "./BentoGrid/examples/BasicBento.svelte";
+import BasicBentoCode from "./BentoGrid/examples/BasicBento.svelte?raw";
+import BentoSkeletonCode from "./BentoGrid/examples/BentoSkeleton.svelte?raw";
+import BentoGridCode from "./BentoGrid/BentoGrid.svelte?raw";
+import BentoGridItemCode from "./BentoGrid/BentoGridItem.svelte?raw";
+
 export let allAceternityUI: AceternityUI[] = [
   {
     id: "lens",
@@ -24,7 +30,9 @@ export let allAceternityUI: AceternityUI[] = [
           filename: "LensPreview.svelte",
           language: "svelte",
         },
+        
       ],
+      isgridCenter: true,
     },
     installations: [
       {
@@ -32,7 +40,7 @@ export let allAceternityUI: AceternityUI[] = [
         allcode: [
           {
             title: "Install dependencies",
-            code: "npm clsx tailwind-merge",
+            code: "npm i clsx tailwind-merge",
             language: "shellscript",
             filename: "Terminal",
           },
@@ -63,6 +71,7 @@ export function cn(...inputs: ClassValue[]) {
         desc: "A basic example with animation",
         preview: {
           comp: BaiscWithAnimation,
+          isgridCenter: true,
           allcode: [
             {
               code: BaiscWithAnimationCode,
@@ -76,10 +85,91 @@ export function cn(...inputs: ClassValue[]) {
         desc: "A basic example with animation",
         preview: {
           comp: LensWholeComp,
+          isgridCenter: true,
           allcode: [
             {
               code: LensWholeCompCode,
               filename: "LensWholeCompExample.svelte",
+            },
+          ],
+        },
+      },
+    ],
+  },
+  {
+    id: "bento-grid",
+    title: "Bento Grid",
+    desc: "A grid component to display images, videos, or practically anything.",
+    tags: ["Grid", "Special", "Tailwind CSS"],
+    preview: {
+      comp: BasicBento,
+      isgrid: true,
+      allcode: [
+        {
+          code: BasicBentoCode,
+          filename: "BasicBento.svelte",
+          language: "svelte",
+          class: "no-scrollbar overflow-y-auto h-[500px]",
+        },
+        {
+          code: BentoSkeletonCode,
+          filename: "BentoSkeleton.svelte",
+          language: "svelte",
+        },
+      ],
+    },
+    installations: [
+      {
+        desc: "Install the package",
+        allcode: [
+          {
+            title: "Install dependencies",
+            code: "npm i clsx tailwind-merge @tabler/icons-svelte",
+            language: "shellscript",
+            filename: "Terminal",
+          },
+          {
+            title: "Add Util File",
+            code: `import { ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+ 
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}`,
+            filename: "lib/util.ts",
+            language: "ts",
+          },
+          {
+            title: "Copy the Source Code - Bento Grid",
+            code: BentoGridCode,
+            filename: "BentoGrid.svelte",
+            language: "svelte",
+          },
+          {
+            title: "Copy the Source Code - Bento Grid Item",
+            code: BentoGridItemCode,
+            filename: "BentoGridItem.svelte",
+            language: "svelte",
+          },
+        ],
+      },
+    ],
+    examples: [
+      {
+        title: "Basic Bento",
+        preview: {
+          comp: BasicBento,
+          allcode: [
+            {
+              code: BasicBentoCode,
+              filename: "BasicBento.svelte",
+              language: "svelte",
+              class: "no-scrollbar overflow-y-auto h-[450px]",
+            },
+            {
+              code: BentoSkeletonCode,
+              filename: "BentoSkeleton.svelte",
+              language: "svelte",
             },
           ],
         },

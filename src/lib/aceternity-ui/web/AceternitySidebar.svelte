@@ -54,6 +54,10 @@
           name: "Lens",
           link: "/a/components/lens",
         },
+        {
+          name: "Bento Grid",
+          link: "/a/components/bento-grid",
+        }
       ],
     },
   ];
