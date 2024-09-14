@@ -15,6 +15,7 @@ import BasicBentoCode from "./BentoGrid/examples/BasicBento.svelte?raw";
 import BentoSkeletonCode from "./BentoGrid/examples/BentoSkeleton.svelte?raw";
 import BentoGridCode from "./BentoGrid/BentoGrid.svelte?raw";
 import BentoGridItemCode from "./BentoGrid/BentoGridItem.svelte?raw";
+import BentoPremium from "./BentoGrid/examples/premium/BentoPremium.svelte";
 
 export let allAceternityUI: AceternityUI[] = [
   {
@@ -30,7 +31,6 @@ export let allAceternityUI: AceternityUI[] = [
           filename: "LensPreview.svelte",
           language: "svelte",
         },
-        
       ],
       isgridCenter: true,
     },
@@ -170,6 +170,19 @@ export function cn(...inputs: ClassValue[]) {
               code: BentoSkeletonCode,
               filename: "BentoSkeleton.svelte",
               language: "svelte",
+            },
+          ],
+        },
+      },
+      {
+        title: "Populated with Header and Content",
+        preview: {
+          comp: BentoPremium,
+          isgrid: true,
+          allcode: [
+            {
+            code: "",
+              filename: "BentoPremium.svelte",
             },
           ],
         },

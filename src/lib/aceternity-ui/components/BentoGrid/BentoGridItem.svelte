@@ -5,7 +5,7 @@
   let _class = "";
   export { _class as class };
   export let title: string | ComponentType;
-  export let description: string | ComponentType;
+  export let description: string  = "";
 </script>
 
 <div
@@ -30,7 +30,7 @@
     <div
       class="font-sans font-normal text-neutral-600 text-xs dark:text-neutral-300"
     >
-      {#if typeof description === "string"}
+      {#if description.length > 0}
         {description}
       {:else}
         <slot name="description"></slot>
