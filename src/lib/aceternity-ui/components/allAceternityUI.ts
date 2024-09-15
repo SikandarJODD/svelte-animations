@@ -10,11 +10,27 @@ import LensWholeCompCode from "./Lens/examples/LensWholeComp.svelte?raw";
 import BaiscWithAnimation from "./Lens/examples/BaiscWithAnimation.svelte";
 import BaiscWithAnimationCode from "./Lens/examples/BaiscWithAnimation.svelte?raw";
 
+// Bento Grid Component
 import BasicBento from "./BentoGrid/examples/BasicBento.svelte";
 import BasicBentoCode from "./BentoGrid/examples/BasicBento.svelte?raw";
 import BentoSkeletonCode from "./BentoGrid/examples/BentoSkeleton.svelte?raw";
 import BentoGridCode from "./BentoGrid/BentoGrid.svelte?raw";
 import BentoGridItemCode from "./BentoGrid/BentoGridItem.svelte?raw";
+
+// Bento Premium Example
+import BentoPremium from "./BentoGrid/examples/premium/BentoPremium.svelte";
+import BentoPremiumCode from "./BentoGrid/examples/premium/BentoPremium.svelte?raw";
+import SkeletonOneCode from "./BentoGrid/examples/premium/SkeletonOne.svelte?raw";
+import SkeletonTwoCode from "./BentoGrid/examples/premium/SkeletonTwo.svelte?raw";
+import SkeletonThreeCode from "./BentoGrid/examples/premium/SkeletonThree.svelte?raw";
+import SkeletonFourCode from "./BentoGrid/examples/premium/SkeletonFour.svelte?raw";
+import SkeletonFiveCode from "./BentoGrid/examples/premium/SkeletonFive.svelte?raw";
+
+// BentoTwo Column Example
+import BentoTwoColumn from "./BentoGrid/examples/TwoColumn/BentoTwoColumn.svelte";
+import BentoTwoColumnCode from "./BentoGrid/examples/TwoColumn/BentoTwoColumn.svelte?raw";
+import TwoColumnSkeletonCode from "./BentoGrid/examples/TwoColumn/TwoColumnSkeleton.svelte?raw";
+import { featuresSections } from "./feature-sections/feature-sections";
 
 export let allAceternityUI: AceternityUI[] = [
   {
@@ -30,7 +46,6 @@ export let allAceternityUI: AceternityUI[] = [
           filename: "LensPreview.svelte",
           language: "svelte",
         },
-        
       ],
       isgridCenter: true,
     },
@@ -174,6 +189,72 @@ export function cn(...inputs: ClassValue[]) {
           ],
         },
       },
+      {
+        title: "Populated with Header and Content",
+        preview: {
+          comp: BentoPremium,
+          isgrid: true,
+          allcode: [
+            {
+              code: BentoPremiumCode,
+              filename: "BentoPremium.svelte",
+              language: "svelte",
+              class: "no-scrollbar overflow-y-auto h-[400px]",
+            },
+            {
+              code: SkeletonOneCode,
+              filename: "SkeletonOne.svelte",
+              language: "svelte",
+              class: "no-scrollbar overflow-y-auto h-[300px]",
+            },
+            {
+              code: SkeletonTwoCode,
+              filename: "SkeletonTwo.svelte",
+              language: "svelte",
+              class: "no-scrollbar overflow-y-auto h-[300px]",
+            },
+            {
+              code: SkeletonThreeCode,
+              filename: "SkeletonThree.svelte",
+              language: "svelte",
+              class: "no-scrollbar overflow-y-auto h-[300px]",
+            },
+            {
+              code: SkeletonFourCode,
+              filename: "SkeletonFour.svelte",
+              language: "svelte",
+              class: "no-scrollbar overflow-y-auto h-[300px]",
+            },
+            {
+              code: SkeletonFiveCode,
+              filename: "SkeletonFive.svelte",
+              language: "svelte",
+              class: "no-scrollbar overflow-y-auto h-[300px]",
+            },
+          ],
+        },
+      },
+      {
+        title: "2 Column Grid",
+        preview: {
+          comp: BentoTwoColumn,
+          isgrid: true,
+          allcode: [
+            {
+              code: BentoTwoColumnCode,
+              filename: "BentoTwoColumn.svelte",
+              language: "svelte",
+              class: "no-scrollbar overflow-y-auto h-[400px]",
+            },
+            {
+              code: TwoColumnSkeletonCode,
+              filename: "TwoColumnSkeleton.svelte",
+              language: "svelte",
+            },
+          ],
+        },
+      },
     ],
   },
+  featuresSections,
 ];

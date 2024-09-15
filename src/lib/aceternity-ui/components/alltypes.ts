@@ -5,7 +5,7 @@ export type AceternityUI = {
   title: string;
   desc?: string;
   tags?: string[];
-  preview: PreviewComponent;
+  preview?: PreviewComponent;
   installations: Installation[];
   examples?: Examples[];
 };
