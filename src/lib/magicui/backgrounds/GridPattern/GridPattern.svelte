@@ -11,6 +11,7 @@
   let id = crypto.randomUUID().toString().slice(0, 8);
   export let fillColor = "rgb(156 163 175 / 0.3)";
   // : rgb(156 163 175 / 0.3)
+  export let strokeWidth = 1;
 </script>
 
 <svg
@@ -21,6 +22,7 @@
   )}
   {...$$restProps}
   stroke={fillColor}
+  stroke-width={strokeWidth}
 >
   <defs>
     <pattern {id} {width} {height} patternUnits="userSpaceOnUse" {x} {y}>

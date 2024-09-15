@@ -11,6 +11,7 @@
 
   $: routeID = $page.params.componentID;
   $: comp = allAceternityUI.filter((c) => c.id === routeID)[0];
+  $: console.log(comp, "Compoent");
 </script>
 
 <svelte:head>
@@ -63,94 +64,96 @@
       </div>
 
       <!-- Preview Comp -->
-      <div id="{comp.title}-tabs">
-        <Tabs.Root value={comp.title}>
-          <Tabs.List class="bg-transparent">
-            <Tabs.Trigger value={comp.title}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.7"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-app-window-mac mr-1"
-                ><rect width="20" height="16" x="2" y="4" rx="2" /><path
-                  d="M6 8h.01"
-                /><path d="M10 8h.01" /><path d="M14 8h.01" /></svg
+      {#if comp.preview}
+        <div id="{comp.title}-tabs">
+          <Tabs.Root value={comp.title}>
+            <Tabs.List class="bg-transparent">
+              <Tabs.Trigger value={comp.title}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-app-window-mac mr-1"
+                  ><rect width="20" height="16" x="2" y="4" rx="2" /><path
+                    d="M6 8h.01"
+                  /><path d="M10 8h.01" /><path d="M14 8h.01" /></svg
+                >
+                Preview</Tabs.Trigger
               >
-              Preview</Tabs.Trigger
-            >
-            <Tabs.Trigger value="{comp.title}-code">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.7"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-square-terminal mr-1"
-                ><path d="m7 11 2-2-2-2" /><path d="M11 13h4" /><rect
+              <Tabs.Trigger value="{comp.title}-code">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
                   width="18"
                   height="18"
-                  x="3"
-                  y="3"
-                  rx="2"
-                  ry="2"
-                /></svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-square-terminal mr-1"
+                  ><path d="m7 11 2-2-2-2" /><path d="M11 13h4" /><rect
+                    width="18"
+                    height="18"
+                    x="3"
+                    y="3"
+                    rx="2"
+                    ry="2"
+                  /></svg
+                >
+                Code</Tabs.Trigger
               >
-              Code</Tabs.Trigger
-            >
-          </Tabs.List>
-          <Separator class="mb-4 -mt-0.5 ml-1  pt-0" />
-          <Tabs.Content value={comp.title}>
-            <ComponentView>
-              {#if comp.preview.isgrid}
-                <GridPattern
-                  width={14}
-                  height={14}
-                  x={-1}
-                  y={-1}
-                  fillColor="rgb(16, 16, 16)"
-                  class={cn(
-                    "[mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)] "
-                  )}
-                />
-              {:else if comp.preview.isgridCenter}
-                <GridPattern
-                  width={25}
-                  height={25}
-                  strokeDashArray="2.21 2"
-                  class={cn(
-                    "[mask-image:radial-gradient(400px_circle_at_center,white,transparent)]"
-                  )}
-                />
-              {/if}
-              <div class="z-10">
-                <svelte:component this={comp.preview.comp} />
-              </div>
-            </ComponentView>
-          </Tabs.Content>
-          <Tabs.Content value="{comp.title}-code">
-            {#each comp.preview.allcode as item}
-              <div class="mb-5">
-                <CodeBlock
-                  lang="svelte"
-                  code={item.code}
-                  fileName={item.filename}
-                  class={item.class}
-                />
-              </div>
-            {/each}
-          </Tabs.Content>
-        </Tabs.Root>
-      </div>
+            </Tabs.List>
+            <Separator class="mb-4 -mt-0.5 ml-1  pt-0" />
+            <Tabs.Content value={comp.title}>
+              <ComponentView>
+                {#if comp.preview.isgrid}
+                  <GridPattern
+                    width={14}
+                    height={14}
+                    x={-1}
+                    y={-1}
+                    fillColor="rgb(16, 16, 16)"
+                    class={cn(
+                      "[mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)] "
+                    )}
+                  />
+                {:else if comp.preview.isgridCenter}
+                  <GridPattern
+                    width={25}
+                    height={25}
+                    strokeDashArray="2.21 2"
+                    class={cn(
+                      "[mask-image:radial-gradient(400px_circle_at_center,white,transparent)]"
+                    )}
+                  />
+                {/if}
+                <div class="z-10">
+                  <svelte:component this={comp.preview.comp} />
+                </div>
+              </ComponentView>
+            </Tabs.Content>
+            <Tabs.Content value="{comp.title}-code">
+              {#each comp.preview.allcode as item}
+                <div class="mb-5">
+                  <CodeBlock
+                    lang="svelte"
+                    code={item.code}
+                    fileName={item.filename}
+                    class={item.class}
+                  />
+                </div>
+              {/each}
+            </Tabs.Content>
+          </Tabs.Root>
+        </div>
+      {/if}
       <Separator class="my-4" />
 
       <!-- Installation Part -->
@@ -196,10 +199,10 @@
             Examples • {comp.title} Component
           </h1>
           <Separator class="my-4" />
-          <div>
+          <div class=''>
             {#each comp.examples as item, index}
-              <div>
-                <div class="mb-2 ml-1">
+              <div id={item.title}>
+                <div class="mt-6 mb-2 ml-1">
                   <h4 class="text-xl font-medium mt-4">
                     {index + 1}. {item.title}
                   </h4>
@@ -261,18 +264,16 @@
                     <Separator class="mb-4 -mt-0.5 ml-1  pt-0" />
                     <Tabs.Content value={item.title}>
                       <ComponentView>
-                        {#if comp.preview.isgrid}
+                        {#if item.preview.isgrid}
                           <GridPattern
-                            width={14}
-                            height={14}
+                            width={10}
+                            height={10}
                             x={-1}
                             y={-1}
-                            fillColor="rgb(16, 16, 16)"
-                            class={cn(
-                              "[mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)] "
-                            )}
+                            fillColor="rgb(9, 9, 9)"
+                            strokeWidth={0.5}
                           />
-                        {:else if comp.preview.isgridCenter}
+                        {:else if item.preview.isgridCenter}
                           <GridPattern
                             width={25}
                             height={25}

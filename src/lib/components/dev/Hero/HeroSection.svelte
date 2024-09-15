@@ -95,7 +95,7 @@
         </div>
         <div class="w-full">
           <Button
-            href="/a/components/lens"
+            href="/a/components/bento-grid"
             variant="secondary"
             class="flex justify-center gap-3 w-full"
             >Svelte Acterenity UI

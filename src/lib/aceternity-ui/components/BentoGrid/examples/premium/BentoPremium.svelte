@@ -67,7 +67,7 @@
         <svelte:component this={item.header} />
       </div>
 
-      <p slot="description" class="text-neutral-500 text-sm mt-4">
+      <p slot="description" class="text-neutral-500 text-sm">
         {item.description}
       </p>
       <div slot="icon">

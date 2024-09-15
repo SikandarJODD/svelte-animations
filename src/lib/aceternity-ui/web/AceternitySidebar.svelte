@@ -57,6 +57,10 @@
         {
           name: "Bento Grid",
           link: "/a/components/bento-grid",
+        },
+        {
+          name:'Features Sections',
+          link:'/a/components/feature-sections'
         }
       ],
     },
