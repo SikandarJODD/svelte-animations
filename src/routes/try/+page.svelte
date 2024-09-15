@@ -1,4 +1,5 @@
 <script>
+  import FeatureDemoCard from "$lib/aceternity-ui/components/cards/feature-block-animated/FeatureDemoCard.svelte";
   import Compare from "$lib/aceternity-ui/components/Compare/Compare.svelte";
   import FeatureSelectionDemo from "$lib/aceternity-ui/components/feature-sections/simple-card/FeatureSelectionDemo.svelte";
   import HoverFeatureCard from "$lib/aceternity-ui/components/feature-sections/simple-hover-card/HoverFeatureCard.svelte";
@@ -6,7 +7,7 @@
 </script>
 
 <div class="h-[40rem] w-full flex items-center justify-center overflow-hidden">
-  <SvgMaskEffect class="h-[40rem] w-[80rem] border rounded-md">
+  <!-- <SvgMaskEffect class="h-[40rem] w-[80rem] border rounded-md">
     <p
       slot="reveal"
       class="max-w-4xl mx-auto text-slate-800 text-center text-4xl font-bold"
@@ -16,7 +17,9 @@
     <div slot="def" class='px-36'>
       Svelte is <span class='text-sky-500' >Easy</span> & Everyone <span class="text-emerald-400">Loves</span> it.
     </div>
-  </SvgMaskEffect>
+  </SvgMaskEffect> -->
+
+  <FeatureDemoCard />
 </div>
 
 <div

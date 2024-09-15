@@ -100,6 +100,12 @@ const config: Config = {
         // Syntax UI
         "skew-scroll": "skew-scroll 20s linear infinite",
         pulse: "pulse var(--duration) ease-out infinite",
+
+        // Aceternity Ui
+        move: "move 5s linear infinite",
+        smoothTranslate:
+          "smoothTranslate var(--animation-duration) var(--animation-delay) infinite",
+          ty : "ty 1s  var(--animation-delay)",
       },
       keyframes: {
         spin: {
@@ -309,6 +315,20 @@ const config: Config = {
               "rotatex(20deg) rotateZ(-20deg) skewX(20deg) translateZ(0) translateY(-100%)",
           },
         },
+
+        // Aceternity UI
+        move: {
+          "0%": { transform: "translateX(-200px)" },
+          "100%": { transform: "translateX(200px)" },
+        },
+        smoothTranslate: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(4px)" },
+        },
+        ty: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-4px)' },
+        }
       },
     },
   },
