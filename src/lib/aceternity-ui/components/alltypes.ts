@@ -29,6 +29,7 @@ type PreviewComponent = {
   allcode: SingleCode[];
   isgrid?: boolean;
   isgridCenter?: boolean;
+  class ? : string;
 };
 
 type Examples = {

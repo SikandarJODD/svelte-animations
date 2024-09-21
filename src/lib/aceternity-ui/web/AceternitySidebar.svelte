@@ -59,8 +59,28 @@
           link: "/a/components/bento-grid",
         },
         {
-          name:'Features Sections',
-          link:'/a/components/feature-sections'
+          name: "Features Sections",
+          link: "/a/components/feature-sections",
+        },
+        {
+          name: "Text Hover Effect",
+          link: "/a/components/text-hover-effect",
+          isNew: true,
+        },
+        {
+          name: "Svg Mask Effect",
+          link: "/a/components/svg-mask-effect",
+          isNew: true,
+        },
+        {
+          name: 'Compare',
+          link: '/a/components/compare',
+          isNew : true
+        },
+        {
+          name: 'Direction Hover',
+          link: '/a/components/direction-hover',
+          isNew : true
         }
       ],
     },
