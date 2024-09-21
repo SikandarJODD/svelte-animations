@@ -31,6 +31,10 @@ import BentoTwoColumn from "./BentoGrid/examples/TwoColumn/BentoTwoColumn.svelte
 import BentoTwoColumnCode from "./BentoGrid/examples/TwoColumn/BentoTwoColumn.svelte?raw";
 import TwoColumnSkeletonCode from "./BentoGrid/examples/TwoColumn/TwoColumnSkeleton.svelte?raw";
 import { featuresSections } from "./feature-sections/feature-sections";
+import { acetTextHoverEffect } from "./text-hover-effect/acetTextHover";
+import { acetSvgMaskEffect } from "./SvgMaskEffect/acetSvgMask";
+import { acetCompare } from "./Compare/acetCompare";
+import { acetDirectionHover } from "./DirectionHover/acetDirectionHover";
 
 export let allAceternityUI: AceternityUI[] = [
   {
@@ -257,4 +261,8 @@ export function cn(...inputs: ClassValue[]) {
     ],
   },
   featuresSections,
+  acetTextHoverEffect,
+  acetSvgMaskEffect,
+  acetCompare,
+  acetDirectionHover
 ];

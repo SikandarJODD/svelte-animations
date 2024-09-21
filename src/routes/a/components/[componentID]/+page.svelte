@@ -11,7 +11,7 @@
 
   $: routeID = $page.params.componentID;
   $: comp = allAceternityUI.filter((c) => c.id === routeID)[0];
-  $: console.log(comp, "Compoent");
+  $: console.log(comp, "Component", routeID);
 </script>
 
 <svelte:head>
@@ -112,7 +112,7 @@
             </Tabs.List>
             <Separator class="mb-4 -mt-0.5 ml-1  pt-0" />
             <Tabs.Content value={comp.title}>
-              <ComponentView>
+              <ComponentView class={comp.preview.class}>
                 {#if comp.preview.isgrid}
                   <GridPattern
                     width={14}
@@ -199,7 +199,7 @@
             Examples • {comp.title} Component
           </h1>
           <Separator class="my-4" />
-          <div class=''>
+          <div class="">
             {#each comp.examples as item, index}
               <div id={item.title}>
                 <div class="mt-6 mb-2 ml-1">

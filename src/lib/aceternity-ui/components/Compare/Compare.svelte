@@ -1,13 +1,13 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import { tweened } from "svelte/motion";
-  import Sparkles from "../Sparkles/Sparkles.svelte";
 
   export let firstImage: string = "";
   export let secondImage: string = "";
-  export let className: string = "";
-  export let firstImageClassName: string = "";
-  export let secondImageClassname: string = "";
+  let className: string = "";
+  export { className as class };
+  export let firstImageClass: string = "";
+  export let secondImageClass: string = "";
   export let initialSliderPercentage: number = 50;
   export let slideMode: "hover" | "drag" = "hover";
   export let showHandlebar: boolean = true;
@@ -145,16 +145,16 @@
     <div
       class="w-10 h-1/2 absolute top-1/2 -translate-y-1/2 left-0 bg-gradient-to-r from-cyan-400 via-transparent to-transparent z-10 opacity-100"
     /> -->
-    <div class="w-10 h-3/4 top-1/2 -translate-y-1/2 absolute -right-10">
-        <Sparkles
-          background="transparent"
-          minSize={0.4}
-          maxSize={1}
-          particleDensity={1200}
-          class="w-full h-full"
-          particleColor="#FFFFFF"
-        />
-      </div>
+    <!-- <div class="w-10 h-3/4 top-1/2 -translate-y-1/2 absolute -right-10">
+      <Sparkles
+        background="transparent"
+        minSize={0.4}
+        maxSize={1}
+        particleDensity={1200}
+        class="w-full h-full"
+        particleColor="#FFFFFF"
+      />
+    </div> -->
     {#if showHandlebar}
       <div
         class="h-5 w-5 rounded-md top-1/2 -translate-y-1/2 bg-white z-30 -right-2.5 absolute flex items-center justify-center shadow-[0px_-1px_0px_0px_#FFFFFF40]"
@@ -185,14 +185,14 @@
     {#if firstImage}
       <!-- svelte-ignore a11y-img-redundant-alt -->
       <div
-        class="absolute inset-0 z-20 rounded-2xl flex-shrink-0 w-full h-full select-none overflow-hidden {firstImageClassName}"
+        class="absolute inset-0 z-20 rounded-2xl flex-shrink-0 w-full h-full select-none overflow-hidden {firstImageClass}"
         style="clip-path: inset(0 {100 - $sliderXPercent}% 0 0);"
       >
         <!-- svelte-ignore a11y-img-redundant-alt -->
         <img
           alt="first image"
           src={firstImage}
-          class="absolute inset-0 z-20 rounded-2xl flex-shrink-0 w-full h-full select-none {firstImageClassName}"
+          class="absolute inset-0 z-20 rounded-2xl flex-shrink-0 w-full h-full select-none {firstImageClass}"
           draggable="false"
         />
       </div>
@@ -202,7 +202,7 @@
   {#if secondImage}
     <!-- svelte-ignore a11y-img-redundant-alt -->
     <img
-      class="absolute top-0 left-0 z-[19] rounded-2xl w-full h-full select-none {secondImageClassname}"
+      class="absolute top-0 left-0 z-[19] rounded-2xl w-full h-full select-none {secondImageClass}"
       alt="second image"
       src={secondImage}
       draggable="false"
