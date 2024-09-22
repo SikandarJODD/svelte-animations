@@ -1,6 +1,6 @@
 <script lang="ts">
   import { fly } from "svelte/transition";
-  import IconLayoutNavbarCollapse from "@tabler/icons-svelte/icons/layout-navbar-collapse";
+  import IconLayoutNavbarCollapse from "$lib/svg/tabler/layout-navbar-collapse.svg";
   import { spring } from "svelte/motion";
 
   interface Item {
@@ -34,8 +34,11 @@
           style="transition-delay: {idx * 50}ms"
         >
           <a href={item.href} class="h-4 w-4">
-            <!-- {@html item.icon} -->
-             <svelte:component this={item.icon} class="h-full w-full text-neutral-500 dark:text-neutral-300" />
+            <img
+              src={item.icon}
+              alt="svg_icons"
+              class="h-full w-full text-neutral-500 dark:text-neutral-300"
+            />
           </a>
         </div>
       {/each}
@@ -45,8 +48,10 @@
     on:click={toggleOpen}
     class="h-10 w-10 rounded-full bg-gray-50 dark:bg-neutral-800 flex items-center justify-center"
   >
-    <IconLayoutNavbarCollapse
-      class="h-5 w-5 text-neutral-500 dark:text-neutral-400"
+    <img
+      src={IconLayoutNavbarCollapse}
+      alt="svg_icons"
+      class="h-5 w-5 text-neutral-500 dark:text-neutral-300"
     />
   </button>
 </div>

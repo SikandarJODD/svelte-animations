@@ -10,7 +10,6 @@ export let acetSvgMaskEffect: AceternityUI = {
   tags: ["SVG", "Special", "Tailwind CSS",'Svelte Motion'],
   preview: {
     comp: SvgMaskPreview,
-    class: "overflow-hidden relative",
     allcode: [
       {
         code: SvgMaskPreviewCode,

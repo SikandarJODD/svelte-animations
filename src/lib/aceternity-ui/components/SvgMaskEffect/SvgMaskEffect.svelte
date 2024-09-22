@@ -1,17 +1,15 @@
 <script>
-  import { Motion } from "svelte-motion";
   import { onMount, onDestroy } from "svelte";
   import { writable } from "svelte/store";
-  import { scale } from "svelte/transition";
   import maskSvg from "./mask.svg";
   import { cn } from "$lib/utils";
 
   export let size = 10;
-  export let revealSize = 310;
+  export let revealSize = 200;
   let className = "";
   export { className as class };
 
-  let isHovered = writable(false);
+  let isHovered = false;
   let mousePosition = writable({ x: 0, y: 0 });
   let containerRef;
 
@@ -23,7 +21,9 @@
   };
 
   onMount(() => {
-    containerRef.addEventListener("mousemove", updateMousePosition);
+    if (containerRef) {
+      containerRef.addEventListener("mousemove", updateMousePosition);
+    }
   });
 
   onDestroy(() => {
@@ -32,51 +32,32 @@
     }
   });
 
-  $: maskSize = $isHovered ? revealSize : size;
-  $: console.log($isHovered, $mousePosition);
+  $: maskSize = isHovered ? revealSize : size;
 </script>
 
-<Motion
-  animate={{
-    backgroundColor: $isHovered ? "var(--white)" : "var(--white)",
-  }}
-  let:motion
->
+<div bind:this={containerRef} class={cn("relative bg-white", className)}>
+  <!-- svelte-ignore a11y-no-static-element-interactions -->
   <div
-    use:motion
-    bind:this={containerRef}
-    class={cn("relative overflow-hidden", className)}
-  >
-    <Motion
-      animate={{
-        maskPosition: `${$mousePosition.x - maskSize / 2}px ${$mousePosition.y - maskSize / 2}px`,
-        maskSize: `${maskSize}px`,
-      }}
-      transition={{ duration: 0 }}
-      let:motion
-    >
-      <div
-        use:motion
-        class="w-full h-full flex items-center justify-center text-6xl absolute bg-black bg-grid-white/[0.2] text-white"
-        style="
+    class="w-full h-full flex items-center justify-center text-6xl absolute bg-black text-white bg-grid-white/[0.2]"
+    style="
+        mask-position: {$mousePosition.x - maskSize / 2}px {$mousePosition.y -
+      maskSize / 2}px;
         mask-image: url({maskSvg});
-        mask-size: 40px;
+        mask-size: {maskSize}px;
         mask-repeat: no-repeat;
       "
-      >
-        <div class="absolute inset-0 bg-black h-full w-full z-0 opacity-50" />
-        <!-- svelte-ignore a11y-no-static-element-interactions -->
-        <div
-          on:mouseenter={() => isHovered.set(true)}
-          on:mouseleave={() => isHovered.set(false)}
-          class="max-w-4xl mx-auto text-center text-white text-4xl font-bold relative z-20"
-        >
-          <slot name="def"></slot>
-        </div>
-      </div>
-    </Motion>
-    <div class="w-full h-full flex items-center justify-center text-white">
-      <slot name="reveal"></slot>
+  >
+    <div class="absolute inset-0 bg-black h-full w-full z-0 opacity-50" />
+    <div
+      on:mouseenter={() => (isHovered = true)}
+      on:mouseleave={() => (isHovered = false)}
+      class="max-w-4xl mx-auto text-center text-white text-4xl font-bold relative z-20"
+    >
+      <slot name="def"></slot>
     </div>
   </div>
-</Motion>
+
+  <div class="w-full h-full flex items-center justify-center text-white">
+    <slot name="reveal"></slot>
+  </div>
+</div>

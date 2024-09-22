@@ -1,12 +1,11 @@
 <script>
   import BentoGrid from "../../BentoGrid.svelte";
   import BentoGridItem from "../../BentoGridItem.svelte";
-  import {
-    IconClipboardCopy,
-    IconFileBroken,
-    IconSignature,
-    IconTableColumn,
-  } from "@tabler/icons-svelte";
+
+  import IconClipboardCopy  from "$lib/svg/tabler/clipboard-copy.svg";
+  import IconFileBroken  from "$lib/svg/tabler/file-broken.svg";
+  import IconSignature  from "$lib/svg/tabler/signature.svg";
+  import IconTableColumn  from "$lib/svg/tabler/table-column.svg";
   import TwoColumnSkeleton from "./TwoColumnSkeleton.svelte";
 
   const items = [
@@ -54,7 +53,7 @@
         <svelte:component this={item.header} />
       </div>
       <div slot="icon">
-        <svelte:component this={item.icon} class="h-4 w-4 text-neutral-500" />
+        <img src={item.icon} alt="svg_icons" class="h-4 w-4 text-neutral-500" />
       </div>
     </BentoGridItem>
   {/each}

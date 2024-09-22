@@ -2,13 +2,13 @@
   import BentoGrid from "../../BentoGrid.svelte";
   import BentoGridItem from "../../BentoGridItem.svelte";
 
-  import {
-    IconBoxAlignRightFilled,
-    IconClipboardCopy,
-    IconFileBroken,
-    IconSignature,
-    IconTableColumn,
-  } from "@tabler/icons-svelte";
+  import IconBoxAlignRightFilled  from "$lib/svg/tabler/box-align-right.svg";
+  import IconClipboardCopy  from "$lib/svg/tabler/clipboard-copy.svg";
+  import IconFileBroken  from "$lib/svg/tabler/file-broken.svg";
+  import IconSignature  from "$lib/svg/tabler/signature.svg";
+  import IconTableColumn  from "$lib/svg/tabler/table-column.svg";
+
+
   import SkeletonOne from "./SkeletonOne.svelte";
   import SkeletonTwo from "./SkeletonTwo.svelte";
   import SkeletonThree from "./SkeletonThree.svelte";
@@ -71,7 +71,7 @@
         {item.description}
       </p>
       <div slot="icon">
-        <svelte:component this={item.icon} class="h-4 w-4 text-neutral-500" />
+        <img src={item.icon} alt="svg_icons" class="h-4 w-4 text-neutral-500" />
       </div>
     </BentoGridItem>
   {/each}
