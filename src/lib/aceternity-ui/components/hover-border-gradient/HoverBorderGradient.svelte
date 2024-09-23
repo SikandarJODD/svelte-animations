@@ -43,16 +43,16 @@
     if (!hovered) {
       interval = setInterval(() => {
         if (clockwise) {
-          if (index === 3) {
-            index = 0;
-          } else {
-            index++;
-          }
-        } else {
           if (index === 0) {
             index = 3;
           } else {
             index--;
+          }
+        } else {
+          if (index === 3) {
+            index = 0;
+          } else {
+            index++;
           }
         }
         t1.set(allValues[index][0]);

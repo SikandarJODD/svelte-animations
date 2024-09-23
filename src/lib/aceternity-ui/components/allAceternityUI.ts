@@ -35,6 +35,8 @@ import { acetTextHoverEffect } from "./text-hover-effect/acetTextHover";
 import { acetSvgMaskEffect } from "./SvgMaskEffect/acetSvgMask";
 import { acetCompare } from "./Compare/acetCompare";
 import { acetDirectionHover } from "./DirectionHover/acetDirectionHover";
+import { acetHoverBorderGradient } from "./hover-border-gradient/acetHoverBorderGradient";
+import { acetPlaceholderVanishInput } from "./placeholder-vanish-input/acetPlaceholderVanishInput";
 
 export let allAceternityUI: AceternityUI[] = [
   {
@@ -264,5 +266,7 @@ export function cn(...inputs: ClassValue[]) {
   acetTextHoverEffect,
   acetSvgMaskEffect,
   acetCompare,
-  acetDirectionHover
+  acetDirectionHover,
+  acetHoverBorderGradient,
+  acetPlaceholderVanishInput,
 ];

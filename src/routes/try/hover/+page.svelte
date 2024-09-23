@@ -3,10 +3,10 @@
   import HoverBorderGradient from "./HoverBorderGradient.svelte";
 
   const placeholders = [
-    "What's the first rule of Fight Club?",
-    "Who is Tyler Durden?",
-    "Where is Andrew Laeddis Hiding?",
-    "Write a Javascript method to reverse a string",
+    "What's upp",
+    "Khem Chee",
+    "Maja ma",
+    "kee haal chaal",
     "How to assemble your own PC?",
   ];
 
@@ -29,12 +29,14 @@
     <span> Svelte Aceternity UI</span>
   </HoverBorderGradient>
 </div> -->
-  <div class="h-[40rem] w-[40rem] mx-auto flex flex-col justify-center items-center px-4">
-    <h2
-      class="mb-10 sm:mb-12 text-xl text-center sm:text-5xl bg-gradient-to-tr from-white from-20% via-neutral-400 to-neutral-600/80 to-90% text-transparent bg-clip-text font-semibold"
-    >
-      Svelte Aceternity UI
-    </h2>
+<div
+  class="h-[40rem] w-[40rem] mx-auto flex flex-col justify-center items-center px-4"
+>
+  <h2
+    class="mb-10 sm:mb-12 text-xl text-center sm:text-5xl bg-gradient-to-tr from-white from-20% via-neutral-400 to-neutral-600/80 to-90% text-transparent bg-clip-text font-semibold"
+  >
+    O Helluuu there! 🤗
+  </h2>
 
-    <PlaceHolderVanish {placeholders} onSubmit={handleSubmit} />
-  </div>
+  <PlaceHolderVanish {placeholders} onSubmit={handleSubmit} />
+</div>
