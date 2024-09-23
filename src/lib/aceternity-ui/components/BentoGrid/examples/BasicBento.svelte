@@ -4,13 +4,13 @@
   import BentoSkeleton from "./BentoSkeleton.svelte";
 
   // Icons, you can use any icon library you like
-  import IconArrowWaveRightUp from "@tabler/icons-svelte/icons/arrow-wave-right-up";
-  import IconBoxAlignRightFilled from "@tabler/icons-svelte/icons/box-align-right-filled";
-  import IconBoxAlignTopLeft from "@tabler/icons-svelte/icons/box-align-top-left";
-  import IconClipboardCopy from "@tabler/icons-svelte/icons/clipboard-copy";
-  import IconFileBroken from "@tabler/icons-svelte/icons/file-broken";
-  import IconSignature from "@tabler/icons-svelte/icons/signature";
-  import IconTableColumn from "@tabler/icons-svelte/icons/table-column";
+  import IconArrowWaveRightUp  from "$lib/svg/tabler/arrow-wave-right-up.svg";
+  import IconBoxAlignRightFilled  from "$lib/svg/tabler/box-align-right.svg";
+  import IconBoxAlignTopLeft  from "$lib/svg/tabler/box-align-top-left.svg";
+  import IconClipboardCopy  from "$lib/svg/tabler/clipboard-copy.svg";
+  import IconFileBroken  from "$lib/svg/tabler/file-broken.svg";
+  import IconSignature  from "$lib/svg/tabler/signature.svg";
+  import IconTableColumn  from "$lib/svg/tabler/table-column.svg";
 
   const items = [
     {
@@ -71,7 +71,7 @@
         <svelte:component this={item.header} />
       </div>
       <div slot="icon">
-        <svelte:component this={item.icon} class="h-4 w-4 text-neutral-500" />
+        <img src={item.icon} alt="svg_icons" class="h-4 w-4 text-neutral-500" />
       </div>
     </BentoGridItem>
   {/each}

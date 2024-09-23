@@ -10,7 +10,7 @@ export type AceternityUI = {
   examples?: Examples[];
 };
 type Installation = {
-  desc: string;
+  desc?: string;
   allcode: InstallationCode[];
 };
 

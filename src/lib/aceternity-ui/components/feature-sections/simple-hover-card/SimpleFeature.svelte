@@ -25,7 +25,7 @@
     />
   {/if}
   <div class="mb-4 relative z-10 px-10 text-neutral-600 dark:text-neutral-400">
-    <svelte:component this={icon} />
+    <img src={icon}  alt="svg_logo"/>
   </div>
   <div class="text-lg font-bold mb-2 relative z-10 px-10">
     <div

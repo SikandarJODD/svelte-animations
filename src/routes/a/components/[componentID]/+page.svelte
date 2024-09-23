@@ -11,7 +11,7 @@
 
   $: routeID = $page.params.componentID;
   $: comp = allAceternityUI.filter((c) => c.id === routeID)[0];
-  $: console.log(comp, "Component", routeID);
+  // $: console.log(comp, "Component", routeID);
 </script>
 
 <svelte:head>

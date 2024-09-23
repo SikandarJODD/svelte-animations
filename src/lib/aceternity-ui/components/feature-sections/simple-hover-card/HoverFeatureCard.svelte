@@ -1,14 +1,11 @@
 <script>
-  import {
-    IconAdjustmentsBolt,
-    IconCloud,
-    IconCurrencyDollar,
-    IconEaseInOut,
-    IconHeart,
-    IconHelp,
-    IconRouteAltLeft,
-    IconTerminal2,
-  } from "@tabler/icons-svelte";
+  import IconAdjustmentsBolt from "$lib/svg/tabler/adjustments-bolt.svg";
+  import IconCloud from "$lib/svg/tabler/cloud.svg";
+  import IconCurrencyDollar from "$lib/svg/tabler/currency-dollar.svg";
+  import IconEaseInOut from "$lib/svg/tabler/ease-in-out.svg";
+  import IconHeart from "$lib/svg/tabler/heart.svg";
+  import IconHelp from "$lib/svg/tabler/help.svg";
+  import IconTerminal2 from "$lib/svg/tabler/terminal.svg";
 
   import SimpleFeature from "./SimpleFeature.svelte"; // Scroll down to see the SimpleFeature component
 
@@ -39,7 +36,7 @@
     {
       title: "Multi-tenant Architecture",
       description: "You can simply share passwords instead of buying new seats",
-      icon: IconRouteAltLeft,
+      icon: IconHelp,
     },
     {
       title: "24/7 Customer Support",
