@@ -1,5 +1,4 @@
 <script lang="ts">
-    import { Motion } from "svelte-motion";
     import { writable } from "svelte/store";
   
     export let text = "";
@@ -9,21 +8,7 @@
     let cursor = writable({ x: 0, y: 0 });
     let hovered = writable(false);
     let maskPosition = writable({ cx: "50%", cy: "50%" });
-  
-    //   $: $cursor,
-    //     svgRef,
-    //     () => {
-    //       if (svgRef) {
-    //         let svgRect = svgRef.getBoundingClientRect();
-    //         console.log(svgRect, "Svg");
-    //         let cxPercentage = (($cursor.x - svgRect.left) / svgRect.width) * 100;
-    //         let cyPercentage = (($cursor.y - svgRect.top) / svgRect.height) * 100;
-    //         maskPosition.set({
-    //           cx: `${cxPercentage}%`,
-    //           cy: `${cyPercentage}%`,
-    //         });
-    //       }
-    //     };
+
     let cursorChange = () => {
       if (svgRef) {
         let svgRect = svgRef.getBoundingClientRect();

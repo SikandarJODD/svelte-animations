@@ -1,6 +1,5 @@
 <script>
   import { Motion } from "svelte-motion";
-
   const randomMove = () => Math.random() * 2 - 1;
   const randomOpacity = () => Math.random();
   const random = () => Math.random();
@@ -23,9 +22,9 @@
       let:motion
     >
       <span
+        use:motion
         style="position: absolute; top: {random() * 100}%; left: {random() *
           100}%; width: 2px; height: 2px; border-radius: 50%; z-index: 1;"
-        use:motion
         class="inline-block bg-black dark:bg-white"
       ></span>
     </Motion>

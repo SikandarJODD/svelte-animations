@@ -1,7 +1,6 @@
 <script>
-
-    let className = "";
-    export { className as class };
+  let className = "";
+  export { className as class };
 </script>
 
 <svg
@@ -12,7 +11,7 @@
   fill-rule="evenodd"
   clip-rule="evenodd"
   viewBox="0 0 512 512"
-  {className}
+  class={className}
 >
   <rect fill="#CC9B7A" width="512" height="512" rx="104.187" ry="105.042" />
   <path

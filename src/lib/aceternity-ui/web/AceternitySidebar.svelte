@@ -74,7 +74,6 @@
         {
           name: "Compare",
           link: "/a/components/compare",
-          isNew: true,
         },
         {
           name: "Direction Hover",
@@ -83,11 +82,30 @@
         {
           name: "Hover Border Gradient",
           link: "/a/components/hover-border-gradient",
-          isNew: true,
         },
         {
           name: "Placeholders and vanish input",
           link: "/a/components/placeholders-and-vanish-input",
+          isNew: true,
+        },
+        {
+          name: "Sidebar",
+          link: "/a/components/sidebar",
+          isNew: true,
+        },
+        {
+          name: "Floating Dock",
+          link: "/a/components/floating-dock",
+          isNew: true,
+        },
+        {
+          name: "Follow Pointer",
+          link: "/a/components/follow-pointer",
+          isNew: true,
+        },
+        {
+          name: "Cards",
+          link: "/a/components/cards",
           isNew: true,
         },
       ],
