@@ -1,9 +1,18 @@
 <script lang="ts">
-  import SidebarBody from "$lib/aceternity-ui/components/sidebar/SidebarBody.svelte";
-  import SidebarLink from "$lib/aceternity-ui/components/sidebar/SidebarLink.svelte";
-  import { ArrowLeft, Bolt, Home, Settings, UserCircle2, Squircle } from "lucide-svelte";
-  import { vopen } from "$lib/aceternity-ui/components/sidebar/svelteContent";
+  import {
+    ArrowLeft,
+    Bolt,
+    Home,
+    Settings,
+    UserCircle2,
+    Squircle,
+  } from "lucide-svelte";
   import { slide } from "svelte/transition";
+
+  // Checkout Installation Guide for more details regarding the following imports
+  import SidebarBody from "../SidebarBody.svelte";
+  import { vopen } from "../svelteContent";
+  import SidebarLink from "../SidebarLink.svelte";
 
   interface LinkItem {
     label: string;
@@ -17,12 +26,9 @@
     { label: "Settings", href: "#", icon: Settings },
     { label: "Logout", href: "#", icon: ArrowLeft },
   ];
-
-  let avatarUrl =
-    "https://i.pinimg.com/564x/af/8c/87/af8c8778f8d2693af7b7166530e7db51.jpg";
 </script>
 
-<div class="flex justify-center items-center h-[90vh]">
+<div class="flex justify-center items-center h-[90vh] w-64 md:w-[50rem]">
   <div
     class="rounded-md flex flex-col md:flex-row bg-gray-100 dark:bg-neutral-800 w-full flex-1 max-w-7xl mx-auto border border-neutral-200 dark:border-neutral-700 overflow-hidden h-[60vh]"
   >

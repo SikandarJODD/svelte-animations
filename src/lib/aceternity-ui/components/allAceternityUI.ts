@@ -37,6 +37,10 @@ import { acetCompare } from "./Compare/acetCompare";
 import { acetDirectionHover } from "./DirectionHover/acetDirectionHover";
 import { acetHoverBorderGradient } from "./hover-border-gradient/acetHoverBorderGradient";
 import { acetPlaceholderVanishInput } from "./placeholder-vanish-input/acetPlaceholderVanishInput";
+import { acetSidebar } from "./sidebar/acetSidebar";
+import { acetFloatingDock } from "./floating-dock/acetFloatingDock";
+import { acetFollowPointer } from "./follow-pointer/acetFollowPointer";
+import { acetCards } from "./cards/acetCards";
 
 export let allAceternityUI: AceternityUI[] = [
   {
@@ -269,4 +273,8 @@ export function cn(...inputs: ClassValue[]) {
   acetDirectionHover,
   acetHoverBorderGradient,
   acetPlaceholderVanishInput,
+  acetSidebar,
+  acetFloatingDock,
+  acetFollowPointer,
+  acetCards,
 ];

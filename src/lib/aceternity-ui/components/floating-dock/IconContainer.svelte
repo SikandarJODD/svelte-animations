@@ -29,7 +29,7 @@
 
     return val - bounds?.width / 2 - XDiffToContainerX;
   });
-  let widthSync = useTransform(distance, [-150, 0, 150], [40, 80, 40]);
+  let widthSync = useTransform(distance, [-110, 0, 110], [40, 80, 40]);
   //   Adjust stiffness and damping as per needs
   let width = useSpring(widthSync, { stiffness: 400, damping: 25 });
 
@@ -63,21 +63,22 @@
       bind:this={ref}
       on:mouseenter={handleMouseEnter}
       on:mouseleave={handleMouseLeave}
-      class="aspect-square rounded-full bg-gray-200 dark:bg-neutral-800 flex items-center justify-center relative"
+      class="aspect-square rounded-full bg-gray-200 dark:bg-neutral-800 flex items-center justify-center relative group"
     >
       {#if $hovered}
         <div
           in:fade
-          out:fade={{duration: 200}}
+          out:fade
           class="px-2 py-0.5 whitespace-pre rounded-md bg-gray-100 border dark:bg-neutral-800 dark:border-neutral-900 dark:text-white border-gray-200 text-neutral-700 absolute left-1/2 -translate-x-1/2 -top-8 w-fit text-xs"
         >
           {title}
         </div>
       {/if}
-      <div class="flex items-center justify-center">
+      <div class="flex items-center  justify-center group-hover:scale-125 transition-all duration-200">
         <svelte:component
           this={icon}
-          class="h-full w-full text-neutral-500 dark:text-neutral-300"
+          strokeWidth={1.4}
+          class=" text-neutral-500 dark:text-neutral-300"
         />
       </div>
     </div>
