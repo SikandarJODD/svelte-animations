@@ -108,6 +108,16 @@
           link: "/a/components/cards",
           isNew: true,
         },
+        {
+          name: "Background Lines",
+          link: "/a/components/background-lines",
+          isNew: true,
+        },
+        {
+          name: "Layout Grid",
+          link: "/a/components/layout-grid",
+          isNew: true,
+        },
       ],
     },
   ];

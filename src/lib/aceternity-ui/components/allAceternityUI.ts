@@ -41,6 +41,8 @@ import { acetSidebar } from "./sidebar/acetSidebar";
 import { acetFloatingDock } from "./floating-dock/acetFloatingDock";
 import { acetFollowPointer } from "./follow-pointer/acetFollowPointer";
 import { acetCards } from "./cards/acetCards";
+import { acetBackgroundLines } from "./background-lines/acetBackgroundLines";
+import { acetLayoutGrid } from "./layout-grid/acetLayoutGrid";
 
 export let allAceternityUI: AceternityUI[] = [
   {
@@ -277,4 +279,6 @@ export function cn(...inputs: ClassValue[]) {
   acetFloatingDock,
   acetFollowPointer,
   acetCards,
+  acetBackgroundLines,
+  acetLayoutGrid,
 ];
