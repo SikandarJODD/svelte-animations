@@ -15,6 +15,7 @@ export let acetTimeline: AceternityUI = {
   desc: "A timeline component",
   preview: {
     comp: ExampleTimeline,
+    isgrid: true,
     class: "overflow-hidden",
     allcode: [
       {

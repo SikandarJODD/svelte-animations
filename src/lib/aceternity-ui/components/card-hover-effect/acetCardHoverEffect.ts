@@ -10,10 +10,12 @@ import CardHoverExampleCode from "./CardHoverExample.svelte?raw";
 export let acetCardHoverEffect: AceternityUI = {
   id: "card-hover-effect",
   title: "Card Hover Effect",
-  tags: ["card", "hover", "effect"],
+  tags: ["card", "hover", "effect",'svelte-motion'],
   desc: "A card hover effect that zooms in on the card.",
   preview: {
     comp: CardHoverExample,
+    isgridCenter: true,
+    isgrid: true,
     allcode: [
       {
         code: CardHoverExampleCode,

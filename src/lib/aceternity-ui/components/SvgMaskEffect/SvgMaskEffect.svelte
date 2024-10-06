@@ -4,8 +4,8 @@
   import maskSvg from "./mask.svg";
   import { cn } from "$lib/utils";
 
-  export let size = 10;
-  export let revealSize = 200;
+  export let size = 50;
+  export let revealSize = 300;
   let className = "";
   export { className as class };
 
@@ -42,7 +42,7 @@
     style="
         mask-position: {$mousePosition.x - maskSize / 2}px {$mousePosition.y -
       maskSize / 2}px;
-        mask-image: url({maskSvg});
+        mask-image: var(--mask-svg);
         mask-size: {maskSize}px;
         mask-repeat: no-repeat;
       "
@@ -61,3 +61,9 @@
     <slot name="reveal"></slot>
   </div>
 </div>
+
+<style>
+  :root {
+    --mask-svg: url("./mask.svg");
+  }
+</style>
