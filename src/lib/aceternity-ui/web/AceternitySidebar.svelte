@@ -66,11 +66,11 @@
           name: "Text Hover Effect",
           link: "/a/components/text-hover-effect",
         },
-        // {
-        //   name: "Svg Mask Effect",
-        //   link: "/a/components/svg-mask-effect",
-        //   isNew: true,
-        // },
+        {
+          name: "Svg Mask Effect",
+          link: "/a/components/svg-mask-effect",
+          isNew: true,
+        },
         {
           name: "Compare",
           link: "/a/components/compare",
@@ -91,7 +91,6 @@
         {
           name: "Sidebar",
           link: "/a/components/sidebar",
-          isNew: true,
         },
         {
           name: "Floating Dock",
@@ -101,12 +100,10 @@
         {
           name: "Follow Pointer",
           link: "/a/components/follow-pointer",
-          isNew: true,
         },
         {
           name: "Cards",
           link: "/a/components/cards",
-          isNew: true,
         },
         {
           name: "Background Lines",
@@ -116,7 +113,6 @@
         {
           name: "Layout Grid",
           link: "/a/components/layout-grid",
-          isNew: true,
         },
         {
           name: "Card Hover Effect",

@@ -3,7 +3,7 @@ import GlareExampleCard from "./GlareExampleCard.svelte";
 import GlareExampleCardCode from "./GlareExampleCard.svelte?raw";
 
 import GlareCardCode from "./GlareCard.svelte?raw";
-import GlareSvgCode from "./glare.svg?raw";
+import GlareSvgCode from "./svelte.svg?raw";
 
 export let acetGlareCard: AceternityUI = {
   id: "glare-card",
@@ -12,6 +12,7 @@ export let acetGlareCard: AceternityUI = {
   desc: "A glare effect that happens on hover, as seen on Linear's website",
   preview: {
     comp: GlareExampleCard,
+    isgridCenter: true,
     allcode: [
       {
         code: GlareExampleCardCode,
@@ -49,7 +50,7 @@ export function cn(...inputs: ClassValue[]) {
         {
           title: "Add SVG",
           code: GlareSvgCode,
-          filename: "glare.svg",
+          filename: "svelte.svg",
         },
       ],
     },

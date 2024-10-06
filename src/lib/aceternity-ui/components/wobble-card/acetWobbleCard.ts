@@ -10,6 +10,7 @@ export let acetWobbleCard: AceternityUI = {
   desc: "A wobble effect that happens on hover.",
   preview: {
     comp: ExampleWobbleCard,
+    isgrid: true,
     allcode: [
       {
         code: ExampleWobbleCardCode,

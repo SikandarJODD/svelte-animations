@@ -2,7 +2,7 @@
   import SvgMaskEffect from "./SvgMaskEffect.svelte";
 </script>
 
-<SvgMaskEffect class="h-[25rem] w-[60rem]">
+<SvgMaskEffect class="h-[30rem] w-[60rem]">
   <div slot="def" class="px-36 py-20">
     Svelte is <span class="text-sky-500">Easy</span> & Everyone
     <span class="text-emerald-400">Loves</span> it.

@@ -9,10 +9,11 @@ import ExplosionCode from "./Explosion.svelte?raw";
 export let acetBackgroundBeamCollision: AceternityUI = {
   id: "background-beam-collision",
   title: "Background Beam Collision",
-  tags: ["background", "beam", "collision"],
+  tags: ["background", "beam", "collision",'svelte-motion'],
   desc: "A background beam collision effect",
   preview: {
     comp: BbCollisionExample,
+    isgrid: true,
     allcode: [
       {
         code: BbCollisionExampleCode,
