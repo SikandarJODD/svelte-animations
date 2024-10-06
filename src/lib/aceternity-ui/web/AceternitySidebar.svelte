@@ -118,6 +118,31 @@
           link: "/a/components/layout-grid",
           isNew: true,
         },
+        {
+          name: "Card Hover Effect",
+          link: "/a/components/card-hover-effect",
+          isNew: true,
+        },
+        {
+          name: "Background Beam Collision",
+          link: "/a/components/background-beam-collision",
+          isNew: true,
+        },
+        {
+          name: "Glare Card",
+          link: "/a/components/glare-card",
+          isNew: true,
+        },
+        {
+          name: "Wobble Card",
+          link: "/a/components/wobble-card",
+          isNew: true,
+        },
+        {
+          name: "Timeline",
+          link: "/a/components/timeline",
+          isNew: true,
+        },
       ],
     },
   ];

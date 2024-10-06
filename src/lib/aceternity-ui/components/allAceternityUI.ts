@@ -43,6 +43,11 @@ import { acetFollowPointer } from "./follow-pointer/acetFollowPointer";
 import { acetCards } from "./cards/acetCards";
 import { acetBackgroundLines } from "./background-lines/acetBackgroundLines";
 import { acetLayoutGrid } from "./layout-grid/acetLayoutGrid";
+import { acetGlareCard } from "./glare-card/acetGlareCard";
+import { acetBackgroundBeamCollision } from "./background-beams-collision/acetBackgroundBeamCollision";
+import { acetCardHoverEffect } from "./card-hover-effect/acetCardHoverEffect";
+import { acetWobbleCard } from "./wobble-card/acetWobbleCard";
+import { acetTimeline } from "./timeline/acetTimeline";
 
 export let allAceternityUI: AceternityUI[] = [
   {
@@ -281,4 +286,9 @@ export function cn(...inputs: ClassValue[]) {
   acetCards,
   acetBackgroundLines,
   acetLayoutGrid,
+  acetGlareCard,
+  acetBackgroundBeamCollision,
+  acetCardHoverEffect,
+  acetWobbleCard,
+  acetTimeline,
 ];
