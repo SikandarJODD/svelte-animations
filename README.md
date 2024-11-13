@@ -1,6 +1,21 @@
-# Svelte Components 
+# Svelte Components
 
 Build using Tailwind CSS and [**Svelte motion**](https://svelte-motion.gradientdescent.de).
+
+- Components build using Tailwind CSS works in Svelte 5 too.
+- Right now i am trying to convert each component to Svelte 5 using [**Motion-Start**](https://github.com/JonathonRP/motion-start)
+
+### Svelte 5 Support Components Count
+
+| UI Libs       | Count          | description                                                                 |
+| ------------- | -------------- | --------------------------------------------------------------------------- |
+| Aceternity UI | 13             | build using svelte and tailwind css - you can easily migrate it to svelte 5 |
+| Indie UI      | All components | build using svelte and tailwind css - you can easily migrate it to svelte 5 |
+| Luxe UI       | 20             | build using svelte and tailwind css - you can easily migrate it to svelte 5 |
+| Magic UI      | 20+            | build using svelte and tailwind css - you can easily migrate it to svelte 5 |
+
+- I will be converting the rest of the component to Svelte 5, so you can use it in your project in the coming days...
+- I will be using Motion-Start Lib whcih is same as Svelte Motion but it works in Svelte 5 too.
 
 ---
 
@@ -16,14 +31,22 @@ Build using Tailwind CSS and [**Svelte motion**](https://svelte-motion.gradientd
 - GitHub : [Repo](https://github.com/SikandarJODD/startup-template)
   ![Preview](/static//startup_sve.png)
 
+## New Aceternity UI Components
+
+| Name                          | Preview                                                                                 | Section       |
+| ----------------------------- | --------------------------------------------------------------------------------------- | ------------- |
+| Animated Testimonial          | [Visit](https://animation-svelte.vercel.app/a/components/animated-testimonials)         | Aceternity UI |
+| Spotlight                     | [Visit](https://animation-svelte.vercel.app/a/components/spotlight)                     | Aceternity UI |
+| Placeholders and vanish Input | [Visit](https://animation-svelte.vercel.app/a/components/placeholders-and-vanish-input) | Aceternity UI |
+
 ### New Components
 
-| Name           | Preview                                                        | Section  |
-| -------------- | -------------------------------------------------------------- | -------- |
-| Particles      | [Visit](https://animation-svelte.vercel.app/magic/particles)  | Magic UI |
-| Cool Mode      | [Visit](https://animation-svelte.vercel.app/magic/cool-mode)  | Magic UI |
-| Shine Border   | [Visit](https://animation-svelte.vercel.app/magic/shine-border)  | Magic UI |
-| Magic Card     | [Visit](https://animation-svelte.vercel.app/magic/magic-card)  | Magic UI |
+| Name           | Preview                                                         | Section  |
+| -------------- | --------------------------------------------------------------- | -------- |
+| Particles      | [Visit](https://animation-svelte.vercel.app/magic/particles)    | Magic UI |
+| Cool Mode      | [Visit](https://animation-svelte.vercel.app/magic/cool-mode)    | Magic UI |
+| Shine Border   | [Visit](https://animation-svelte.vercel.app/magic/shine-border) | Magic UI |
+| Magic Card     | [Visit](https://animation-svelte.vercel.app/magic/magic-card)   | Magic UI |
 | Encrypt Button | [Visit](https://animation-svelte.vercel.app/magic/examples/11)  | Magic UI |
 
 ### Svelte Animations Examples
@@ -36,7 +59,6 @@ Build using Tailwind CSS and [**Svelte motion**](https://svelte-motion.gradientd
 | Dynamic Island | Effect inspired from Emil Kowalski : Time, Ring, Silent |
 | Reveal Link    | Reveal Link on Hover, Inspired from hover.dev           |
 
-
 ### Feedback
 
 If you have any feedback, please reach out at [Twitter](https://twitter.com/Sikandar_Bhide)
@@ -44,7 +66,8 @@ If you have any feedback, please reach out at [Twitter](https://twitter.com/Sika
 ### Credits
 
 - [Magic UI](https://www.magicui.design/)
-- [Luxe Components](https://www.luxeui.com)
+- [Aceternity UI](https://ui.aceternity.com)
+- [Luxe UI](https://www.luxeui.com)
 - [Indie UI](https://ui.indie-starter.dev)
 - [Hover.dev](https://hover.dev)
 
