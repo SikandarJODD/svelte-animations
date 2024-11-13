@@ -1,6 +1,6 @@
 <script>
   import Separator from "$lib/components/ui/separator/separator.svelte";
-import { allLuxeComponents } from "$lib/luxe/components/AllLuxeComponents";
+  import { allLuxeComponents } from "$lib/luxe/components/AllLuxeComponents";
   import ComponentView from "$lib/luxe/components/codeblock/ComponentView.svelte";
   import GradientLine from "$lib/luxe/components/codeblock/GradientLine.svelte";
   import { cn } from "$lib/utils";
@@ -21,7 +21,6 @@ import { allLuxeComponents } from "$lib/luxe/components/AllLuxeComponents";
       "Luxe Svelte - Library of components copy and paste to illuminate your applications with elegance and sophistication.",
     image:
       "https://i.pinimg.com/736x/8f/88/8a/8f888ad7286306bbbf10a138c687ca5d.jpg",
-      
   }}
   openGraph={{
     url: "https://animation-svelte.vercel.app/luxe",
@@ -47,11 +46,14 @@ import { allLuxeComponents } from "$lib/luxe/components/AllLuxeComponents";
         Svelte Luxe Components
       </h1>
       <p class=" font-normal text-neutral-500">
-        Luxe Svelte - Free components, <span class="text-primary"
-          >Copy</span
-        >
-        and <span class="text-primary">Paste</span> to illuminate your applications
-        with elegance.
+        Luxe Svelte - Free components, <span class="text-primary">Copy</span>
+        and <span class="text-primary">Paste</span> to illuminate your
+        applications with elegance.
+        <br />
+        This Library is Inspired from <a class='text-primary' href="https://www.luxeui.com" target="_blank">Luxe UI</a> build by
+        <a class='text-primary' href="https://x.com/guhrodrrigues" target="_blank"
+          >Gustavo Rodrigues</a
+        >.
       </p>
     </div>
   </section>

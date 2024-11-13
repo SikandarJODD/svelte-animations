@@ -51,6 +51,16 @@
       heading: "Components",
       sub: [
         {
+          name: "Animated Testimonials",
+          link: "/a/components/animated-testimonials",
+          isNew: true,
+        },
+        {
+          name: "Spotlight",
+          link: "/a/components/spotlight",
+          isNew: true,
+        },
+        {
           name: "Lens",
           link: "/a/components/lens",
         },
@@ -69,7 +79,6 @@
         {
           name: "Svg Mask Effect",
           link: "/a/components/svg-mask-effect",
-          isNew: true,
         },
         {
           name: "Compare",
@@ -95,7 +104,6 @@
         {
           name: "Floating Dock",
           link: "/a/components/floating-dock",
-          isNew: true,
         },
         {
           name: "Follow Pointer",
@@ -108,7 +116,6 @@
         {
           name: "Background Lines",
           link: "/a/components/background-lines",
-          isNew: true,
         },
         {
           name: "Layout Grid",
@@ -117,27 +124,22 @@
         {
           name: "Card Hover Effect",
           link: "/a/components/card-hover-effect",
-          isNew: true,
         },
         {
           name: "Background Beam Collision",
           link: "/a/components/background-beam-collision",
-          isNew: true,
         },
         {
           name: "Glare Card",
           link: "/a/components/glare-card",
-          isNew: true,
         },
         {
           name: "Wobble Card",
           link: "/a/components/wobble-card",
-          isNew: true,
         },
         {
           name: "Timeline",
           link: "/a/components/timeline",
-          isNew: true,
         },
       ],
     },

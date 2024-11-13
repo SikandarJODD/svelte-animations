@@ -48,6 +48,8 @@ import { acetBackgroundBeamCollision } from "./background-beams-collision/acetBa
 import { acetCardHoverEffect } from "./card-hover-effect/acetCardHoverEffect";
 import { acetWobbleCard } from "./wobble-card/acetWobbleCard";
 import { acetTimeline } from "./timeline/acetTimeline";
+import { acetAnimatedTestimonials } from "./animated-testimonials/animatedTestimonials";
+import { acetSpotlight } from "./spotlight/acetSpotlight";
 
 export let allAceternityUI: AceternityUI[] = [
   {
@@ -291,4 +293,6 @@ export function cn(...inputs: ClassValue[]) {
   acetCardHoverEffect,
   acetWobbleCard,
   acetTimeline,
+  acetAnimatedTestimonials,
+  acetSpotlight
 ];

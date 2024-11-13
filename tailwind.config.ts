@@ -105,7 +105,7 @@ const config: Config = {
         move: "move 5s linear infinite",
         smoothTranslate:
           "smoothTranslate var(--animation-duration) var(--animation-delay) infinite",
-          ty : "ty 1s  var(--animation-delay)",
+        ty: "ty 1s  var(--animation-delay)",
       },
       keyframes: {
         spin: {
@@ -326,9 +326,9 @@ const config: Config = {
           "50%": { transform: "translateY(4px)" },
         },
         ty: {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-4px)' },
-        }
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-4px)" },
+        },
       },
     },
   },
