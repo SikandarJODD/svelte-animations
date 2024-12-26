@@ -196,7 +196,7 @@ module.exports = {
   /** @type {import('tailwindcss').Config} */
 module.exports = {
  plugins: [
-    addVariablesForColors,  // below is the function 
+    addVariablesForColors,  // below is the function
     function ({ matchUtilities, theme }: any) {
       matchUtilities(
         {
@@ -274,4 +274,60 @@ module.exports = {
   },
 };
 `,
+  'rippling': `// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      animation: {
+         rippling: "rippling var(--duration) ease-out",
+      },
+      keyframes: {
+        rippling: {
+          "0%": {
+            opacity: "1",
+          },
+          "100%": {
+            transform: "scale(2)",
+            opacity: "0",
+          },
+        },
+      },
+    },
+  },
+};`,
+  'rainbow-button': `
+  /*
+    Add the following to your global.css file.
+    :root {
+      --color-1: 0 100% 63%;
+      --color-2: 270 100% 63%;
+      --color-3: 210 100% 63%;
+      --color-4: 195 100% 63%;
+      --color-5: 90 100% 63%;
+    }
+  */
+
+  /** @type {import('tailwindcss').Config} */
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        "color-1": "hsl(var(--color-1))",
+        "color-2": "hsl(var(--color-2))",
+        "color-3": "hsl(var(--color-3))",
+        "color-4": "hsl(var(--color-4))",
+        "color-5": "hsl(var(--color-5))",
+      },
+      animation: {
+        rainbow: "rainbow var(--speed, 2s) infinite linear",
+      },
+      keyframes: {
+        rainbow: {
+          "0%": { "background-position": "0%" },
+          "100%": { "background-position": "200%" },
+        },
+      },
+    },
+  },
+};`
 };

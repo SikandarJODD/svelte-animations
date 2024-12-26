@@ -17,8 +17,25 @@ import PulsatingBtnExampleCode from "./pulsating/PulsatingBtnExample.svelte?raw"
 // Animated Subscribe Button
 import AnimatedSubscribeButton from "./animatedSubscribe/AnimatedSubscribeButton.svelte";
 import AnimatedSubscribeButtonCode from "./animatedSubscribe/AnimatedSubscribeButton.svelte?raw";
+
 import AsExample from "./animatedSubscribe/ASExample.svelte";
 import AsExampleCode from "./animatedSubscribe/ASExample.svelte?raw";
+
+import RippleButton from "./ripple/RippleButton.svelte";
+import RippleButtonCode from "./ripple/RippleButton.svelte?raw";
+
+import RainbowButton from "./rainbow/RainbowButton.svelte";
+import RainbowButtonCode from "./rainbow/RainbowButton.svelte?raw";
+
+import InteractiveHover from "./interactive-hover/InteractiveHover.svelte";
+import InteractiveHoverCode from "./interactive-hover/InteractiveHover.svelte?raw";
+
+import RippleExample from "./ripple/RippleExample.svelte";
+import RippleExampleCode from "./ripple/RippleExample.svelte?raw";
+import RainbowBtnExample from "./rainbow/RainbowBtnExample.svelte";
+import RainbowBtnExampleCode from "./rainbow/RainbowBtnExample.svelte?raw";
+import InteractiveHoverBtnExample from "./interactive-hover/InteractiveHoverBtnExample.svelte";
+import InteractiveHoverBtnExampleCode from "./interactive-hover/InteractiveHoverBtnExample.svelte?raw";
 
 export let buttonMagic: MagicComponent[] = [
   {
@@ -86,5 +103,61 @@ export let buttonMagic: MagicComponent[] = [
     ],
     cncode: cncode,
     download: "npm i clsx tailwind-merge svelte-motion",
+  },
+  {
+    id: 'ripple-button',
+    link: '/magic/ripple-button',
+    name: 'Ripple Button',
+    desc: 'A button with ripple effect.',
+    component: RippleButton,
+    code: RippleButtonCode,
+    tailwind: allMagicTailwinds['rippling'],
+    examples: [
+      {
+        id: 1,
+        name: 'Ripple Button',
+        fileName: 'RippleButton.svelte',
+        code: RippleExampleCode,
+        component: RippleExample,
+        showDots: true
+      }
+    ],
+  },
+  {
+    id: 'rainbow',
+    link: '/magic/rainbow',
+    name: 'Rainbow Button',
+    desc: 'A button with rainbow effect.',
+    tailwind: allMagicTailwinds['rainbow-button'],
+    component: RainbowButton,
+    code: RainbowButtonCode,
+    examples: [
+      {
+        id: 1,
+        name: 'Rainbow Button',
+        fileName: 'RainbowButton.svelte',
+        code: RainbowBtnExampleCode,
+        component: RainbowBtnExample,
+        showDots: true,
+      },
+    ],
+  },
+  {
+    id: 'interactive-hover',
+    link: '/magic/interactive-hover',
+    name: 'Interactive Hover',
+    desc: 'A button with interactive hover effect.',
+    component: InteractiveHover,
+    code: InteractiveHoverCode,
+    examples: [
+      {
+        id: 1,
+        name: 'Interactive Hover',
+        fileName: 'InteractiveHover.svelte',
+        code: InteractiveHoverBtnExampleCode,
+        component: InteractiveHoverBtnExample,
+        showGrid: true,
+      },
+    ],
   },
 ];

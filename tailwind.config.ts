@@ -18,6 +18,12 @@ const config: Config = {
 
     extend: {
       colors: {
+        "color-1": "hsl(var(--color-1))",
+        "color-2": "hsl(var(--color-2))",
+        "color-3": "hsl(var(--color-3))",
+        "color-4": "hsl(var(--color-4))",
+        "color-5": "hsl(var(--color-5))",
+
         border: "hsl(var(--border) / <alpha-value>)",
         input: "hsl(var(--input) / <alpha-value>)",
         ring: "hsl(var(--ring) / <alpha-value>)",
@@ -92,6 +98,8 @@ const config: Config = {
         grid: "grid 15s linear infinite",
         meteor: "meteor 5s linear infinite",
         "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
+        rippling: "rippling 0.6s ease-out",
+        rainbow: "rainbow var(--speed, 2s) infinite linear",
 
         // Lukacho UI Effects
         moveUp: "moveUp 1.4s ease forwards",
@@ -303,6 +311,19 @@ const config: Config = {
           to: {
             "background-position": "0% 0%",
           },
+        },
+        rippling: {
+          "0%": {
+            opacity: "1",
+          },
+          "100%": {
+            transform: "scale(2)",
+            opacity: "0",
+          }
+        },
+        rainbow: {
+          "0%": { "background-position": "0%" },
+          "100%": { "background-position": "200%" },
         },
         // Syntax UI
         "skew-scroll": {

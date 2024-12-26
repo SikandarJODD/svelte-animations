@@ -89,6 +89,11 @@ import HvDex2Code from "./HeroVideoDialog/examples/HVDex2.svelte?raw";
 import HvDex3 from "./HeroVideoDialog/examples/HVDex3.svelte";
 import HvDex3Code from "./HeroVideoDialog/examples/HVDex3.svelte?raw";
 
+import ScratchToReveal from "./ScratchToReveal/ScratchToReveal.svelte";
+import ScratchToRevealCode from "./ScratchToReveal/ScratchToReveal.svelte?raw";
+import ScratchRevealExample from "./ScratchToReveal/ScratchRevealExample.svelte";
+import ScratchRevealExampleCode from "./ScratchToReveal/ScratchRevealExample.svelte?raw";
+
 export let allSubMagicComps: MagicComponent[] = [
   {
     id: "bento-grid",
@@ -486,4 +491,21 @@ export let allSubMagicComps: MagicComponent[] = [
       },
     ],
   },
+  {
+    id: "scratch-to-reveal",
+    name: "Scratch To Reveal",
+    link: "/magic/scratch-to-reveal",
+    desc: "A simple scratch to reveal component",
+    // component: ScratchToReveal,
+    code: ScratchToRevealCode,
+    examples: [
+      {
+        id: 1,
+        name: "Example",
+        component: ScratchRevealExample,
+        code: ScratchRevealExampleCode,
+        fileName: "ScratchToRevealExample.svelte",
+      }
+    ]
+  }
 ];

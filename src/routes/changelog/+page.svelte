@@ -4,6 +4,11 @@
   import GithubSvg from "$lib/svg/web/github.svg";
   let markdown = `
 
+  ### Date - 26 Dec 2024 - Added New Magic UI Components
+  - Device Mockups for Iphone, Browser.
+  - Added Rainbow, Ripple, Interactive Hover Button.
+  - Added **Scratch To Reveal** Component.
+
   ### Date - 18 August 2024
   - Added [Particles Component](https://animation-svelte.vercel.app/magic/particles) from Magic UI
   - Added [Cool Mode](https://animation-svelte.vercel.app/magic/cool-mode) from Magic UI

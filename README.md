@@ -2,7 +2,13 @@
 
 Build using Tailwind CSS and [**Svelte motion**](https://svelte-motion.gradientdescent.de).
 
-- Components build using Tailwind CSS works in Svelte 5 too.
+### Important Note
+
+- Components which includes svelte-motion library are not supported in Svelte 5.
+- Only components which are build using Tailwind CSS and Svelte are supported in Svelte 5.
+
+---
+
 - Right now i am trying to convert each component to Svelte 5 using [**Motion-Start**](https://github.com/JonathonRP/motion-start)
 
 ### Svelte 5 Support Components Count
@@ -35,19 +41,20 @@ Build using Tailwind CSS and [**Svelte motion**](https://svelte-motion.gradientd
 
 | Name                          | Preview                                                                                 | Section       |
 | ----------------------------- | --------------------------------------------------------------------------------------- | ------------- |
-| Animated Testimonial          | [Visit](https://animation-svelte.vercel.app/a/components/animated-testimonials)         | Aceternity UI |
-| Spotlight                     | [Visit](https://animation-svelte.vercel.app/a/components/spotlight)                     | Aceternity UI |
 | Placeholders and vanish Input | [Visit](https://animation-svelte.vercel.app/a/components/placeholders-and-vanish-input) | Aceternity UI |
 
 ### New Components
 
-| Name           | Preview                                                         | Section  |
-| -------------- | --------------------------------------------------------------- | -------- |
-| Particles      | [Visit](https://animation-svelte.vercel.app/magic/particles)    | Magic UI |
-| Cool Mode      | [Visit](https://animation-svelte.vercel.app/magic/cool-mode)    | Magic UI |
-| Shine Border   | [Visit](https://animation-svelte.vercel.app/magic/shine-border) | Magic UI |
-| Magic Card     | [Visit](https://animation-svelte.vercel.app/magic/magic-card)   | Magic UI |
-| Encrypt Button | [Visit](https://animation-svelte.vercel.app/magic/examples/11)  | Magic UI |
+| Name                     | Preview                                                              | Section  |
+| ------------------------ | -------------------------------------------------------------------- | -------- |
+| Scratch To Reveal        | [Visit](https://animation-svelte.vercel.app/magic/scratch-to-reeal)  | Magic UI |
+| Ripple Button            | [Visit](https://animation-svelte.vercel.app/magic/ripple-button)     | Magic UI |
+| Interactive Hover Button | [Visit](https://animation-svelte.vercel.app/magic/interactive-hover) | Magic UI |
+| Particles                | [Visit](https://animation-svelte.vercel.app/magic/particles)         | Magic UI |
+| Cool Mode                | [Visit](https://animation-svelte.vercel.app/magic/cool-mode)         | Magic UI |
+| Shine Border             | [Visit](https://animation-svelte.vercel.app/magic/shine-border)      | Magic UI |
+| Magic Card               | [Visit](https://animation-svelte.vercel.app/magic/magic-card)        | Magic UI |
+| Encrypt Button           | [Visit](https://animation-svelte.vercel.app/magic/examples/11)       | Magic UI |
 
 ### Svelte Animations Examples
 

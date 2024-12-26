@@ -27,9 +27,8 @@
       heading: "Components",
       sub: [
         {
-          name:'Hero Video Dialog',
-          link:'/magic/hero-video-dialog',
-          isNew:true
+          name: "Hero Video Dialog",
+          link: "/magic/hero-video-dialog",
         },
         {
           name: "Orbiting Circles",
@@ -66,8 +65,28 @@
         {
           name: "Circular Progress Bar",
           link: "/magic/circular-progress-bar",
+        },
+      ],
+    },
+    {
+      id: 8,
+      heading: "Deice Mocks",
+      sub: [
+        {
+          name: "Safari",
+          link: "/magic/safari",
           isNew: true,
         },
+        {
+          name: "iPhone 15 Pro",
+          link: "/magic/iphone15-pro",
+          isNew: true,
+        },
+        // {
+        //   name: "Android",
+        //   link: "/magic/android",
+        //   isNew: true,
+        // },
       ],
     },
     {
@@ -85,7 +104,6 @@
         {
           name: "Shine Border",
           link: "/magic/shine-border",
-          isNew: true,
         },
         {
           name: "Cool Mode",
@@ -94,13 +112,16 @@
         {
           name: "Magic Card",
           link: "/magic/magic-card",
-          isNew: true,
         },
         {
           name: "Particles",
           link: "/magic/particles",
+        },
+        {
+          name: "Scratch To Reveal",
+          link: "/magic/scratch-to-reveal",
           isNew: true,
-        }
+        },
       ],
     },
     {
@@ -138,10 +159,9 @@
           link: "/magic/retro-grid",
         },
         {
-          name:'Flickering Grid',
-          link:'/magic/flickering-grid',
-          isNew:true
-        }
+          name: "Flickering Grid",
+          link: "/magic/flickering-grid",
+        },
       ],
     },
     {
@@ -159,6 +179,21 @@
         {
           name: "Animated Subscribe",
           link: "/magic/animated-subscribe",
+        },
+        {
+          name: "Ripple Button",
+          link: "/magic/ripple-button",
+          isNew: true,
+        },
+        {
+          name: "Rainbow",
+          link: "/magic/rainbow",
+          isNew: true,
+        },
+        {
+          name: "Interactive Hover",
+          link: "/magic/interactive-hover",
+          isNew: true,
         },
       ],
     },
@@ -209,7 +244,6 @@
         {
           name: "Blur In",
           link: "/magic/blur-in",
-          isNew: true,
         },
         {
           name: "Word Rotate",
@@ -218,8 +252,7 @@
         {
           name: "Sparkles Text",
           link: "/magic/sparkles-text",
-          isNew: true,
-        }
+        },
       ],
     },
   ];
