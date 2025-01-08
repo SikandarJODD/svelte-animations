@@ -109,6 +109,30 @@ import DropDown from "../dropdown/DropDown.svelte";
 import DropDownCode from "../dropdown/DropDown.svelte?raw";
 import { cncode } from "$lib/cncode";
 
+import ButtonDesctructive2 from "../buttons/ButtonDesctructive2.svelte";
+import ButtonDesctructive2Code from "../buttons/ButtonDesctructive2.svelte?raw";
+
+import ButtonGlitchBrightness from "../buttons/ButtonGlitchBrightness.svelte";
+import ButtonGlitchBrightnessCode from "../buttons/ButtonGlitchBrightness.svelte?raw";
+
+import ButtonLoadingv2 from "../buttons/ButtonLoadingv2.svelte";
+import ButtonLoadingv2Code from "../buttons/ButtonLoadingv2.svelte?raw";
+
+import ButtonMagnetic from "../buttons/ButtonMagnetic.svelte";
+import ButtonMagneticCode from "../buttons/ButtonMagnetic.svelte?raw";
+
+import TextGenerativeEffect from "../text/TextGenerativeEffect.svelte";
+import TextGenerativeEffectCode from "../text/TextGenerativeEffect.svelte?raw";
+
+import TextHoverEnter from "../text/TextHoverEnter.svelte";
+import TextHoverEnterCode from "../text/TextHoverEnter.svelte?raw";
+
+import TextShinev2 from "../text/TextShinev2.svelte";
+import TextShinev2Code from "../text/TextShinev2.svelte?raw";
+
+import ButtonSuccessv2 from "../buttons/ButtonSuccessv2.svelte";
+import ButtonSuccessv2Code from "../buttons/ButtonSuccessv2.svelte?raw";
+
 type LuxeComponent = {
   id: string;
   name: string;
@@ -130,6 +154,113 @@ type Code = {
 };
 
 export let allLuxeComponents: LuxeComponent[] = [
+  {
+    id: 'button-destructive-v2',
+    name: 'Button Destructive v2',
+    description: 'A button with a destructive style',
+    component: ButtonDesctructive2,
+    link: '/luxe/button-destructive-v2',
+    code: [
+      {
+        filename: 'ButtonDesctructive2.svelte',
+        code: ButtonDesctructive2Code,
+      }
+    ]
+  },
+  {
+    id: 'button-glitch-brightness',
+    name: 'Button Glitch Brightness',
+    description: 'A button with a glitch brightness effect',
+    component: ButtonGlitchBrightness,
+    link: '/luxe/button-glitch-brightness',
+    code: [
+      {
+        filename: 'ButtonGlitchBrightness.svelte',
+        code: ButtonGlitchBrightnessCode,
+      }
+    ]
+  },
+  {
+    id: 'button-loading-v2',
+    name: 'Button Loading v2',
+    description: 'A button with a loading state',
+    component: ButtonLoadingv2,
+    link: '/luxe/button-loading-v2',
+    code: [
+      {
+        filename: 'ButtonLoadingv2.svelte',
+        code: ButtonLoadingv2Code,
+      }
+    ]
+  },
+  {
+    id: 'button-magnetic',
+    name: 'Button Magnetic',
+    description: 'A button with a magnetic effect',
+    component: ButtonMagnetic,
+    link: '/luxe/button-magnetic',
+    code: [
+      {
+        filename: 'ButtonMagnetic.svelte',
+        code: ButtonMagneticCode,
+      }
+    ]
+  },
+  {
+    id: 'text-generate-effect',
+    tags: ['Text Effect', 'Svelte-Moition'],
+    name: 'Text Generate Effect',
+    description: 'Text with generate effect',
+    component: TextGenerativeEffect,
+    link: '/luxe/text-generate-effect',
+    code: [
+      {
+        filename: 'TextGenerativeEffect.svelte',
+        code: TextGenerativeEffectCode,
+      }
+    ]
+  },
+  {
+    id: 'text-hover-enter',
+    tags: ['Text Hover', 'Svelte-Moition'],
+    name: 'Text Hover Enter',
+    description: 'Text with hover enter effect',
+    component: TextHoverEnter,
+    link: '/luxe/text-hover-enter',
+    code: [
+      {
+        filename: 'TextHoverEnter.svelte',
+        code: TextHoverEnterCode,
+      }
+    ]
+  },
+  {
+    id: 'text-shine-v2',
+    tags: ['Text Shine', 'Svelte-Moition'],
+    name: 'Text Shine',
+    description: 'Text with shine effect',
+    component: TextShinev2,
+    link: '/luxe/text-hover-enter',
+    code: [
+      {
+        filename: 'TextShine.svelte',
+        code: TextShinev2Code,
+      }
+    ]
+  },
+  {
+    id: 'button-success-v2',
+    name: 'Button Success v2',
+    description: 'A button with a success style',
+    component: ButtonSuccessv2,
+    link: '/luxe/button-success-v2',
+    code: [
+      {
+        filename: 'ButtonSuccessv2.svelte',
+        code: ButtonSuccessv2Code,
+      }
+    ]
+  },
   {
     id: "dock-menu",
     tags: ["Svelte Motion"],

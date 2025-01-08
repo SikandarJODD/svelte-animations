@@ -2,13 +2,16 @@
   import { Motion, AnimateSharedLayout } from "svelte-motion";
   const tabs = [
     {
-      title: "Product",
+      title: "All Posts",
     },
     {
-      title: "Services",
+      title: "Interactions",
     },
     {
-      title: "About",
+      title: "Resources",
+    },
+    {
+      title: "Docs",
     },
   ];
   let activeIdx = 0;
@@ -18,7 +21,7 @@
   <AnimateSharedLayout>
     {#each tabs as item, i}
       <button
-        class="group relative z-[1] rounded-full px-4 py-2 {activeIdx === i
+        class="group relative z-[1] rounded-full px-3 py-2 {activeIdx === i
           ? 'z-0'
           : ''} "
         on:click={() => {
@@ -28,7 +31,7 @@
         {#if activeIdx === i}
           <Motion
             layoutId="clicked-btn"
-            transition={{ duration: 0.2 }}
+            transition={{ duration: 0.2, type:'spring', stiffness: 300, damping: 30 }}
             let:motion
           >
             <div
