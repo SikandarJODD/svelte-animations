@@ -117,6 +117,7 @@ const config: Config = {
         smoothTranslate:
           "smoothTranslate var(--animation-duration) var(--animation-delay) infinite",
         ty: "ty 1s  var(--animation-delay)",
+        aurora: "aurora 60s linear infinite",
       },
       keyframes: {
         spin: {
@@ -368,6 +369,14 @@ const config: Config = {
         ty: {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-4px)" },
+        },
+        aurora: {
+          from: {
+            backgroundPosition: "50% 50%, 50% 50%",
+          },
+          to: {
+            backgroundPosition: "350% 50%, 350% 50%",
+          },
         },
       },
     },
