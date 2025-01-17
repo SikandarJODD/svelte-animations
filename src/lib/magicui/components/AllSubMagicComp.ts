@@ -89,10 +89,13 @@ import HvDex2Code from "./HeroVideoDialog/examples/HVDex2.svelte?raw";
 import HvDex3 from "./HeroVideoDialog/examples/HVDex3.svelte";
 import HvDex3Code from "./HeroVideoDialog/examples/HVDex3.svelte?raw";
 
-import ScratchToReveal from "./ScratchToReveal/ScratchToReveal.svelte";
 import ScratchToRevealCode from "./ScratchToReveal/ScratchToReveal.svelte?raw";
 import ScratchRevealExample from "./ScratchToReveal/ScratchRevealExample.svelte";
 import ScratchRevealExampleCode from "./ScratchToReveal/ScratchRevealExample.svelte?raw";
+
+import FeatureCardCode from "./features/FeatureCard.svelte?raw";
+import FeatureCardExample from "./features/FeatureCardExample.svelte";
+import FeatureCardExampleCode from "./features/FeatureCardExample.svelte?raw";
 
 export let allSubMagicComps: MagicComponent[] = [
   {
@@ -505,6 +508,23 @@ export let allSubMagicComps: MagicComponent[] = [
         component: ScratchRevealExample,
         code: ScratchRevealExampleCode,
         fileName: "ScratchToRevealExample.svelte",
+      }
+    ]
+  },
+  {
+    id: 'features',
+    name: 'Features',
+    desc: 'These components are used to build the features section of the website.',
+    tags: ['Features', 'Svelte 4 & 5'],
+    link: '/magic/features',
+    code: FeatureCardCode,
+    examples: [
+      {
+        id: 1,
+        name: 'Feature Card',
+        component: FeatureCardExample,
+        code: FeatureCardExampleCode,
+        fileName: 'FeatureCardExample.svelte'
       }
     ]
   }

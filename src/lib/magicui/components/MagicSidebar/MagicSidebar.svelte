@@ -66,6 +66,11 @@
           name: "Circular Progress Bar",
           link: "/magic/circular-progress-bar",
         },
+        {
+          name: "Features",
+          link: "/magic/features",
+          isNew: true,
+        },
       ],
     },
     {

@@ -2,7 +2,8 @@
   import FeatureCard from "$lib/magicui/components/features/FeatureCard.svelte";
   import { Eye, PackageSearch, Settings } from "lucide-svelte";
 
-  //  className="size-6 text-primary"
+  // Svelte 5 Code : https://svelte.dev/playground/39866a136f0d4268821e5ae901dce47f?version=5.0.5
+
   let data = [
     {
       id: 1,
@@ -34,4 +35,4 @@
   ];
 </script>
 
-<FeatureCard {data} />
+<FeatureCard {data}  />
