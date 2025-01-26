@@ -7,25 +7,46 @@
   } from "svelte-motion";
   import { writable } from "svelte/store";
   import { cn } from "$lib/utils";
-
-  export const dockItemPositions = writable({});
-
-  export let listDockApps: {
-    id: string;
-    icon: string;
-  }[] = [];
+   
+  /**
+   * @module AppDockMenu
+   * App Dock Menu with zoom animation on hover, and 
+   * enhances current app with opacity and shine effect.
+   * Option: automatically click on hover 
+   * @property {string[]} listDockApps - List of dock apps
+   * @property {(id: string) => void} handleAppDockClick - Called when a dock app is clicked with id
+   * @property {boolean} [shouldAutoClickOnHover=true] - Whether to automatically click on hover
+   * @property {boolean} [shouldAnimateZoom=true] - Whether to animate zoom effect on hover
+   * @property {boolean} [gapBetweenItems=false] - Whether to add gap between items
+   * @property {string} [bgColor="#DED8C4"] - Background color for the dock
+   */
+  let {
+    listDockApps = [],
+    handleAppDockClick = () => {},
+    shouldAutoClickOnHover = true,
+    shouldAnimateZoom = true,
+    gapBetweenItems = false,
+    bgColor = "#DED8C4",
+  } : {
+    listDockApps: {
+      id: string;
+      icon: string;
+    }[];
+    handleAppDockClick: (id: string) => void;
+    shouldAutoClickOnHover?: boolean;
+    shouldAnimateZoom?: boolean;
+    gapBetweenItems?: boolean;
+    bgColor?: string;
+  } = $props();
 
   const activeViewStore = writable(listDockApps?.[0]?.id);
-  export let handleAppDockClick = null;
 
   activeViewStore.subscribe((value) => {
     handleAppDockClick(value);
   });
+  const dockItemPositions = writable({});
 
-  export let side: "top" | "bottom" = "top";
-  export let size: number = 64;
-  export let className: string;
-  export { className as class };
+  let className: string;
 
   const mouseX = useMotionValue(Infinity);
   const containerX = useMotionValue(0);
@@ -63,7 +84,6 @@
 <div
   style="user-select: none;"
   class={cn("bottom-4", className)}
-  {...$$restProps}
 >
   <Motion let:motion>
     <div
@@ -74,23 +94,15 @@
       aria-label="Dock Menu"
       style="user-select: none;"
       tabindex="0"
-      class="h-16 items-end gap-4 rounded-full bg-[#DED8C4] border border-[#DED8C4] px-3 pb-2 flex shadow-inner shadow-neutral-300/5"
-      on:mouseleave={() => mouseX.set(Infinity)}
-      on:mousemove={(e) => {
+      class="h-16 items-end {gapBetweenItems ? 'gap-5' : 'gap-1'} rounded-full bg-[{bgColor}] border border-[{bgColor}] px-3 pb-2 flex shadow-inner shadow-neutral-300/5"
+     onmouseleave={() => mouseX.set(Infinity)}
+     onmousemove={(e) => {
         const rect = containerRef.getBoundingClientRect();
         if (rect) {
           mouseX.set(e.clientX - rect.left);
           containerX.set(rect.x);
         }
       }}
-      on:touchmove={(e) => {
-        const rect = containerRef.getBoundingClientRect();
-        if (rect && e.touches.length > 0) {
-          mouseX.set(e.touches[0].clientX - rect.left);
-          containerX.set(rect.x);
-        }
-      }}
-      on:touchend={() => mouseX.set(Infinity)}
     >
       {#each listDockApps as dockItem, index (dockItem.id)}
         {@const distance = createDistanceTransform(index)}
@@ -99,12 +111,16 @@
           [-125, 0, 125],
           [44, 85, 44],
         )}
-        {@const width = useSpring(widthSync, { stiffness: 400, damping: 25 })}
+        {@const width = shouldAnimateZoom && useSpring(widthSync, { stiffness: 400, damping: 25 })}
         <!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_static_element_interactions -->
         <div
           role="button"
           tabindex={index}
-          on:click={() => activeViewStore.set(dockItem.id)}
+         ontouchstart={() => (window.appDockClickOnHover = shouldAutoClickOnHover && setTimeout(() => activeViewStore.set(dockItem.id), 1000))}
+         ontouchend={() => clearTimeout(window?.appDockClickOnHover)}
+         onmouseenter={() => (window.appDockClickOnHover = shouldAutoClickOnHover && setTimeout(() => activeViewStore.set(dockItem.id), 1000))}
+         onmouseleave={() => clearTimeout(window?.appDockClickOnHover)}
+         onclick={() => activeViewStore.set(dockItem.id)}
         >
           <Motion
             let:motion
