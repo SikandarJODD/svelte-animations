@@ -50,6 +50,8 @@ import { acetWobbleCard } from "./wobble-card/acetWobbleCard";
 import { acetTimeline } from "./timeline/acetTimeline";
 import { acetAnimatedTestimonials } from "./animated-testimonials/animatedTestimonials";
 import { acetSpotlight } from "./spotlight/acetSpotlight";
+import { acet_animated_tooltip } from "./animated-tooltip/acetAnimatedTooltip";
+import { acetAuroraBackground } from "./aurora-background/acetAuroraBackground";
 
 export let allAceternityUI: AceternityUI[] = [
   {
@@ -82,7 +84,7 @@ export let allAceternityUI: AceternityUI[] = [
             title: "Add Util File",
             code: `import { ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
- 
+
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }`,
@@ -166,7 +168,7 @@ export function cn(...inputs: ClassValue[]) {
             title: "Add Util File",
             code: `import { ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
- 
+
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }`,
@@ -294,5 +296,7 @@ export function cn(...inputs: ClassValue[]) {
   acetWobbleCard,
   acetTimeline,
   acetAnimatedTestimonials,
-  acetSpotlight
+  acetSpotlight,
+  acet_animated_tooltip,
+  acetAuroraBackground
 ];

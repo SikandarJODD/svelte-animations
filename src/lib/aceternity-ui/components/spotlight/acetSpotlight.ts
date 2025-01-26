@@ -40,6 +40,7 @@ export function cn(...inputs: ClassValue[]) {
         },
         {
           title: "Copy tailwind.config.js",
+          filename: "tailwind.config.ts",
           code: `theme: {
     extend: {
       animation: {

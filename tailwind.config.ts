@@ -79,6 +79,9 @@ const config: Config = {
         "text-glitch-from": "text-glitch-from 0.6s ease-in-out infinite",
         "text-scale": "text-scale 1s linear infinite forwards",
         spin: "spin 2s linear infinite",
+        "spinner": "spinner 1.2s linear infinite",
+        // Luxe UI
+        "brightness": "brightness 2.2s linear infinite",
 
         // From UI-Snippets : https://ui.ibelick.com
         // 'text-gradient': 'text-gradient 1.5s linear infinite',
@@ -114,6 +117,7 @@ const config: Config = {
         smoothTranslate:
           "smoothTranslate var(--animation-duration) var(--animation-delay) infinite",
         ty: "ty 1s  var(--animation-delay)",
+        aurora: "aurora 60s linear infinite",
       },
       keyframes: {
         spin: {
@@ -137,6 +141,14 @@ const config: Config = {
           to: {
             backgroundPosition: "-200% 0",
           },
+        },
+        "spinner": {
+          "0%": {
+            "opacity": "1"
+          },
+          "100%": {
+            "opacity": "0.15"
+          }
         },
         "border-width": {
           from: {
@@ -207,6 +219,14 @@ const config: Config = {
             opacity: "1",
             transform: "translate(-50%,-40%) scale(1)",
           },
+        },
+        "brightness": {
+          "0%": {
+            "transform": "skew(-13deg) translateX(-100%)"
+          },
+          "100%": {
+            "transform": "skew(-13deg) translateX(100%)"
+          }
         },
         // For Gradient Input, UI-Snippets : https://ui.ibelick.com
         "background-shine": {
@@ -349,6 +369,14 @@ const config: Config = {
         ty: {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-4px)" },
+        },
+        aurora: {
+          from: {
+            backgroundPosition: "50% 50%, 50% 50%",
+          },
+          to: {
+            backgroundPosition: "350% 50%, 350% 50%",
+          },
         },
       },
     },

@@ -9,33 +9,33 @@
 </script>
 
 <SvelteSeo
-  title="Luxe Svelte Components"
-  description="Luxe Svelte - Library of components copy and paste to illuminate your applications with elegance and sophistication."
+  title="Svelte Luxe UI"
+  description="Svelte Luxe UI - Library of components copy and paste to illuminate your applications with elegance and sophistication."
   canonical="https://animation-svelte.vercel.app/luxe"
-  keywords="luxe svelte, luxe componetns, svelte, sveltekit, UI Design, animation-svelte.vercel.app, svelte animation, svelte components, svelte library, svelte ui, sveltekit components, sveltekit library, sveltekit ui, sveltekit animation, sveltekit ui library, sveltekit components library, sveltekit ui components, luxe svelte, copy paste svelte components, svelte components library, svelte ui library, svelte animation library, sveltekit animation library, sveltekit ui library, sveltekit components library, sveltekit ui components, sveltekit components library, sveltekit animation components"
+  keywords="svelte luxe ui, luxe svelte, luxe componetns, svelte, sveltekit, UI Design, animation-svelte.vercel.app, svelte animation, svelte components, svelte library, svelte ui, sveltekit components, sveltekit library, sveltekit ui, sveltekit animation, sveltekit ui library, sveltekit components library, sveltekit ui components, luxe svelte, copy paste svelte components, svelte components library, svelte ui library, svelte animation library, sveltekit animation library, sveltekit ui library, sveltekit components library, sveltekit ui components, sveltekit components library, sveltekit animation components"
   twitter={{
     card: "summary_large_image",
     site: "@Sikandar_Bhide",
-    title: "Luxe Svelte Components",
+    title: "Svelte Luxe UI",
     description:
-      "Luxe Svelte - Library of components copy and paste to illuminate your applications with elegance and sophistication.",
+      "Svelte Luxe UI - Library of components copy and paste to illuminate your applications with elegance and sophistication.",
     image:
       "https://i.pinimg.com/736x/8f/88/8a/8f888ad7286306bbbf10a138c687ca5d.jpg",
   }}
   openGraph={{
     url: "https://animation-svelte.vercel.app/luxe",
-    title: "Luxe Svelte Components",
+    title: "Svelte Luxe UI",
     description:
-      "Luxe Svelte - Library of components copy and paste to illuminate your applications with elegance and sophistication.",
+      "Svelte Luxe UI - Library of components copy and paste to illuminate your applications with elegance and sophistication.",
     images: [
       {
         url: "https://i.pinimg.com/736x/8f/88/8a/8f888ad7286306bbbf10a138c687ca5d.jpg",
         width: 800,
         height: 600,
-        alt: "Luxe Svelte Components",
+        alt: "Svelte Luxe UI",
       },
     ],
-    site_name: "Luxe Svelte Components",
+    site_name: "Svelte Luxe UI",
   }}
 />
 
@@ -43,17 +43,17 @@
   <section class="flex flex-col gap-6">
     <div class="space-y-2">
       <h1 class="text-3xl md:text-4xl font-semibold text-primary">
-        Svelte Luxe Components
+        Svelte Luxe UI
       </h1>
       <p class=" font-normal text-neutral-500">
         Luxe Svelte - Free components, <span class="text-primary">Copy</span>
         and <span class="text-primary">Paste</span> to illuminate your
         applications with elegance.
         <br />
-        This Library is Inspired from <a class='text-primary' href="https://www.luxeui.com" target="_blank">Luxe UI</a> build by
-        <a class='text-primary' href="https://x.com/guhrodrrigues" target="_blank"
-          >Gustavo Rodrigues</a
-        >.
+        This Library is Inspired from
+        <a class="text-primary" href="https://www.luxeui.com" target="_blank"
+          >Luxe UI</a
+        >
       </p>
     </div>
   </section>

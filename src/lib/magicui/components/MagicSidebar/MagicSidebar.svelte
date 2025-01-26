@@ -66,11 +66,16 @@
           name: "Circular Progress Bar",
           link: "/magic/circular-progress-bar",
         },
+        {
+          name: "Features",
+          link: "/magic/features",
+          isNew: true,
+        },
       ],
     },
     {
       id: 8,
-      heading: "Deice Mocks",
+      heading: "Device Mocks",
       sub: [
         {
           name: "Safari",

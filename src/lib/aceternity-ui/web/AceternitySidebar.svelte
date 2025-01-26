@@ -53,12 +53,20 @@
         {
           name: "Animated Testimonials",
           link: "/a/components/animated-testimonials",
+        },
+        {
+          name: "Animated Tooltip",
+          link: "/a/components/animated-tooltip",
+          isNew: true,
+        },
+        {
+          name: "Aurora Background",
+          link: "/a/components/aurora-background",
           isNew: true,
         },
         {
           name: "Spotlight",
           link: "/a/components/spotlight",
-          isNew: true,
         },
         {
           name: "Lens",
