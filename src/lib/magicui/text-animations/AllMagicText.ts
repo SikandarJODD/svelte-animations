@@ -330,13 +330,13 @@ export let allMagicText: MagicComponent[] = [
   },
   {
     id: "sparkles-text",
+    tags: ["Svelte Motion", "Tailwind CSS", 'Svelte 4'],
     name: "Sparkles Text",
     link: "/magic/sparkles-text",
     desc: "A dynamic text that generates continous sparkles with smooth",
     component: SparklesText,
-    download: "npm i clsx tailwind-merge",
+    download: "npm i clsx tailwind-merge svelte-motion",
     cncode: cncode,
     code: SparklesTextCode,
-    
   },
 ];

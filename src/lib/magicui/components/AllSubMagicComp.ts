@@ -448,7 +448,7 @@ export let allSubMagicComps: MagicComponent[] = [
     desc: "Animated Circular Progress Bar is a component that displays a circular gauge with a percentage value.",
     link: "/magic/circular-progress-bar",
     cncode: cncode,
-    download: "npm i svelte-motion clsx tailwind-merge",
+    download: "npm i clsx tailwind-merge",
     component: CircularProgressBar,
     code: CircularProgressBarCode,
     examples: [
