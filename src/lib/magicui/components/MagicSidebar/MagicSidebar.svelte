@@ -69,7 +69,6 @@
         {
           name: "Features",
           link: "/magic/features",
-          isNew: true,
         },
       ],
     },
@@ -80,12 +79,10 @@
         {
           name: "Safari",
           link: "/magic/safari",
-          isNew: true,
         },
         {
           name: "iPhone 15 Pro",
           link: "/magic/iphone15-pro",
-          isNew: true,
         },
         // {
         //   name: "Android",
@@ -188,17 +185,14 @@
         {
           name: "Ripple Button",
           link: "/magic/ripple-button",
-          isNew: true,
         },
         {
           name: "Rainbow",
           link: "/magic/rainbow",
-          isNew: true,
         },
         {
           name: "Interactive Hover",
           link: "/magic/interactive-hover",
-          isNew: true,
         },
       ],
     },
@@ -206,6 +200,11 @@
       id: 4,
       heading: "Text Animations",
       sub: [
+        {
+          name: "Aurora Text",
+          link: "/magic/aurora-text",
+          isNew: true,
+        },
         {
           name: "Text Reveal",
           link: "/magic/text-reveal",
@@ -233,6 +232,11 @@
         {
           name: "Gradual Spacing",
           link: "/magic/gradual-spacing",
+        },
+        {
+          name: "Spinning Text",
+          link: "/magic/spinning-text",
+          isNew: true,
         },
         {
           name: "Letter Pull up",
