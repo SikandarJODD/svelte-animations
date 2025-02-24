@@ -1,5 +1,5 @@
 <script>
-
+  import ColourfulText from "./ColourfulText.svelte";
 </script>
 <div
   class="h-screen w-full flex items-center justify-center relative overflow-hidden bg-black"
