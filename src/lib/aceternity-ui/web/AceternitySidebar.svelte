@@ -1,5 +1,4 @@
 <script lang="ts">
-  import Separator from "$lib/components/ui/separator/separator.svelte";
   import { page } from "$app/stores";
   import { navs } from "$lib";
   import Badge from "$lib/components/ui/badge/badge.svelte";
@@ -57,12 +56,20 @@
         {
           name: "Animated Tooltip",
           link: "/a/components/animated-tooltip",
-          isNew: true,
         },
         {
           name: "Aurora Background",
           link: "/a/components/aurora-background",
-          isNew: true,
+        },
+        {
+          name:'Glowing Effect',
+          link:'/a/components/glowing-effect',
+          isNew:true
+        },
+        {
+          name:'Colourful Text',
+          link:'/a/components/colourful-text',
+          isNew:true
         },
         {
           name: "Spotlight",

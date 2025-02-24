@@ -79,6 +79,16 @@ import WordRotateExampleCode from "./WordRotate/WordRotateExample.svelte?raw";
 import SparklesText from "./SparklesText/SparklesText.svelte";
 import SparklesTextCode from "./SparklesText/SparklesText.svelte?raw";
 
+import AuroraText from "./AuroraText/AuroraText.svelte";
+import AuroraTextCode from "./AuroraText/AuroraText.svelte?raw";
+import AuroraTextExample from "./AuroraText/AuroraTextExample.svelte";
+import AuroraTextExampleCode from "./AuroraText/AuroraTextExample.svelte?raw";
+
+import SpinningText from "./SpinningText/SpinningText.svelte";
+import SpinningTextCode from "./SpinningText/SpinningText.svelte?raw";
+import SpinningTextExample from "./SpinningText/SpinningTextExample.svelte";
+import SpinningTextExampleCode from "./SpinningText/SpinningTextExample.svelte?raw";
+
 export let allMagicText: MagicComponent[] = [
   {
     id: "number-ticker",
@@ -338,5 +348,44 @@ export let allMagicText: MagicComponent[] = [
     download: "npm i clsx tailwind-merge svelte-motion",
     cncode: cncode,
     code: SparklesTextCode,
+  },
+  {
+    id: "aurora-text",
+    tags: ["Tailwind CSS", 'Svelte 4', 'Svelte 5'],
+    name: "Aurora Text",
+    link: "/magic/aurora-text",
+    desc: 'A beautiful aurora text effect',
+    component: AuroraText,
+    download: "npm i clsx tailwind-merge",
+    cncode: cncode,
+    code: AuroraTextCode,
+    examples: [
+      {
+        id: 1,
+        name: 'Aurora Text Example',
+        fileName: 'AuroraTextExample.svelte',
+        component: AuroraTextExample,
+        code: AuroraTextExampleCode
+      }
+    ]
+  },
+  {
+    id: "spinning-text",
+    tags: ["Tailwind CSS", 'Svelte 4', 'Svelte 5'],
+    name: "Spinning Text",
+    link: "/magic/spinning-text",
+    desc: 'The Spinning Text component animates text in a circular motion with customizable speed, direction, color, and transitions for dynamic and engaging effects.',
+    download: "npm i clsx tailwind-merge",
+    cncode: cncode,
+    code: SpinningTextCode,
+    examples: [
+      {
+        id: 1,
+        name: 'Example',
+        fileName:'SpinningTextExample.svelte',
+        component: SpinningTextExample,
+        code: SpinningTextExampleCode
+      }
+    ]
   },
 ];

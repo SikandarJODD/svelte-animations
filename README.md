@@ -47,28 +47,16 @@ Build using Tailwind CSS and [**Svelte motion**](https://svelte-motion.gradientd
 
 | Name                     | Preview                                                              | Section  |
 | ------------------------ | -------------------------------------------------------------------- | -------- |
+| Colorful Text       | [Visit](https://animation-svelte.vercel.app/magic/colorful-text)  | Magic UI |
 | Scratch To Reveal        | [Visit](https://animation-svelte.vercel.app/magic/scratch-to-reeal)  | Magic UI |
 | Ripple Button            | [Visit](https://animation-svelte.vercel.app/magic/ripple-button)     | Magic UI |
 | Interactive Hover Button | [Visit](https://animation-svelte.vercel.app/magic/interactive-hover) | Magic UI |
-| Particles                | [Visit](https://animation-svelte.vercel.app/magic/particles)         | Magic UI |
-| Cool Mode                | [Visit](https://animation-svelte.vercel.app/magic/cool-mode)         | Magic UI |
-| Shine Border             | [Visit](https://animation-svelte.vercel.app/magic/shine-border)      | Magic UI |
-| Magic Card               | [Visit](https://animation-svelte.vercel.app/magic/magic-card)        | Magic UI |
-| Encrypt Button           | [Visit](https://animation-svelte.vercel.app/magic/examples/11)       | Magic UI |
 
-### Svelte Animations Examples
-
-| Effects        | Description                                             |
-| -------------- | ------------------------------------------------------- |
-| Link Hover     | It's show small Image after hovering `a` tag            |
-| Modul Div.     | Crossfade Animation on Div, Inspired from modul.so      |
-| Spring Div     | Simple Usage of Spring on Extending div height & width  |
-| Dynamic Island | Effect inspired from Emil Kowalski : Time, Ring, Silent |
-| Reveal Link    | Reveal Link on Hover, Inspired from hover.dev           |
 
 ### Feedback
 
 If you have any feedback, please reach out at [Twitter](https://twitter.com/Sikandar_Bhide)
+
 
 ### Credits
 
