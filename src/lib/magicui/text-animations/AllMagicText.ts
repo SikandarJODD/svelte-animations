@@ -358,6 +358,7 @@ export let allMagicText: MagicComponent[] = [
     component: AuroraText,
     download: "npm i clsx tailwind-merge",
     cncode: cncode,
+    tailwind: allMagicTailwinds["aurora-text"],
     code: AuroraTextCode,
     examples: [
       {
@@ -367,7 +368,8 @@ export let allMagicText: MagicComponent[] = [
         component: AuroraTextExample,
         code: AuroraTextExampleCode
       }
-    ]
+    ],
+
   },
   {
     id: "spinning-text",
@@ -382,7 +384,7 @@ export let allMagicText: MagicComponent[] = [
       {
         id: 1,
         name: 'Example',
-        fileName:'SpinningTextExample.svelte',
+        fileName: 'SpinningTextExample.svelte',
         component: SpinningTextExample,
         code: SpinningTextExampleCode
       }
