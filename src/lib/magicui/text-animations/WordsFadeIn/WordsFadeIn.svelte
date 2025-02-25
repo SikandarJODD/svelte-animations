@@ -1,6 +1,6 @@
 <script lang="ts">
   import { cn } from "$lib/utils";
-  import { AnimatePresence, Motion } from "svelte-motion";
+  import { Motion } from "svelte-motion";
 
   let className: any = "";
   export { className as class };
