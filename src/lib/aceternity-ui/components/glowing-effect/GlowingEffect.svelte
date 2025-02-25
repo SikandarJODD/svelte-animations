@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { onMount } from "svelte";
+  import { onDestroy, onMount } from "svelte";
   import { animate } from "svelte-motion";
 
   export let blur = 0;
@@ -11,13 +11,13 @@
   export let className = "";
   export let movementDuration = 2;
   export let borderWidth = 1;
-  export let disabled = true;
+  export let disabled = false;
 
   let containerRef: HTMLDivElement;
   let lastPosition = { x: 0, y: 0 };
-  let animationFrameRef: number;
+  let animationFrameRef: any;
 
-  function handleMove(e: MouseEvent) {
+  function handleMove(e?: MouseEvent | { x: number; y: number }) {
     if (!containerRef) return;
 
     if (animationFrameRef) {
@@ -70,7 +70,9 @@
         duration: movementDuration,
         ease: [0.16, 1, 0.3, 1],
         onUpdate: (value) => {
-          containerRef.style.setProperty("--start", String(value));
+          if (containerRef) {
+            containerRef.style.setProperty("--start", String(value));
+          }
         },
       });
     });
@@ -79,20 +81,18 @@
   onMount(() => {
     if (disabled) return;
 
-    const handleScroll = () => (e: MouseEvent) => handleMove(e);
-    const handlePointerMove = (e: MouseEvent) => handleMove(e);
+    const handleScroll = () => () => handleMove();
+    const handlePointerMove = (e: PointerEvent) => handleMove(e);
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    document.body.addEventListener("pointermove", handlePointerMove, {
-      passive: true,
-    });
+    window.addEventListener("scroll", handleScroll);
+    document.addEventListener("pointermove", handlePointerMove);
 
     return () => {
       if (animationFrameRef) {
         cancelAnimationFrame(animationFrameRef);
       }
       window.removeEventListener("scroll", handleScroll);
-      document.body.removeEventListener("pointermove", handlePointerMove);
+      document.removeEventListener("pointermove", handlePointerMove);
     };
   });
 </script>
