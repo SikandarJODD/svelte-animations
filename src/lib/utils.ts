@@ -7,6 +7,8 @@ export function cn(...inputs: ClassValue[]) {
 	return twMerge(clsx(inputs));
 }
 
+export const isBrowser = typeof document !== "undefined";
+
 type FlyAndScaleParams = {
 	y?: number;
 	x?: number;

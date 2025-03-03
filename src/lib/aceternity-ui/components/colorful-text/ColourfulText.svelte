@@ -26,7 +26,7 @@
   }
 
   onMount(() => {
-    const interval = setInterval(shuffleColors, 5000);
+    const interval = setInterval(shuffleColors, 3000);
     return () => clearInterval(interval);
   });
 </script>

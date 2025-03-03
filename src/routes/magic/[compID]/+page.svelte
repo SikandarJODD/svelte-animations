@@ -7,6 +7,7 @@
   import * as Tabs from "$lib/components/ui/tabs";
   import DotPattern from "$lib/magicui/backgrounds/DotPattern/DotPattern.svelte";
   import Badge from "$lib/components/ui/badge/badge.svelte";
+  import Carbon from "$lib/carbon/Carbon.svelte";
 
   $: routeID = $page.params.compID;
   $: comp = allMagicComponents.filter((c) => c.id === routeID)[0];
@@ -36,37 +37,51 @@
 </svelte:head>
 
 <div class="my-0 md:my-2 mx-2 md:mx-4">
-  <a href="/magic" class="flex items-center gap-1 text-muted-foreground w-fit">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="17"
-      height="17"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="1.2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class="lucide lucide-arrow-left mt-px"
-      ><path d="m12 19-7-7 7-7" /><path d="M19 12H5" /></svg
-    >
-    Back
-  </a>
-  <div class="space-y-5">
-    <div>
-      <h1 class="text-2xl font-bold mt-4 md:text-3xl capitalize mb-3">
-        {comp.name}
-      </h1>
-      <p class="text-muted-foreground text-lg">
-        {@html comp.desc}
-      </p>
-      {#if comp?.tags}
-        <div class="flex gap-2 mt-2">
-          {#each comp.tags as item}
-            <Badge variant="outline" class="py-1 px-3">{item}</Badge>
-          {/each}
-        </div>
-      {/if}
+  <div>
+    <div class="w-full min-h-36 grid grid-cols-1 md:grid-cols-6 space-x-6">
+      <div class="md:col-span-4">
+        <a
+          href="/magic"
+          class="flex items-center gap-1 text-muted-foreground w-fit"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="17"
+            height="17"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-arrow-left mt-px"
+            ><path d="m12 19-7-7 7-7" /><path d="M19 12H5" /></svg
+          >
+          Back
+        </a>
+        <h1 class="text-2xl font-bold mt-4 md:text-3xl capitalize mb-3">
+          {comp.name}
+        </h1>
+        <p class="text-muted-foreground text-lg">
+          {@html comp.desc}
+        </p>
+        {#if comp?.tags}
+          <div class="flex gap-2 mt-2">
+            {#each comp.tags as item}
+              <Badge variant="outline" class="py-1 px-3">{item}</Badge>
+            {/each}
+          </div>
+        {/if}
+      </div>
+      <div class="md:col-span-2 my-4 md:my-0">
+          <!-- <script
+            async
+            type="text/javascript"
+            src="//cdn.carbonads.com/carbon.js?serve=CW7ICKJI&placement=animation-sveltevercelapp&format=cover"
+            id="_carbonads_js"
+          ></script> -->
+          <Carbon />
+      </div>
     </div>
     {#if comp?.examples}
       <!-- <h1 class="text-2xl font-bold mt-4 md:text-3xl capitalize mb-3">
@@ -236,3 +251,6 @@
     {/if}
   </div>
 </div>
+
+<style>
+</style>
