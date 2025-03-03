@@ -1,0 +1,19 @@
+.carbon-responsive-wrap {
+  @apply bg-background;
+}
+
+#carbon-responsive .carbon-responsive-wrap {
+  @apply bg-background grid grid-cols-[auto_1fr] items-center gap-4 border-0 p-0 !important;
+}
+
+#carbon-responsive {
+  @apply gap-1 !important;
+}
+
+#carbonads .carbon-poweredby {
+  @apply bg-background text-muted-foreground block text-right text-[0.5em] uppercase no-underline !important;
+}
+
+#carbonads .carbon-text {
+  @apply text-muted-foreground text-sm !important;
+}

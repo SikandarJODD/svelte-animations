@@ -7,6 +7,7 @@
   import NewNavbar from "$lib/components/dev/Navbar/NewNavbar.svelte";
   setMode("dark");
   let pageWidth = 0;
+  import "./carbon.css";
 </script>
 
 <svelte:window bind:innerWidth={pageWidth} />
