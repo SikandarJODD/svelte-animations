@@ -6,22 +6,10 @@
   import Separator from "$lib/components/ui/separator/separator.svelte";
   import DotPattern from "$lib/magicui/backgrounds/DotPattern/DotPattern.svelte";
   import CodeBlock from "$lib/luxe/components/codeblock/CodeBlock.svelte";
+  import Carbon from "$lib/carbon/Carbon.svelte";
 
   $: routeID = $page.params.compID;
   $: comp = allIndieUIComponents.filter((comp) => comp.id == routeID)[0];
-
-  /* 
-  class="{comp?.showGrid === true
-          ? ' relative overflow-hidden'
-          : ''} {comp?.class}"
-
-
-class="{example?.showGrid === true
-                        ? ' relative overflow-hidden '
-                        : ''} {example.class} {example?.showDots === true
-                        ? ' relative overflow-hidden '
-                        : ''}"
-  */
 </script>
 
 <svelte:head>
@@ -38,28 +26,35 @@ class="{example?.showGrid === true
 </svelte:head>
 
 <div class="my-0 md:my-4 mx-px md:mx-5">
-  <a href="/in" class="flex items-center gap-1 text-muted-foreground w-fit">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="17"
-      height="17"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="1.2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class="lucide lucide-arrow-left mt-px"
-      ><path d="m12 19-7-7 7-7" /><path d="M19 12H5" /></svg
-    >
-    Back
-  </a>
-  <div class="space-y-5">
-    <div>
-      <h1 class="text-2xl font-bold mt-4 md:text-3xl capitalize mb-2">
-        {comp.name}
-      </h1>
+  <div class="w-full min-h-32 grid grid-cols-1 lg:grid-cols-6 space-x-6">
+    <div class="md:col-span-4">
+      <a href="/in" class="flex items-center gap-1 text-muted-foreground w-fit">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="17"
+          height="17"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-arrow-left mt-px"
+          ><path d="m12 19-7-7 7-7" /><path d="M19 12H5" /></svg
+        >
+        Back
+      </a>
+      <div>
+        <h1 class="text-2xl font-bold mt-4 md:text-3xl capitalize mb-2">
+          {comp.name}
+        </h1>
+      </div>
     </div>
+    <div class="lg:col-span-2 my-4 md:my-0 order-first lg:order-last">
+      <Carbon />
+    </div>
+  </div>
+  <div class="space-y-5 lg:-mt-8">
     <div>
       {#key comp}
         <div class="space-y-6">
@@ -135,5 +130,4 @@ class="{example?.showGrid === true
       {/key}
     </div>
   </div>
-  
 </div>

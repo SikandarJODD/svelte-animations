@@ -38,8 +38,8 @@
 
 <div class="my-0 md:my-2 mx-2 md:mx-4">
   <div>
-    <div class="w-full min-h-36 grid grid-cols-1 md:grid-cols-6 space-x-6">
-      <div class="md:col-span-4">
+    <div class="w-full min-h-36 grid grid-cols-1 lg:grid-cols-6 space-x-6">
+      <div class="lg:col-span-4">
         <a
           href="/magic"
           class="flex items-center gap-1 text-muted-foreground w-fit"
@@ -73,14 +73,14 @@
           </div>
         {/if}
       </div>
-      <div class="md:col-span-2 my-4 md:my-0">
-          <!-- <script
+      <div class="lg:col-span-2 my-4 md:my-0 order-first lg:order-last">
+        <!-- <script
             async
             type="text/javascript"
             src="//cdn.carbonads.com/carbon.js?serve=CW7ICKJI&placement=animation-sveltevercelapp&format=cover"
             id="_carbonads_js"
           ></script> -->
-          <Carbon />
+        <Carbon />
       </div>
     </div>
     {#if comp?.examples}
