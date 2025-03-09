@@ -12,23 +12,27 @@
 
   onMount(() => {
     if (!dev) {
-      refreshCarbonAds();
+    refreshCarbonAds();
 
-      return () => {
-        const scriptNode = container?.querySelector(`[data-id="${localId}"]`);
-        const carbonNode = container?.querySelector(`#carbonads`);
-        scriptNode?.remove();
-        carbonNode?.remove();
-      };
+    return () => {
+      const scriptNode = container?.querySelector(`[data-id="${localId}"]`);
+      const carbonNode = container?.querySelector(`#carbonads`);
+      scriptNode?.remove();
+      carbonNode?.remove();
+    };
     }
   });
 
   beforeNavigate((navigation) => {
-    let fromparam = navigation.from?.params.compID;
-    let toparam = navigation.to?.params.compID;
-    const isDocIndex = navigation.from?.route.id === `/magic/${fromparam}`;
+    let fromparam = navigation.from?.params.compID || "";
+    let toparam = navigation.to?.params.compID || "";
+    if(fromparam === '' || toparam==='') {
+      return;
+    }
+    let pathname = navigation.from?.url.pathname.split("/")[1] || "magic";
+    const isDocIndex = navigation.from?.route.id === `/${pathname}/${fromparam}`;
     if (isDocIndex) return;
-    const goingToDocIndex = navigation.to?.route.id === `/magic/${toparam}`;
+    const goingToDocIndex = navigation.to?.route.id === `/${pathname}/${toparam}`;
     if (goingToDocIndex) return;
     refreshCarbonAds();
   });
@@ -45,22 +49,22 @@
 
   function refreshCarbonAds() {
     if (!dev) {
-      if (!isBrowser) return;
-      const scriptNode = container?.querySelector("[data-id='_carbonads_js']");
-      const carbonAdsNode = container?.querySelector("#carbonads");
+    if (!isBrowser) return;
+    const scriptNode = container?.querySelector("[data-id='_carbonads_js']");
+    const carbonAdsNode = container?.querySelector("#carbonads");
 
-      carbonAdsNode?.remove();
-      scriptNode?.remove();
+    carbonAdsNode?.remove();
+    scriptNode?.remove();
 
-      const script = createCarbonScript();
-      container = document.getElementById(localId);
-      if (container) {
-        container.appendChild(script);
-      }
+    const script = createCarbonScript();
+    container = document.getElementById(localId);
+    if (container) {
+      container.appendChild(script);
+    }
     }
   }
 </script>
 
 {#if !dev}
-  <div id={localId} class=""></div>
+<div id={localId} class=""></div>
 {/if}

@@ -4,6 +4,7 @@
   import { page } from "$app/stores";
   import CodeBlock from "$lib/luxe/components/codeblock/CodeBlock.svelte";
   import Badge from "$lib/components/ui/badge/badge.svelte";
+  import Carbon from "$lib/carbon/Carbon.svelte";
 
   $: routeID = $page.params.componentID;
   $: comp = allLuxeComponents.filter((comp) => comp.id == routeID)[0];
@@ -32,35 +33,45 @@
 </svelte:head>
 
 <div class="my-0 md:my-4 mx-px md:mx-5">
-  <a href="/luxe" class="flex items-center gap-1 text-muted-foreground w-fit">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="17"
-      height="17"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="1.2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class="lucide lucide-arrow-left mt-px"
-      ><path d="m12 19-7-7 7-7" /><path d="M19 12H5" /></svg
-    >
-    Back
-  </a>
-  <div class="space-y-5">
-    <div>
-      <h1 class="text-2xl font-bold mt-4 md:text-3xl capitalize mb-2">
-        {comp.name}
-      </h1>
-      {#if comp?.tags}
-        <div class="flex gap-2 items-center">
-          {#each comp.tags as item}
-            <Badge variant='outline' class="py-1 px-3">{item}</Badge>
-          {/each}
-        </div>
-      {/if}
+  <div class="w-full min-h-32 grid grid-cols-1 lg:grid-cols-6 space-x-6">
+    <div class="lg:col-span-4">
+      <a
+        href="/luxe"
+        class="flex items-center gap-1 text-muted-foreground w-fit"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="17"
+          height="17"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-arrow-left mt-px"
+          ><path d="m12 19-7-7 7-7" /><path d="M19 12H5" /></svg
+        >
+        Back
+      </a>
+      <div>
+        <h1 class="text-2xl font-bold mt-4 md:text-3xl capitalize mb-2">
+          {comp.name}
+        </h1>
+        {#if comp?.tags}
+          <div class="flex gap-2 items-center">
+            {#each comp.tags as item}
+              <Badge variant="outline" class="py-1 px-3">{item}</Badge>
+            {/each}
+          </div>
+        {/if}
+      </div>
     </div>
+    <div class="order-first lg:order-last min-h-32 lg:col-span-2  md:my-0">
+      <Carbon />
+    </div>
+  </div>
+  <div class="space-y-5 mt-2 lg:mt-0">
     <div>
       <ComponentView
         class="{comp?.showGrid === true

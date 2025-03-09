@@ -13,7 +13,7 @@
   ];
   let miniNav = [
     { link: "/magic", name: "Magic UI" },
-    { link: "/in", name: "Indie UI" },
+    { link: "/in/cards-simple", name: "Indie UI" },
     { link: "/examples", name: "Examples" },
     { link: "/luxe", name: "Luxe Components" },
   ];
@@ -27,7 +27,7 @@
   $: routeId = $page.url.pathname;
 </script>
 
-<nav class="bg-background/50 border-b sticky top-0 z-50 backdrop-blur-md">
+<nav class="bg-background/50 border-b sticky top-0 z-[100] backdrop-blur-md">
   <div class="mx-auto max-w-7xl px-2 sm:px-4 lg:px-8">
     <div class="relative flex h-14 items-center justify-between">
       <div class="flex items-center px-2 lg:px-0">
@@ -168,7 +168,7 @@
           <span class="sr-only">Open main menu</span>
           <!--
               Icon when menu is closed.
-  
+
               Menu open: "hidden", Menu closed: "block"
             -->
           <svg
@@ -187,7 +187,7 @@
           </svg>
           <!--
               Icon when menu is open.
-  
+
               Menu open: "block", Menu closed: "hidden"
             -->
           <svg
