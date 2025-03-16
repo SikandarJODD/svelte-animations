@@ -9,23 +9,8 @@
 
   $: routeID = $page.params.templateID;
   $: template = allTemplates.filter((t) => t.id === routeID)[0];
-  $: console.log(template, "Template");
 </script>
-
-<!-- <svelte:head>
-  <title>{comp.name} · Svelte</title>
-  <meta name="description" content={comp.description} />
-  <meta property="og:title" content={comp.name + "· Svelte"} />
-  <meta property="og:description" content={comp.description} />
-  <meta property="og:site_name" content="Svelte Tailwind Components" />
-  <meta property="og:url" content="https://animation-svelte.vercel.app" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content={comp.name + "· Svelte"} />
-  <meta name="twitter:description" content={comp.description} />
-  <meta name="twitter:site" content="@Sikandar_Bhide" />
-</svelte:head> -->
-
-<div class="my-0 md:my-2 md:mx-2">
+<div class="my-0 md:my-0 md:mx-2">
   <!-- Breadcrumb -->
   <div>
     <Breadcrumb.Root>
@@ -123,21 +108,6 @@
           >
         {/each}
       </div>
-    </div>
-    <div
-      class="bg-zinc-900/40 px-3 py-4 border-l-4 border"
-      id="credits_{template.title}"
-    >
-      <h3 class="font-semibold text-2xl mb-1.5">Credits</h3>
-      <p class="text-zinc-400">
-        <a
-          href="https://magicui.design/"
-          target="_blank"
-          class="underline underline-offset-2 text-primary">Magic UI</a
-        >
-        : This template is Inspired from Magic UI. He is GOD, do visit for Amazing
-        Components and Templates.
-      </p>
     </div>
   </div>
 </div>
