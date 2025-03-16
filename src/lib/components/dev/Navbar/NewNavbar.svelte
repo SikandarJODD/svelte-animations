@@ -9,7 +9,7 @@
     { link: "/", name: "Home" },
     { link: "/", name: "Components" },
     { link: "/changelog", name: "Changelog" },
-    { link: "/templates/developer-portfolio", name: "Templates" },
+    { link: "/templates/saas-template", name: "Templates" },
   ];
   let miniNav = [
     { link: "/magic", name: "Magic UI" },
@@ -120,9 +120,12 @@
               {:else}
                 <a
                   href={link}
-                  class="rounded-md px-3 py-2 text-sm text-gray-300 hover:bg-gray-700/20 transition-all duration-200 hover:text-white"
-                  >{name}</a
-                >
+                  class="rounded-md px-3 py-2 text-sm text-gray-300 hover:bg-gray-700/20 transition-all duration-200 hover:text-white {name ===
+                  'Templates'
+                    ? 'bg-zinc-800/90 text-primary'
+                    : ''}"
+                  >{name}
+                </a>
               {/if}
             {/each}
           </div>
@@ -141,7 +144,7 @@
             href="https://github.com/SikandarJODD/svelte-animations?tab=readme-ov-file#simple-components"
             target="_blank"
             size="icon"
-            class='hidden sm:flex'
+            class="hidden sm:flex"
           >
             <img src={GithubSvg} alt="twitter_logo" class="size-6" />
           </Button>

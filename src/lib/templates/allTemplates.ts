@@ -19,7 +19,7 @@ A minimalistic portfolio template to showcase your skills and experience.
 - Download | Edit | Publish
 - Deploy to **Vercel** in seconds
 
-### Usage 
+### Usage
 1. Click on **Download** button
 2. Extract the zip file & open in your favorite code editor
 3. Edit the **/src/lib/data/resume.ts** file with your details
@@ -37,7 +37,7 @@ A complete landing page template to launch a new project or idea (frontend only)
 - High Quality Design & Responsive UI
 - SEO friendly
 
-### Features 
+### Features
 - Header Section
 - Hero Section
 - Social Proof Section
@@ -79,6 +79,25 @@ export let allTemplates = [
     title: "Startup Template",
     desc: "The best landing page template for your startup.",
     tags: ["startup", "product"],
+    img: StartupImg,
+    markdown: startup_markdown,
+    techstack: [
+      "svelte",
+      "tailwindCSS",
+      "typescript",
+      "shadcn-svelte",
+      "svelte-animations",
+    ],
+    credits: "Magic UI",
+    downloadLink:
+      "https://github.com/SikandarJODD/startup-template/archive/refs/heads/master.zip",
+    previewLink: "https://startup-sve.vercel.app",
+  },
+  {
+    id: "sass-template",
+    title: "SASS Template",
+    desc: "The best landing page template for your startup.",
+    tags: ["startup", "product", "sass"],
     img: StartupImg,
     markdown: startup_markdown,
     techstack: [

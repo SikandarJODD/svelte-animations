@@ -19,6 +19,11 @@
           name: "Startup Template",
           link: "/templates/startup-template",
         },
+        {
+          name: "SAAS Template",
+          link: "/templates/saas-template",
+          isNew: true,
+        },
       ],
     },
   ];
