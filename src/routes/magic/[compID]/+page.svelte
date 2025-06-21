@@ -7,7 +7,7 @@
   import * as Tabs from "$lib/components/ui/tabs";
   import DotPattern from "$lib/magicui/backgrounds/DotPattern/DotPattern.svelte";
   import Badge from "$lib/components/ui/badge/badge.svelte";
-  import Carbon from "$lib/carbon/Carbon.svelte";
+  // import Carbon from "$lib/carbon/Carbon.svelte";
 
   $: routeID = $page.params.compID;
   $: comp = allMagicComponents.filter((c) => c.id === routeID)[0];
@@ -73,15 +73,15 @@
           </div>
         {/if}
       </div>
-      <div class="lg:col-span-2 my-4 md:my-0 order-first lg:order-last">
+      <!-- <div class="lg:col-span-2 my-4 md:my-0 order-first lg:order-last"> -->
         <!-- <script
             async
             type="text/javascript"
             src="//cdn.carbonads.com/carbon.js?serve=CW7ICKJI&placement=animation-sveltevercelapp&format=cover"
             id="_carbonads_js"
           ></script> -->
-        <Carbon />
-      </div>
+        <!-- <Carbon /> -->
+      <!-- </div> -->
     </div>
     {#if comp?.examples}
       <!-- <h1 class="text-2xl font-bold mt-4 md:text-3xl capitalize mb-3">

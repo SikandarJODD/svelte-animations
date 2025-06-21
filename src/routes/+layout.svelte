@@ -5,21 +5,21 @@
   import { setMode } from "mode-watcher";
 
   import NewNavbar from "$lib/components/dev/Navbar/NewNavbar.svelte";
-  onMount(() => {
-    setMode("dark");
-  });
   let pageWidth = 0;
   import "./carbon.css";
   import { onMount } from "svelte";
-  import Banner from "$lib/components/dev/Navbar/Banner.svelte";
-  import { page } from "$app/stores";
+  // import Banner from "$lib/components/dev/Navbar/Banner.svelte";
+  // import { page } from "$app/stores";
+  onMount(() => {
+    setMode("dark");
+  });
 </script>
 
 <svelte:window bind:innerWidth={pageWidth} />
 <ModeWatcher />
-{#if $page.url.pathname === "/"}
+<!-- {#if $page.url.pathname === "/"}
   <Banner />
-{/if}
+{/if} -->
 <NewNavbar />
 <div>
   <slot />

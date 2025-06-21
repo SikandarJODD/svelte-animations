@@ -62,14 +62,12 @@
           link: "/a/components/aurora-background",
         },
         {
-          name:'Glowing Effect',
-          link:'/a/components/glowing-effect',
-          isNew:true
+          name: "Glowing Effect",
+          link: "/a/components/glowing-effect",
         },
         {
-          name:'Colourful Text',
-          link:'/a/components/colourful-text',
-          isNew:true
+          name: "Colourful Text",
+          link: "/a/components/colourful-text",
         },
         {
           name: "Spotlight",
@@ -110,6 +108,10 @@
         {
           name: "Placeholders and vanish input",
           link: "/a/components/placeholders-and-vanish-input",
+        },
+        {
+          name: "Pointer Highlight",
+          link: "/a/components/pointer-highlight",
           isNew: true,
         },
         {

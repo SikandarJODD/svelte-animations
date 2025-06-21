@@ -4,7 +4,7 @@
   import { page } from "$app/stores";
   import CodeBlock from "$lib/luxe/components/codeblock/CodeBlock.svelte";
   import Badge from "$lib/components/ui/badge/badge.svelte";
-  import Carbon from "$lib/carbon/Carbon.svelte";
+  // import Carbon from "$lib/carbon/Carbon.svelte";
 
   $: routeID = $page.params.componentID;
   $: comp = allLuxeComponents.filter((comp) => comp.id == routeID)[0];
@@ -67,9 +67,9 @@
         {/if}
       </div>
     </div>
-    <div class="order-first lg:order-last min-h-32 lg:col-span-2  md:my-0">
+    <!-- <div class="order-first lg:order-last min-h-32 lg:col-span-2  md:my-0">
       <Carbon />
-    </div>
+    </div> -->
   </div>
   <div class="space-y-5 mt-2 lg:mt-0">
     <div>

@@ -89,6 +89,13 @@ import SpinningTextCode from "./SpinningText/SpinningText.svelte?raw";
 import SpinningTextExample from "./SpinningText/SpinningTextExample.svelte";
 import SpinningTextExampleCode from "./SpinningText/SpinningTextExample.svelte?raw";
 
+import VideoTextExample from "./VideoText/VideoTextExample.svelte";
+import VideoTextExampleCode from "./VideoText/VideoTextExample.svelte?raw";
+import VideoTextCode from "./VideoText/VideoText.svelte?raw";
+
+import SmoothCursor from "./SmoothCursor/SmoothCursor.svelte";
+import SmoothCursorCode from "./SmoothCursor/SmoothCursor.svelte?raw";
+
 export let allMagicText: MagicComponent[] = [
   {
     id: "number-ticker",
@@ -340,7 +347,7 @@ export let allMagicText: MagicComponent[] = [
   },
   {
     id: "sparkles-text",
-    tags: ["Svelte Motion", "Tailwind CSS", 'Svelte 4'],
+    tags: ["Svelte Motion", "Tailwind CSS", "Svelte 4"],
     name: "Sparkles Text",
     link: "/magic/sparkles-text",
     desc: "A dynamic text that generates continous sparkles with smooth",
@@ -351,10 +358,10 @@ export let allMagicText: MagicComponent[] = [
   },
   {
     id: "aurora-text",
-    tags: ["Tailwind CSS", 'Svelte 4', 'Svelte 5'],
+    tags: ["Tailwind CSS", "Svelte 4", "Svelte 5"],
     name: "Aurora Text",
     link: "/magic/aurora-text",
-    desc: 'A beautiful aurora text effect',
+    desc: "A beautiful aurora text effect",
     component: AuroraText,
     download: "npm i clsx tailwind-merge",
     cncode: cncode,
@@ -363,31 +370,60 @@ export let allMagicText: MagicComponent[] = [
     examples: [
       {
         id: 1,
-        name: 'Aurora Text Example',
-        fileName: 'AuroraTextExample.svelte',
+        name: "Aurora Text Example",
+        fileName: "AuroraTextExample.svelte",
         component: AuroraTextExample,
-        code: AuroraTextExampleCode
-      }
+        code: AuroraTextExampleCode,
+      },
     ],
-
   },
   {
     id: "spinning-text",
-    tags: ["Tailwind CSS", 'Svelte 4', 'Svelte 5'],
+    tags: ["Tailwind CSS", "Svelte 4", "Svelte 5"],
     name: "Spinning Text",
     link: "/magic/spinning-text",
-    desc: 'The Spinning Text component animates text in a circular motion with customizable speed, direction, color, and transitions for dynamic and engaging effects.',
+    desc: "The Spinning Text component animates text in a circular motion with customizable speed, direction, color, and transitions for dynamic and engaging effects.",
     download: "npm i clsx tailwind-merge",
     cncode: cncode,
     code: SpinningTextCode,
     examples: [
       {
         id: 1,
-        name: 'Example',
-        fileName: 'SpinningTextExample.svelte',
+        name: "Example",
+        fileName: "SpinningTextExample.svelte",
         component: SpinningTextExample,
-        code: SpinningTextExampleCode
-      }
-    ]
+        code: SpinningTextExampleCode,
+      },
+    ],
+  },
+  {
+    id: "video-text",
+    name: "Video Text",
+    tags: ["Tailwind CSS", "Svelte 4", "Svelte 5"],
+    desc: "A text component that plays a video in the background with text overlay",
+    cncode: cncode,
+    link: "/magic/video-text",
+    download: "npm i clsx tailwind-merge",
+    code: VideoTextCode,
+    examples: [
+      {
+        id: 1,
+        name: "Video Text Example",
+        fileName: "VideoTextExample.svelte",
+        component: VideoTextExample,
+        code: VideoTextExampleCode,
+      },
+    ],
+  },
+  {
+    id: "smooth-cursor",
+    name: "Smooth Cursor",
+    tags: ["Tailwind CSS", "Svelte 4", "Svelte 5"],
+    desc: "A smooth cursor animation that follows the mouse movement",
+    cncode: cncode,
+    link: "/magic/smooth-cursor",
+    download: "npm i clsx tailwind-merge",
+    code: SmoothCursorCode,
+    component: SmoothCursor,
   },
 ];

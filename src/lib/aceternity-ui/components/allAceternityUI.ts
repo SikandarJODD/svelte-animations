@@ -54,6 +54,7 @@ import { acet_animated_tooltip } from "./animated-tooltip/acetAnimatedTooltip";
 import { acetAuroraBackground } from "./aurora-background/acetAuroraBackground";
 import { acetGlowingEffect } from "./glowing-effect/acetGlowingEffect";
 import { acetColorfulText } from "./colorful-text/acetColourfulText";
+import { acetPointerHighlight } from "./pointer-highlight/acetPointerHighlght";
 
 export let allAceternityUI: AceternityUI[] = [
   {
@@ -302,5 +303,6 @@ export function cn(...inputs: ClassValue[]) {
   acet_animated_tooltip,
   acetAuroraBackground,
   acetGlowingEffect,
-  acetColorfulText
+  acetColorfulText,
+  acetPointerHighlight
 ];

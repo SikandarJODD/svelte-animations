@@ -6,7 +6,7 @@
   import Separator from "$lib/components/ui/separator/separator.svelte";
   import DotPattern from "$lib/magicui/backgrounds/DotPattern/DotPattern.svelte";
   import CodeBlock from "$lib/luxe/components/codeblock/CodeBlock.svelte";
-  import Carbon from "$lib/carbon/Carbon.svelte";
+  // import Carbon from "$lib/carbon/Carbon.svelte";
 
   $: routeID = $page.params.compID;
   $: comp = allIndieUIComponents.filter((comp) => comp.id == routeID)[0];
@@ -50,9 +50,9 @@
         </h1>
       </div>
     </div>
-    <div class="lg:col-span-2 my-4 md:my-0 order-first lg:order-last">
+    <!-- <div class="lg:col-span-2 my-4 md:my-0 order-first lg:order-last">
       <Carbon />
-    </div>
+    </div> -->
   </div>
   <div class="space-y-5 lg:-mt-8">
     <div>

@@ -122,7 +122,6 @@
         {
           name: "Scratch To Reveal",
           link: "/magic/scratch-to-reveal",
-          isNew: true,
         },
       ],
     },
@@ -203,7 +202,6 @@
         {
           name: "Aurora Text",
           link: "/magic/aurora-text",
-          isNew: true,
         },
         {
           name: "Text Reveal",
@@ -236,6 +234,15 @@
         {
           name: "Spinning Text",
           link: "/magic/spinning-text",
+        },
+        {
+          name: "Video Text",
+          link: "/magic/video-text",
+          isNew: true,
+        },
+        {
+          name: "Smooth Cursor",
+          link: "/magic/smooth-cursor",
           isNew: true,
         },
         {

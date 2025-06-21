@@ -1,11 +1,36 @@
-<script>
+<script lang="ts">
+  import PointerHighlight from "$lib/aceternity-ui/components/pointer-highlight/PointerHighlight.svelte";
   import AuroraText from "$lib/magicui/text-animations/AuroraText/AuroraText.svelte";
+  import SmoothCursor from "$lib/magicui/text-animations/SmoothCursor/SmoothCursor.svelte";
+  import VideoText from "$lib/magicui/text-animations/VideoText/VideoText.svelte";
+  let cursor: any = null;
 </script>
 
-<div class="h-screen w-full flex items-center justify-center ">
-  <h1 class="text-4xl font-bold tracking-tighter md:text-5xl lg:text-9xl">
+<div class="h-screen w-full flex items-center justify-center">
+  <!-- <h1 class="text-4xl font-bold tracking-tighter md:text-5xl lg:text-9xl">
     Ship <AuroraText class='pr-3'>Svelte</AuroraText>
-  </h1>
+  </h1> -->
+
+  <!-- <div
+    class="mx-auto max-w-lg py-20 text-2xl font-bold tracking-tight md:text-4xl"
+  >
+    The best way to grow is to
+    <div class='mt-1.5'>
+      <PointerHighlight
+        rectangleClassName="bg-blue-100 dark:bg-blue-900/70 border-blue-300 dark:border-blue-700 leading-loose"
+        pointerClassName="text-blue-500"
+        containerClassName="inline-block mx-1"
+      >
+        <span class="px-1 ">Take Action</span>
+      </PointerHighlight>
+    </div>
+  </div> -->
+  <div class="relative h-44 w-full overflow-hidden">
+    <VideoText
+      src="https://cdn.magicui.design/ocean-small.webm"
+      content="SVELTE"
+    ></VideoText>
+  </div>
 </div>
 
 <!-- <div class="h-[40rem] w-full flex items-center justify-center ">
