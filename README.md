@@ -1,29 +1,21 @@
 # Svelte Components
 
+> ### Svelte 5 Version Available
+> Here is the Svelte 5 version of Svelte Animations.  
+> Visit: [sv-animations.vercel.app](https://sv-animations.vercel.app)  
+> GitHub: [SikandarJODD/animations](https://github.com/SikandarJODD/animations)
+>
+> Since `svelte-motion` does not support Svelte 5, I am using the new library `motion-sv` for animations.
+>
+> Includes new components:
+> - [Dither Shader](https://sv-animations.vercel.app/magic/docs/components/dither-shader)
+> - [Pixel Image](https://sv-animations.vercel.app/magic/docs/components/pixel-image)
+> - [Line Shadow Text](https://sv-animations.vercel.app/magic/docs/components/line-shadow-text)
+> - [Text Animate](https://sv-animations.vercel.app/magic/docs/components/text-animate)
+
 Build using Tailwind CSS and [**Svelte motion**](https://svelte-motion.gradientdescent.de).
 
-### Important Note
-
-- Components which includes svelte-motion library are not supported in Svelte 5.
-- Only components which are build using Tailwind CSS and Svelte are supported in Svelte 5.
-
----
-
-- Right now i am trying to convert each component to Svelte 5 using [**Motion-Start**](https://github.com/JonathonRP/motion-start)
-
-### Svelte 5 Support Components Count
-
-| UI Libs       | Count          | description                                                                 |
-| ------------- | -------------- | --------------------------------------------------------------------------- |
-| Aceternity UI | 13             | build using svelte and tailwind css - you can easily migrate it to svelte 5 |
-| Indie UI      | All components | build using svelte and tailwind css - you can easily migrate it to svelte 5 |
-| Luxe UI       | 20             | build using svelte and tailwind css - you can easily migrate it to svelte 5 |
-| Magic UI      | 20+            | build using svelte and tailwind css - you can easily migrate it to svelte 5 |
-
-- I will be converting the rest of the component to Svelte 5, so you can use it in your project in the coming days...
-- I will be using Motion-Start Lib whcih is same as Svelte Motion but it works in Svelte 5 too.
-
----
+This repository contains animation components inspired by Magic UI, Aceternity UI, Indie UI, and more.
 
 ### New Templates
 
@@ -51,7 +43,6 @@ Build using Tailwind CSS and [**Svelte motion**](https://svelte-motion.gradientd
 | Scratch To Reveal        | [Visit](https://animation-svelte.vercel.app/magic/scratch-to-reeal)  | Magic UI |
 | Ripple Button            | [Visit](https://animation-svelte.vercel.app/magic/ripple-button)     | Magic UI |
 | Interactive Hover Button | [Visit](https://animation-svelte.vercel.app/magic/interactive-hover) | Magic UI |
-
 
 ### Feedback
 

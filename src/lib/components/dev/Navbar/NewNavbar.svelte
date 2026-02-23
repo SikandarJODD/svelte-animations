@@ -27,7 +27,7 @@
   $: routeId = $page.url.pathname;
 </script>
 
-<nav class="bg-background/50 border-b sticky top-0 z-[100] backdrop-blur-md">
+<nav class="bg-background/50 border-b sticky top-10 z-[100] backdrop-blur-md">
   <div class="mx-auto max-w-7xl px-2 sm:px-4 lg:px-8">
     <div class="relative flex h-14 items-center justify-between">
       <div class="flex items-center px-2 lg:px-0">
