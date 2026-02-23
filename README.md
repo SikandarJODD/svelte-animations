@@ -1,33 +1,54 @@
-# Svelte Components
+# Svelte Animation Components
 
-> ### Svelte 5 Version Available
-> Here is the Svelte 5 version of Svelte Animations.  
-> Visit: [sv-animations.vercel.app](https://sv-animations.vercel.app)  
+> ### New Version Available
+> New Svelte 5 Animations.
+> Visit: [sv-animations.vercel.app](https://sv-animations.vercel.app)
 > GitHub: [SikandarJODD/animations](https://github.com/SikandarJODD/animations)
 >
-> Since `svelte-motion` does not support Svelte 5, I am using the new library `motion-sv` for animations.
+> **Key Features**
+> - Install components directly via the shadcn-svelte CLI
+> - Fully TypeScript support
+> - Light and dark mode included
+> - New components like [Dither Shader](https://sv-animations.vercel.app/magic/docs/components/dither-shader), [Pixel Image](https://sv-animations.vercel.app/magic/docs/components/pixel-image), and [Text Animate](https://sv-animations.vercel.app/magic/docs/components/text-animate)
+> - Built on top of the `motion-sv` library
 >
-> Includes new components:
-> - [Dither Shader](https://sv-animations.vercel.app/magic/docs/components/dither-shader)
-> - [Pixel Image](https://sv-animations.vercel.app/magic/docs/components/pixel-image)
-> - [Line Shadow Text](https://sv-animations.vercel.app/magic/docs/components/line-shadow-text)
-> - [Text Animate](https://sv-animations.vercel.app/magic/docs/components/text-animate)
+> Explore the docs and components on the Svelte 5 site to get started quickly.
 
-Build using Tailwind CSS and [**Svelte motion**](https://svelte-motion.gradientdescent.de).
+---
 
-This repository contains animation components inspired by Magic UI, Aceternity UI, Indie UI, and more.
+Built with Tailwind CSS and [**Svelte Motion**](https://svelte-motion.gradientdescent.de).
 
-### New Templates
+This repository includes reusable Svelte animation components and learning-focused examples.
 
-#### [Minimalist Developer Portfolio](https://portfolio-sve.vercel.app)
+## Component Libraries & Sections
 
-- GitHub : [Repo](https://github.com/SikandarJODD/portfolio-template)
+1. Svelte Aceternity UI
+2. Svelte Magic UI
+3. Svelte Luxe UI
+4. Framer Learning
+5. More Examples
+
+## Premium Templates
+
+1. [Startup Template (Premium)](/templates/saas-template)
+   Use code `ILOVESVELTE` for 30% off.
+
+## Open Source Templates
+
+1. [Minimalist Developer Portfolio](https://portfolio-sve.vercel.app)
+2. [Startup Template](https://startup-sve.vercel.app)
+
+### Open Source Template Details
+
+#### Minimalist Developer Portfolio
+
+- GitHub: [Repo](https://github.com/SikandarJODD/portfolio-template)
   ![Preview](/static/portfolio_svelte.png)
 
-#### [Start-up Landing Page](https://startup-sve.vercel.app)
+#### Startup Template
 
-- GitHub : [Repo](https://github.com/SikandarJODD/startup-template)
-  ![Preview](/static//startup_sve.png)
+- GitHub: [Repo](https://github.com/SikandarJODD/startup-template)
+  ![Preview](/static/startup_sve.png)
 
 ## New Aceternity UI Components
 
@@ -57,10 +78,10 @@ If you have any feedback, please reach out at [Twitter](https://twitter.com/Sika
 - [Indie UI](https://ui.indie-starter.dev)
 - [Hover.dev](https://hover.dev)
 
-Components are inspired from the above mentioned websites.
-Thankyou everyone for building such amazing components.
+Components are inspired by the websites listed above.
+Thank you to everyone building such amazing components.
 
 ### Support
 
-- If you Like my work, you can sponsor me on [GitHub](https://github.com/sponsors/SikandarJODD)
+- If you like my work, you can sponsor me on [GitHub](https://github.com/sponsors/SikandarJODD)
 - Share this project with your friends on [Twitter](https://twitter.com/intent/tweet?url=https://animation-svelte.vercel.app%0A&text=Svelte%20Animation%20Components%20Built%20using%20Svelte%20Motion%20and%20Tailwind%20CSS%0A&via=Sikandar_Bhide&hashtags=sveltejs,tailwindcss,webdev,frontend)

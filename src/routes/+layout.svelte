@@ -130,7 +130,8 @@
       </HoverCard.Content>
     </HoverCard.Root>
     <span class="text-emerald-900/90 dark:text-neutral-100"
-      >Includes Dither Shader, Pixel Image, Line Shadow Text, and Text Animate.</span
+      >Open Source & Free • Install via CLI • Full TypeScript • Light/Dark •
+      motion-sv</span
     >
     <a
       class="font-semibold text-emerald-800 underline underline-offset-2 hover:text-emerald-900 dark:text-emerald-200 dark:hover:text-emerald-100"
