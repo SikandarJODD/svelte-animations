@@ -146,7 +146,7 @@
   <!-- Static sidebar for desktop -->
   {#if isLoading}
     <div
-      class="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-60 lg:flex-col mt-16"
+      class="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-60 lg:flex-col mt-24"
     >
       <!-- Sidebar component, swap this element with another sidebar if you like -->
       <div
@@ -198,7 +198,7 @@
   {/if}
 
   <div
-    class="sticky top-0 z-40 flex items-center gap-x-6 dark:bg-slate-900 bg-white backdrop-blur-md px-4 py-4 shadow-sm sm:px-6 lg:hidden"
+    class="sticky top-24 z-40 flex items-center gap-x-6 dark:bg-slate-900 bg-white backdrop-blur-md px-4 py-4 shadow-sm sm:px-6 lg:hidden"
   >
     <button
       on:click={() => (mobileMenu = !mobileMenu)}
@@ -232,3 +232,4 @@
     </div>
   </main>
 </div>
+
