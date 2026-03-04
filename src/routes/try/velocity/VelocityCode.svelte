@@ -61,14 +61,12 @@
       window.removeEventListener("scroll", handleScroll);
     };
   });
-  
-    // $: x = baseX;
 </script>
 
 <div class="parallax">
   <div
     class="scroller text-center font-display text-4xl font-bold tracking-[-0.02em] drop-shadow-sm md:text-7xl md:leading-[5rem]"
-    style="transform: translateX({x}%);"
+    style="transform: translateX({$baseX}%);"
   >
     <span>
       <slot>Coding is Fun</slot>
