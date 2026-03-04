@@ -18,7 +18,6 @@
 
 	let phi = 0;
 	let width = 0;
-  $: console.log(width, "X");
 	let onResize = () => {
 		width = canvas.offsetWidth;
 	};
@@ -106,7 +105,6 @@
     }}
     on:mousemove={(e) => {
       if (pointerInteracting !== null) {
-        console.log("working");
         const delta = e.clientX - pointerInteracting;
         pointerInteractionMovement = delta;
         x.set(delta / 200);

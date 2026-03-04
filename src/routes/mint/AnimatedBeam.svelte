@@ -40,7 +40,6 @@
         y1: ["0%", "0%"],
         y2: ["0%", "0%"],
       };
-  $: console.log(fromRef, toRef, "Refs");
   let updatePath = () => {
     let containerRect = containerRef?.getBoundingClientRect();
     let rectA = fromRef?.getBoundingClientRect();
