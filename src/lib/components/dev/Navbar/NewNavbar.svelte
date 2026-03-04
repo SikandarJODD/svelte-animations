@@ -32,7 +32,7 @@
       icon: Sparkles,
     },
     {
-      link: "/a",
+      link: "/a/components/floating-dock",
       name: "Svelte Aceternity UI",
       desc: "Modern UI blocks ported for Svelte projects.",
       icon: Layers,
